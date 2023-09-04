@@ -12,7 +12,7 @@
   margin-top: 36px;
   margin-left: 48px;
   height: 127px;
-  width: 190px;
+  width: 90%;
   border-radius: 10px;
   border: 1px solid black;
   box-shadow: 0px -12px rgb(216, 207, 207);
@@ -23,97 +23,22 @@
   border-radius: 10px;
   margin-top: 36px;
   margin-left: 20px;
-  height: 420px;
-  width: 25%;
+  height: auto;
+  width: 95%;
   border: 1px solid black;
 }
 
-@media (min-width: 741px) and (max-width: 1240px) {
-  .card {
-    width:fit-content;
-    flex-grow: 1;
-    height: max-content;
-  }
-  .box5{
-    margin-right: 20px;
-  }
-  table hr {
-    margin: auto;
-  }
-}
-@media (max-width: 399px) {
-  .cards, .cards3{
-    flex-direction: column;
-  }
-  
-  .box5{
-    margin-right: 20px;
-  }
 
-  .card{
-    width: 95%;
-    height: max-content;
-  }
-}
+  
 
 
 @media (min-width:400px)and (max-width: 740px) {
   
-.boxes{
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  margin-right: 10px;
-}
-.box5{
-  margin-right: 20px ;
-}
-  table tbody {
-    margin-left: auto;
-  }
-  .card4 {
-    width:95%t;
-  }
-  .card5 {
-    height: fit-content;
-  }
-  table hr {
-    margin: auto;
-  }
-  .card hr {
-    margin: auto;
-  }
-  table tbody{
-    margin: auto;
+
+ 
+ 
+
   
-  }
-  .card table {
-    width: 100%;
-    height: auto;
-  }
-  .card {
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-    width: 95%;
-    margin-left: 10px;
-    margin-right: 30px;
-  }
-
-  .cards {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 5;
-  }
-
-  .card8 {
-    width: max-content;
-    margin-right: 10px;
-    margin-left: 5px;
-  }
-  .cards3 {
-    flex-direction: column;
-  }
   nav {
     display: flex;
     flex-direction: column;
