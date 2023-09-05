@@ -10,22 +10,36 @@ import setting from "../asserts/images/sett.jpg";
 import zoom from "../asserts/images/zoom.png";
 import { Link } from "react-router-dom";
 
-
-
 function Navbar(props) {
   const darkMode = () => {
     props.toggleMode();
   };
 
+  // const[show, setShow]=useState(false);
+ 
+  // const toggle=()=> setShow(!show)
+
   return (
     <>
-    
+
+      
+
+
+
+
+    <div className="navbar ">
       <nav
-        className={` pl-3 pb-3 flex  justify-between   pr-4 ${
+        className={` pl-3 pb-3 mt-5  fixed flex sm:shrink lg:justify-between md:justify-around sm:justify-evenly  pr-4 ${
           props.mode === "light" ? "dark" : "light"
         }`}
       >
-        <div className="search ">
+        <div className="search flex ">
+          <div className="btn space-y-1 m-4">
+            <div className="l1 w-8 h-1 bg-black"></div>
+            <div className="l2 w-8 h-1 bg-black"></div>
+            <div className="l3 w-8 h-1 bg-black"></div>
+          </div>
+
           <label htmlFor="search"></label>
           <input
             type="search"
@@ -37,7 +51,7 @@ function Navbar(props) {
             <img src={Search} alt="" className=" rounded-lg w-5" />
           </button>
         </div>
-        <div className="icons mt-4  ">
+        <div className="icons mt-4 flex md:shrink sm:shrink  ">
           <ul className=" flex space-x-5 text-lg pr-2">
             <li>
               <Link to="/dummy">
@@ -48,7 +62,10 @@ function Navbar(props) {
             </li>
             <li>
               <Link to="#">
-                <button className=" hover:bg-blue-200 w-8 p-1 rounded-2xl " onClick={darkMode}>
+                <button
+                  className=" hover:bg-blue-200 w-8 p-1 rounded-2xl "
+                  onClick={darkMode}
+                >
                   <img src={mode} alt="" className="rounded-lg w-5 " />
                 </button>
               </Link>
@@ -102,7 +119,7 @@ function Navbar(props) {
             </li>
           </ul>
         </div>
-      </nav>
+      </nav></div>
     </>
   );
 }

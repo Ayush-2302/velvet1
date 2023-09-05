@@ -32,27 +32,7 @@
   
 
 
-@media (min-width:400px)and (max-width: 740px) {
-  
 
- 
- 
-
-  
-  nav {
-    display: flex;
-    flex-direction: column;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .search,
-  .icons {
-    margin-top: 15px;
-  }
-}
 
 @tailwind utilities;
 
