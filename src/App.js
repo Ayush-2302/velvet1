@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar className=" fixed" mode={mode} toggleMode={toggleMode} />
+        <Navbar mode={mode} toggleMode={toggleMode} />
 
         <Routes>
           <Route exact path="/" element={<Home />} />

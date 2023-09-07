@@ -28,14 +28,14 @@ function Velvet() {
           <ul className="space-y-2">
 
 
-            <li>
+            <li onClick={toggle}>
               <div className={`cursor-pointer `} >
                 
                   <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600" >Dashbord
                   <div className=" btn">»</div></div>
                 </div>
                 
-                <ul className= {`dropDash hidden ml-10 hover:contents`} >
+                <ul className= {`dropDash ${show?"":"hidden"} ml-10 hover:contents`} >
                   <li>
                     <Link to="#"> - Scale</Link>
                   </li>

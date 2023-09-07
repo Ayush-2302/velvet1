@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Search from "../asserts/images/search.png";
-import profile from "../asserts/images/profile.png";
+import profile from "../asserts/images/w7.png";
 import cart from "../asserts/images/cart.png";
 import images from "../asserts/images/images.png";
 import language from "../asserts/images/lang.jpg";
@@ -29,7 +29,7 @@ function Navbar(props) {
 
       <div className="navbar ">
         <nav
-          className={` pl-3 pb-3 mt-5  fixed flex sm:shrink lg:justify-between md:justify-around sm:justify-evenly  pr-4 ${
+          className={` pl-3 pb-3 mt-5 static flex sm:shrink lg:justify-between md:justify-around sm:justify-evenly  pr-4 ${
             props.mode === "light" ? "dark" : "light"
           }`}
         >
@@ -52,7 +52,7 @@ function Navbar(props) {
             </button>
           </div>
           <div className="icons mt-4 flex md:shrink sm:shrink  ">
-            <ul className=" flex space-x-5 text-lg pr-2">
+            <ul className=" flex space-x-5 justify-center items-center m-auto text-lg pr-2">
               <li>
                 <Link to="#">
                   <button onClick={toggle}
@@ -137,15 +137,16 @@ function Navbar(props) {
               </li>
               <li>
                 <Link to="#">
-                  <button className="bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl ">
-                    <img src={profile} alt="" className="rounded-lg w-5" />
+                  <button className=" bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl ">
+                    <img src={zoom} alt="" className="rounded-lg w-5" />
                   </button>
                 </Link>
               </li>
               <li>
                 <Link to="#">
-                  <button className=" bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl ">
-                    <img src={zoom} alt="" className="rounded-lg w-5" />
+                  <button className="bg-slate-100 flex hover:bg-blue-200 w-fit p-1 rounded-2xl ">
+                    <img src={profile} alt="" className=" rounded-full w-8" />
+                    <p>Harry John's</p>
                   </button>
                 </Link>
               </li>
@@ -156,7 +157,7 @@ function Navbar(props) {
               </li>
               <li>
                 <Link to="#">
-                  <button className="bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl ">
+                  <button className=" bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl ">
                     <img src={setting} alt="" className="rounded-lg w-5" />
                   </button>
                 </Link>
