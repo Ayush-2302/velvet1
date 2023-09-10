@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-// import NewApp from './/NewApp';
+// import NewApp from './NewApp';
 import 'react-calendar/dist/Calendar.css';
 
 
@@ -11,7 +11,7 @@ import 'react-calendar/dist/Calendar.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />/
+    <App />
     {/* <NewApp/> */}
   </React.StrictMode>
 );

@@ -10,7 +10,7 @@ import pic7 from "../asserts/images/w7.png";
 function Notification() {
   return (
     <>
-      <div></div>
+      
       <div className="cart w-96 h-96   overflow-auto">
         <div className="flex justify-between">
           <span className=" text-2xl font-bold">Cart Items </span>

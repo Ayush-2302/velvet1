@@ -1,18 +1,16 @@
 import React from "react";
 import Dashboard from "./Dashboard";
 import Body from "./Body";
-import Velvet from "./Velvet";
+// import Velvet from "./Velvet";
 
-function Home() {
+function Home( props ) {
   return (
     <>
-      <div className="flex">
-        <Velvet/>
         <div className="body">
           <Dashboard />
           <Body />
         </div>
-      </div>
+      
     </>
   );
 }
