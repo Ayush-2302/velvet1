@@ -9,17 +9,9 @@ import notification from "../asserts/images/notification.png";
 import setting from "../asserts/images/sett.jpg";
 import zoom from "../asserts/images/zoom.png";
 import { Link } from "react-router-dom";
-// import Dropdowncart from "./Dropdowncart";
-import cactus from "../asserts/images/cactus.png";
-import del from "../asserts/images/delete.png";
-import shoes from "../asserts/images/shoes.png";
-import watch from "../asserts/images/watch.png";
-import goodluck from "../asserts/images/goodluck.png";
-import transplant from "../asserts/images/transplant.jpeg";
-// import Calendar from "react-calendar";
 import CalNoti from "./CalNoti";
 import Notification from "./Notification";
-// import Velvet from "./Velvet";
+import Dropdowncart from "./Dropdowncart";
 
 function Navbar(props) {
   const darkMode = () => {
@@ -29,8 +21,44 @@ function Navbar(props) {
   const [lang, setLang] = useState(false);
   const [prof, setProf] = useState(false);
   const [cart, setCart] = useState(false);
-  const[cal,setCal]=useState(false)
-  const[noti,setNoti]=useState(false)
+  const [cal, setCal] = useState(false);
+  const [noti, setNoti] = useState(false);
+
+  const handleProf = () => {
+    setProf(!prof);
+    setLang(false);
+    setCart(false);
+    setCal(false);
+    setNoti(false);
+  };
+  const handleLang = () => {
+    setProf(false);
+    setLang(!lang);
+    setCart(false);
+    setCal(false);
+    setNoti(false);
+  };
+  const handleCart = () => {
+    setProf(false);
+    setLang(false);
+    setCart(!cart);
+    setCal(false);
+    setNoti(false);
+  };
+  const handleCal = () => {
+    setProf(false);
+    setLang(false);
+    setCart(false);
+    setCal(!cal);
+    setNoti(false);
+  };
+  const handleNoti = () => {
+    setProf(false);
+    setLang(false);
+    setCart(false);
+    setCal(false);
+    setNoti(!noti);
+  };
 
   return (
     <>
@@ -41,8 +69,9 @@ function Navbar(props) {
 
       <div className="navbar ">
         <nav
-          className={` pl-3 pb-3 mt-5 static flex sm:shrink lg:justify-between md:justify-around sm:justify-evenly  pr-4 ${props.mode === "light" ? "dark" : "light"
-            }`}
+          className={` pl-3 pb-3 mt-5 static flex sm:shrink lg:justify-between md:justify-around sm:justify-evenly  pr-4 ${
+            props.mode === "light" ? "dark" : "light"
+          }`}
         >
           <div className="search flex ">
             <div className="btn space-y-1 m-4">
@@ -69,7 +98,7 @@ function Navbar(props) {
                   <Link to="#">
                     <button
                       onClick={() => {
-                        setLang(!lang);
+                        handleLang();
                       }}
                       className={`  bg-slate-100  hover:bg-blue-300 w-8 p-1 rounded-2xl`}
                     >
@@ -78,10 +107,11 @@ function Navbar(props) {
                   </Link>
                 </li>
                 <div
-                  className={` ${lang ? "" : "hidden"
-                    } langDropdown  w-28  text-md border-gray-100 border-2 shadow-inner  bg-white text-black translate-y-2 absolute  `}
+                  className={` ${
+                    lang ? "" : "hidden"
+                  } langDropdown  w-28  text-md border-gray-100 border-2 shadow-inner  bg-white text-black translate-y-2 absolute  `}
                 >
-                  <ul className="" >
+                  <ul className="">
                     <div className="p-2">
                       <li className=" ml-5 hover:bg-gray-200 ">
                         <Link href="#">English</Link>
@@ -116,7 +146,7 @@ function Navbar(props) {
               <li>
                 <Link to="#">
                   <button
-                    onClick={() => setCart(!cart)}
+                    onClick={() => handleCart()}
                     className={` bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl`}
                   >
                     <img src={cart1} alt="" className="rounded-lg w-5" />
@@ -125,78 +155,19 @@ function Navbar(props) {
               </li>
 
               <div
-                className={`${cart ? "" : "hidden"} text-sm absolute -translate-x-72 w-80 translate-y-64  bg-slate-300  border-gray-200 border-2`}>
-                <div className="cart  ">
-                  <div className="flex justify-between">
-                    <span className=" text-2xl font-bold">Cart Items </span>
-                    <span className=" font-bold text-green-500">5 items</span>
-                  </div>
-                  <hr className="m-2 border-black" />
-                  <div className=" h-80 overflow-y-scroll ">
-                    <div className="cactus mt-2 flex justify-evenly">
-                      <img src={cactus} alt="" className=" w-20 h-16 " />
-                      <div className="content">
-                        <p className=" font-bold">Cactus mini plant</p>
-                        <p>Quantity : 02</p>
-                        <p className="rate text-lg font-bold">$1229</p>
-                      </div>
-                      <img src={del} alt="" className="  ml-6 w-6 h-6" />
-                    </div>
-                    <hr className="mt-2 " />
-
-                    <div className="Shoes mt-2 flex justify-evenly">
-                      <img src={shoes} alt="" className=" w-20 h-16 " />
-                      <div className="content">
-                        <p className=" font-bold">Mens Sport Shoes</p>
-                        <p>Quantity : 01</p>
-                        <p className="rate text-lg font-bold">$119</p>
-                      </div>
-                      <img src={del} alt="" className="  ml-6. w-6 h-6" />
-                    </div>
-                    <hr className="m-2" />
-
-                    <div className="watch mt-2 flex justify-evenly">
-                      <img src={watch} alt="" className=" w-20 h-16" />
-                      <div className="content">
-                        <p className=" font-bold">Watch for Men</p>
-                        <p>Quantity : 03</p>
-                        <p className="rate text-lg font-bold">$2119</p>
-                      </div>
-                      <img src={del} alt="" className="  ml-6 w-6 h-6" />
-                    </div>
-                    <hr className="m-2 " />
-                    <div className="goodluck mt-2 flex justify-evenly">
-                      <img src={goodluck} alt="" className=" w-20 h-16 " />
-                      <div className="content">
-                        <p className=" font-bold">GoodLuck Plant</p>
-                        <p>Quantity : 03</p>
-                        <p className="rate text-lg font-bold">$1019</p>
-                      </div>
-                      <img src={del} alt="" className="  ml-6 w-6 h-6" />
-                    </div>
-                    <hr className="m-2 " />
-
-                    <div className="plant mt-2 flex justify-evenly">
-                      <img src={transplant} alt="" className=" w-20 h-16 " />
-                      <div className="content">
-                        <p className=" font-bold">Transparent Plant</p>
-                        <p>Quantity : 03</p>
-                        <p className="rate text-lg font-bold">$1019</p>
-                      </div>
-                      <img src={del} alt="" className="  ml-6 w-6 h-6" />
-                    </div>
-                    <hr className="m-2 " />
-                  </div>
-                </div>
-
-                <div className=" check flex justify-center mt-5 mb-3 bg-purple-600 text-white h-10 items-center rounded text-2xl">
-                  CheckOut
-                </div>
+                className={`${
+                  cart ? "" : "hidden"
+                } text-sm absolute -translate-x-72 w-80 translate-y-64  bg-slate-300  border-gray-200 border-2`}
+               >
+                <Dropdowncart/>
               </div>
 
               <li>
                 <Link to="#">
-                  <button onClick={()=>{setNoti(!noti)}} className="bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl ">
+                  <button
+                    onClick={() => handleNoti()}
+                    className="bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl "
+                  >
                     <img
                       src={notification}
                       alt=""
@@ -205,22 +176,32 @@ function Navbar(props) {
                   </button>
                 </Link>
               </li>
-              <div className={`${noti?"":' hidden'} absolute bg-white  translate-y-60 -translate-x-60`}>
-                <Notification/>
+              <div
+                className={`${
+                  noti ? "" : " hidden"
+                } absolute bg-white  translate-y-60 -translate-x-60`}
+              >
+                <Notification />
               </div>
-
 
               <li>
                 <Link to="#">
-                  <button  onClick={()=>{setCal(!cal)}} className="bg-slate-100  hover:bg-blue-200 w-8 p-1 rounded-2xl ">
+                  <button
+                    onClick={() => handleCal()}
+                    className="bg-slate-100  hover:bg-blue-200 w-8 p-1 rounded-2xl "
+                  >
                     <img src={images} alt="" className="rounded-lg w-5" />
                   </button>
                 </Link>
               </li>
-              <div className={` ${cal?"":"hidden"} cal absolute h-60 translate-y-36 translate-x-24`}>
-                    <CalNoti/>
+              <div
+                className={` ${
+                  cal ? "" : "hidden"
+                } cal absolute h-60 translate-y-36 translate-x-24`}
+              >
+                <CalNoti />
               </div>
-              
+
               <li>
                 <Link to="#">
                   <button className=" bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl ">
@@ -231,7 +212,7 @@ function Navbar(props) {
               <li>
                 <Link to="#">
                   <button
-                    onClick={() => setProf(!prof)}
+                    onClick={() => handleProf()}
                     className="bg-slate-100 flex hover:bg-blue-200 w-fit p-1 rounded-2xl "
                   >
                     <img src={profile} alt="" className="  rounded-full w-8" />
@@ -240,11 +221,11 @@ function Navbar(props) {
                 </Link>
               </li>
 
-
               <div className="proDrop">
                 <ul
-                  className={` ${prof ? "" : "hidden"
-                    } py-1 text-sm   text-black-700 absolute -translate-x-36 translate-y-6 border-2 border-gray-100  px-4   shadow-inner bg-white`}
+                  className={` ${
+                    prof ? "" : "hidden"
+                  } py-1 text-sm   text-black-700 absolute -translate-x-36 translate-y-6 border-2 border-gray-100  px-4   shadow-inner bg-white`}
                 >
                   <div className="ml-2 text-lg text-black">
                     <li className=" hover:bg-gray-200 ">
@@ -276,7 +257,7 @@ function Navbar(props) {
               </li>
               <li>
                 <Link to="#">
-                  <button className=" bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl ">
+                  <button className=" bg-slate-100 hover:bg-blue-200 p-1 ease-in rounded-2xl animate-spin ">
                     <img src={setting} alt="" className="rounded-lg w-5" />
                   </button>
                 </Link>
