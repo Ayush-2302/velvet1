@@ -11,16 +11,16 @@ function Notification() {
   return (
     <>
       
-      <div className="cart w-96 h-96   overflow-auto">
+      <div className="cart w-fit h-96   shadow-inner overflow-auto">
         <div className="flex justify-between">
-          <span className=" text-2xl font-bold">Cart Items </span>
-          <span className=" font-bold text-green-500">5 items</span>
+          <span className=" text-xl font-bold">Notification </span>
+          <span className=" font-bold text-green-500"> view</span>
         </div>
         <hr className="m-2" />
         <div className="pic1 mt-3 flex justify-around">
           <img src={pic1} alt="" className=" w-12 h-12 " />
           <div className="content w-52">
-            <p className=" font-bold">Olivia james</p>
+            <p className=" text-sm  font-bold">Olivia james</p>
             <p className=" text-sm">Congrulate for New template start</p>
           </div>
           <div>
@@ -34,7 +34,7 @@ function Notification() {
         <div className="pic6 mt-3 flex justify-around">
   <img src={del} alt="" className=" w-12 h-12 " />
   <div className="contentw-52">
-    <p className=" font-bold">Deleted</p>
+    <p className=" text-sm font-bold">Deleted</p>
     <p className=" text-sm">some items has been deleted</p>
   </div>
   <div>
@@ -49,7 +49,7 @@ function Notification() {
         <div className="pic2 mt-3 flex justify-around">
           <img src={pic2} alt="" className=" w-12 h-12 " />
           <div className="content w-52">
-            <p className=" font-bold">Elizabeth james</p>
+            <p className=" text-sm font-bold">Elizabeth james</p>
             <p className=" text-sm">added new schedule realease date</p>
           </div>
           <div>
@@ -64,7 +64,7 @@ function Notification() {
         <div className="pic3 mt-3 flex justify-around">
           <img src={pic3} alt="" className=" w-12 h-12 " />
           <div className="content w-52">
-            <p className=" font-bold">lara james</p>
+            <p className=" text-sm font-bold">lara james</p>
             <p className=" text-sm"> your product is out of stock</p>
           </div>
           <div>
@@ -79,7 +79,7 @@ function Notification() {
         <div className="pic4 mt-3 flex justify-around">
           <img src={pic4} alt="" className=" w-12 h-12 " />
           <div className="content w-52">
-            <p className=" font-bold">Jonh's Sinha</p>
+            <p className=" text-sm font-bold">Jonh's Sinha</p>
             <p className=" text-sm">please complete your transction</p>
           </div>
           <div>
@@ -93,7 +93,7 @@ function Notification() {
         <div className="pic5 mt-3 flex justify-around">
           <img src={setting} alt="" className=" w-12 h-12 " />
           <div className="content w-52">
-            <p className=" font-bold">Setting</p>
+            <p className=" text-sm font-bold">Setting</p>
             <p className=" text-sm">complete your KYC details</p>
           </div>
           <div>
@@ -107,7 +107,7 @@ function Notification() {
         <div className="pic7 mt-3 flex justify-around">
           <img src={pic7} alt="" className=" w-12 h-12 " />
           <div className="content w-52">
-            <p className=" font-bold">Aaron</p>
+            <p className=" text-sm font-bold">Aaron</p>
             <p className=" text-sm"> Checkout: some items are added in cart</p>
           </div>
           <div>

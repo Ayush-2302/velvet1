@@ -140,23 +140,23 @@ function Velvet() {
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between items-center text-gray-700 py-1.5 px-4 rounded space-x-2 cursor-pointer">
+                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between items-center text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
                   <span>Utilities</span>
-                  <span className="   text-black font-bold px-2 py-0.5 text-xs rounded-lg">
+                  <span className="   text-red-500 font-bold px-2 py-0.5 text-xs rounded-lg">
                     »
                   </span>
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between  items-center text-gray-700 py-1.5 px-4 rounded space-x-2 cursor-pointer">
+                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between  items-center text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
                   <span>Error</span>
-                  <span className="   text-black font-bold px-2 py-0.5 text-xs rounded-lg">
+                  <span className="   text-red-500 font-bold px-2 py-0.5 text-xs rounded-lg">
                     »
                   </span>
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex items-center justify-between text-gray-700 py-1.5 px-4 rounded space-x-2 cursor-pointer">
+                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex items-center justify-between text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
                   <span className="flex items-center space-x-2">
                     <span>Apps</span>
                   </span>
@@ -166,15 +166,16 @@ function Velvet() {
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex  justify-between items-center text-gray-700 py-1.5 px-4 rounded space-x-2 cursor-pointer">
+                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex  justify-between items-center text-red-500
+                 py-1.5 px-4 rounded space-x-2 cursor-pointer">
                   <span>Icons</span>
-                  <span className="   text-black font-bold px-2 py-0.5 text-xs rounded-lg">
+                  <span className="   text-red-500 font-bold px-2 py-0.5 text-xs rounded-lg">
                     »
                   </span>
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between  items-center text-gray-700 py-1.5 px-4 rounded space-x-2 cursor-pointer">
+                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between  items-center text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
                   <span>Widgets</span>
                   <span className="bg-red-400 text-gray-100 font-bold px-2 py-0.5 text-xs rounded-lg">
                     Hot
