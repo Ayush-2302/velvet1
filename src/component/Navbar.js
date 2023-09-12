@@ -13,6 +13,7 @@ import CalNoti from "./CalNoti";
 import Notification from "./Notification";
 import Dropdowncart from "./Dropdowncart";
 
+
 function Navbar(props) {
   const darkMode = () => {
     props.toggleMode();
@@ -157,7 +158,7 @@ function Navbar(props) {
               <div
                 className={`${
                   cart ? "" : "hidden"
-                } text-sm absolute -translate-x-72 w-80 translate-y-64  bg-slate-300  border-gray-200 border-2`}
+                } cart text-sm absolute -translate-x-72 translate-y-64   bg-sky-500  border-gray-200 border-2`}
                >
                 <Dropdowncart/>
               </div>
@@ -179,7 +180,7 @@ function Navbar(props) {
               <div
                 className={`${
                   noti ? "" : " hidden"
-                } absolute bg-white  translate-y-60 -translate-x-60`}
+                } absolute bg-sky-400  translate-y-60 -translate-x-60`}
               >
                 <Notification />
               </div>

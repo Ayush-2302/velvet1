@@ -1,0 +1,14 @@
+.customize_overflow::-webkit-scrollbar{
+    width: 4px;
+}
+
+.customize_overflow::-webkit-scrollbar-thumb {
+    background: rgb(95, 90, 90);
+    border-radius: 5px;
+  }
+  
+  .customize_overflow::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  

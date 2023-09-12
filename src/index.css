@@ -7,8 +7,8 @@
   /* background-color: rgb(230, 221, 221); */
 }
 
-body{
-  /* background-color: rgb(219, 165, 71); */
+.accod{
+  width: 400px;
 }
 
 /* .container{
@@ -36,7 +36,9 @@ body{
   border: 1px solid black;
 }
 
-
+.cart{
+  width:352px
+}
   
 
 

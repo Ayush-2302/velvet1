@@ -7,8 +7,9 @@ function Calender() {
   }
 
   return (
+    
     <>
-      <div className="cal float-right h-80 w-96 ">
+      <div className="cal  float-right h-80 w-96 ">
         <Calendar onChange={onChange} value={date} />
         {date.toString()}
       </div>

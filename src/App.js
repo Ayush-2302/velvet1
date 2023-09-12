@@ -36,7 +36,8 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar mode={mode} toggleMode={toggleMode} />
+        <Navbar mode={mode} toggleMode={toggleMode}
+         />
         <div className="flex slide">
         <Velvet/>
         <div className="routs m-auto">
