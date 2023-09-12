@@ -260,12 +260,12 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-red-600" : ""
-          }  container pb-6 w-11/12 m-auto mt-3   rounded-xl h-auto border-2  border-gray-300`}
+          }  container pb-6 w-5/6 m-auto mt-3   rounded-xl h-auto border-2  border-gray-300`}
         >
           {open &&
             open.map((ele, index) => (
               <div
-                className={`accordian w-11/12  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300`}
+                className={`accordian  w-[450px]  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300`}
               >
                 <div
                   onClick={() => toggle(index)}
@@ -293,16 +293,16 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-green-600" : ""
-          } container pb-6 w-11/12 m-auto mt-3   rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-5/6 m-auto mt-3   rounded-xl h-auto border-2 border-gray-300`}
         >
           {open2 &&
             open2.map((ele, index) => (
               <div
-                className={` accordian w-11/12  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300`}
+                className={` accordian w-[450px]  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300`}
               >
                 <div
                   onClick={() => toggle2(index)}
-                  className="flex justify-between mr-5 ml-4"
+                  className="flex  justify-between mr-5 ml-4"
                 >
                   <h2 className=" lg:text-lg sm:text-sm md:text-sm  text-sm font-bold">
                     {" "}
@@ -356,13 +356,13 @@ function Accordian() {
         <div
           className={` ${
             open ? " text-yellow-500" : ""
-          } container pb-6 w-11/12 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-5/6 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open4 &&
             open4.map((ele, index) => (
               <div
                 onClick={() => toggle4(index)}
-                className="accordian w-11/12  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300"
+                className="accordian w-[450px]  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300"
               >
                 <div className="flex justify-between mr-5 ml-4">
                   <h2 className=" lg:text-lg sm:text-sm md:text-sm  text-sm font-bold">
@@ -386,13 +386,13 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-cyan-600" : ""
-          } container pb-6 w-11/12 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-5/6 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open5 &&
             open5.map((ele, index) => (
               <div
                 onClick={() => toggle5(index)}
-                className="accordian w-11/12  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300"
+                className="accordian w-[450px]  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300"
               >
                 <div className="flex justify-between mr-5 ml-4">
                   <h2 className=" lg:text-lg sm:text-sm md:text-sm  text-sm font-bold">
@@ -415,7 +415,7 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-purple-600" : ""
-          } container pb-6 w-11/12 m-auto mt-4 p-2 col-span-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-[85%] m-auto mt-4 p-2 col-span-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open6 &&
             open6.map((ele, index) => (
@@ -445,13 +445,13 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-green-600" : ""
-          } container pb-6 w-11/12 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-5/6 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open7 &&
             open7.map((ele, index) => (
               <div
                 onClick={() => toggle7(index)}
-                className="accordian w-11/12  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300"
+                className="accordian w-[450px]  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300"
               >
                 <div className="flex justify-between mr-5 ml-4">
                   <h2 className=" lg:text-lg sm:text-sm md:text-sm  text-sm font-bold">
@@ -474,13 +474,13 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-pink-600" : ""
-          } container pb-6 w-11/12 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-5/6 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open8 &&
             open8.map((ele, index) => (
               <div
                 onClick={() => toggle8(index)}
-                className="accordian w-11/12  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300"
+                className="accordian w-[450px]  m-auto mt-4 p-2    rounded-lg shadow-2xl  border-2 border-gray-300"
               >
                 <div className="flex justify-between mr-5 ml-4">
                   <h2 className=" lg:text-lg sm:text-sm md:text-sm  text-sm font-bold">
