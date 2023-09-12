@@ -11,7 +11,6 @@ function Velvet() {
   const [ui, setUI] = useState(false);
   const [page, setPage] = useState(false);
 
-
   // const { show, toggle } = useContext(sideContext);
 
   return (
@@ -26,24 +25,25 @@ function Velvet() {
           </div>
           <div className="px-2 pt-4 pb-8 border-r border-gray-300">
             <ul className="space-y-2">
-              <li className={`${dashboard? "bg-gray-200" : "" }` }>
+              <li className={`${dashboard ? "bg-gray-200" : ""}`}>
                 <div className={`cursor-pointer `}>
                   <div onClick={() => setDashboard(!dashboard)} className="">
-                  <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
-                    Dashbord
-                    <div className=" btn">»</div>
+                    <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
+                      Dashbord
+                      <div className=" btn">»</div>
+                    </div>
                   </div>
-                  </div>
-                  
                 </div>
 
                 <ul
                   className={`dropDash ${
-                    dashboard ? 'display opacity-100 scale-y-100 bg-gray-200 ' : 'h-[0px] opacity-0 scale-y-0'
+                    dashboard
+                      ? "display opacity-100 scale-y-100 bg-gray-200 "
+                      : "h-[0px] opacity-0 scale-y-0"
                   } ml-10  transform origin-top transition-opacity duration-300`}
                 >
-                  <li>
-                    <Link to="#"> - Scale</Link>
+                  <li className=" text-green-600">
+                    <Link to="/"> - Scale</Link>
                   </li>
                   <li>
                     <Link to="#"> - Crypto</Link>
@@ -60,23 +60,24 @@ function Velvet() {
                 </ul>
               </li>
 
-              <li className={`${ui? "bg-gray-200" : "" }` }>
+              <li className={`${ui ? "bg-gray-200" : ""}`}>
                 <div className="advanceui cursor-pointer ">
                   <div onClick={() => setUI(!ui)}>
-                  <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
-                    Advance Ui
-                    <div className=" btn">»</div>
+                    <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
+                      Advance Ui
+                      <div className=" btn">»</div>
+                    </div>
                   </div>
-                  </div>
-                  
                 </div>
                 <ul
                   className={`dropDash ${
-                    ui ? 'display opacity-100 scale-y-100 bg-gray-200 ' : 'h-[0px] opacity-0 scale-y-0'
+                    ui
+                      ? "display opacity-100 scale-y-100 bg-gray-200 "
+                      : "h-[0px] opacity-0 scale-y-0"
                   } ml-10  transform origin-top transition-opacity duration-300`}
                 >
-                  <li>
-                    <Link to="accordian"> - Accordians & Collapse </Link>
+                  <li className=" text-green-600">
+                    <Link to=" accordian"> - Accordians & Collapse </Link>
                   </li>
                   <li>
                     <Link to="#"> - Carousel </Link>
@@ -98,22 +99,23 @@ function Velvet() {
                   </li>
                 </ul>
               </li>
-              <li className={`${page? "bg-gray-200" : "" }` }>
+              <li className={`${page ? "bg-gray-200" : ""}`}>
                 <div className="page cursor-pointer ">
                   <div onClick={() => setPage(!page)}>
-                  <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
-                    Page
-                    <div className=" btn">»</div>
-                  </div>
-                 
+                    <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
+                      Page
+                      <div className=" btn">»</div>
+                    </div>
                   </div>
 
                   <div className="pagDrop ml-10">
-                  <ul
-                  className={`dropDash ${
-                    page ? 'display opacity-100 scale-y-100 bg-gray-200 ' : 'h-[0px] opacity-0 scale-y-0'
-                  } ml-10  transform origin-top transition-opacity duration-300`}
-                >
+                    <ul
+                      className={`dropDash ${
+                        page
+                          ? "display opacity-100 scale-y-100 bg-gray-200 "
+                          : "h-[0px] opacity-0 scale-y-0"
+                      } ml-10  transform origin-top transition-opacity duration-300`}
+                    >
                       <li>
                         <Link to="#"> - Blog</Link>
                       </li>
@@ -166,8 +168,10 @@ function Velvet() {
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex  justify-between items-center text-red-500
-                 py-1.5 px-4 rounded space-x-2 cursor-pointer">
+                <div
+                  className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex  justify-between items-center text-red-500
+                 py-1.5 px-4 rounded space-x-2 cursor-pointer"
+                >
                   <span>Icons</span>
                   <span className="   text-red-500 font-bold px-2 py-0.5 text-xs rounded-lg">
                     »

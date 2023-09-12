@@ -260,7 +260,7 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-red-600" : ""
-          }  container pb-6 w-96 m-auto mt-3   rounded-xl h-auto border-2  border-gray-300`}
+          }  container pb-6 w-11/12 m-auto mt-3   rounded-xl h-auto border-2  border-gray-300`}
         >
           {open &&
             open.map((ele, index) => (
@@ -293,7 +293,7 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-green-600" : ""
-          } container pb-6 w-96 m-auto mt-3   rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-11/12 m-auto mt-3   rounded-xl h-auto border-2 border-gray-300`}
         >
           {open2 &&
             open2.map((ele, index) => (
@@ -326,7 +326,7 @@ function Accordian() {
         <div
           className={` ${
             open ? " text-orange-600" : ""
-          } container pb-6 w-96 m-auto mt-4 p-2 grid col-span-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-[85%] m-auto mt-4 p-2 grid col-span-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open3 &&
             open3.map((ele, index) => (
@@ -356,7 +356,7 @@ function Accordian() {
         <div
           className={` ${
             open ? " text-yellow-500" : ""
-          } container pb-6 w-96 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-11/12 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open4 &&
             open4.map((ele, index) => (
@@ -386,7 +386,7 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-cyan-600" : ""
-          } container pb-6 w-96 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-11/12 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open5 &&
             open5.map((ele, index) => (
@@ -415,7 +415,7 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-purple-600" : ""
-          } container pb-6 w-96 m-auto mt-4 p-2 col-span-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-11/12 m-auto mt-4 p-2 col-span-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open6 &&
             open6.map((ele, index) => (
@@ -445,7 +445,7 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-green-600" : ""
-          } container pb-6 w-96 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-11/12 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open7 &&
             open7.map((ele, index) => (
@@ -474,7 +474,7 @@ function Accordian() {
         <div
           className={`  ${
             open ? " text-pink-600" : ""
-          } container pb-6 w-96 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
+          } container pb-6 w-11/12 m-auto mt-4 p-2 mb-4 rounded-xl h-auto border-2 border-gray-300`}
         >
           {open8 &&
             open8.map((ele, index) => (
@@ -501,8 +501,8 @@ function Accordian() {
             ))}
         </div>
 
-        <div className="endline w-96 h-4 rounded-2xl border-2 border-gray-200 shadow-inner mb-5 ml-6"></div>
-        <div className="endline w-96 h-4 rounded-2xl border-2 border-gray-200 shadow-inner mb-5 ml-6"></div>
+        <div className="endline w-11/12 h-4 rounded-2xl border-2 border-gray-200 shadow-inner mb-5 ml-6"></div>
+        <div className="endline w-11/12 h-4 rounded-2xl border-2 border-gray-200 shadow-inner mb-5 ml-6"></div>
       </div>
     </>
   );

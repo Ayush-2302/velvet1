@@ -217,7 +217,7 @@ function Navbar(props) {
                     className="bg-slate-100 flex hover:bg-blue-200 w-fit p-1 rounded-2xl "
                   >
                     <img src={profile} alt="" className="  rounded-full w-8" />
-                    <p className=" text-black">Harry John's</p>
+                    <p className="bg-slate-100 rounded-2xl text-black">Harry John's</p>
                   </button>
                 </Link>
               </li>
@@ -229,7 +229,7 @@ function Navbar(props) {
                   } py-1 text-sm   text-black-700 absolute -translate-x-36 translate-y-6 border-2 border-gray-100  px-4   shadow-inner bg-white`}
                 >
                   <div className="ml-2 text-lg text-black">
-                    <li className=" hover:bg-gray-200 ">
+                    <li className=" text-green-600 hover:bg-gray-200 ">
                       <Link to="profile"> Profile </Link>
                     </li>
                     <hr />
