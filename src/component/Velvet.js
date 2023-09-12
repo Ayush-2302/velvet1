@@ -77,7 +77,7 @@ function Velvet() {
                   } ml-10  transform origin-top transition-opacity duration-300`}
                 >
                   <li className=" text-green-600">
-                    <Link to=" accordian"> - Accordians & Collapse </Link>
+                    <Link to="accordian"> - Accordians & Collapse </Link>
                   </li>
                   <li>
                     <Link to="#"> - Carousel </Link>
