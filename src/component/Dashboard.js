@@ -7,7 +7,7 @@ import cart from "../asserts/images/cart.png";
       <div className="dashboard mt-1 text-3xl ml-10 mr-10 flex justify-between">
         Dashboard <p className=" text-sm m-3">Dashbord » scale</p>
       </div>
-      <div className=" boxes mr-12 grid lg:grid-cols-5 md:grid-cols-3 xl:gap-8 sm:grid-cols-2 grid-cols-2 ">
+      <div className=" boxes mr-12 grid lg:grid-cols-5 md:grid-cols-3 xl:gap-8 sm:grid-cols-1 grid-cols-1 ">
         <div className="box box1">
           <span className=" flex justify-between">
             Total sale  <div className=" w-10 bg-red-500 pl-1 rounded-lg"> <img src={cart} alt="img" className=" w-5 m-1 " /></div>

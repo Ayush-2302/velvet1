@@ -100,45 +100,45 @@ function Body() {
           </div>
           <hr className=" m-2" />
 
-          <table>
-            <thead>
-              <tr>
+          <table className=" w-11/12 m-auto ">
+            <thead className=" ">
+              <tr className="top flex justify-between" >
                 <th>Country</th>
-                <th className=" pl-4"> Scale </th>
-                <th className=" pl-6"> Bounce</th>
+                <th > Scale </th>
+                <th > Bounce</th>
               </tr>
             </thead>
             <hr className=" m-5" />
-            <tbody>
-              <tr>
-                <td className=" pl-3">Canada</td>
-                <td className=" pl-6">2500</td>
-                <td className=" pl-8 text-green-500">24%</td>
+            <tbody >
+              <tr  className="top flex justify-between">
+                <td >Canada</td>
+                <td >2500</td>
+                <td className=" text-green-500">24%</td>
               </tr>
               <hr className=" m-5" />
 
-              <tr>
-                <td className=" m-3 pl-3">Germany</td>
-                <td className=" pl-6">846</td>
-                <td className=" pl-8 text-red-500">22.33%</td>
+              <tr className="top flex justify-between">
+                <td className=" ">Germany</td>
+                <td >846</td>
+                <td className=" text-red-500">22.33%</td>
               </tr>
               <hr className=" m-5" />
-              <tr>
-                <td className=" m-3 pl-3">Mexico</td>
-                <td className=" pl-6">1024</td>
-                <td className=" pl-8 text-red-500">14.8%</td>
+              <tr className="top flex justify-between">
+                <td >Mexico</td>
+                <td >1024</td>
+                <td className="  text-red-500">14.8%</td>
               </tr>
               <hr className=" m-5" />
-              <tr>
-                <td className=" m-3 pl-3">Russia</td>
-                <td className=" pl-6">482</td>
-                <td className=" pl-8 text-green-500">05.8%</td>
+              <tr className="top flex justify-between">
+                <td >Russia</td>
+                <td >482</td>
+                <td className="  text-green-500">05.8%</td>
               </tr>
               <hr className=" m-5" />
-              <tr>
-                <td className=" m-3 pl-3">U.S.A</td>
-                <td className=" pl-6">1410</td>
-                <td className=" pl-8 text-red-500">13.08%</td>
+              <tr className="top flex justify-between">
+                <td>U.S.A</td>
+                <td >1410</td>
+                <td className=" text-red-500">13.08%</td>
               </tr>
             </tbody>
           </table>
@@ -146,30 +146,30 @@ function Body() {
 
         {/* second row second card */}
 
-        <div className="card card5 grow  ">
+        <div className="card card5 grow w-11/12  ">
           <div className="top flex justify-between">
             <h1 className=" text-2xl font-bold">Top Selling Products </h1>
             <button className="w-4 bg-blue-100 rounded p-1">:</button>
           </div>
           <hr className=" m-2" />
-          <table>
+          <table className="  w-11/12 m-auto ">
             <thead>
-              <tr>
+              <tr className="break-words flex justify-between ">
                 <th>Product Name</th>
-                <th className=" pl-14"> Stock </th>
-                <th className=" pl-5"> price</th>
-                <th className=" pl-5"> Sold</th>
-                <th className=" pl-10"> Action</th>
+                <th > Stock </th>
+                <th> price</th>
+                <th> Sold</th>
+                <th > Action</th>
               </tr>
             </thead>
             <hr className=" m-5" />
             <tbody className=" text-sm">
-              <tr>
-                <td className=" text-sm pl-5">Sports Shoes For Men</td>
-                <td className=" pl-20 text-green-500">in Stocks</td>
-                <td className=" pl-5 ">$73.800</td>
-                <td className=" pl-5 ">1534</td>
-                <td className=" pl-5 ">
+              <tr className=" break-words flex justify-between ">
+                <td className=" text-sm">Sports Shoes For Men</td>
+                <td className="  text-green-500">in Stocks</td>
+                <td >$73.800</td>
+                <td >1534</td>
+                <td className=" flex " >
                   {" "}
                   <button className=" hover:bg-blue-200  w-8 p-1 bg-blue-100 rounded">
                     🖋️
@@ -180,12 +180,12 @@ function Body() {
                 </td>
               </tr>
               <hr className="m-2 " />
-              <tr>
-                <td className=" text-sm pl-5">Beautiful flower frame </td>
-                <td className=" pl-20 text-blue-400">Few-left</td>
-                <td className=" pl-5 ">$73.800</td>
-                <td className=" pl-5 ">4987</td>
-                <td className=" pl-5 ">
+              <tr className="break-words flex justify-between ">
+                <td >Beautiful flower frame </td>
+                <td className=" text-blue-400">Few-left</td>
+                <td >$73.800</td>
+                <td >4987</td>
+                <td className="flex">
                   <button className=" hover:bg-blue-200  w-8 p-1 bg-blue-100 rounded">
                     🖋️
                   </button>
@@ -195,12 +195,12 @@ function Body() {
                 </td>
               </tr>
               <hr className="m-2 " />
-              <tr>
-                <td className=" text-sm pl-5">Small alarm Watch </td>
-                <td className=" pl-20 text-red-500">Out of stock</td>
-                <td className=" pl-5 ">$13.800</td>
-                <td className=" pl-5 ">87875</td>
-                <td className=" pl-5 ">
+              <tr className="break-words flex justify-between">
+                <td >Small alarm Watch </td>
+                <td className="  text-red-500">Out of stock</td>
+                <td >$13.800</td>
+                <td >87875</td>
+                <td className=" flex">
                   <button className=" hover:bg-blue-200  w-8 p-1 bg-blue-100 rounded">
                     🖋️
                   </button>
@@ -210,12 +210,12 @@ function Body() {
                 </td>
               </tr>
               <hr className="m-2 " />
-              <tr>
-                <td className=" text-sm pl-5">Smart Phone </td>
-                <td className=" pl-20 text-green-500">In-Stock</td>
-                <td className=" pl-5 ">$14.600</td>
-                <td className=" pl-5 ">87875</td>
-                <td className=" pl-5 ">
+              <tr className="break-words flex justify-between ">
+                <td > New Smart Phone </td>
+                <td className="  text-green-500">In-Stock</td>
+                <td >$14.600</td>
+                <td >87875</td>
+                <td className="flex ">
                   <button className=" hover:bg-blue-200  w-8 p-1 bg-blue-100 rounded">
                     🖋️
                   </button>
@@ -225,12 +225,12 @@ function Body() {
                 </td>
               </tr>
               <hr className="m-2 " />
-              <tr>
-                <td className=" text-sm pl-5">Black Colord camera </td>
-                <td className=" pl-20 text-green-500">In-Stock</td>
-                <td className=" pl-5 ">$23.800</td>
-                <td className=" pl-5 ">4087</td>
-                <td className=" pl-5 ">
+              <tr className="break-words flex justify-between ">
+                <td >Black Colord camera </td>
+                <td className="  text-green-500">In-Stock</td>
+                <td >$23.800</td>
+                <td >4087</td>
+                <td className="flex">
                   <button className=" hover:bg-blue-200  w-8 p-1 bg-blue-100 rounded">
                     🖋️
                   </button>
@@ -291,7 +291,7 @@ function Body() {
 
         {/* third row first card */}
 
-        <div className="card card7">
+        <div className="card card7 ">
           <div className="top flex justify-between">
             <h1 className=" text-xl font-bold">Transaction History </h1>
             <button className="w-fit bg-blue-200 rounded-2xl p-1">
@@ -339,37 +339,37 @@ function Body() {
 
       {/* Third row second card */}
 
-      <div className="card card8 grow  md:w-fit sm:w-fit ">
+      <div className="card card8 grow sm:w-fit lg:w-11/12 w-fit ">
         <div className="top flex  sm:grow-2 justify-between">
           <h1 className=" text-2xl font-bold">Top Selling Products </h1>
           <button className="w-6 bg-blue-100 rounded p-2">:</button>
         </div>
         <hr className=" m-1" />
-        <table>
-          <thead className=" flex-shrink">
-            <tr>
-              <th className=" pl-5"> S.NO</th>
-              <th className=" pl-10">Customer Name</th>
-              <th className=" pl-16">Order ID</th>
-              <th className=" pl-8">Order Date</th>
-              <th className=" pl-5"> price</th>
-              <th className=" pl-5"> Status</th>
-              <th className=" pl-10"> Action</th>
+        <table className=" w-11/12 m-auto">
+          <thead>
+            <tr className="  flex justify-between break-words space-x-4 grow   ">
+              <th> S.NO</th>
+              <th>Customer Name</th>
+              <th>Order ID</th>
+              <th>Order Date</th>
+              <th> price</th>
+              <th> Status</th>
+              <th className=" "> Action</th>
             </tr>
           </thead>
           <hr className=" m-5" />
           <tbody className=" text-sm">
-            <tr>
-              <td className=" pl-8">01</td>
-              <td className=" text-sm pl-16">
+            <tr className="flex justify-between pl-5  break-word ">
+              <td>01</td>
+              <td>
                 Patty Furniture <br />
                 patty@gmail.com
               </td>
-              <td className=" pl-20 text-blue-400">#123dfk</td>
-              <td className=" pl-10 ">01 Apr 2022</td>
-              <td className=" pl-10 ">$73.800</td>
-              <td className=" pl-8 text-green-500">Delivered</td>
-              <td className=" pl-8 ">
+              <td className="  text-blue-400">#123dfk</td>
+              <td>01 Apr 2022</td>
+              <td>$73.800</td>
+              <td className="  text-green-500">Delivered</td>
+              <td className="  flex   ">
                 {" "}
                 <button className=" hover:bg-blue-200  w-8 p-1 bg-blue-100 rounded">
                   🖋️
@@ -379,18 +379,18 @@ function Body() {
                 </button>
               </td>
             </tr>
-            <hr className="m-2 " />
-            <tr>
-              <td className=" pl-8">02</td>
-              <td className=" text-sm pl-16">
+            <hr className="mt-2 " />
+            <tr className="flex justify-between pl-5  break-word ">
+              <td >02</td>
+              <td >
                 Allie Grate <br />
                 allie@spuko.com
               </td>
-              <td className=" pl-20 text-blue-400">#123df2</td>
-              <td className=" pl-10 ">02 Apr 2022</td>
-              <td className=" pl-10 ">$13.800</td>
-              <td className=" pl-8 text-green-500">Delivered</td>
-              <td className=" pl-8 ">
+              <td className="  text-blue-400">#123df2</td>
+              <td >02 Apr 2022</td>
+              <td >$13.800</td>
+              <td className=" text-green-500">Delivered</td>
+              <td className=" flex ">
                 {" "}
                 <button className=" hover:bg-blue-200  w-8 p-1 bg-blue-100 rounded">
                   🖋️
@@ -401,17 +401,17 @@ function Body() {
               </td>
             </tr>
             <hr className="m-2 " />
-            <tr>
-              <td className=" pl-8">03</td>
-              <td className=" text-sm pl-16">
+            <tr className="flex justify-between pl-5  break-word ">
+              <td >03</td>
+              <td >
                 Peg Legge <br />
                 pegy@spuko.com
               </td>
-              <td className=" pl-20 text-blue-400">#123d5fk</td>
-              <td className=" pl-10 ">24 mar 2022</td>
-              <td className=" pl-10 ">$37.800</td>
-              <td className=" pl-8 text-red-500">cancelled</td>
-              <td className=" pl-8 ">
+              <td className="  text-blue-400">#123d5fk</td>
+              <td >24 mar 2022</td>
+              <td >$37.800</td>
+              <td className=" text-red-500">cancelled</td>
+              <td className=" flex ">
                 {" "}
                 <button className=" hover:bg-blue-200  w-8 p-1 bg-blue-100 rounded">
                   🖋️
@@ -420,19 +420,19 @@ function Body() {
                   🔆
                 </button>
               </td>
-            </tr>
+            </tr >
             <hr className="m-2 " />
-            <tr>
-              <td className=" pl-8">01</td>
-              <td className=" text-sm pl-16">
+            <tr className="flex justify-between pl-5  break-word ">
+              <td>04</td>
+              <td >
                 Maureen Biologist <br />
                 maureen@gmail.com
               </td>
-              <td className=" pl-20 text-blue-400">#124dfk</td>
-              <td className=" pl-10 ">24 Mar 2022</td>
-              <td className=" pl-10 ">$33.800</td>
-              <td className=" pl-8 text-blue-500">pending</td>
-              <td className=" pl-8 ">
+              <td className="  text-blue-400">#124dfk</td>
+              <td >24 Mar 2022</td>
+              <td >$33.800</td>
+              <td className=" text-blue-500">pending</td>
+              <td className=" flex ">
                 {" "}
                 <button className=" hover:bg-blue-200  w-8 p-1 bg-blue-100 rounded">
                   🖋️
@@ -443,17 +443,17 @@ function Body() {
               </td>
             </tr>
             <hr className="m-2 " />
-            <tr>
-              <td className=" pl-8">01</td>
-              <td className=" text-sm pl-16">
+            <tr className="flex justify-between pl-5  break-word ">
+              <td >05</td>
+              <td>
                 olive Yew <br />
                 patty@gmail.com
               </td>
-              <td className=" pl-20 text-blue-400">#123f4gk</td>
-              <td className=" pl-10 ">20 Mar 2022</td>
-              <td className=" pl-10 ">$720.800</td>
-              <td className=" pl-8 text-yellow-500">Shipped</td>
-              <td className=" pl-8 ">
+              <td className="  text-blue-400">#123f4gk</td>
+              <td >20 Mar 2022</td>
+              <td >$720.800</td>
+              <td className=" text-yellow-500">Shipped</td>
+              <td className="  flex">
                 {" "}
                 <button className=" hover:bg-blue-200  w-8 p-1 bg-blue-100 rounded">
                   🖋️
