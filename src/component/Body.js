@@ -146,15 +146,15 @@ function Body() {
 
         {/* second row second card */}
 
-        <div className="card card5 grow w-11/12  ">
+        <div className="card card5 grow overflow-x-scroll  ">
           <div className="top flex justify-between">
             <h1 className=" text-2xl font-bold">Top Selling Products </h1>
             <button className="w-4 bg-blue-100 rounded p-1">:</button>
           </div>
           <hr className=" m-2" />
-          <table className="  w-11/12 m-auto ">
+          <table className=" w-[95%]  m-auto ">
             <thead>
-              <tr className="break-words flex justify-between ">
+              <tr className="break-words space-x-5 flex justify-between ">
                 <th>Product Name</th>
                 <th > Stock </th>
                 <th> price</th>
@@ -164,7 +164,7 @@ function Body() {
             </thead>
             <hr className=" m-5" />
             <tbody className=" text-sm">
-              <tr className=" break-words flex justify-between ">
+              <tr className=" break-words space-x-5 flex justify-between ">
                 <td className=" text-sm">Sports Shoes For Men</td>
                 <td className="  text-green-500">in Stocks</td>
                 <td >$73.800</td>
@@ -180,7 +180,7 @@ function Body() {
                 </td>
               </tr>
               <hr className="m-2 " />
-              <tr className="break-words flex justify-between ">
+              <tr className="break-words space-x-5 flex justify-between ">
                 <td >Beautiful flower frame </td>
                 <td className=" text-blue-400">Few-left</td>
                 <td >$73.800</td>
@@ -195,7 +195,7 @@ function Body() {
                 </td>
               </tr>
               <hr className="m-2 " />
-              <tr className="break-words flex justify-between">
+              <tr className="break-words space-x-5 flex justify-between">
                 <td >Small alarm Watch </td>
                 <td className="  text-red-500">Out of stock</td>
                 <td >$13.800</td>
@@ -210,7 +210,7 @@ function Body() {
                 </td>
               </tr>
               <hr className="m-2 " />
-              <tr className="break-words flex justify-between ">
+              <tr className="break-words space-x-5 flex justify-between ">
                 <td > New Smart Phone </td>
                 <td className="  text-green-500">In-Stock</td>
                 <td >$14.600</td>
@@ -225,7 +225,7 @@ function Body() {
                 </td>
               </tr>
               <hr className="m-2 " />
-              <tr className="break-words flex justify-between ">
+              <tr className="break-words space-x-5 flex justify-between ">
                 <td >Black Colord camera </td>
                 <td className="  text-green-500">In-Stock</td>
                 <td >$23.800</td>
@@ -291,7 +291,7 @@ function Body() {
 
         {/* third row first card */}
 
-        <div className="card card7 ">
+        <div className="card card7 sm:w-11/12 ">
           <div className="top flex justify-between">
             <h1 className=" text-xl font-bold">Transaction History </h1>
             <button className="w-fit bg-blue-200 rounded-2xl p-1">
@@ -339,15 +339,15 @@ function Body() {
 
       {/* Third row second card */}
 
-      <div className="card card8 grow sm:w-fit lg:w-11/12 w-fit ">
+      <div className="card card8 grow  overflow-x-scroll">
         <div className="top flex  sm:grow-2 justify-between">
           <h1 className=" text-2xl font-bold">Top Selling Products </h1>
           <button className="w-6 bg-blue-100 rounded p-2">:</button>
         </div>
         <hr className=" m-1" />
-        <table className=" w-11/12 m-auto">
+        <table className=" w-11/12 m-auto ">
           <thead>
-            <tr className="  flex justify-between break-words space-x-4 grow   ">
+            <tr className="  flex justify-between break-words space-x-5 grow   ">
               <th> S.NO</th>
               <th>Customer Name</th>
               <th>Order ID</th>
@@ -359,7 +359,7 @@ function Body() {
           </thead>
           <hr className=" m-5" />
           <tbody className=" text-sm">
-            <tr className="flex justify-between pl-5  break-word ">
+            <tr className="flex justify-between space-x-5 break-word ">
               <td>01</td>
               <td>
                 Patty Furniture <br />
@@ -380,7 +380,7 @@ function Body() {
               </td>
             </tr>
             <hr className="mt-2 " />
-            <tr className="flex justify-between pl-5  break-word ">
+            <tr className="flex justify-between space-x-5  break-word ">
               <td >02</td>
               <td >
                 Allie Grate <br />
@@ -401,7 +401,7 @@ function Body() {
               </td>
             </tr>
             <hr className="m-2 " />
-            <tr className="flex justify-between pl-5  break-word ">
+            <tr className="flex justify-between space-x-5 break-word ">
               <td >03</td>
               <td >
                 Peg Legge <br />
@@ -422,11 +422,11 @@ function Body() {
               </td>
             </tr >
             <hr className="m-2 " />
-            <tr className="flex justify-between pl-5  break-word ">
+            <tr className="flex justify-between space-x-5  break-word ">
               <td>04</td>
               <td >
                 Maureen Biologist <br />
-                maureen@gmail.com
+                maure@gmail.com
               </td>
               <td className="  text-blue-400">#124dfk</td>
               <td >24 Mar 2022</td>
@@ -443,14 +443,14 @@ function Body() {
               </td>
             </tr>
             <hr className="m-2 " />
-            <tr className="flex justify-between pl-5  break-word ">
+            <tr className="flex justify-between space-x-5 break-word ">
               <td >05</td>
               <td>
                 olive Yew <br />
-                patty@gmail.com
+                yewo@gmail.com
               </td>
               <td className="  text-blue-400">#123f4gk</td>
-              <td >20 Mar 2022</td>
+              <td>20 Mar 2022</td>
               <td >$720.800</td>
               <td className=" text-yellow-500">Shipped</td>
               <td className="  flex">
