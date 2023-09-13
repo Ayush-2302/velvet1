@@ -16,14 +16,16 @@
 } */
 
 .box {
-  padding: 12px;
+  padding: 6px 8px 0px 8px;
   margin-top: 36px;
   margin-left: 48px;
-  height: 127px;
-  width: 90%;
+  height: 121px;
+  width: 215.3px;
+  min-height: auto;
+  min-width: auto;
   border-radius: 10px;
   border: 1px solid black;
-  box-shadow: 0px -12px rgb(216, 207, 207);
+  box-shadow: 0px  -12px rgb(236, 234, 234);
 }
 .card {
   margin-right: 20px;

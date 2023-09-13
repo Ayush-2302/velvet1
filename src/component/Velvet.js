@@ -72,7 +72,7 @@ function Velvet() {
                 <ul
                   className={`dropDash ${
                     ui
-                      ? "display opacity-100 scale-y-100 bg-gray-200 "
+                      ? "display opacity-100 scale-y-100 bg-gray-2~00 "
                       : "h-[0px] opacity-0 scale-y-0"
                   } ml-10  transform origin-top transition-opacity duration-300`}
                 >

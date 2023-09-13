@@ -339,14 +339,14 @@ function Body() {
 
       {/* Third row second card */}
 
-      <div className="card card8 grow  ">
-        <div className="top flex sm:grow-2 justify-between">
+      <div className="card card8 grow  md:w-fit sm:w-fit ">
+        <div className="top flex  sm:grow-2 justify-between">
           <h1 className=" text-2xl font-bold">Top Selling Products </h1>
           <button className="w-6 bg-blue-100 rounded p-2">:</button>
         </div>
         <hr className=" m-1" />
         <table>
-          <thead>
+          <thead className=" flex-shrink">
             <tr>
               <th className=" pl-5"> S.NO</th>
               <th className=" pl-10">Customer Name</th>
