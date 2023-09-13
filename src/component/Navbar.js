@@ -68,14 +68,14 @@ function Navbar(props) {
         </div>
        */}
 
-      <div className="navbar ">
+      <div className="navbar bg-blue-600 ">
         <nav
-          className={` pl-3 pb-3 mt-5 static flex sm:shrink lg:justify-between md:justify-around sm:justify-evenly  pr-4 ${
+          className={` pl-3 pb-3  static flex  lg:justify-between md:justify-around sm:justify-evenly  pr-4 ${
             props.mode === "light" ? "dark" : "light"
           }`}
         >
-          <div className="search flex ">
-            <div className="btn space-y-1 m-4">
+          <div className="search flex flex-wrap  m-2 mt-3">
+            <div className="btn space-y-1 m-3">
               <div className="l1 w-8 h-1 bg-black"></div>
               <div className="l2 w-8 h-1 bg-black"></div>
               <div className="l3 w-8 h-1 bg-black"></div>
@@ -86,15 +86,15 @@ function Navbar(props) {
               type="search"
               id="search"
               placeholder="Search for result"
-              className=" h-12  rounded-2xl w-fit border-2 pl-2"
+              className=" h-10  rounded-2xl w-fit border-2 pl-2"
             />
-            <button className="   bg-slate-100 ml-2 p-1 hover:bg-blue-200   rounded-2xl">
-              <img src={Search} alt="" className="  w-6 p2 rounded-lg " />
+            <button className=" ">
+              <img src={Search} alt="" className="  w-6 ml-1   mb-2 h-7 rounded " />
             </button>
           </div>
-          <div className="icons  flex md:shrink sm:shrink  ">
-            <ul className=" flex space-x-5 justify-center items-center m-auto text-lg pr-2">
-              <div className="lang">
+          <div className="icons   ">
+            <ul className=" flex  items-center  text-lg space-x-2 space-y-2 flex-wrap m-2">
+              <div className="lang mt-2">
                 <li>
                   <Link to="#">
                     <button

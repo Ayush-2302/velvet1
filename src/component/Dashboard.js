@@ -1,5 +1,6 @@
 import React from "react";
 import cart from "../asserts/images/cart.png";
+// import "./index.css"
 
  function Dashboard  ()  {
   return (
@@ -7,7 +8,7 @@ import cart from "../asserts/images/cart.png";
       <div className="dashboard mt-1 text-3xl ml-10 mr-10 flex justify-between">
         Dashboard <p className=" text-sm m-3">Dashbord » scale</p>
       </div>
-      <div className=" boxes mr-12 grid lg:grid-cols-5 md:grid-cols-3 xl:gap-8 sm:grid-cols-1 grid-cols-1 ">
+      <div className=" boxes    ">
         <div className="box box1">
           <span className=" flex justify-between">
             Total sale  <div className=" w-10 bg-red-500 pl-1 rounded-lg"> <img src={cart} alt="img" className=" w-5 m-1 " /></div>
@@ -38,7 +39,7 @@ import cart from "../asserts/images/cart.png";
             <p className=" underline">view more</p>
           </p>
         </div>
-        <div className="box md:w-64 box4">
+        <div className="box  box4">
           <span className=" flex justify-between">
             Total sale <div className=" w-10 bg-green-400 pl-1 rounded-lg"> <img src={cart} alt="img" className=" w-5 m-1 " /></div>
           </span>
@@ -48,7 +49,7 @@ import cart from "../asserts/images/cart.png";
             <p className=" underline">view more</p>
           </p>
         </div>
-        <div className="box md:w-64 md:ml-24 sm:w-full  box5">
+        <div className="box  box5">
           <span className=" flex justify-between">
             Total sale <div className=" w-10 bg-red-500 pl-1 rounded-lg"> <img src={cart} alt="img" className=" w-5 m-1 " /></div>
           </span>

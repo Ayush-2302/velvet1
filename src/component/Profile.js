@@ -13,7 +13,7 @@ function Profile() {
         </p>
       </div>
 
-      <div className="pr-container flex justify-between w-11/12 shadow-inner border-2 m-auto border-gray-300 mt-10">
+      <div className="pr-container flex flex-wrap text-sm justify-between w-11/12 shadow-inner border-2 m-auto border-gray-300 mt-10">
         <div className="info flex space-x-3">
           <img
             src={pic}
@@ -26,23 +26,28 @@ function Profile() {
             <p>Gergia , Washington D.C </p>
           </span>
         </div>
-        <div className="no flex m-7 space-x-5">
+        <div className="flex flex-wrap">
+        <div className="no flex  m-7 space-x-5">
           <p className="projets">
-            <p className=" font-bold text-2xl">113</p>
+            <p className=" font-bold md:text-lg lg:text-2xl">113</p>
             <p>Porjects</p>
           </p>
           <p className="Followers">
-            <p className=" font-bold text-2xl">12.2K</p>
+            <p className=" font-bold md:text-lg lg:text-2xl">12.2K</p>
             <p>Followers</p>
           </p>
           <p className="Folling">
-            <p className=" font-bold text-2xl"> 20k</p>
+            <p className=" font-bold md:text-lg lg:text-2xl"> 20k</p>
             <p>Following</p>
           </p>
-          <button className=" border-2 p-3 border-gray-400 rounded-xl shadow-inner  text-white  bg-blue-400 ">
+        </div>
+        <div className="btn m-7">
+          <button className=" border-2 p-3  border-gray-400 rounded-xl shadow-inner  text-white  bg-blue-400 ">
             + Follow
           </button>
-        </div>
+          </div>
+          </div>
+          
       </div>
 
       <div className=" w-11/12 shadow-inner border-2 m-auto border-gray-300 mt-10">
@@ -67,7 +72,7 @@ function Profile() {
           </p>
           <p>
             <span className=" font-bold m-2">Email :</span>
-            <span className=" text-sm">sonyataylor@gmail.com</span>
+            <span className=" text-sm">sonylor@gmail.com</span>
           </p>
           <p>
             <span className=" font-bold m-2">Phone :</span>
@@ -138,18 +143,18 @@ function Profile() {
           </div>
         </div>
       </div>
-      <div className=" ml-16 w-11/12 h-20 shadow-inner mt-10 border-gray-300 space-x-8 mb-6 border-2 ">
-        <div className=" space-x-16">
-        <button className=" ml-16  mt-4 w-36  rounded-2xl p-2 bg-violet-500 hover:bg-violet-600"> Activity </button>
-        <button className=" rounded-2xl p-2 w-36 bg-violet-500 hover:bg-violet-600"> Activity </button>
-        <button className=" rounded-2xl p-2 w-36 bg-violet-500 hover:bg-violet-600"> Activity </button>
-        <button className=" rounded-2xl p-2 w-36 bg-violet-500 hover:bg-violet-600"> Activity </button>
-      </div>
+      <div className=" ml-7 w-11/12 flex flex-wrap justify-around  h-auto p-5 space-y-2 shadow-inner mt-10 border-gray-300  mb-6 border-2 ">
+       
+        <button className=" rounded-2xl p-1 h-12 m-auto w-36 bg-violet-500 hover:bg-violet-600"> Activity </button>
+        <button className=" rounded-2xl p-1 h-12 m-auto w-36 bg-violet-500 hover:bg-violet-600"> Activity </button>
+        <button className=" rounded-2xl p-1 h-12 m-auto w-36 bg-violet-500 hover:bg-violet-600"> Activity </button>
+        <button className=" rounded-2xl p-1 h-12 m-auto w-36 bg-violet-500 hover:bg-violet-600"> Activity </button>
+    
       </div>
 
-      <div className="stack w-11/12 mb-10 shadow-inner ml-16 ">
+      <div className="stack w-11/12 mb-10 shadow-inner ml-7 ">
 
-      <ul role="list" class="divide-y divide-gray-100">
+      <ul  class="divide-y divide-gray-100">
   <li class="flex justify-between gap-x-6 py-5">
     <div class="flex min-w-0 gap-x-4">
       <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
