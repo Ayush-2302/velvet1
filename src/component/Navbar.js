@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import Search from "../asserts/images/search.png";
 import profile from "../asserts/images/w7.png";
-import cart1 from "../asserts/images/cart.png";
-import images from "../asserts/images/images.png";
-import language from "../asserts/images/lang.jpg";
-import mode from "../asserts/images/mode.png";
-import notification from "../asserts/images/notification.png";
-import setting from "../asserts/images/sett.jpg";
-import zoom from "../asserts/images/zoom.png";
 import { Link } from "react-router-dom";
 import CalNoti from "./CalNoti";
 import Notification from "./Notification";
 import Dropdowncart from "./Dropdowncart";
-
+import "bootstrap-icons/font/bootstrap-icons.css";
+// import { FaBeer } from 'react-icons/fa';
+// import { FaBeer } from "react-icons/fa";
+import { FaSearch, FaHome } from "react-icons/fa";
 
 function Navbar(props) {
   const darkMode = () => {
@@ -68,43 +63,39 @@ function Navbar(props) {
         </div>
        */}
 
-      <div className="navbar bg-blue-600 ">
-        <nav
-          className={` pl-3 pb-3  static flex  lg:justify-between md:justify-around sm:justify-evenly  pr-4 ${
-            props.mode === "light" ? "dark" : "light"
-          }`}
-        >
-          <div className="search flex flex-wrap  m-2 mt-3">
-            <div className="btn space-y-1 m-3">
-              <div className="l1 w-8 h-1 bg-black"></div>
-              <div className="l2 w-8 h-1 bg-black"></div>
-              <div className="l3 w-8 h-1 bg-black"></div>
+      <nav
+        className={`fix bg-violet-600 flex text-white h-[63px] border-2 border-b-gray-400  border-t-gray-400  ${
+          props.mode === "light" ? "dark" : "light"
+        }`}
+      >
+        <div className="container ml-20  flex items-center h-16  justify-between">
+          <div className="hidden sm:block">
+            <div className="flex items-center space-x-2">
+              <Link to="/">
+                <FaHome className="inline-block mr-3 w-7 h-7  " />
+              </Link>
+              <input
+                type="text"
+                placeholder="Search"
+                className="rounded-full py-2 px-2 bg-gray-200 text-black"
+              />
+              <button className="text-gray-200">
+                <FaSearch />
+              </button>
             </div>
-
-            <label htmlFor="search"></label>
-            <input
-              type="search"
-              id="search"
-              placeholder="Search for result"
-              className=" h-10  rounded-2xl w-fit border-2 pl-2"
-            />
-            <button className=" ">
-              <img src={Search} alt="" className="  w-6 ml-1   mb-2 h-7 rounded " />
-            </button>
           </div>
-          <div className="icons   ">
-            <ul className=" flex  items-center  text-lg space-x-2 space-y-2 flex-wrap m-2">
-              <div className="lang mt-2">
+
+          <div className="icons flex items-center  ">
+            <ul className="hidden sm:flex space-x-4">
+              <div className="lang">
                 <li>
                   <Link to="#">
-                    <button
+                    <i
                       onClick={() => {
                         handleLang();
                       }}
-                      className={`  bg-slate-100  hover:bg-blue-300 w-8 p-1 rounded-2xl`}
-                    >
-                      <img src={language} alt="" className=" rounded-lg w-5 " />
-                    </button>
+                      className="bi bi-globe inline-block w-5 h-5 "
+                    ></i>
                   </Link>
                 </li>
                 <div
@@ -112,7 +103,7 @@ function Navbar(props) {
                     lang ? "" : "hidden"
                   } langDropdown  w-28  text-md border-gray-100 border-2 shadow-inner  bg-white text-black translate-y-2 absolute  `}
                 >
-                  <ul className="">
+                  <ul>
                     <div className="p-2">
                       <li className=" ml-5 hover:bg-gray-200 ">
                         <Link href="#">English</Link>
@@ -136,91 +127,87 @@ function Navbar(props) {
 
               <li>
                 <Link to="#">
-                  <button
-                    className=" hover:bg-blue-200 w-8 p-1 rounded-2xl "
+                  <i
                     onClick={darkMode}
-                  >
-                    <img src={mode} alt="" className="rounded-lg w-5 " />
-                  </button>
+                    className="bi bi-moon  inline-block w-5 h-5 "
+                  ></i>
                 </Link>
               </li>
               <li>
                 <Link to="#">
-                  <button
+                  <i
                     onClick={() => handleCart()}
-                    className={` bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl`}
-                  >
-                    <img src={cart1} alt="" className="rounded-lg w-5" />
-                  </button>
+                    className="bi bi-cart  inline-block w-5 h-5 "
+                  ></i>
                 </Link>
               </li>
 
               <div
                 className={`${
                   cart ? "" : "hidden"
-                } cart text-sm absolute -translate-x-72 translate-y-64   bg-sky-500  border-gray-200 border-2`}
-               >
-                <Dropdowncart/>
+                } cart text-sm absolute -translate-x-72 translate-y-12   bg-sky-500  border-gray-200 border-2`}
+              >
+                <Dropdowncart />
               </div>
 
               <li>
                 <Link to="#">
-                  <button
+                  <i
                     onClick={() => handleNoti()}
-                    className="bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl "
-                  >
-                    <img
-                      src={notification}
-                      alt=""
-                      className=" rounded-lg w-5"
-                    />
-                  </button>
+                    className="bi bi-bell  inline-block w-5 h-5 "
+                  ></i>
+                </Link>
+              </li>
+
+              <li>
+                <Link to="#">
+                  <i className="bi bi-grid  inline-block w-5 h-5 "></i>
                 </Link>
               </li>
               <div
                 className={`${
                   noti ? "" : " hidden"
-                } absolute bg-sky-400  translate-y-60 -translate-x-60`}
+                } absolute bg-sky-400  translate-y-12 -translate-x-60`}
               >
                 <Notification />
               </div>
+              <li>
+                <Link to="#">
+                  <i className="bi bi-fullscreen  inline-block w-5 h-5 "></i>
+                </Link>
+              </li>
 
               <li>
                 <Link to="#">
-                  <button
+                  <i
                     onClick={() => handleCal()}
-                    className="bg-slate-100  hover:bg-blue-200 w-8 p-1 rounded-2xl "
-                  >
-                    <img src={images} alt="" className="rounded-lg w-5" />
-                  </button>
+                    className="bi bi-sliders2  inline-block w-5 h-5 "
+                  ></i>
                 </Link>
               </li>
               <div
                 className={` ${
                   cal ? "" : "hidden"
-                } cal absolute h-60 translate-y-36 translate-x-24`}
+                } cal absolute h-60 translate-y-12 translate-x-[105px]`}
               >
                 <CalNoti />
               </div>
-
-              <li>
+            </ul>
+          </div>
+          </div>
+          <div className="profile ml-4">
                 <Link to="#">
-                  <button className=" bg-slate-100 hover:bg-blue-200 w-8 p-1 rounded-2xl ">
-                    <img src={zoom} alt="" className="rounded-lg w-5" />
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link to="#">
-                  <button
+                  <div className="flex justify-center items-center h-full w-40 border-r-2 border-l-2 border-gray-400 shadow-inner">
+                  <img
                     onClick={() => handleProf()}
-                    className="bg-slate-100 flex hover:bg-blue-200 w-fit p-1 rounded-2xl "
-                  >
-                    <img src={profile} alt="" className="  rounded-full w-8" />
-                    <p className="bg-slate-100 rounded-2xl text-black">Harry John's</p>
-                  </button>
+                    src={profile}
+                    alt=""
+                    className="  rounded-full w-8 h-8"
+                  />
+                  <p className=" font-bold ml-2">Harry's John</p>
+                  </div>
                 </Link>
-              </li>
+              </div>
 
               <div className="proDrop">
                 <ul
@@ -251,22 +238,12 @@ function Navbar(props) {
                   </div>
                 </ul>
               </div>
-              <li>
-                <div className="john">
-                  <img src="" alt="" />
-                </div>
-              </li>
-              <li>
-                <Link to="#">
-                  <button className=" bg-slate-100 hover:bg-blue-200 p-1 ease-in rounded-2xl animate-spin ">
-                    <img src={setting} alt="" className="rounded-lg w-5" />
-                  </button>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+              <div className="setting ml-4 mr-5 flex items-center"> 
+              <i class="bi bi-gear animate-spin"></i>
+              </div>
+
+  
+      </nav>
     </>
   );
 }
