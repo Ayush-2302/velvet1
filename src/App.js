@@ -24,11 +24,11 @@ function App() {
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
-      document.body.style.backgroundColor = "rgb(24 20 32)";
+      document.body.style.backgroundColor = "rgb(166, 164, 164)";
       document.body.style.color = "white";
     } else {
       setMode("light");
-      document.body.style.backgroundColor = "white";
+      document.body.style.backgroundColor = "rgb(166, 164, 164)";
       document.body.style.color = "black";
     }
   };
