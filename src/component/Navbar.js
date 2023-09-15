@@ -64,11 +64,11 @@ function Navbar(props) {
        */}
 
       <nav
-        className={`fix bg-violet-600 flex text-white h-[63px] border-2 border-b-gray-400  border-t-gray-400  ${
+        className={`navbar sticky bg-violet-600 flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400  ${
           props.mode === "light" ? "dark" : "light"
         }`}
       >
-        <div className="container ml-20  flex items-center h-16  justify-between">
+        <div className="container ml-10  flex items-center h-16  justify-between">
           <div className="hidden sm:block">
             <div className="flex items-center space-x-2">
               <Link to="/">

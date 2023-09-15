@@ -5,10 +5,10 @@ import cart from "../asserts/images/cart.png";
 function Dashboard() {
   return (
     <>
-      <div className="dashboard  mt-1 text-3xl ml-10 mr-10 flex justify-between">
+      <div className="dashboardcont  pt-5  text-3xl pl-10 pr-10 flex  h-32 justify-between">
         Dashboard <p className=" text-sm m-3">Dashbord » scale</p>
       </div>
-      <div className=" boxes m-auto    ">
+      <div className=" boxes -mt-20 m-auto  mr-6  ">
         <div className="box box1">
           <div className=" flex justify-between leading-9">
             <p>

@@ -24,11 +24,11 @@ function App() {
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
-      document.body.style.backgroundColor = "rgb(166, 164, 164)";
+      document.body.style.backgroundColor = "red";
       document.body.style.color = "white";
     } else {
       setMode("light");
-      document.body.style.backgroundColor = "rgb(166, 164, 164)";
+      document.body.style.backgroundColor = "red";
       document.body.style.color = "black";
     }
   };
@@ -36,21 +36,19 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar mode={mode} toggleMode={toggleMode}
-         />
         <div className="flex slide">
-        <Velvet/>
-        <div className="routs m-auto w-[100%]">
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/dummy" element={<Dummy />} />
-          <Route exact path="/accordian" element={<Accordian />} />
-          <Route exact path="/profile" element={<Profile/>} />
-        </Routes>
-        </div>
-        </div>
-        <div className=" ">
-        <Footer />
+          <Velvet />
+
+          <div className="routs m-auto w-[100%]">
+            <Navbar mode={mode} toggleMode={toggleMode} />
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/dummy" element={<Dummy />} />
+              <Route exact path="/accordian" element={<Accordian />} />
+              <Route exact path="/profile" element={<Profile />} />
+            </Routes>
+            <Footer />
+          </div>
         </div>
       </Router>
     </>

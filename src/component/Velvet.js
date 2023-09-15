@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import { sideContext } from "../Context/SideBarContext";
 // import "../Style/Velvet.css"
+import "boxicons";
 
 function Velvet() {
   // const show = false
@@ -15,22 +16,22 @@ function Velvet() {
 
   return (
     <>
-      <div className={`${show ? " w-64" : " w-10"}`}>
-        <div className={` ${show ? "" : "hidden"}`}>
-          <div className="h-16 flex items-center">
-            <div className="w-52 mx-auto bg-blue-500 hover:bg-blue-600 flex items-center justify-between text-gray-100 p-2 rounded space-x-2 transition duration-150">
-              <span>Dashboard</span>
-              <button>»</button>
-            </div>
-          </div>
+      <div className={`velvet ${show ? "" : ""}  text-white w-72`}>
+        <div className=" h-[63px] text-3xl flex justify-center m-auto sticky items-center border-y-2 border-y-gray-500 ">
+          <i class="bi bi-browser-chrome mr-4"></i>
+          <p>Velvet</p>
+        </div>
+        <div className="velvet_body overflow-y-auto">
+          <p className=" text-gray-500 ml-5 mt-2 ">Main</p>
           <div className="px-2 pt-4 pb-8 border-r border-gray-300">
             <ul className="space-y-2">
               <li className={`${dashboard ? "bg-gray-200" : ""}`}>
                 <div className={`cursor-pointer `}>
-                  <div onClick={() => setDashboard(!dashboard)} className="">
-                    <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
+                  <div onClick={() => setDashboard(!dashboard)} className=" ">
+                    <div className="hover:bg-gray-200 hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600 flex justify-around">
+                      <i class="bi bi-pc-display-horizontal -ml-4"></i>
                       Dashbord
-                      <div className=" btn">»</div>
+                      <div className=" btn ml-2">»</div>
                     </div>
                   </div>
                 </div>
@@ -59,11 +60,13 @@ function Velvet() {
                   </li>
                 </ul>
               </li>
+              <p className=" text-gray-500 ml-3">General</p>
 
               <li className={`${ui ? "bg-gray-200" : ""}`}>
                 <div className="advanceui cursor-pointer ">
-                  <div onClick={() => setUI(!ui)}>
-                    <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
+                  <div onClick={() => setUI(!ui)} className="">
+                    <div className="hover:bg-gray-200  hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600 flex justify-around">
+                      <i class="bi bi-box -ml-4"></i>
                       Advance Ui
                       <div className=" btn">»</div>
                     </div>
@@ -99,12 +102,17 @@ function Velvet() {
                   </li>
                 </ul>
               </li>
+              <p className=" text-gray-500 ml-3 ">Page</p>
+
               <li className={`${page ? "bg-gray-200" : ""}`}>
-                <div className="page cursor-pointer ">
-                  <div onClick={() => setPage(!page)}>
+                <div onClick={() => setPage(!page)}>
+                  <div className="page cursor-pointer   ">
                     <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
-                      Page
-                      <div className=" btn">»</div>
+                      <p>
+                        <i class="bi bi-file-earmark-break  mr-5"></i>
+                        Page
+                      </p>
+                      <div className=" btn mr-3">»</div>
                     </div>
                   </div>
 
@@ -143,7 +151,10 @@ function Velvet() {
               </li>
               <li>
                 <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between items-center text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
-                  <span>Utilities</span>
+                  <span>
+                    <i class="bi bi-magnet mr-4"></i>
+                    Utilities
+                  </span>
                   <span className="   text-red-500 font-bold px-2 py-0.5 text-xs rounded-lg">
                     »
                   </span>
@@ -151,8 +162,11 @@ function Velvet() {
               </li>
               <li>
                 <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between  items-center text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
-                  <span>Error</span>
-                  <span className="   text-red-500 font-bold px-2 py-0.5 text-xs rounded-lg">
+                  <span>
+                    <i class="bi bi-hexagon mr-4"></i>
+                    Error
+                  </span>
+                  <span className=" font-bold  px-2 py-0.5 text-xs rounded-lg">
                     »
                   </span>
                 </div>
@@ -160,7 +174,11 @@ function Velvet() {
               <li>
                 <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex items-center justify-between text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
                   <span className="flex items-center space-x-2">
-                    <span>Apps</span>
+                    <span>
+                      {" "}
+                      <i class="bi bi-grid mr-4"></i>
+                      Apps
+                    </span>
                   </span>
                   <span className="bg-sky-500 text-gray-100 font-bold px-2 py-0.5 text-xs rounded-lg">
                     1
@@ -172,7 +190,10 @@ function Velvet() {
                   className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex  justify-between items-center text-red-500
                  py-1.5 px-4 rounded space-x-2 cursor-pointer"
                 >
-                  <span>Icons</span>
+                  <span>
+                    <i class="bi bi-emoji-smile mr-4"></i>
+                    Icons
+                  </span>
                   <span className="   text-red-500 font-bold px-2 py-0.5 text-xs rounded-lg">
                     »
                   </span>
@@ -180,7 +201,10 @@ function Velvet() {
               </li>
               <li>
                 <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between  items-center text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
-                  <span>Widgets</span>
+                  <span>
+                    <i class="bi bi-menu-button-wide mr-2"></i>
+                    Widgets
+                  </span>
                   <span className="bg-red-400 text-gray-100 font-bold px-2 py-0.5 text-xs rounded-lg">
                     Hot
                   </span>

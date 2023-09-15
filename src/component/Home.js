@@ -6,7 +6,7 @@ import Body from "./Body";
 function Home( props ) {
   return (
     <>
-        <div className="body">
+        <div className=" bg-gray-200">
           <Dashboard />
           <Body />
         </div>
