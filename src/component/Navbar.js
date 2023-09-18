@@ -7,7 +7,8 @@ import Dropdowncart from "./Dropdowncart";
 import "bootstrap-icons/font/bootstrap-icons.css";
 // import { FaBeer } from 'react-icons/fa';
 // import { FaBeer } from "react-icons/fa";
-import { FaSearch, FaHome } from "react-icons/fa";
+
+import { FaSearch, FaHome,FaBars } from "react-icons/fa";
 
 function Navbar(props) {
   const darkMode = () => {
@@ -55,6 +56,11 @@ function Navbar(props) {
     setCal(false);
     setNoti(!noti);
   };
+  const [nav, setNav] =useState(false);
+
+  const handleNav=()=>{
+      setNav(!nav)
+  }
 
   return (
     <>
@@ -242,6 +248,14 @@ function Navbar(props) {
               <i class="bi bi-gear animate-spin"></i>
               </div>
 
+              <div className="sm:hidden m-5">
+          <button
+            className="text-2xl"
+            onClick={() => {handleNav()}}
+          >
+            <FaBars />
+          </button>
+        </div>
   
       </nav>
     </>

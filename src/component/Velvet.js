@@ -7,31 +7,59 @@ import "boxicons";
 
 function Velvet() {
   // const show = false
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [dashboard, setDashboard] = useState(false);
   const [ui, setUI] = useState(false);
   const [page, setPage] = useState(false);
+  const [dash, setDash] = useState(false);
+  const seedash = () => {
+    setDash(!dash);
+  };
+
+  const handledash = () => {
+    setDashboard(!dashboard);
+    setUI(false);
+    setPage(false);
+  };
+  const handleUi = () => {
+    setDashboard(false);
+    setUI(!ui);
+    setPage(false);
+  };
+  const handlepage = () => {
+    setDashboard(false);
+    setUI(false);
+    setPage(!page);
+  };
 
   // const { show, toggle } = useContext(sideContext);
 
   return (
     <>
-      <div className={`velvet ${show ? "" : ""}  text-white w-72`}>
+      <div className={`velvet ${show ? " " : ""} w-72 text-white`}>
         <div className=" h-[63px] text-3xl flex justify-center m-auto sticky items-center border-y-2 border-y-gray-500 ">
           <i class="bi bi-browser-chrome mr-4"></i>
           <p>Velvet</p>
         </div>
-        <div className="velvet_body overflow-y-auto">
+        <div className="velvet_body grid ">
           <p className=" text-gray-500 ml-5 mt-2 ">Main</p>
           <div className="px-2 pt-4 pb-8 border-r border-gray-300">
             <ul className="space-y-2">
-              <li className={`${dashboard ? "bg-gray-200" : ""}`}>
+              <li>
                 <div className={`cursor-pointer `}>
-                  <div onClick={() => setDashboard(!dashboard)} className=" ">
+                  <div
+                    onClick={() => {
+                      handledash();
+                    }}
+                    className=" "
+                  >
                     <div className="hover:bg-gray-200 hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600 flex justify-around">
                       <i class="bi bi-pc-display-horizontal -ml-4"></i>
-                      Dashbord
-                      <div className=" btn ml-2">»</div>
+                      <p>Dashboard</p>
+                      <div className={` btn ml-2`}>
+                        {" "}
+                        {dashboard ? "‹" : "»"}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -39,9 +67,9 @@ function Velvet() {
                 <ul
                   className={`dropDash ${
                     dashboard
-                      ? "display opacity-100 scale-y-100 bg-gray-200 "
+                      ? "display opacity-100 scale-y-100  "
                       : "h-[0px] opacity-0 scale-y-0"
-                  } ml-10  transform origin-top transition-opacity duration-300`}
+                  } ml-6  transform origin-top transition-opacity duration-300`}
                 >
                   <li className=" text-green-600">
                     <Link to="/"> - Scale</Link>
@@ -62,22 +90,27 @@ function Velvet() {
               </li>
               <p className=" text-gray-500 ml-3">General</p>
 
-              <li className={`${ui ? "bg-gray-200" : ""}`}>
+              <li className={`${ui ? "" : ""}`}>
                 <div className="advanceui cursor-pointer ">
-                  <div onClick={() => setUI(!ui)} className="">
+                  <div
+                    onClick={() => {
+                      handleUi();
+                    }}
+                    className=""
+                  >
                     <div className="hover:bg-gray-200  hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600 flex justify-around">
                       <i class="bi bi-box -ml-4"></i>
                       Advance Ui
-                      <div className=" btn">»</div>
+                      <div className=" btn"> {ui ? "‹" : "»"}</div>
                     </div>
                   </div>
                 </div>
                 <ul
                   className={`dropDash ${
                     ui
-                      ? "display opacity-100 scale-y-100 bg-gray-2~00 "
+                      ? "display opacity-100 scale-y-100  "
                       : "h-[0px] opacity-0 scale-y-0"
-                  } ml-10  transform origin-top transition-opacity duration-300`}
+                  } ml-6 transform origin-top transition-opacity duration-300`}
                 >
                   <li className=" text-green-600">
                     <Link to="accordian"> - Accordians & Collapse </Link>
@@ -104,25 +137,29 @@ function Velvet() {
               </li>
               <p className=" text-gray-500 ml-3 ">Page</p>
 
-              <li className={`${page ? "bg-gray-200" : ""}`}>
-                <div onClick={() => setPage(!page)}>
+              <li className={`${page ? "" : ""}`}>
+                <div
+                  onClick={() => {
+                    handlepage();
+                  }}
+                >
                   <div className="page cursor-pointer   ">
                     <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
                       <p>
                         <i class="bi bi-file-earmark-break  mr-5"></i>
                         Page
                       </p>
-                      <div className=" btn mr-3">»</div>
+                      <div className=" btn mr-1"> {page ? "‹" : "»"}</div>
                     </div>
                   </div>
 
                   <div className="pagDrop ml-10">
                     <ul
-                      className={`dropDash ${
+                      className={`dropDash  ${
                         page
-                          ? "display opacity-100 scale-y-100 bg-gray-200 "
+                          ? "display opacity-100 scale-y-100 "
                           : "h-[0px] opacity-0 scale-y-0"
-                      } ml-10  transform origin-top transition-opacity duration-300`}
+                      }   transform origin-top transition-opacity duration-300`}
                     >
                       <li>
                         <Link to="#"> - Blog</Link>
