@@ -8,9 +8,9 @@ export default function () {
       </footer> */}/
 
 
-<footer className="footer mb-4 -mt-2  sticky footer-center text-base-content rounded">
+<footer className="footer mb-4 -mt-4  sticky footer-center text-base-content rounded">
   <div>
-  <p className=" flex justify-center items-center">Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+  <p className=" flex justify-center items-center text-sm">Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
   </div>
 </footer>
     </>

@@ -47,7 +47,7 @@ function App() {
               <Route exact path="/accordian" element={<Accordian />} />
               <Route exact path="/profile" element={<Profile />} />
             </Routes>
-            <Footer />
+            <Footer  />
           </div>
         </div>
       </Router>

@@ -36,7 +36,7 @@ function Velvet() {
 
   return (
     <>
-      <div className={`velvet ${show ? " " : ""} w-72 text-white`}>
+      <div className={`velvet ${show ? " " : ""} sticky w-64 text-white`}>
         <div className=" h-[63px] text-3xl flex justify-center m-auto sticky items-center border-y-2 border-y-gray-500 ">
           <i class="bi bi-browser-chrome mr-4"></i>
           <p>Velvet</p>

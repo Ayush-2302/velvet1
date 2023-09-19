@@ -73,14 +73,14 @@
 }
 .card {
   background-color: white;
-  margin-right: 20px;
+  margin: auto;
   padding: 12px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 36px;
   margin-left: 20px;
-  height: auto;
-  width: 91%;
-  border: 1px solid black;
+  /* height: auto; */
+  width:95%;
+  border: 0.5px solid gray;
 }
 
 .cart {
@@ -92,8 +92,35 @@
 }
 .cards4{
   display: flex;
+  
 }
+.task{
+  width: 146px;
+}
+.date{
+  width: 64px;
+}
+.card7{
+  width: 30%;
+}
+.card8{
+  margin-top: -8px;
+}
+
 @media(max-width:1400px){
+  .card7{
+    width: 95%;
+  }
+  .card8{
+    margin-top: 36px;
+  }
+  .task{
+    width: auto;
+  }
+  .date{
+    margin-left: 20px;
+    width: auto;
+  }
   .cards1{
     display: flex;
     flex-grow: 1;
