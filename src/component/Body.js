@@ -195,7 +195,7 @@ function Body() {
               <table className=" w-11/12  ">
                 <thead className=" ">
                   <tr className=" text-sm">
-                    <th className="pr-64">Country</th>
+                    <th className="pr-28">Country</th>
                     <th className="pr-4"> Sales </th>
                     <th> Bounce</th>
                   </tr>
