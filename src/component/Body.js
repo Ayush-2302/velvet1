@@ -15,6 +15,7 @@ import {
 import { BiShare, BiDownload } from "react-icons/bi";
 import { RiPencilLine, RiDeleteBin7Line } from "react-icons/ri";
 import { AiOutlineDelete } from "react-icons/ai";
+import stock from "../asserts/images/stock.png";
 import canada from "../asserts/images/canada.png";
 import germany from "../asserts/images/germany.png";
 import mexico from "../asserts/images/mexico.png";
@@ -26,7 +27,6 @@ import cactus from "../asserts/images/cactus.png";
 import headphone from "../asserts/images/headphone.png";
 import smartphone from "../asserts/images/phone.png";
 import camera from "../asserts/images/camera.png";
-
 
 function Body() {
   const [weekdrop, setWeekdrop] = useState(false);
@@ -87,6 +87,7 @@ function Body() {
   return (
     <>
       {/*  card1 */}
+      <div className=" w-full">
       <div className=" container  ">
         <div className="cards1   ">
           <div className="card shadow-inner card1">
@@ -199,7 +200,7 @@ function Body() {
               <thead className=" ">
                 <tr className=" text-sm">
                   <th className="pr-20">Country</th>
-                  <th className="pr-4"> Scale </th>
+                  <th className="pr-4"> Sales </th>
                   <th> Bounce</th>
                 </tr>
               </thead>
@@ -281,7 +282,7 @@ function Body() {
         <div className="cards2 w-[100%]">
           <div className="card card2 ">
             <div className="top flex justify-between">
-              <h1 className=" text-lg font-bold">Scales Statistics </h1>
+              <h1 className=" text-lg font-bold">Sales Statistics </h1>
               <ul className="btn  text-sm ">
                 <div className="flex space-x-2 flex-wrap justify-evenly">
                   <li>
@@ -319,11 +320,7 @@ function Body() {
             </div>
             <hr className=" m-4" />
 
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH7ta95tjJ93eq68ViI9OnIYaJHyNhV_Pscg&usqp=CAU"
-              alt=" img"
-              className=" w-full h-80"
-            />
+            <img src={stock} alt=" img" className=" w-full  " />
           </div>
           {/* card 4 */}
           <div className="card  card5 grow overflow-x-auto   ">
@@ -367,7 +364,11 @@ function Body() {
               <hr className=" m-4" />
               <tbody className=" text-sm">
                 <tr>
-                  <td className="flex items-center"> <img src={shoes} alt=""  className="w-12 rounded-xl"/>Sports Shoes For Men</td>
+                  <td className="flex items-center">
+                    {" "}
+                    <img src={shoes} alt="" className="w-12 rounded-xl" />
+                    Sports Shoes For Men
+                  </td>
                   <td className="  text-green-500">in Stocks</td>
                   <td>$73.800</td>
                   <td>1534</td>
@@ -383,7 +384,11 @@ function Body() {
                 </tr>
                 <hr className="m-3 " />
                 <tr>
-                <td className="flex items-center"> <img src={cactus} alt=""  className="w-12 rounded-xl"/>Beautiful flower frame </td>
+                  <td className="flex items-center">
+                    {" "}
+                    <img src={cactus} alt="" className="w-12 rounded-xl" />
+                    Beautiful flower frame{" "}
+                  </td>
                   <td className=" text-blue-400">Few-left</td>
                   <td>$73.800</td>
                   <td>4987</td>
@@ -398,7 +403,11 @@ function Body() {
                 </tr>
                 <hr className="m-2 " />
                 <tr>
-                <td className="flex items-center"> <img src={watch} alt=""  className="w-12 rounded-xl"/>Small alarm Watch </td>
+                  <td className="flex items-center">
+                    {" "}
+                    <img src={watch} alt="" className="w-12 rounded-xl" />
+                    Small alarm Watch{" "}
+                  </td>
                   <td className="  text-red-500">Out of stock</td>
                   <td>$13.800</td>
                   <td>87875</td>
@@ -413,7 +422,15 @@ function Body() {
                 </tr>
                 <hr className="m-2 " />
                 <tr>
-                <td className="flex items-center"> <img src={smartphone} alt=""  className="w-12 h-10 mr-2 rounded-xl"/> New Smart Phone </td>
+                  <td className="flex items-center">
+                    {" "}
+                    <img
+                      src={smartphone}
+                      alt=""
+                      className="w-12 h-10 mr-2 rounded-xl"
+                    />{" "}
+                    New Smart Phone{" "}
+                  </td>
                   <td className="  text-green-500 ">In-Stock</td>
                   <td>$14.600</td>
                   <td>87875</td>
@@ -428,7 +445,15 @@ function Body() {
                 </tr>
                 <hr className="m-2 " />
                 <tr>
-                <td className="flex items-center"> <img src={camera} alt=""  className="w-10 mr-2  rounded-xl"/>Black Colord camera </td>
+                  <td className="flex items-center">
+                    {" "}
+                    <img
+                      src={camera}
+                      alt=""
+                      className="w-10 mr-2  rounded-xl"
+                    />
+                    Black Colord camera{" "}
+                  </td>
                   <td className="  text-green-500  ">In-Stock</td>
                   <td>$23.800</td>
                   <td>4087</td>
@@ -451,7 +476,7 @@ function Body() {
         <div className="cards3 mr-5  ">
           <div className="card  card3">
             <div className="top flex  justify-between">
-              <h1 className=" text-lg font-bold">Scales Value </h1>
+              <h1 className=" text-lg font-bold">Sales Value </h1>
               <div>
                 <button
                   onClick={() => {
@@ -477,11 +502,25 @@ function Body() {
             </div>
             <hr className=" m-4" />
 
-            <img
-              src="https://images.unsplash.com/photo-1612010167102-d1e8f83833e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
-              alt=""
-              className="w-[110%]  "
-            />
+           <div className=" circle mt-8 w-52 h-52 rounded-full flex justify-center items-center  m-auto">
+          <div className=" font-bold text-2xl ">
+            <p>Total Sale</p>
+            <p className="pl-7">95%</p>
+            </div>
+             </div>
+             <hr className=" mt-8" />
+             <div className="flex justify-center items-center p-2 ">
+            
+          <div className="pr-6 border-r-2">Sale Items
+            <p className="font-bold text-2xl">18,675.00</p>
+          </div >
+            {/* <hr className=" rotate-90 " /> */}
+          <div className="pl-6">Sale Revenue
+            <p className="font-bold text-2xl ">$122,39</p>
+          </div>
+             </div>
+
+
           </div>
 
           {/* card6 */}
@@ -799,6 +838,7 @@ function Body() {
             </tbody>
           </table>
         </div>
+      </div>
       </div>
     </>
   );

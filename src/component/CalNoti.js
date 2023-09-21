@@ -5,11 +5,9 @@ import Notification from './Notification'
 function CalNoti() {
   return (
   <>
-  <div  className={`text-white?"":"black"`}>
+<div className=' space-y-2 bg-white '>
 <Calendar/>
-</div>
-<div className=' bg-white '>
-  <Notification/>
+<Notification/>
   </div>
 
 

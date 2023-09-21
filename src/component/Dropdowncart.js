@@ -10,14 +10,14 @@ import "../style/Navbar.css";
 function Dropdowncart() {
   return (
     <>
-      <div className="cart   text-black ">
-        <div className="flex justify-between">
-          <span className=" text-2xl font-bold">Cart Items </span>
-          <span className=" font-bold m-2 text-yellow-200">5 items</span>
+      <div className="cart    text-black p-4 ">
+        <div className="flex justify-between items-center">
+          <span className=" text-lg font-bold">Cart Items </span>
+          <span className="  rounded-xl mr-2   text-xs bg-green-200 text-green-600 p-1 ">5 items</span>
         </div>
         <hr className="m-2 border-black" />
         <div className="scrollbar text-black h-80 overflow-y-scroll customize_overflow ">
-          <div className="cactus mt-2 flex justify-evenly">
+          <div className="cactus mt-2 flex items-center justify-evenly">
             <img src={cactus} alt="" className=" w-20 h-16 " />
             <div className="content">
               <p className=" font-bold">Cactus mini plant</p>
@@ -28,7 +28,7 @@ function Dropdowncart() {
           </div>
           <hr className="mt-2 " />
 
-          <div className="Shoes mt-2 flex justify-evenly">
+          <div className="Shoes mt-2 flex items-center justify-evenly">
             <img src={shoes} alt="" className=" w-20 h-16 " />
             <div className="content">
               <p className=" font-bold">Mens Sport Shoes</p>
@@ -39,7 +39,7 @@ function Dropdowncart() {
           </div>
           <hr className="m-2" />
 
-          <div className="watch mt-2 flex justify-evenly">
+          <div className="watch mt-2 items-center flex justify-evenly">
             <img src={watch} alt="" className=" w-20 h-16" />
             <div className="content">
               <p className=" font-bold">Watch for Men</p>
@@ -49,7 +49,7 @@ function Dropdowncart() {
             <img src={del} alt="" className="  ml-6 w-6 h-6" />
           </div>
           <hr className="m-2 " />
-          <div className="goodluck mt-2 flex justify-evenly">
+          <div className="goodluck mt-2 items-center flex justify-evenly">
             <img src={goodluck} alt="" className=" w-20 h-16 " />
             <div className="content">
               <p className=" font-bold">GoodLuck Plant</p>
@@ -60,7 +60,7 @@ function Dropdowncart() {
           </div>
           <hr className="m-2 " />
 
-          <div className="plant mt-2 flex justify-evenly">
+          <div className="plant mt-2 items-center flex justify-evenly">
             <img src={transplant} alt="" className=" w-20 h-16 " />
             <div className="content">
               <p className=" font-bold">Transparent Plant</p>

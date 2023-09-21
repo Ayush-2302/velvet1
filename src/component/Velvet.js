@@ -1,13 +1,15 @@
-import React, { useState } from "react";
-// import { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-// import { sideContext } from "../Context/SideBarContext";
-// import "../Style/Velvet.css"
 import "boxicons";
+import { val } from "./ValNav";
 
 function Velvet() {
-  // const show = false
-  const [show, setShow] = useState(false);
+  const toggle = useContext(val);
+
+  const adjWidth = () => {
+    toggle.widthInc();
+  };
+
   const [dashboard, setDashboard] = useState(false);
   const [ui, setUI] = useState(false);
   const [page, setPage] = useState(false);
@@ -32,13 +34,16 @@ function Velvet() {
     setPage(!page);
   };
 
-  // const { show, toggle } = useContext(sideContext);
-
   return (
     <>
-      <div className={`velvet ${show ? " " : ""} sticky w-64 text-white`}>
-        <div className=" h-[63px] text-3xl flex justify-center m-auto sticky items-center border-y-2 border-y-gray-500 ">
-          <i class="bi bi-browser-chrome mr-4"></i>
+      <div className={`velvet ${toggle.show ? " w-16" : "w-72"}  text-white`}>
+        <div
+          onClick={() => {
+            adjWidth();
+          }}
+          className=" hover:cursor-pointer h-[63px] text-3xl flex space-x-12  m-auto sticky items-center border-y-2 border-y-gray-500 "
+        >
+          <i class="bi bi-browser-chrome ml-3 "></i>
           <p>Velvet</p>
         </div>
         <div className="velvet_body grid ">
@@ -53,12 +58,15 @@ function Velvet() {
                     }}
                     className=" "
                   >
-                    <div className="hover:bg-gray-200 hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600 flex justify-around">
-                      <i class="bi bi-pc-display-horizontal -ml-4"></i>
-                      <p>Dashboard</p>
-                      <div className={` btn ml-2`}>
-                        {" "}
-                        {dashboard ? "‹" : "»"}
+                    <div className="hover:bg-gray-200 hover:rounded-2xl items-center  pt-1.5 pl-4 hover:text-blue-600 flex  space-x-7">
+                      <i class="bi bi-pc-display-horizontal "></i>
+                      <div
+                        className={` ${
+                          "w-72" ? "" : ""
+                        }flex justify-between w-2/3`}
+                      >
+                        <p>Dashboard</p>
+                        <p>{dashboard ? "‹" : "»"}</p>
                       </div>
                     </div>
                   </div>
@@ -98,10 +106,12 @@ function Velvet() {
                     }}
                     className=""
                   >
-                    <div className="hover:bg-gray-200  hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600 flex justify-around">
-                      <i class="bi bi-box -ml-4"></i>
+                    <div className="hover:bg-gray-200  hover:rounded-2xl items-center pl-4 pt-4 hover:text-blue-600 flex  space-x-8">
+                      <i class="bi bi-box "></i>
+                      <div className="flex w-2/3 justify-between">
                       Advance Ui
                       <div className=" btn"> {ui ? "‹" : "»"}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -146,10 +156,10 @@ function Velvet() {
                   <div className="page cursor-pointer   ">
                     <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
                       <p>
-                        <i class="bi bi-file-earmark-break  mr-5"></i>
+                        <i class="bi bi-file-earmark-break  mr-9"></i>
                         Page
                       </p>
-                      <div className=" btn mr-1"> {page ? "‹" : "»"}</div>
+                      <div className=" btn mr-2"> {page ? "‹" : "»"}</div>
                     </div>
                   </div>
 
@@ -187,64 +197,61 @@ function Velvet() {
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between items-center text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
-                  <span>
-                    <i class="bi bi-magnet mr-4"></i>
+                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex space-x-9  items-center text-red-500 py-1.5 px-4 rounded  cursor-pointer">
+                    <i class="bi bi-magnet"></i>
+                    <div className="flex w-4/6 justify-between" >
                     Utilities
-                  </span>
-                  <span className="   text-red-500 font-bold px-2 py-0.5 text-xs rounded-lg">
+                  <p className="   text-red-500 font-bold  text-xs rounded-lg">
                     »
-                  </span>
+                  </p>
+                  </div>
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between  items-center text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
-                  <span>
-                    <i class="bi bi-hexagon mr-4"></i>
+                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex space-x-9  items-center text-red-500 py-1.5 px-4 rounded  cursor-pointer">
+                    <i class="bi bi-hexagon "></i>
+                  <div className="flex w-4/6 justify-between">
                     Error
-                  </span>
-                  <span className=" font-bold  px-2 py-0.5 text-xs rounded-lg">
+                  <p className=" font-bold  text-xs rounded-lg">
                     »
-                  </span>
+                  </p>
+                  </div>
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex items-center justify-between text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
-                  <span className="flex items-center space-x-2">
-                    <span>
-                      {" "}
-                      <i class="bi bi-grid mr-4"></i>
+                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex items-center text-red-500 py-1.5 px-4 rounded space-x-9 cursor-pointer">
+                      <i class="bi bi-grid "></i>
+                  <div className="flex items-center justify-between w-5/6 ">
                       Apps
-                    </span>
-                  </span>
                   <span className="bg-sky-500 text-gray-100 font-bold px-2 py-0.5 text-xs rounded-lg">
                     1
                   </span>
+                  </div>
                 </div>
               </li>
               <li>
                 <div
-                  className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex  justify-between items-center text-red-500
-                 py-1.5 px-4 rounded space-x-2 cursor-pointer"
+                  className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex  items-center text-red-500
+                 py-1.5 px-4 rounded space-x-9 cursor-pointer"
                 >
-                  <span>
-                    <i class="bi bi-emoji-smile mr-4"></i>
+                    <i class="bi bi-emoji-smile "></i>
+                  <div className="flex w-4/6 justify-between">
                     Icons
-                  </span>
-                  <span className="   text-red-500 font-bold px-2 py-0.5 text-xs rounded-lg">
+                  </div>
+                  <span className="  pr-3  text-red-500 font-bold text-xs rounded-lg">
                     »
                   </span>
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex justify-between  items-center text-red-500 py-1.5 px-4 rounded space-x-2 cursor-pointer">
-                  <span>
-                    <i class="bi bi-menu-button-wide mr-2"></i>
+                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex items-center text-red-500 py-1.5 px-4 rounded space-x-9 cursor-pointer">
+                    <i class="bi bi-menu-button-wide "></i>
+                  <div className="flex w-5/6 justify-between">
                     Widgets
-                  </span>
-                  <span className="bg-red-400 text-gray-100 font-bold px-2 py-0.5 text-xs rounded-lg">
+                  <p className="bg-red-400 text-gray-100 font-bold -mr-2 px-2 py-1 text-xs rounded-lg">
                     Hot
-                  </span>
+                  </p>
+                  </div>
                 </div>
               </li>
             </ul>

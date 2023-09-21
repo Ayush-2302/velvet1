@@ -12,13 +12,14 @@ function Notification() {
   return (
     <>
       
-      <div className="cart  h-96   shadow-inner customize_overflow overflow-auto">
-        <div className="flex justify-between">
+      <div className="notification  p-2  shadow-inner ">
+        <div className="flex justify-between items-center">
           <span className=" text-xl text-black font-bold">Notification </span>
-          <span className=" font-bold mr-3 text-yellow-300"> view</span>
+          <span className="  mr-3 bg-red-200  text-xs font-bold h-5 p-1 rounded-lg text-red-600"> 5 Unread</span>
         </div>
         <hr className="m-2" />
-        <div className="pic1 mt-3 text-black flex justify-around">
+        <div className="customize_overflow overflow-y-scroll h-96">
+        <div className="pic1 mt-3  text-black flex justify-around">
           <img src={pic1} alt="" className=" w-12 h-12 " />
           <div className="content w-48 ml-2">
             <p className=" text-sm  font-bold">Olivia james</p>
@@ -119,7 +120,7 @@ function Notification() {
         <hr className=" m-2" />
 
 
-
+        </div>
 
       </div>
     </>

@@ -7,10 +7,20 @@
   /* background-color: rgb(230, 221, 221); */
 }
 
+img{
+  object-fit: cover;
+}
+
 .accod {
   width: 400px;
 }
 
+.circle{
+  border-left: 17px solid rgb(175, 50, 175);
+  border-bottom: 17px solid rgb(175, 50, 175);
+  border-right: 17px solid rgb(175, 50, 175);
+  
+}
 .boxes {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -56,12 +66,12 @@
 
 .box {
   font-family: inter, sans-serif;
-  padding: 8px;
+  padding: 10px;
   font-size: 13px;
   line-height: 19.5px;
   background-color: white;
   margin-top: 36px;
-  margin-left: 48px;
+  margin-left: 20px;
   /* height: 124px; */
   min-height: auto;
   min-height: auto;

@@ -8,12 +8,12 @@ function Dashboard() {
       <div className="dashboardcont  pt-5  text-3xl pl-10 pr-10 flex  h-32 justify-between">
         Dashboard <p className=" text-sm m-3">Dashbord » scale</p>
       </div>
-      <div className=" boxes -mt-20 m-auto  mr-6  ">
+      <div className=" boxes  sticky z-[10] -mt-20 m-auto  mr-6 ml-2  ">
         <div className="box box1">
           <div className=" flex justify-between leading-9">
             <p>
               Total sale
-              <h1 className=" text-3xl">$15526</h1>
+              <h1 className=" text-3xl font-bold">$15526</h1>
             </p>
 
             <div className="w-9  h-9 flex items-center justify-center rounded-md bg-purple-300">
@@ -31,7 +31,7 @@ function Dashboard() {
           <div className=" flex justify-between leading-9">
             <p>
               {" "}
-              Total sale <h1 className=" text-3xl">$15526</h1>
+              Total sale <h1 className=" text-3xl font-bold">$15526</h1>
             </p>
 
             <div className=" w-9 h-9 flex items-center justify-center rounded-md bg-red-300">
@@ -50,7 +50,7 @@ function Dashboard() {
           <div className=" flex justify-between leading-9">
             <p>
               Total sale
-              <h1 className="text-3xl">$15526</h1>
+              <h1 className="text-3xl font-bold">$15526</h1>
             </p>
 
             <div className=" w-9 h-9 flex items-center justify-center rounded-md bg-blue-300">
@@ -69,7 +69,7 @@ function Dashboard() {
           <div className=" flex justify-between leading-9">
             <p>
               {" "}
-              Total sale <h1 className=" text-3xl">$15526</h1>
+              Total sale <h1 className=" text-3xl font-bold">$15526</h1>
             </p>
 
             <div className=" w-9 h-9 flex items-center justify-center rounded-md bg-orange-300">
@@ -89,7 +89,7 @@ function Dashboard() {
             <p>
               {" "}
               Total sale
-              <h1 className=" text-3xl">$15526</h1>
+              <h1 className=" text-3xl font-bold">$15526</h1>
             </p>
 
             <div className=" w-9 h-9 flex items-center justify-center rounded-md bg-red-300">

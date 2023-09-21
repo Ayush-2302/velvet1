@@ -8,6 +8,7 @@ import Home from "./component/Home";
 import Accordian from "./component/Accordian";
 import Profile from "./component/Profile";
 import Velvet from "./component/Velvet";
+import ValNav from "./component/ValNav";
 
 function App() {
   // const [text, setText] = useState("black");
@@ -19,28 +20,18 @@ function App() {
   //   }
   // };
 
-  const [mode, setMode] = useState("light");
 
-  const toggleMode = () => {
-    if (mode === "light") {
-      setMode("dark");
-      document.body.style.backgroundColor = "red";
-      document.body.style.color = "white";
-    } else {
-      setMode("light");
-      document.body.style.backgroundColor = "red";
-      document.body.style.color = "black";
-    }
-  };
+
 
   return (
     <>
+    <ValNav>
       <Router>
         <div className="flex slide">
           <Velvet />
 
           <div className="routs m-auto w-[100%]">
-            <Navbar mode={mode} toggleMode={toggleMode} />
+            <Navbar  />
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/dummy" element={<Dummy />} />
@@ -51,6 +42,7 @@ function App() {
           </div>
         </div>
       </Router>
+      </ValNav>
     </>
   );
 }
