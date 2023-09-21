@@ -30,7 +30,7 @@ function App() {
         <div className="flex slide">
           <Velvet />
 
-          <div className="routs m-auto w-[100%]">
+          <div className="routs w-full">
             <Navbar  />
             <Routes>
               <Route exact path="/" element={<Home />} />

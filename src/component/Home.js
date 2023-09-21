@@ -8,6 +8,7 @@ function Home( props ) {
     <>
         <div className=" bg-gray-200">
           <Dashboard />
+          
           <Body />
         </div>
       

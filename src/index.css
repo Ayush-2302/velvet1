@@ -7,7 +7,7 @@
   /* background-color: rgb(230, 221, 221); */
 }
 
-img{
+img {
   object-fit: cover;
 }
 
@@ -15,11 +15,10 @@ img{
   width: 400px;
 }
 
-.circle{
+.circle {
   border-left: 17px solid rgb(175, 50, 175);
   border-bottom: 17px solid rgb(175, 50, 175);
   border-right: 17px solid rgb(175, 50, 175);
-  
 }
 .boxes {
   display: grid;
@@ -30,38 +29,42 @@ img{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 95%;
-  }}
-  @media (max-width: 1200px) {
-    .boxes {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
+}
+@media (max-width: 1200px) {
+  .boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
- @media(max-width:765px)and (min-width: 600px)   {
+@media (max-width: 765px) and (min-width: 600px) {
   .boxes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 95%;
   }
-} 
+}
 
- @media (max-width: 599px) and ( min-width: 407px) {
+@media (max-width: 599px) and (min-width: 407px) {
   .boxes {
     grid-template-columns: repeat(2, 1fr);
   }
-} 
-
+  .card {
+    width: 50%;
+  }
+}
 
 @media (max-width: 406px) {
   .boxes {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.navbar,.dashboardcont{
-  background-image: linear-gradient( 45deg,rgb(91, 91, 239), rgb(151, 79, 151));
+.navbar,
+.dashboardcont {
+  background-image: linear-gradient(45deg, rgb(91, 91, 239), rgb(151, 79, 151));
 }
-.velvet{
-  background-color: rgb(28, 44, 63)
+.velvet {
+  background-color: rgb(28, 44, 63);
 }
 
 .box {
@@ -72,24 +75,23 @@ img{
   background-color: white;
   margin-top: 36px;
   margin-left: 20px;
-  /* height: 124px; */
   min-height: auto;
   min-height: auto;
   word-wrap: break-word;
   transition: all 0s ease 0s;
   border-radius: 10px;
   box-shadow: 0px -10px rgba(199, 198, 198, 0.849);
-    position: relative;
+  position: relative;
 }
 .card {
   background-color: white;
-  margin: auto;
-  padding: 12px;
+  padding: 10px;
+  width: 95%;
+  /* margin-right: 50px; */
   border-radius: 5px;
-  margin-top: 36px;
+  margin-top: 26px;
   margin-left: 20px;
-  /* height: auto; */
-  width:95%;
+  height: fit-content;
   border: 0.5px solid gray;
 }
 
@@ -97,59 +99,59 @@ img{
   width: 352px;
 }
 
-.container{
-  display: flex;
-}
-.cards4{
-  display: flex;
-  
-}
-.task{
+
+.task {
   width: 146px;
 }
-.date{
+.date {
   width: 64px;
 }
-.card7{
-  width: 30%;
-}
-.card8{
-  margin-top: -8px;
+
+
+.task{
+  width: fit-content;
 }
 
-@media(max-width:1400px){
+@media(min-width:1400px) {
+  .keybody{
+    display: flex;
+  }
+  .cards2 .card{
+    width: 98%;
+  }
+ .card8{
+  margin-top: -0.5px;
+ }
+  .cards4{
+    display: flex;
+  }
   .card7{
-    width: 95%;
-  }
-  .card8{
-    margin-top: 36px;
-  }
-  .task{
-    width: auto;
+    width:30% ;
   }
   .date{
-    margin-left: 20px;
-    width: auto;
-  }
-  .cards1{
-    display: flex;
-    flex-grow: 1;
-  }
- .card3 img{
-  height: 400px;
- }
-  .container{
-    display: grid;
-  }
-  .cards4{
-    display: grid;
-  }
-} 
-@media(max-width:992px){
-  .cards1{
-    display: grid;
+    margin-left: 10px;
+    width: fit-content;
   }
 }
+@media(min-width:990px)and (max-width:1400px) {
+  .cards1{
+    display: flex;
+  }
+  .cards1,.cade2{
+    width: 95%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
