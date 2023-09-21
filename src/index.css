@@ -92,7 +92,9 @@ img {
   margin-top: 26px;
   margin-left: 20px;
   height: fit-content;
-  border: 0.5px solid gray;
+  box-shadow: ivory;
+
+  /* border: 0.5px solid gray; */
 }
 
 .cart {
@@ -102,9 +104,6 @@ img {
 
 .task {
   width: 146px;
-}
-.date {
-  width: 64px;
 }
 
 
@@ -116,6 +115,10 @@ img {
   .keybody{
     display: flex;
   }
+  
+.task {
+  width: 130px;
+}
   .cards2 .card{
     width: 98%;
   }
@@ -126,10 +129,10 @@ img {
   .card7{
     width:30% ;
   }
-  .date{
-    margin-left: 10px;
+  /* .date{
+    margin-left: 5px;
     width: fit-content;
-  }
+  } */
 }
 @media(min-width:990px)and (max-width:1400px) {
   .cards1{

@@ -68,7 +68,7 @@ function Navbar(props) {
   return (
     <>
       <nav
-        className={`navbar sticky bg-violet-600 flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400  ${
+        className={`navbar relative bg-violet-600 flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400  ${
           props.mode === "light" ? "dark" : "light"
         }`}
       >
@@ -113,7 +113,7 @@ function Navbar(props) {
                 <div
                   className={` ${
                     lang ? "" : "hidden"
-                  } langDropdown  w-28  text-md border-gray-100 border-2 shadow-inner z-[50]  bg-white text-black translate-y-2 absolute  `}
+                  } langDropdown  w-28  text-md border-gray-100 border-2 shadow-inner z-30  mt-4 bg-white text-black translate-y-2 absolute  `}
                 >
                   <ul>
                     <div className="p-2">
@@ -156,7 +156,7 @@ function Navbar(props) {
               <div
                 className={`${
                   cart ? "" : "hidden"
-                } cart text-sm absolute -translate-x-72 translate-y-12   bg-white border-gray-200 border-2`}
+                } cart text-sm absolute -translate-x-72 translate-y-12 z-30  bg-white border-gray-200 border-2`}
               >
                 <Dropdowncart />
               </div>
@@ -178,7 +178,7 @@ function Navbar(props) {
               <div
                 className={`${
                   noti ? "" : " hidden"
-                } absolute bg-white translate-y-12 -translate-x-60`}
+                } absolute bg-white translate-y-12 z-30 -translate-x-60`}
               >
                 <Notification />
               </div>
@@ -199,7 +199,7 @@ function Navbar(props) {
               <div
                 className={` ${
                   cal ? "" : "hidden"
-                } cal absolute h-60 translate-y-12 text-black translate-x-[90px]`}
+                } cal absolute h-60 translate-y-12 z-30 text-black translate-x-[90px]`}
               >
                 <CalNoti />
               </div>
@@ -224,7 +224,7 @@ function Navbar(props) {
           <ul
             className={` ${
               prof ? "" : "hidden"
-            } py-1 text-sm   text-black-700 absolute -translate-x-36 translate-y-6 border-2 border-gray-100  px-4   shadow-inner bg-white`}
+            } py-1 text-sm   text-black-700 absolute -translate-x-36 translate-y-6 border-2 z-30 border-gray-100  px-4   shadow-inner bg-white`}
           >
             <div className="ml-2 text-lg text-black">
               <li className=" text-green-600 hover:bg-gray-200 ">
