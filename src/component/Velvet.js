@@ -13,10 +13,7 @@ function Velvet() {
   const [dashboard, setDashboard] = useState(false);
   const [ui, setUI] = useState(false);
   const [page, setPage] = useState(false);
-  const [dash, setDash] = useState(false);
-  const seedash = () => {
-    setDash(!dash);
-  };
+ 
 
   const handledash = () => {
     setDashboard(!dashboard);
@@ -36,7 +33,7 @@ function Velvet() {
 
   return (
     <>
-      <div className={`velvet ${toggle.show ? " w-16" : "w-72"}  text-white`}>
+      <div className={`velvet ${toggle.show ? " w-16" : "w-72"}  text-gray-400`}>
         <div
           onClick={() => {
             adjWidth();
@@ -46,207 +43,222 @@ function Velvet() {
           <i class="bi bi-browser-chrome ml-3 "></i>
           <p>Velvet</p>
         </div>
-        <div className="velvet_body grid sticky top-14 ">
-          <p className=" text-gray-500 ml-5 mt-2 ">Main</p>
-          <div className="px-2 pt-4 pb-8 border-r border-gray-300">
-            <ul className="space-y-2">
+        <div className="  border-r sticky top-20 border-gray-300">
+          <div className="velvet_body grid sticky top-16 ">
+            <p className=" text-gray-500 ml-6  ">{`${toggle.show?"°":"Main"}`}</p>
+            <ul className="space-y-2 ">
               <li>
-                <div className={`cursor-pointer `}>
+                <div className="cursor-pointer flex space-x-4 items-center ">
+                  <i className="bi bi-pc-display-horizontal ml-5 "></i>
                   <div
                     onClick={() => {
                       handledash();
                     }}
-                    className=" "
+                    className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  "
                   >
-                    <div className="hover:bg-gray-200 hover:rounded-2xl items-center  pt-1.5 pl-4 hover:text-blue-600 flex  space-x-7">
-                      <i class="bi bi-pc-display-horizontal "></i>
-                      <div
-                        className={` ${
-                          "w-72" ? "" : ""
-                        }flex justify-between w-2/3`}
-                      >
-                        <p>Dashboard</p>
-                        <p>{dashboard ? "‹" : "»"}</p>
-                      </div>
-                    </div>
+                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                      Dashboard
+                    </p>
+                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                      {dashboard ? "‹" : "»"}
+                    </p>
                   </div>
                 </div>
-
                 <ul
-                  className={`dropDash ${
-                    dashboard
+                  className={`dropDash ${dashboard
                       ? "display opacity-100 scale-y-100  "
                       : "h-[0px] opacity-0 scale-y-0"
-                  } ml-6  transform origin-top transition-opacity duration-300`}
+                    } ml-10 mt-3  transform origin-top transition-opacity duration-300`}
                 >
                   <li className=" text-green-600">
                     <Link to="/"> - Scale</Link>
                   </li>
-                  <li>
+                  <li className="hover:text-white ">
                     <Link to="#"> - Crypto</Link>
                   </li>
-                  <li>
+                  <li className="hover:text-white ">
                     <Link to="#"> - Jobs</Link>
-                  </li>
-                  <li>
+                  </li >
+                  <li className="hover:text-white ">
                     <Link to="#"> - CRM</Link>
                   </li>
-                  <li>
+                  <li className="hover:text-white ">
                     <Link to="#"> - Ecommerce</Link>
                   </li>
                 </ul>
               </li>
-              <p className=" text-gray-500 ml-3">General</p>
+              <p className=" text-gray-500 ml-6"> {`${toggle.show?"°":"General"}`}</p>
 
-              <li className={`${ui ? "" : ""}`}>
-                <div className="advanceui cursor-pointer ">
+              <li>
+                <div className="advanceuicursor-pointer flex space-x-4 items-center  ">
+                  <i className="bi bi-box ml-5 "></i>
+
                   <div
                     onClick={() => {
                       handleUi();
                     }}
-                    className=""
+                    className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  "
                   >
-                    <div className="hover:bg-gray-200  hover:rounded-2xl items-center pl-4 pt-4 hover:text-blue-600 flex  space-x-8">
-                      <i class="bi bi-box "></i>
-                      <div className="flex w-2/3 justify-between">
-                        Advance Ui
-                        <div className=" btn"> {ui ? "‹" : "»"}</div>
-                      </div>
+                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                      {" "}
+                      Advance Ui
+                    </p>
+                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                      {" "}
+                      {ui ? "‹" : "»"}
                     </div>
                   </div>
                 </div>
+
                 <ul
-                  className={`dropDash ${
-                    ui
+                  className={`dropDash ${ui
                       ? "display opacity-100 scale-y-100  "
                       : "h-[0px] opacity-0 scale-y-0"
-                  } ml-6 transform origin-top transition-opacity duration-300`}
+                    } ml-10 mt-3 transform origin-top transition-opacity duration-300 ` }
                 >
-                  <li className=" text-green-600">
+                  <li className=" text-green-600 hover:text-white">
                     <Link to="accordian"> - Accordians & Collapse </Link>
                   </li>
-                  <li>
+                  <li className="hover:text-white ">
                     <Link to="#"> - Carousel </Link>
                   </li>
-                  <li>
+                  <li className="hover:text-white ">
                     <Link to="#"> - Draggable Cards </Link>
                   </li>
-                  <li>
+                  <li className="hover:text-white ">
                     <Link to="#"> - Modals & Closes</Link>
                   </li>
-                  <li>
+                  <li className="hover:text-white ">
                     <Link to="#"> - Navbar </Link>
                   </li>
-                  <li>
+                  <li className="hover:text-white ">
                     <Link to="#"> - Offcanvas</Link>
                   </li>
-                  <li>
+                  <li className="hover:text-white ">
                     <Link to="#"> - Placeholder </Link>
                   </li>
                 </ul>
               </li>
-              <p className=" text-gray-500 ml-3 ">Page</p>
+              <p className=" text-gray-500 ml-6 ">{`${toggle.show?"°":"Page"}`}</p>
 
-              <li className={`${page ? "" : ""}`}>
-                <div
-                  onClick={() => {
-                    handlepage();
-                  }}
-                >
-                  <div className="page cursor-pointer   ">
-                    <div className="hover:bg-gray-200 flex justify-between hover:rounded-2xl  py-1.5 px-4 hover:text-blue-600">
-                      <p>
-                        <i class="bi bi-file-earmark-break  mr-9"></i>
-                        Page
-                      </p>
-                      <div className=" btn mr-2"> {page ? "‹" : "»"}</div>
+              <li>
+                <div className="advanceuicursor-pointer flex space-x-4 items-center  ">
+                <i class="bi bi-menu-up ml-5"></i>
+
+                  <div
+                    onClick={() => {
+                      handlepage();
+                    }}
+                    className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  "
+                  >
+                    <p className={`${toggle.show ? "hidden" : ""}`}>Page</p>
+                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                      {page ? "‹" : "»"}
                     </div>
                   </div>
+                </div>
 
-                  <div className="pagDrop ml-10">
-                    <ul
-                      className={`dropDash  ${
-                        page
-                          ? "display opacity-100 scale-y-100 "
-                          : "h-[0px] opacity-0 scale-y-0"
-                      }   transform origin-top transition-opacity duration-300`}
-                    >
-                      <li>
-                        <Link to="#"> - Blog</Link>
-                      </li>
-                      <li>
-                        <Link to="#"> - Chat</Link>
-                      </li>
-                      <li>
-                        <Link to="#"> - Contacts</Link>
-                      </li>
-                      <li>
-                        <Link to="#"> - Ecommerce</Link>
-                      </li>
-                      <li>
-                        <Link to="#"> - Email</Link>
-                      </li>
-                      <li>
-                        <Link to="#"> - Empty</Link>
-                      </li>
-                      <li>
-                        <Link to="#"> - FAQ's</Link>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="pagDrop ml-10">
+                  <ul
+                    className={`dropDash  ${page
+                        ? "display opacity-100 scale-y-100 "
+                        : "h-[0px] opacity-0 scale-y-0"
+                      } ml-2 mt-3  transform origin-top transition-opacity duration-300`}
+                  >
+                    <li className="hover:text-white ">
+                      <Link to="#"> - Blog</Link>
+                    </li>
+                    <li className="hover:text-white ">
+                      <Link to="#"> - Chat</Link>
+                    </li>
+                    <li className="hover:text-white ">
+                      <Link to="#"> - Contacts</Link>
+                    </li>
+                    <li className="hover:text-white ">
+                      <Link to="#"> - Ecommerce</Link>
+                    </li>
+                    <li className="hover:text-white ">
+                      <Link to="#"> - Email</Link>
+                    </li>
+                    <li className="hover:text-white ">
+                      <Link to="#"> - Empty</Link>
+                    </li>
+                    <li className="hover:text-white ">
+                      <Link to="#"> - FAQ's</Link>
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex space-x-9  items-center text-red-500 py-1.5 px-4 rounded  cursor-pointer">
-                  <i class="bi bi-magnet"></i>
-                  <div className="flex w-4/6 justify-between">
-                    Utilities
-                    <p className="   text-red-500 font-bold  text-xs rounded-lg">
-                      »
+                <div className="advanceuicursor-pointer flex space-x-4 items-center  mt-4 ">
+                <i class="bi bi-magnet ml-5"></i>
+
+                  <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
+                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                      {" "}
+                      Utilities
                     </p>
+                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                      <p>»</p>
+                    </div>
                   </div>
                 </div>
               </li>
               <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex space-x-9  items-center text-red-500 py-1.5 px-4 rounded  cursor-pointer">
-                  <i class="bi bi-hexagon "></i>
-                  <div className="flex w-4/6 justify-between">
-                    Error
-                    <p className=" font-bold  text-xs rounded-lg">»</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex items-center text-red-500 py-1.5 px-4 rounded space-x-9 cursor-pointer">
-                  <i class="bi bi-grid "></i>
-                  <div className="flex items-center justify-between w-5/6 ">
-                    Apps
-                    <span className="bg-sky-500 text-gray-100 font-bold px-2 py-0.5 text-xs rounded-lg">
-                      1
-                    </span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div
-                  className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex  items-center text-red-500
-                 py-1.5 px-4 rounded space-x-9 cursor-pointer"
-                >
-                  <i class="bi bi-emoji-smile "></i>
-                  <div className="flex w-4/6 justify-between">Icons</div>
-                  <span className="  pr-3  text-red-500 font-bold text-xs rounded-lg">
-                    »
-                  </span>
-                </div>
-              </li>
-              <li>
-                <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex items-center text-red-500 py-1.5 px-4 rounded space-x-9 cursor-pointer">
-                  <i class="bi bi-menu-button-wide "></i>
-                  <div className="flex w-5/6 justify-between">
-                    Widgets
-                    <p className="bg-red-400 text-gray-100 font-bold -mr-2 px-2 py-1 text-xs rounded-lg">
-                      Hot
+                <div className="advanceuicursor-pointer flex space-x-4 items-center mt-4 ">
+                  <i class="bi bi-hexagon ml-5"></i>
+
+                  <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
+                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                      {" "}
+                      Authentication
                     </p>
+                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                      <p>»</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="advanceuicursor-pointer flex space-x-4 items-center mt-4 ">
+                  <i class="bi bi-grid ml-5 "></i>
+
+                  <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
+                    <p className={`${toggle.show ? "hidden" : ""}`}> Apps</p>
+                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                    <p className="bg-red-300 text-gray-600 font-bold -mr-2 px-1  text-xs rounded-lg">
+                        1
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="advanceuicursor-pointer flex space-x-4 items-center mt-4 ">
+                  <i class="bi bi-emoji-smile  ml-5"></i>
+
+                  <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
+                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                      {" "}
+                      Utilities
+                    </p>
+                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                      <p>»</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="advanceuicursor-pointer flex space-x-4 items-center mt-4 ">
+                  <i class="bi bi-menu-button-wide ml-5 "></i>
+
+                  <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
+                    <p className={`${toggle.show ? "hidden" : ""}`}>Widgets</p>
+                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                      <p className="bg-red-300 text-gray-600 font-bold -mr-2 px-1  text-xs rounded-lg">
+                        Hot
+                      </p>
+                    </div>
                   </div>
                 </div>
               </li>

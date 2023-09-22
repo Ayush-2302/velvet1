@@ -85,7 +85,7 @@ function Dashboard() {
           </p>
         </div>
         <div className="box  box5">
-          <div className=" flex justify-between leading-9">
+          <div className=" flex  justify-between leading-9">
             <p>
               {" "}
               Total sale

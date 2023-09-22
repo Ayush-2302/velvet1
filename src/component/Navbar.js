@@ -248,22 +248,22 @@ function Navbar(props) {
                 <Link to="profile">Profile </Link>
               </li>
               <hr />
-              <li className="flex space-x-2  hover:bg-gray-200">
+              <li className="flex space-x-2 items-center hover:bg-gray-200">
                 <BiComment/>
                 <Link to="#"> Message </Link>
               </li>
               <hr />
-              <li className="flex space-x-2  hover:bg-gray-200">
+              <li className="flex space-x-2 items-center hover:bg-gray-200">
                 <BiCog/>
                 <Link to="#"> Setting </Link>
               </li>
               <hr />
-              <li className="flex space-x-2  hover:bg-gray-200">
+              <li className="flex space-x-2 items-center hover:bg-gray-200">
               <BiHelpCircle/>
                 <Link to="#"> Help </Link>
               </li>
               <hr />
-              <li className="flex space-x-2 hover:bg-gray-200">
+              <li className="flex space-x-2 items-center hover:bg-gray-200">
                 <BiRightArrowAlt/>
                 <Link to="#"> Log Out </Link>
               </li>

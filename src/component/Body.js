@@ -288,7 +288,7 @@ function Body() {
             <div className="top flex justify-between p-3">
               <h1 className=" text-lg font-bold">Sales Statistics </h1>
               <ul className="btn  text-sm ">
-                <div className="flex space-x-2 flex-wrap justify-evenly">
+                <div className="flex space-x-2 space-y-1 flex-wrap justify-evenly">
                   <li>
                     <button className="w-fit justify-center  bg-purple-300  text-purple-900 rounded-lg flex space-x-1 items-center hover:bg-purple-600 hover:text-white p-1 ">
                       <RiFilter3Line color="purple" />
