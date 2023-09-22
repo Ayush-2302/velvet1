@@ -111,11 +111,19 @@ img {
   width: fit-content;
 }
 
-@media(min-width:1400px) {
+@media(min-width:1200px) and (max-width:1401px){
+  .cards3, .cards4{
+    display: flex;
+  }
+  .card7{
+    width: 55%;
+  }
+}
+
+@media(min-width:1401px) {
   .keybody{
     display: flex;
   }
-  
 .task {
   width: 130px;
 }
@@ -129,15 +137,13 @@ img {
   .card7{
     width:30% ;
   }
-  /* .date{
-    margin-left: 5px;
-    width: fit-content;
-  } */
+ 
 }
-@media(min-width:990px)and (max-width:1400px) {
-  .cards1{
+@media(min-width:990px)and (max-width:1401px) {
+  .cards1 {
     display: flex;
   }
+  
   .cards1,.cade2{
     width: 95%;
   }

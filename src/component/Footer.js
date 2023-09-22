@@ -3,15 +3,8 @@ import React from "react";
 export default function () {
   return (
     <>
-      {/* <footer className="footer items-center p-4 bg-neutral text-neutral-content">
-        <p>Copyright © 2023 - All right reserved</p>
-      </footer> */}/
-
-
-<footer className="footer mb-4 -mt-4  sticky footer-center text-base-content rounded">
-  <div>
-  <p className=" flex justify-center items-center text-sm">Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
-  </div>
+<footer className="footer   mt-3 mb-3  h-8 p-2 sticky footer-center text-base-content rounded">
+  <p className=" flex justify-center items-center text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 </footer>
     </>
   );

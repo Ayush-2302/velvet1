@@ -41,12 +41,12 @@ function Velvet() {
           onClick={() => {
             adjWidth();
           }}
-          className=" hover:cursor-pointer h-[63px] text-3xl flex space-x-12  m-auto sticky items-center border-y-2 border-y-gray-500 "
+          className=" hover:cursor-pointer h-[63px] text-3xl flex space-x-12  m-auto sticky top-0 items-center border-y-2 border-y-gray-500 "
         >
           <i class="bi bi-browser-chrome ml-3 "></i>
           <p>Velvet</p>
         </div>
-        <div className="velvet_body grid ">
+        <div className="velvet_body grid sticky top-14 ">
           <p className=" text-gray-500 ml-5 mt-2 ">Main</p>
           <div className="px-2 pt-4 pb-8 border-r border-gray-300">
             <ul className="space-y-2">
@@ -109,8 +109,8 @@ function Velvet() {
                     <div className="hover:bg-gray-200  hover:rounded-2xl items-center pl-4 pt-4 hover:text-blue-600 flex  space-x-8">
                       <i class="bi bi-box "></i>
                       <div className="flex w-2/3 justify-between">
-                      Advance Ui
-                      <div className=" btn"> {ui ? "‹" : "»"}</div>
+                        Advance Ui
+                        <div className=" btn"> {ui ? "‹" : "»"}</div>
                       </div>
                     </div>
                   </div>
@@ -198,34 +198,32 @@ function Velvet() {
               </li>
               <li>
                 <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex space-x-9  items-center text-red-500 py-1.5 px-4 rounded  cursor-pointer">
-                    <i class="bi bi-magnet"></i>
-                    <div className="flex w-4/6 justify-between" >
+                  <i class="bi bi-magnet"></i>
+                  <div className="flex w-4/6 justify-between">
                     Utilities
-                  <p className="   text-red-500 font-bold  text-xs rounded-lg">
-                    »
-                  </p>
+                    <p className="   text-red-500 font-bold  text-xs rounded-lg">
+                      »
+                    </p>
                   </div>
                 </div>
               </li>
               <li>
                 <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex space-x-9  items-center text-red-500 py-1.5 px-4 rounded  cursor-pointer">
-                    <i class="bi bi-hexagon "></i>
+                  <i class="bi bi-hexagon "></i>
                   <div className="flex w-4/6 justify-between">
                     Error
-                  <p className=" font-bold  text-xs rounded-lg">
-                    »
-                  </p>
+                    <p className=" font-bold  text-xs rounded-lg">»</p>
                   </div>
                 </div>
               </li>
               <li>
                 <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex items-center text-red-500 py-1.5 px-4 rounded space-x-9 cursor-pointer">
-                      <i class="bi bi-grid "></i>
+                  <i class="bi bi-grid "></i>
                   <div className="flex items-center justify-between w-5/6 ">
-                      Apps
-                  <span className="bg-sky-500 text-gray-100 font-bold px-2 py-0.5 text-xs rounded-lg">
-                    1
-                  </span>
+                    Apps
+                    <span className="bg-sky-500 text-gray-100 font-bold px-2 py-0.5 text-xs rounded-lg">
+                      1
+                    </span>
                   </div>
                 </div>
               </li>
@@ -234,10 +232,8 @@ function Velvet() {
                   className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex  items-center text-red-500
                  py-1.5 px-4 rounded space-x-9 cursor-pointer"
                 >
-                    <i class="bi bi-emoji-smile "></i>
-                  <div className="flex w-4/6 justify-between">
-                    Icons
-                  </div>
+                  <i class="bi bi-emoji-smile "></i>
+                  <div className="flex w-4/6 justify-between">Icons</div>
                   <span className="  pr-3  text-red-500 font-bold text-xs rounded-lg">
                     »
                   </span>
@@ -245,12 +241,12 @@ function Velvet() {
               </li>
               <li>
                 <div className="hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 flex items-center text-red-500 py-1.5 px-4 rounded space-x-9 cursor-pointer">
-                    <i class="bi bi-menu-button-wide "></i>
+                  <i class="bi bi-menu-button-wide "></i>
                   <div className="flex w-5/6 justify-between">
                     Widgets
-                  <p className="bg-red-400 text-gray-100 font-bold -mr-2 px-2 py-1 text-xs rounded-lg">
-                    Hot
-                  </p>
+                    <p className="bg-red-400 text-gray-100 font-bold -mr-2 px-2 py-1 text-xs rounded-lg">
+                      Hot
+                    </p>
                   </div>
                 </div>
               </li>

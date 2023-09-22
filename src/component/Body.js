@@ -19,8 +19,6 @@ import {
   BiHome,
   BiTv,
   BiSolidZap,
-  BiTrendingUp,
-  BiSolidChevronRight,
 } from "react-icons/bi";
 import { RiPencilLine, RiDeleteBin7Line } from "react-icons/ri";
 import { AiOutlineDelete } from "react-icons/ai";
@@ -33,7 +31,7 @@ import usa from "../asserts/images/usa.png";
 import shoes from "../asserts/images/shoes.png";
 import watch from "../asserts/images/watch.png";
 import cactus from "../asserts/images/cactus.png";
-import headphone from "../asserts/images/headphone.png";
+import grow from "../asserts/images/grow.png";
 import smartphone from "../asserts/images/phone.png";
 import camera from "../asserts/images/camera.png";
 
@@ -96,7 +94,7 @@ function Body() {
   return (
     <>
       {/*  card1 */}
-      <div className="keybody  ">
+      <div className="keybody mb-1 ">
         <div className="cards1   ">
           <div className="card shadow-inner card1">
             <h1 className="text-lg  font-bold">Recent Activity</h1>
@@ -286,7 +284,7 @@ function Body() {
         </div>
         {/*card 3 */}
         <div className="cards2   ">
-          <div className="card card3 p-0">
+          <div className="card card3 p-0  ">
             <div className="top flex justify-between p-3">
               <h1 className=" text-lg font-bold">Sales Statistics </h1>
               <ul className="btn  text-sm ">
@@ -326,10 +324,10 @@ function Body() {
             </div>
             <hr className=" m-1" />
 
-            <img src={stock} alt=" img" className=" w-full  " />
+            <img src={stock} alt=" img" className=" w-full max-h-96  " />
           </div>
           {/* card 4 */}
-          <div className="card  card5 grow overflow-x-scroll   ">
+          <div className="card  card5 grow customize_overflow overflow-x-scroll   ">
             <div className="top flex justify-between">
               <h1 className=" text-lg font-bold">Top Selling Products </h1>
               <div className="flex">
@@ -527,7 +525,7 @@ function Body() {
           </div>
 
           {/* card6 */}
-          <div className="card overflow-x-auto  card6 ">
+          <div className="card overflow-x-auto  card6 p-2 ">
             <div className="top flex justify-between">
               <h1 className=" text-lg font-bold">Monthly Profit </h1>
               <div className="">
@@ -555,22 +553,16 @@ function Body() {
             </div>
             <hr className=" m-2" />
             <h1 className=" font-bold text-2xl">$78344</h1>
-            <p className=" to-gray-200 text-gray-400">
+            <p className=" to-gray-200 text-gray-400 flex justify-between">
               Total Profit Growth Of 85%
-            </p>
-            <div className="grow flex ml-20  animate-pulse -rotate-[20deg] h-20">
-              <p className="  w-12  mt-10 rotate-45 -mr-4 bg-pink-500 h-1"></p>
-              <p className="  w-12  mt-10 -rotate-45 -mr-4   bg-pink-500 h-1"></p>
-              <p className="  w-12  mt-10 rotate-45 -mr-4  bg-pink-500 h-1"></p>
-              <span className="  w-12  mt-10 -rotate-45 -mr-4  bg-pink-500 h-1">
-                {" "}
-              </span>
-              <span className=" -rotate-45 h-12 text-pink-500 ml-[12px] mt-3">
-                <BiSolidChevronRight />
-              </span>
+              <div className=" w-20  mt-5 mr-7 ">
+              <img src={grow} alt="" className=" max-h-24" />
             </div>
+            </p>
+           
 
             <hr className=" m-2" />
+            <div className="w-11/12">
             <div className="cube flex space-x-2 items-center">
               <div className="w-6  rounded-md p-1 bg-purple-200">
                 {" "}
@@ -578,46 +570,41 @@ function Body() {
               </div>
               <p>Fashion</p>
             </div>
-            <div className="progress w-60 h-1 bg-purple-600 animate-pulse mt-5">
+            <div className="progress w-11/12 h-1 bg-purple-600 animate-pulse mt-5">
               {" "}
             </div>
 
             <hr className=" m-2" />
             <div className="home flex space-x-2 items-center">
-            <div className="w-6  rounded-md p-1 bg-yellow-100">
-              <BiHome />
-            </div>
+              <div className="w-6  rounded-md p-1 bg-yellow-100">
+                <BiHome />
+              </div>
               <p>Home Furniture</p>
             </div>
-            <div className="progress w-60 h-1 bg-yellow-400 animate-pulse mt-5">
-              {" "}
-            </div>
+            <div className="progress w-8/12 h-1 bg-yellow-400 animate-pulse mt-5"></div>
 
             <hr className=" m-2" />
             <div className="tv flex space-x-2 items-center">
-            <div className="w-6  rounded-md p-1 bg-orange-200">
-
-              <BiTv />
-            </div>
+              <div className="w-6  rounded-md p-1 bg-orange-200">
+                <BiTv />
+              </div>
               <p>Electronics</p>
             </div>
-            <div className="progress w-52 h-1 bg-orange-600 animate-pulse mt-5">
-              {" "}
-            </div>
+            <div className="progress w-10/12 h-1 bg-orange-600 animate-pulse mt-5"></div>
 
             <hr className=" m-2" />
             <div className="zap items-center flex space-x-2">
-            <div className="w-6  rounded-md p-1 bg-blue-200">
-
-              <BiSolidZap />
-            </div>
+              <div className="w-6  rounded-md p-1 bg-blue-200">
+                <BiSolidZap />
+              </div>
               <p>Groceries</p>
             </div>
-            <div className="progress w-52 h-1 bg-blue-600 animate-pulse mt-5">
+            <div className="progress w-11/12 h-1 bg-blue-600 animate-pulse mt-5">
               {" "}
             </div>
 
             <hr className=" m-2" />
+            </div>
           </div>
         </div>
       </div>
