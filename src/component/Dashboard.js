@@ -1,12 +1,12 @@
 import React from "react";
-import cart from "../asserts/images/cart.png";
+// import cart from "../asserts/images/cart.png";
 // import "./index.css"
 
 function Dashboard() {
   return (
     <>
       <div className="dashboardcont  pt-5 text-white text-3xl pl-10 pr-10 flex  h-32 justify-between">
-        Dashboard <p className=" text-sm m-3">Dashbord » scale</p>
+        Dashboard <p className=" text-sm m-3">Dashbord » sale</p>
       </div>
       <div className=" boxes  relative z-10 -mt-20 m-auto  mr-6 ml-2  ">
         <div className="box box1">

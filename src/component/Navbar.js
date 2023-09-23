@@ -1,4 +1,4 @@
-import React, {  useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import profile from "../asserts/images/w7.png";
 import { Link } from "react-router-dom";
 import CalNoti from "./CalNoti";
@@ -30,7 +30,6 @@ function Navbar(props) {
     sideBar.widthInc();
   };
 
-
   const [lang, setLang] = useState(false);
   const [prof, setProf] = useState(false);
   const [cart, setCart] = useState(false);
@@ -45,7 +44,7 @@ function Navbar(props) {
     setCal(false);
     setNoti(false);
     setAppicon(false);
-
+    setNav(false);
   };
   const handleapp = () => {
     setProf(false);
@@ -91,11 +90,11 @@ function Navbar(props) {
 
   const handleNav = () => {
     setNav(!nav);
+    setProf(false);
   };
 
   return (
     <>
-   
       <nav
         className={`navbar relative   bg-violet-600 flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400  ${
           props.mode === "light" ? "dark" : "light"
@@ -115,7 +114,7 @@ function Navbar(props) {
         </Link>
         <div className="container ml-5  flex items-center h-16  justify-between">
           <div className="hidden sm:block">
-            <div className="flex  hover:cursor-pointer  items-center space-x-2">
+            <div id="search" className="  flex  hover:cursor-pointer  items-center space-x-2">
               <input
                 type="text"
                 placeholder="Search"
@@ -151,12 +150,12 @@ function Navbar(props) {
                         <img src={usa} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">English</Link>
                       </li>
-                      <hr  />
+                      <hr />
                       <li className="  flex space-x-2 p-1 hover:bg-gray-200   ">
                         <img src={canada} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">French</Link>
                       </li>
-                      <hr  />
+                      <hr />
                       <li className="  flex space-x-2 p-1 hover:bg-gray-200 ">
                         <img
                           src={germany}
@@ -175,7 +174,7 @@ function Navbar(props) {
                         <img src={itly} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">Italien</Link>
                       </li>
-                      <hr  />
+                      <hr />
                       <li className=" flex space-x-2 p-1 hover:bg-gray-200  ">
                         <img src={russia} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">Russian</Link>
@@ -320,10 +319,58 @@ function Navbar(props) {
             className="text-2xl"
             onClick={() => {
               handleNav();
-            }}
-          >
+            }} >
             <FaBars />
           </button>
+         
+
+        <div className={`${nav?"":"hidden"} bg-white absolute text-black my-4 w-36 -translate-x-28 rounded-md    `}>
+          <nav className=" ml-4 p-1">
+            <ul>
+              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+              <i className="bi bi-globe inline-block w-5 h-5 "
+                    ></i>
+                Language</li>
+              <hr />
+              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+              <i className="bi bi-moon  inline-block w-5 h-5 "></i>
+              Dark Mode</li>
+              <hr />
+              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+              <i
+                    onClick={() => handleCart()}
+                    className="bi bi-cart  inline-block w-5 h-5 "
+                  ></i>
+                cart</li>
+              <hr />
+              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+              <i
+                    onClick={() => handleNoti()}
+                    className="bi bi-bell  inline-block w-5 h-5 "
+                  ></i>
+                  Notification</li>
+              <hr />
+              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+              <i
+                    onClick={() => handleCal()}
+                    className="bi bi-sliders2  inline-block w-5 h-5 "
+                  ></i>
+                Calender</li>
+              <hr />
+              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+              <i
+                    onClick={() => handleapp()}
+                    className="bi bi-grid  inline-block w-5 h-5 "
+                  ></i>
+                Apps</li>
+              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+              <BiUser />
+
+                Profile</li>
+              <hr />
+            </ul>
+          </nav>
+          </div>
         </div>
       </nav>
     </>

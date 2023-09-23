@@ -71,7 +71,7 @@ function Velvet() {
                     } ml-10 mt-3  transform origin-top transition-opacity duration-300`}
                 >
                   <li className=" text-green-600">
-                    <Link to="/"> - Scale</Link>
+                    <Link to="/"> - Sale</Link>
                   </li>
                   <li className="hover:text-white ">
                     <Link to="#"> - Crypto</Link>
