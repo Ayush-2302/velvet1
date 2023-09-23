@@ -6,122 +6,117 @@ import pic4 from "../asserts/images/w4.png";
 import setting from "../asserts/images/sett.jpg";
 import del from "../asserts/images/delete.png";
 import pic7 from "../asserts/images/w7.png";
-import "../style/Navbar.css"
+import "../style/Navbar.css";
+import { BsXLg } from "react-icons/bs";
+
 
 function Notification() {
   return (
     <>
-      
-      <div className="notification  p-2  shadow-inner ">
+      <div className="notification  p-4 w-96  shadow-inner ">
         <div className="flex justify-between items-center">
-          <span className=" text-xl text-black font-bold">Notification </span>
-          <span className="  mr-3 bg-red-200  text-xs font-bold h-5 p-1 rounded-lg text-red-600"> 5 Unread</span>
+          <p className=" text-xl text-black font-bold">Notification </p>
+          <p className="  mr-5 bg-red-100  text-xs font-bold p-0.5 pl-1.5 pr-1.5 rounded-md text-red-400">
+            {" "}
+            5 Unread
+          </p>
         </div>
         <hr className="m-2" />
         <div className="customize_overflow overflow-y-scroll h-96">
-        <div className="pic1 mt-3  text-black flex justify-around">
-          <img src={pic1} alt="" className=" w-12 h-12 " />
-          <div className="content w-48 ml-2">
-            <p className=" text-sm  font-bold">Olivia james</p>
-            <p className=" text-sm">Congrulate for New template start</p>
+          <div className="pic1   p-3 text-black flex justify-between hover:bg-gray-100">
+            <img src={pic1} alt="" className=" rounded-md w-12 h-12 " />
+            <div className="content text-sm  w-44 ml-2">
+              <p className="   font-bold">Olivia james</p>
+              <p className="text-xs text-gray-400">Congrulate for New template start</p>
+            </div>
+            <div>
+              <p className="  ml-8 text-red-600"><BsXLg/></p>
+              <p className=" text-xs text-gray-400">5 min ago</p>
+            </div>
           </div>
-          <div>
-            <p className=" relative ml-12 text-red-600">X</p>
-            <p className=" text-sm">5 min ago</p>
+          <hr />
+
+          <div className="pic6 p-3 text-black flex justify-between hover:bg-gray-100">
+            <img src={del} alt="" className=" rounded-md w-12 h-12 " />
+            <div className="content text-sm  w-44 ml-2">
+              <p className=" font-bold">Deleted</p>
+              <p className="text-xs text-gray-400 ">some items has been deleted</p>
+            </div>
+            <div>
+              <p className=" ml-8 text-red-600"><BsXLg/></p>
+              <p className=" text-xs text-gray-400">15 min ago</p>
+            </div>
           </div>
+          <hr />
+
+          <div className="pic2 p-3 text-black flex justify-between hover:bg-gray-100">
+            <img src={pic2} alt="" className=" rounded-md w-12 h-12 " />
+            <div className=" text-sm  content w-44 ml-2">
+              <p className="  font-bold">Elizabeth james</p>
+              <p className="text-xs text-gray-400">added new schedule realease date</p>
+            </div>
+            <div>
+              <p className=" relative ml-8 text-red-600"><BsXLg/></p>
+              <p className=" text-xs text-gray-400">10 min ago</p>
+            </div>
+          </div>
+          <hr />
+
+          <div className="pic3 p-3 text-black flex justify-between hover:bg-gray-100">
+            <img src={pic3} alt="" className=" w-12 h-12 " />
+            <div className=" text-sm content w-44 ml-2">
+              <p className="  font-bold">lara james</p>
+              <p className=" text-xs text-gray-400"> your product is out of stock</p>
+            </div>
+            <div>
+              <p className="  ml-8 text-red-600"><BsXLg/></p>
+              <p className=" text-xs text-gray-400">12 min ago</p>
+            </div>
+          </div>
+          <hr />
+
+          <div className="pic4 p-3 text-black flex justify-between hover:bg-gray-100">
+            <img src={pic4} alt="" className=" rounded-md w-12 h-12 " />
+            <div className="content text-sm w-44 ml-2">
+              <p className="  font-bold">Jonh's Sinha</p>
+              <p className="text-xs text-gray-400">please complete your transction</p>
+            </div>
+            <div>
+              <p className="  ml-8 text-red-600"><BsXLg/></p>
+              <p className=" text-xs text-gray-400">13 min ago</p>
+            </div>
+          </div>
+          <hr />
+
+          <div className="pic5 p-3 text-black flex justify-between hover:bg-gray-100">
+            <img src={setting} alt="" className=" rounded-md w-12 h-12 " />
+            <div className="content text-sm w-44 ml-2">
+              <p className="  font-bold">Setting</p>
+              <p className="text-xs text-gray-400">complete your KYC details</p>
+            </div>
+            <div>
+              <p className="  ml-8 text-red-600"><BsXLg/></p>
+              <p className=" text-xs text-gray-400">15 min ago</p>
+            </div>
+          </div>
+          <hr />
+
+          <div className="pic7 p-3 text-black  flex justify-between hover:bg-gray-100">
+            <img src={pic7} alt="" className=" rounded-md w-12 h-12 " />
+            <div className="content text-sm  ml-2 w-44">
+              <p className="  font-bold">Aaron</p>
+              <p className="text-xs text-gray-400 ">
+                {" "}
+                Checkout: some items are added in cart
+              </p>
+            </div>
+            <div>
+              <p className="  ml-8 text-red-600"><BsXLg/></p>
+              <p className=" text-xs text-gray-400">18 min ago</p>
+            </div>
+          </div>
+          <hr />
         </div>
-        <hr className="m-2 " />
-
-
-        <div className="pic6 mt-3 text-black flex justify-around">
-  <img src={del} alt="" className=" w-12 h-12 " />
-  <div className="contentw-48 ml-2">
-    <p className=" text-sm font-bold">Deleted</p>
-    <p className=" text-sm">some items has been deleted</p>
-  </div>
-  <div>
-    <p className=" relative ml-12 text-red-600">X</p>
-    <p className=" text-sm">15 min ago</p>
-  </div>
-</div>
-<hr className=" m-2" />
-
-
-
-        <div className="pic2 mt-3 text-black flex justify-around">
-          <img src={pic2} alt="" className=" w-12 h-12 " />
-          <div className="content w-48 ml-2">
-            <p className=" text-sm font-bold">Elizabeth james</p>
-            <p className=" text-sm">added new schedule realease date</p>
-          </div>
-          <div>
-            <p className=" relative ml-12 text-red-600">X</p>
-            <p className=" text-sm">10 min ago</p>
-          </div>
-        </div>
-        <hr className=" m-2" />
-
-
-
-        <div className="pic3 mt-3 text-black flex justify-around">
-          <img src={pic3} alt="" className=" w-12 h-12 " />
-          <div className="content w-48 ml-2">
-            <p className=" text-sm font-bold">lara james</p>
-            <p className=" text-sm"> your product is out of stock</p>
-          </div>
-          <div>
-            <p className=" relative ml-12 text-red-600">X</p>
-            <p className=" text-sm">12 min ago</p>
-          </div>
-        </div>
-        <hr className=" m-2" />
-
-
-
-        <div className="pic4 mt-3 text-black flex justify-around">
-          <img src={pic4} alt="" className=" w-12 h-12 " />
-          <div className="content w-48 ml-2">
-            <p className=" text-sm font-bold">Jonh's Sinha</p>
-            <p className=" text-sm">please complete your transction</p>
-          </div>
-          <div>
-            <p className=" relative ml-12 text-red-600">X</p>
-            <p className=" text-sm">13 min ago</p>
-          </div>
-        </div>
-        <hr className=" m-2" />
-
-
-        <div className="pic5 mt-3 text-black flex justify-around">
-          <img src={setting} alt="" className=" w-12 h-12 " />
-          <div className="content w-48 ml-2">
-            <p className=" text-sm font-bold">Setting</p>
-            <p className=" text-sm">complete your KYC details</p>
-          </div>
-          <div>
-            <p className=" relative ml-12 text-red-600">X</p>
-            <p className=" text-sm">15 min ago</p>
-          </div>
-        </div>
-        <hr className=" m-2" />
-
-
-        <div className="pic7 mt-3 text-black  flex justify-around">
-          <img src={pic7} alt="" className=" w-12 h-12 " />
-          <div className="content ml-2 w-48">
-            <p className=" text-sm font-bold">Aaron</p>
-            <p className=" text-sm"> Checkout: some items are added in cart</p>
-          </div>
-          <div>
-            <p className=" relative ml-12 text-red-600">X</p>
-            <p className=" text-sm">18 min ago</p>
-          </div>
-        </div>
-        <hr className=" m-2" />
-
-
-        </div>
-
       </div>
     </>
   );

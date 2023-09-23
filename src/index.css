@@ -38,13 +38,44 @@ img {
     grid-template-columns:repeat(2,1fr);
   }
 }
-@media (min-width:407px) and (max-width:768px){
+@media (min-width:600px) and (max-width:768px){
   .boxes{
     display: grid;
     grid-template-columns:repeat(3,1fr);
-    width: 95%;
 
   }
+}
+@media (min-width:407px) and (max-width:600px){
+  .boxes{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+
+  }
+}
+@media(max-width:601px){
+  #velvet{
+    display: none; 
+    /* width:64px; */
+   }
+  
+}
+@media(max-width:830px){
+  .icons ul li{
+    display: none;  }
+  
+}
+@media(max-width:400px){
+  .harry{
+    display: none;  }
+    .profile .john{
+      width: 60px;
+    }
+}
+@media(max-width:300px){
+ 
+    .profile .john , #setting, .dashboardcont p {
+      display: none;
+    }
 }
 
 
@@ -76,7 +107,7 @@ img {
   word-wrap: break-word;
   transition: all 0s ease 0s;
   border-radius: 10px;
-  box-shadow: 0px -10px rgba(199, 198, 198, 0.849);
+  box-shadow: 0px -10px rgba(242, 242, 242, 0.849);
   position: relative;
 }
 .card {

@@ -1,5 +1,6 @@
 .customize_overflow::-webkit-scrollbar{
     width: 4px;
+    height: 4px;
 }
 
 .customize_overflow::-webkit-scrollbar-thumb {

@@ -1,15 +1,22 @@
-import React, { useContext, useState } from "react";
+import React, {  useContext, useState } from "react";
 import profile from "../asserts/images/w7.png";
 import { Link } from "react-router-dom";
 import CalNoti from "./CalNoti";
 import Notification from "./Notification";
+import Appsicons from "./Appsicons";
 import Dropdowncart from "./Dropdowncart";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import { FaSearch, FaHome, FaBars } from "react-icons/fa";
 import { AiOutlineBars } from "react-icons/ai";
 import { val } from "./ValNav";
-import { BiUser,BiCog, BiComment, BiHelpCircle, BiRightArrowAlt  } from "react-icons/bi";
+import {
+  BiUser,
+  BiCog,
+  BiComment,
+  BiHelpCircle,
+  BiRightArrowAlt,
+} from "react-icons/bi";
 import canada from "../asserts/images/canada.png";
 import germany from "../asserts/images/germany.png";
 import spain from "../asserts/images/spain.png";
@@ -23,11 +30,13 @@ function Navbar(props) {
     sideBar.widthInc();
   };
 
+
   const [lang, setLang] = useState(false);
   const [prof, setProf] = useState(false);
   const [cart, setCart] = useState(false);
   const [cal, setCal] = useState(false);
   const [noti, setNoti] = useState(false);
+  const [appicon, setAppicon] = useState(false);
 
   const handleProf = () => {
     setProf(!prof);
@@ -35,9 +44,20 @@ function Navbar(props) {
     setCart(false);
     setCal(false);
     setNoti(false);
+    setAppicon(false);
+
+  };
+  const handleapp = () => {
+    setProf(false);
+    setLang(false);
+    setCart(false);
+    setCal(false);
+    setNoti(false);
+    setAppicon(!appicon);
   };
   const handleLang = () => {
     setProf(false);
+    setAppicon(false);
     setLang(!lang);
     setCart(false);
     setCal(false);
@@ -45,6 +65,7 @@ function Navbar(props) {
   };
   const handleCart = () => {
     setProf(false);
+    setAppicon(false);
     setLang(false);
     setCart(!cart);
     setCal(false);
@@ -52,6 +73,7 @@ function Navbar(props) {
   };
   const handleCal = () => {
     setProf(false);
+    setAppicon(false);
     setLang(false);
     setCart(false);
     setCal(!cal);
@@ -60,6 +82,7 @@ function Navbar(props) {
   const handleNoti = () => {
     setProf(false);
     setLang(false);
+    setAppicon(false);
     setCart(false);
     setCal(false);
     setNoti(!noti);
@@ -72,26 +95,27 @@ function Navbar(props) {
 
   return (
     <>
+   
       <nav
         className={`navbar relative   bg-violet-600 flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400  ${
           props.mode === "light" ? "dark" : "light"
         }`}
         style={{ position: "sticky", top: "1px", zIndex: 12 }}
       >
-        <div className="container ml-10  flex items-center h-16  justify-between">
+        <div
+          onClick={() => {
+            handleSide();
+          }}
+          className=" ml-5 mt-6"
+        >
+          <AiOutlineBars />
+        </div>
+        <Link to="/">
+          <FaHome className="inline-block mr-3 w-7 h-7 ml-5 mt-4 " />
+        </Link>
+        <div className="container ml-5  flex items-center h-16  justify-between">
           <div className="hidden sm:block">
             <div className="flex  hover:cursor-pointer  items-center space-x-2">
-              <div
-                onClick={() => {
-                  handleSide();
-                }}
-                className="valvet"
-              >
-                <AiOutlineBars />
-              </div>
-              <Link to="/">
-                <FaHome className="inline-block mr-3 w-7 h-7  " />
-              </Link>
               <input
                 type="text"
                 placeholder="Search"
@@ -119,37 +143,41 @@ function Navbar(props) {
                 <div
                   className={` ${
                     lang ? "" : "hidden"
-                  } langDropdown  w-36  text-md border-gray-100 border-2 shadow-inner  mt-4 bg-white text-black translate-y-2 absolute  `}
+                  } langDropdown  w-36 rounded-md   text-sm  border-gray-100 border-2 shadow-inner  mt-4 bg-white text-black translate-y-2 absolute  `}
                 >
                   <ul>
                     <div className="p-2 ml-2">
-                      <li className="  flex space-x-2 hover:bg-gray-200 ">
-                      <img src={usa} alt="" className=" w-5 rounded-2xl"/>
+                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 ">
+                        <img src={usa} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">English</Link>
                       </li>
-                      <hr className="m-1" />
-                      <li className="  flex space-x-2 hover:bg-gray-200   ">
-                      <img src={canada} alt="" className=" w-5 rounded-2xl"/>
+                      <hr  />
+                      <li className="  flex space-x-2 p-1 hover:bg-gray-200   ">
+                        <img src={canada} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">French</Link>
                       </li>
-                      <hr className="m-1" />
-                      <li className="  flex space-x-2 hover:bg-gray-200 ">
-                      <img src={germany} alt="" className=" w-5 rounded-2xl"/>
+                      <hr  />
+                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 ">
+                        <img
+                          src={germany}
+                          alt=""
+                          className=" w-5 rounded-2xl"
+                        />
                         <Link href="#">German</Link>
                       </li>
                       <hr className="m-1" />
-                      <li className="  flex space-x-2 hover:bg-gray-200 ">
-                      <img src={spain} alt="" className=" w-5 rounded-2xl"/>
+                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 ">
+                        <img src={spain} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">Spainish</Link>
                       </li>
-                      <hr className="m-1" />
-                      <li className="  flex space-x-2 hover:bg-gray-200 ">
-                      <img src={itly} alt="" className=" w-5 rounded-2xl"/>
+                      <hr />
+                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 ">
+                        <img src={itly} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">Italien</Link>
                       </li>
-                      <hr className="m-1" />
-                      <li className=" flex space-x-2 hover:bg-gray-200  ">
-                      <img src={russia} alt="" className=" w-5 rounded-2xl"/>
+                      <hr  />
+                      <li className=" flex space-x-2 p-1 hover:bg-gray-200  ">
+                        <img src={russia} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">Russian</Link>
                       </li>
                     </div>
@@ -174,7 +202,7 @@ function Navbar(props) {
               <div
                 className={`${
                   cart ? "" : "hidden"
-                } cart text-sm absolute -translate-x-72 translate-y-12   bg-white border-gray-200 border-2`}
+                } cart text-sm absolute -translate-x-72 translate-y-12 rounded-md  bg-white border-gray-200 border-2`}
               >
                 <Dropdowncart />
               </div>
@@ -188,18 +216,31 @@ function Navbar(props) {
                 </Link>
               </li>
 
-              <li>
-                <Link to="#">
-                  <i className="bi bi-grid  inline-block w-5 h-5 "></i>
-                </Link>
-              </li>
               <div
                 className={`${
                   noti ? "" : " hidden"
-                } absolute bg-white translate-y-12  -translate-x-60`}
+                } absolute bg-white translate-y-12  rounded-md -translate-x-60`}
               >
                 <Notification />
               </div>
+
+              <li>
+                <Link to="#">
+                  <i
+                    onClick={() => handleapp()}
+                    className="bi bi-grid  inline-block w-5 h-5 "
+                  ></i>
+                </Link>
+              </li>
+
+              <div
+                className={`${
+                  appicon ? "" : " hidden"
+                } absolute bg-white translate-y-12  h-[700px] rounded-md translate-x-24`}
+              >
+                <Appsicons />
+              </div>
+
               <li>
                 <Link to="#">
                   <i className="bi bi-fullscreen  inline-block w-5 h-5 "></i>
@@ -228,10 +269,10 @@ function Navbar(props) {
           <Link to="#">
             <div
               onClick={() => handleProf()}
-              className="flex justify-center items-center h-full w-40 border-r-2 border-l-2 border-gray-400 shadow-inner"
+              className=" john flex justify-center items-center h-full w-40 border-r-2 border-l-2 border-gray-400 shadow-inner"
             >
               <img src={profile} alt="" className="  rounded-full w-8 h-8" />
-              <p className=" font-bold ml-2">Harry's John</p>
+              <p className="harry font-bold ml-2">Harry's John</p>
             </div>
           </Link>
         </div>
@@ -242,39 +283,39 @@ function Navbar(props) {
               prof ? "" : "hidden"
             } py-1 text-sm   text-black-700 absolute -translate-x-40 translate-y-16 w-40 border-2  border-gray-100  px-4   shadow-inner bg-white`}
           >
-            <div className="ml-2 text-lg text-black">
-              <li className=" text-green-600 flex space-x-2 items-center hover:bg-gray-200 ">
-              <BiUser/>
+            <div className="ml-2 text-base  text-gray-600">
+              <li className=" text-green-600 flex space-x-2  p-1 items-center hover:bg-gray-200 ">
+                <BiUser />
                 <Link to="profile">Profile </Link>
               </li>
               <hr />
-              <li className="flex space-x-2 items-center hover:bg-gray-200">
-                <BiComment/>
+              <li className="flex space-x-2 items-center p-1  hover:bg-gray-200">
+                <BiComment />
                 <Link to="#"> Message </Link>
               </li>
               <hr />
-              <li className="flex space-x-2 items-center hover:bg-gray-200">
-                <BiCog/>
+              <li className="flex space-x-2 items-center p-1  hover:bg-gray-200">
+                <BiCog />
                 <Link to="#"> Setting </Link>
               </li>
               <hr />
-              <li className="flex space-x-2 items-center hover:bg-gray-200">
-              <BiHelpCircle/>
+              <li className="flex space-x-2 items-center p-1  hover:bg-gray-200">
+                <BiHelpCircle />
                 <Link to="#"> Help </Link>
               </li>
               <hr />
-              <li className="flex space-x-2 items-center hover:bg-gray-200">
-                <BiRightArrowAlt/>
+              <li className="flex space-x-2 items-center p-1  hover:bg-gray-200">
+                <BiRightArrowAlt />
                 <Link to="#"> Log Out </Link>
               </li>
             </div>
           </ul>
         </div>
-        <div className="setting ml-4 mr-5 flex items-center">
+        <div id="setting" className=" ml-4 mr-2 pr-3 flex items-center">
           <i class="bi bi-gear "></i>
         </div>
 
-        <div className="sm:hidden m-5">
+        <div className="sm:hidden m-5 mr-6 smallNav  ">
           <button
             className="text-2xl"
             onClick={() => {

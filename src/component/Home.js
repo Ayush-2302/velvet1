@@ -6,9 +6,8 @@ import Body from "./Body";
 function Home( props ) {
   return (
     <>
-        <div className=" bg-gray-200">
+        <div className=" m-auto bg-gray-200">
           <Dashboard />
-          
           <Body />
         </div>
       

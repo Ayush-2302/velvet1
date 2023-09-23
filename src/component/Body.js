@@ -95,7 +95,7 @@ function Body() {
     <>
       {/*  card1 */}
       <div className="keybody mb-1 ">
-        <div className="cards1   ">
+        <div className="cards1  mr-5  ">
           <div className="card shadow-inner card1">
             <h1 className="text-lg  font-bold">Recent Activity</h1>
             <hr className="mt-3" />
@@ -283,7 +283,7 @@ function Body() {
           </div>
         </div>
         {/*card 3 */}
-        <div className="cards2   ">
+        <div className="cards2 mr-5   ">
           <div className="card card3 p-0  ">
             <div className="top flex justify-between p-3">
               <h1 className=" text-lg font-bold">Sales Statistics </h1>
@@ -610,7 +610,7 @@ function Body() {
       </div>
       {/* card 7 */}
 
-      <div className=" cards4 xl:m-auto pb-8 ">
+      <div className=" cards4 xl:m-auto pb-8  mr-5">
         <div className="card card7  ">
           <div className="top flex justify-between">
             <h1 className=" text-lg font-bold">Transaction History </h1>

@@ -1,7 +1,6 @@
 import React from "react";
 
 import cactus from "../asserts/images/cactus.png";
-import del from "../asserts/images/delete.png";
 import shoes from "../asserts/images/shoes.png";
 import watch from "../asserts/images/watch.png";
 import goodluck from "../asserts/images/goodluck.png";
@@ -10,66 +9,68 @@ import "../style/Navbar.css";
 function Dropdowncart() {
   return (
     <>
-      <div className="cart    text-black p-4 ">
+      <div className="cart   text-black p-4 ">
         <div className="flex justify-between items-center">
           <span className=" text-lg font-bold">Cart Items </span>
-          <span className="  rounded-xl mr-2   text-xs bg-green-200 text-green-600 p-1 ">5 items</span>
+          <span className="  rounded-xl mr-2   text-xs bg-green-200 text-green-600 p-1 pl-2 pr-2 ">
+            5 items
+          </span>
         </div>
         <hr className="m-2 border-black" />
         <div className="scrollbar text-black h-80 overflow-y-scroll customize_overflow ">
-          <div className="cactus mt-2 flex items-center justify-evenly">
-            <img src={cactus} alt="" className=" w-20 h-16 " />
+          <div className="cactus p-2 flex items-center justify-between hover:bg-gray-100">
+            <img src={cactus} alt="" className="  rounded-md w-20 h-16 " />
             <div className="content">
               <p className=" font-bold">Cactus mini plant</p>
               <p>Quantity : 02</p>
               <p className="rate text-lg font-bold">$1229</p>
             </div>
-            <img src={del} alt="" className="  ml-6 w-6 h-6" />
+            <i class="bi bi-trash3 text-red-600 mb-10 ml-10"></i>
           </div>
-          <hr className="mt-2 " />
+          <hr />
 
-          <div className="Shoes mt-2 flex items-center justify-evenly">
-            <img src={shoes} alt="" className=" w-20 h-16 " />
+          <div className="Shoes p-2 flex items-center justify-between hover:bg-gray-100">
+            <img src={shoes} alt="" className="rounded-lg w-20 h-16 " />
             <div className="content">
               <p className=" font-bold">Mens Sport Shoes</p>
               <p>Quantity : 01</p>
               <p className="rate text-lg font-bold">$119</p>
             </div>
-            <img src={del} alt="" className="  ml-6. w-6 h-6" />
+            <i class="bi bi-trash3 text-red-600 mb-10 ml-10"></i>
           </div>
-          <hr className="m-2" />
+          <hr />
 
-          <div className="watch mt-2 items-center flex justify-evenly">
-            <img src={watch} alt="" className=" w-20 h-16" />
+          <div className="watch p-2 items-center flex justify-between hover:bg-gray-100">
+            <img src={watch} alt="" className=" rounded-md w-20 h-16" />
             <div className="content">
               <p className=" font-bold">Watch for Men</p>
               <p>Quantity : 03</p>
               <p className="rate text-lg font-bold">$2119</p>
             </div>
-            <img src={del} alt="" className="  ml-6 w-6 h-6" />
+            <i class="bi bi-trash3 text-red-600 mb-10 ml-10"></i>
           </div>
-          <hr className="m-2 " />
-          <div className="goodluck mt-2 items-center flex justify-evenly">
-            <img src={goodluck} alt="" className=" w-20 h-16 " />
+          <hr />
+          <div className="goodluck p-2 items-center flex justify-between hover:bg-gray-100">
+            <img src={goodluck} alt="" className=" rounded-md w-20 h-16 " />
             <div className="content">
               <p className=" font-bold">GoodLuck Plant</p>
               <p>Quantity : 03</p>
               <p className="rate text-lg font-bold">$1019</p>
             </div>
-            <img src={del} alt="" className="  ml-6 w-6 h-6" />
+            <i class="bi bi-trash3 text-red-600 mb-10 ml-10"></i>
           </div>
-          <hr className="m-2 " />
+          <hr />
 
-          <div className="plant mt-2 items-center flex justify-evenly">
-            <img src={transplant} alt="" className=" w-20 h-16 " />
+          <div className="plant p-2 items-center flex justify-between hover:bg-gray-100">
+            <img src={transplant} alt="" className=" rounded-md w-20 h-16 " />
             <div className="content">
               <p className=" font-bold">Transparent Plant</p>
               <p>Quantity : 03</p>
               <p className="rate text-lg font-bold">$1019</p>
             </div>
-            <img src={del} alt="" className="  ml-6 w-6 h-6" />
+            <i class="bi bi-trash3 text-red-600 mb-10 ml-10"></i>
           </div>
-          <hr className="m-2 " />
+          <hr />
         </div>
       </div>
 

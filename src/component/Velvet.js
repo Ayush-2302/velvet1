@@ -33,7 +33,7 @@ function Velvet() {
 
   return (
     <>
-      <div className={`velvet ${toggle.show ? " w-16" : "w-72"}  text-gray-400`}>
+      <div id="velvet" className={`velvet ${toggle.show ? " w-16" : "w-72"}  text-gray-400`}>
         <div
           onClick={() => {
             adjWidth();
@@ -45,7 +45,7 @@ function Velvet() {
         </div>
         <div className="  border-r sticky top-20 border-gray-300">
           <div className="velvet_body grid sticky top-16 ">
-            <p className=" text-gray-500 ml-6  ">{`${toggle.show?"°":"Main"}`}</p>
+            <p className=" text-gray-500 ml-6 mb-4 ">{`${toggle.show?"°":"Main"}`}</p>
             <ul className="space-y-2 ">
               <li>
                 <div className="cursor-pointer flex space-x-4 items-center ">
@@ -56,7 +56,7 @@ function Velvet() {
                     }}
                     className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  "
                   >
-                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                    <p className={`${toggle.show ? "hidden" : ""} `}>
                       Dashboard
                     </p>
                     <p className={`${toggle.show ? "hidden" : ""}`}>

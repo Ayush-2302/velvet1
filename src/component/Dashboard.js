@@ -5,7 +5,7 @@ import cart from "../asserts/images/cart.png";
 function Dashboard() {
   return (
     <>
-      <div className="dashboardcont  pt-5  text-3xl pl-10 pr-10 flex  h-32 justify-between">
+      <div className="dashboardcont  pt-5 text-white text-3xl pl-10 pr-10 flex  h-32 justify-between">
         Dashboard <p className=" text-sm m-3">Dashbord » scale</p>
       </div>
       <div className=" boxes  relative z-10 -mt-20 m-auto  mr-6 ml-2  ">
@@ -21,7 +21,7 @@ function Dashboard() {
             </div>
           </div>
           <p className=" flex justify-between text-xs h-5 mt-2 ">
-            <p className=" rounded-2xl flex w-fit ml-1 p-0.5 bg-purple-300 text-purple-900 font-bold ">
+            <p className=" rounded-2xl flex   ml-1 items-center p-1 bg-purple-100 text-purple-900  ">
               +52% <p className=" ml-1 rotate-90">→</p>{" "}
             </p>
             <p className=" underline ">view more</p>
@@ -40,7 +40,7 @@ function Dashboard() {
             </div>
           </div>
           <p className=" flex justify-between text-xs mt-2 ">
-            <p className=" rounded-2xl flex w-fit ml-1 p-0.5 bg-green-300 text-green-900 font-bold">
+            <p className=" rounded-2xl flex ml-1  items-center p-1 bg-green-100 text-green-500 font-bold">
               +52% <p className=" ml-1 -rotate-90">→</p>{" "}
             </p>
             <p className=" underline">view more</p>
@@ -59,7 +59,7 @@ function Dashboard() {
             </div>
           </div>
           <p className=" flex justify-between text-xs  mt-2 ">
-            <p className=" rounded-2xl flex w-fit ml-1 p-0.5 bg-red-300 text-red-900 font-bold">
+            <p className=" rounded-2xl flex ml-1  items-center p-1 bg-red-100 text-red-400 font-bold">
               +52% <p className=" ml-1 rotate-90">→</p>{" "}
             </p>
             <p className=" underline ">view more</p>
@@ -78,7 +78,7 @@ function Dashboard() {
             </div>
           </div>
           <p className=" flex justify-between text-xs  mt-2 ">
-            <p className=" rounded-2xl flex w-fit ml-1 p-0.5 bg-green-300 to-green-900 font-bold">
+            <p className=" rounded-2xl flex ml-1  items-center p-1 bg-green-100 text-green-500 font-bold">
               +52% <p className=" ml-1 -rotate-90">→</p>{" "}
             </p>
             <p className=" underline">view more</p>
@@ -98,7 +98,7 @@ function Dashboard() {
             </div>
           </div>
           <p className=" flex justify-between text-xs mt-2 ">
-            <p className=" rounded-2xl flex w-fit ml-1 p-0.5 bg-red-300 font-bold text-red-900">
+            <p className=" rounded-2xl flex  ml-1  items-center p-1 bg-red-100 font-bold text-red-400">
               +52% <p className=" ml-1 rotate-90">→</p>{" "}
             </p>
             <p className=" underline ">view more</p>
