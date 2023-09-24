@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { BsXLg } from "react-icons/bs";
 import {
   BiUser,
@@ -8,17 +8,32 @@ import {
   BiCalendar,
   BiEnvelope,
 } from "react-icons/bi";
+import { cross } from "./Navbar";
 
 function Appsicons() {
+  const button = useContext(cross);
+  const [btn,setBtn]=useState(false)
+  const hide =()=>{
+    setBtn(!btn)
+  }
+  // const btn = button.appicon;
+  // const hide = () => {
+  //   button.handleapp()
+  // }
 
   return (
     <>
-      <div className="cart w-80  m-3   float-right">
+      <div className={`${btn ? "hidden" : ""}  cart w-80  m-3   float-right`}>
         <div className="flex justify-between items-center">
           <span className=" text-2xl font-bold m-2 text-black">
-            Realated Apps{" "}
+            Realated Apps {button}
           </span>
-          <button className=" w-6 m-4 h-7 rounded-md border-gray-100 text-black   bg-slate-200 p-1 ">
+          <button
+            onClick={() => {
+              hide();
+            }}
+            className=" w-6 m-4 h-7 rounded-md border-gray-100 text-black   bg-slate-200 p-1 "
+          >
             <BsXLg />
           </button>
         </div>

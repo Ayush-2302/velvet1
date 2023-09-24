@@ -284,7 +284,7 @@ function Body() {
         </div>
         {/*card 3 */}
         <div className="cards2 mr-5   ">
-          <div className="card card3 p-0  ">
+          <div className="card card3 p-0  overflow-x-auto ">
             <div className="top flex justify-between p-3">
               <h1 className=" text-lg font-bold">Sales Statistics </h1>
               <ul className="btn  text-sm ">
@@ -324,7 +324,7 @@ function Body() {
             </div>
             <hr className=" m-1" />
 
-            <img src={stock} alt=" img" className=" w-full max-h-96  " />
+            <img src={stock} alt=" img" className=" w-full h-96  " />
           </div>
           {/* card 4 */}
           <div className="card  card5 grow customize_overflow overflow-x-scroll   ">
@@ -610,8 +610,8 @@ function Body() {
       </div>
       {/* card 7 */}
 
-      <div className=" cards4 xl:m-auto pb-8  mr-5">
-        <div className="card card7  ">
+      <div className=" cards4 xl:m-auto pb-8   mr-5">
+        <div className="card card7 overflow-x-auto ">
           <div className="top flex justify-between">
             <h1 className=" text-lg font-bold">Transaction History </h1>
             <div className="flex">

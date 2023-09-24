@@ -61,7 +61,7 @@ img {
 
 @media(max-width:601px) {
   #velvet {
-    display: none;
+    /* display: none; */
     /* width:64px; */
   }
 

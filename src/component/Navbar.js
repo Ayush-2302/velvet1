@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import profile from "../asserts/images/w7.png";
 import { Link } from "react-router-dom";
 import CalNoti from "./CalNoti";
@@ -23,6 +23,9 @@ import spain from "../asserts/images/spain.png";
 import itly from "../asserts/images/itly.png";
 import russia from "../asserts/images/russia.png";
 import usa from "../asserts/images/usa.png";
+
+
+const cross=createContext();
 
 function Navbar(props) {
   const sideBar = useContext(val);
@@ -93,8 +96,15 @@ function Navbar(props) {
     setProf(false);
   };
 
+  const [knife, setKnife]= useState("Helllow Ayush")
+
   return (
     <>
+    {/* <cross.Provider value={knife}> */}
+      {/* {props.children} */}
+      {/* <Appsicons/> */}
+    {/* </cross.Provider> */}
+
       <nav
         className={`navbar relative   bg-violet-600 flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400  ${
           props.mode === "light" ? "dark" : "light"
@@ -237,7 +247,10 @@ function Navbar(props) {
                   appicon ? "" : " hidden"
                 } absolute bg-white translate-y-12  h-[700px] rounded-md translate-x-24`}
               >
+                    <cross.Provider value={knife}>
+
                 <Appsicons />
+                </cross.Provider>
               </div>
 
               <li>
@@ -373,8 +386,10 @@ function Navbar(props) {
           </div>
         </div>
       </nav>
+
     </>
   );
 }
 
 export default Navbar;
+export {cross}

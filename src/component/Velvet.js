@@ -13,7 +13,6 @@ function Velvet() {
   const [dashboard, setDashboard] = useState(false);
   const [ui, setUI] = useState(false);
   const [page, setPage] = useState(false);
- 
 
   const handledash = () => {
     setDashboard(!dashboard);
@@ -33,7 +32,10 @@ function Velvet() {
 
   return (
     <>
-      <div id="velvet" className={`velvet ${toggle.show ? " w-16" : "w-72"}  text-gray-400`}>
+      <div
+        id="velvet"
+        className={`velvet ${toggle.show ? " w-72" : "w-16"}  text-gray-400`}
+      >
         <div
           onClick={() => {
             adjWidth();
@@ -45,7 +47,9 @@ function Velvet() {
         </div>
         <div className="  border-r sticky top-20 border-gray-300">
           <div className="velvet_body grid sticky top-16 ">
-            <p className=" text-gray-500 ml-6 mb-4 ">{`${toggle.show?"°":"Main"}`}</p>
+            <p className=" text-gray-500 ml-6 mb-4 ">{`${
+              toggle.show ? "Main" : "°"
+            }`}</p>
             <ul className="space-y-2 ">
               <li>
                 <div className="cursor-pointer flex space-x-4 items-center ">
@@ -56,19 +60,20 @@ function Velvet() {
                     }}
                     className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  "
                   >
-                    <p className={`${toggle.show ? "hidden" : ""} `}>
+                    <p className={`${toggle.show ? "" : "hidden"} `}>
                       Dashboard
                     </p>
-                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                    <p className={`${toggle.show ? "" : "hidden"}`}>
                       {dashboard ? "‹" : "»"}
                     </p>
                   </div>
                 </div>
                 <ul
-                  className={`dropDash ${dashboard
+                  className={`dropDash ${
+                    dashboard
                       ? "display opacity-100 scale-y-100  "
                       : "h-[0px] opacity-0 scale-y-0"
-                    } ml-10 mt-3  transform origin-top transition-opacity duration-300`}
+                  } ml-10 mt-3  transform origin-top transition-opacity duration-300`}
                 >
                   <li className=" text-green-600">
                     <Link to="/"> - Sale</Link>
@@ -78,7 +83,7 @@ function Velvet() {
                   </li>
                   <li className="hover:text-white ">
                     <Link to="#"> - Jobs</Link>
-                  </li >
+                  </li>
                   <li className="hover:text-white ">
                     <Link to="#"> - CRM</Link>
                   </li>
@@ -87,7 +92,10 @@ function Velvet() {
                   </li>
                 </ul>
               </li>
-              <p className=" text-gray-500 ml-6"> {`${toggle.show?"°":"General"}`}</p>
+              <p className=" text-gray-500 ml-6">
+                {" "}
+                {`${toggle.show ? " General" : "°"}`}
+              </p>
 
               <li>
                 <div className="advanceuicursor-pointer flex space-x-4 items-center  ">
@@ -99,11 +107,11 @@ function Velvet() {
                     }}
                     className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  "
                   >
-                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                    <p className={`${toggle.show ? "" : "hidden"}`}>
                       {" "}
                       Advance Ui
                     </p>
-                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                    <div className={`${toggle.show ? "" : "hidden"}`}>
                       {" "}
                       {ui ? "‹" : "»"}
                     </div>
@@ -111,10 +119,11 @@ function Velvet() {
                 </div>
 
                 <ul
-                  className={`dropDash ${ui
+                  className={`dropDash ${
+                    ui
                       ? "display opacity-100 scale-y-100  "
                       : "h-[0px] opacity-0 scale-y-0"
-                    } ml-10 mt-3 transform origin-top transition-opacity duration-300 ` }
+                  } ml-10 mt-3 transform origin-top transition-opacity duration-300 `}
                 >
                   <li className=" text-green-600 hover:text-white">
                     <Link to="accordian"> - Accordians & Collapse </Link>
@@ -139,11 +148,13 @@ function Velvet() {
                   </li>
                 </ul>
               </li>
-              <p className=" text-gray-500 ml-6 ">{`${toggle.show?"°":"Page"}`}</p>
+              <p className=" text-gray-500 ml-6 ">{`${
+                toggle.show ? "Page" : "°"
+              }`}</p>
 
               <li>
                 <div className="advanceuicursor-pointer flex space-x-4 items-center  ">
-                <i class="bi bi-menu-up ml-5"></i>
+                  <i class="bi bi-menu-up ml-5"></i>
 
                   <div
                     onClick={() => {
@@ -151,8 +162,8 @@ function Velvet() {
                     }}
                     className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  "
                   >
-                    <p className={`${toggle.show ? "hidden" : ""}`}>Page</p>
-                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                    <p className={`${toggle.show ? "" : "hidden"}`}>Page</p>
+                    <div className={`${toggle.show ? "" : "hidden"}`}>
                       {page ? "‹" : "»"}
                     </div>
                   </div>
@@ -160,10 +171,11 @@ function Velvet() {
 
                 <div className="pagDrop ml-10">
                   <ul
-                    className={`dropDash  ${page
+                    className={`dropDash  ${
+                      page
                         ? "display opacity-100 scale-y-100 "
                         : "h-[0px] opacity-0 scale-y-0"
-                      } ml-2 mt-3  transform origin-top transition-opacity duration-300`}
+                    } ml-2 mt-3  transform origin-top transition-opacity duration-300`}
                   >
                     <li className="hover:text-white ">
                       <Link to="#"> - Blog</Link>
@@ -191,14 +203,14 @@ function Velvet() {
               </li>
               <li>
                 <div className="advanceuicursor-pointer flex space-x-4 items-center  mt-4 ">
-                <i class="bi bi-magnet ml-5"></i>
+                  <i class="bi bi-magnet ml-5"></i>
 
                   <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
-                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                    <p className={`${toggle.show ? "" : "hidden"}`}>
                       {" "}
                       Utilities
                     </p>
-                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                    <div className={`${toggle.show ? "" : "hidden"}`}>
                       <p>»</p>
                     </div>
                   </div>
@@ -209,11 +221,11 @@ function Velvet() {
                   <i class="bi bi-hexagon ml-5"></i>
 
                   <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
-                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                    <p className={`${toggle.show ? "" : "hidden"}`}>
                       {" "}
                       Authentication
                     </p>
-                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                    <div className={`${toggle.show ? "" : "hidden"}`}>
                       <p>»</p>
                     </div>
                   </div>
@@ -224,9 +236,9 @@ function Velvet() {
                   <i class="bi bi-grid ml-5 "></i>
 
                   <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
-                    <p className={`${toggle.show ? "hidden" : ""}`}> Apps</p>
-                    <div className={`${toggle.show ? "hidden" : ""}`}>
-                    <p className="bg-red-300 text-gray-600 font-bold -mr-2 px-1  text-xs rounded-lg">
+                    <p className={`${toggle.show ? "" : "hidden"}`}> Apps</p>
+                    <div className={`${toggle.show ? "" : "hidden"}`}>
+                      <p className="bg-red-300 text-gray-600 font-bold -mr-2 px-1  text-xs rounded-lg">
                         1
                       </p>
                     </div>
@@ -238,11 +250,11 @@ function Velvet() {
                   <i class="bi bi-emoji-smile  ml-5"></i>
 
                   <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
-                    <p className={`${toggle.show ? "hidden" : ""}`}>
+                    <p className={`${toggle.show ? "" : "hidden"}`}>
                       {" "}
                       Utilities
                     </p>
-                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                    <div className={`${toggle.show ? "" : "hidden"}`}>
                       <p>»</p>
                     </div>
                   </div>
@@ -253,8 +265,8 @@ function Velvet() {
                   <i class="bi bi-menu-button-wide ml-5 "></i>
 
                   <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
-                    <p className={`${toggle.show ? "hidden" : ""}`}>Widgets</p>
-                    <div className={`${toggle.show ? "hidden" : ""}`}>
+                    <p className={`${toggle.show ? "" : "hidden"}`}>Widgets</p>
+                    <div className={`${toggle.show ? "" : "hidden"}`}>
                       <p className="bg-red-300 text-gray-600 font-bold -mr-2 px-1  text-xs rounded-lg">
                         Hot
                       </p>
