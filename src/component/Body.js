@@ -285,12 +285,12 @@ function Body() {
         {/*card 3 */}
         <div className="cards2 mr-5   ">
           <div className="card card3 p-0  overflow-x-auto ">
-            <div className="top flex justify-between p-3">
+            <div className="top flex justify-between items-center p-3">
               <h1 className=" text-lg font-bold">Sales Statistics </h1>
               <ul className="btn  text-sm ">
-                <div className="flex space-x-2 space-y-1 flex-wrap justify-evenly">
+                <div className="flex space-x-2 space-y-1 flex-wrap items-center justify-evenly">
                   <li>
-                    <button className="w-fit justify-center  bg-purple-300  text-purple-900 rounded-lg flex space-x-1 items-center hover:bg-purple-600 hover:text-white p-1 ">
+                    <button className="w-fit justify-center  bg-purple-300  text-purple-900 rounded-lg flex space-x-1 items-center hover:bg-purple-600 hover:text-white p-0.5 pl-1 pr-1 ">
                       <RiFilter3Line color="purple" />
                       <p>Filter</p>
                     </button>
@@ -300,7 +300,7 @@ function Body() {
                       onClick={() => {
                         handleweek();
                       }}
-                      className="w-fit flex justify-between items-center space-x-1 bg-purple-600 text-white rounded-lg p-1"
+                      className="w-fit flex justify-between items-center space-x-1 bg-purple-600 text-white rounded-lg p-1 pl-1 pr-1"
                     >
                       <RiCalendar2Line color="white" />
                       <p>This Week</p>
@@ -339,11 +339,11 @@ function Body() {
                   <p className="w-8 font-bold bg-gray-100 rounded p-1">:</p>
                 </button>
                 <div
-                  className={` bg-white  mt-10  -translate-x-32  border-2 shadow-inner absolute     ${
+                  className={` bg-white  mt-10  -translate-x-32  border-2 shadow-inner absolute rounded-lg    ${
                     selling ? "" : "hidden"
                   }`}
                 >
-                  <ul className=" text-sm  font-bold ml-2 p-2 space-y-3 ">
+                  <ul className=" text-sm  font-bold ml-2 p-2 space-y-3  ">
                     <li className="hover:text-blue-500">Action </li>
                     <li className="hover:text-blue-500">Another action </li>
                     <li className="hover:text-blue-500">
@@ -640,7 +640,7 @@ function Body() {
           <hr className=" m-3" />
           <div className=" flex justify-between">
             <div className=" flex justify-center items-center ">
-              <FiCreditCard className="green mr-2 text-green-800 bg-green-200 w-8 h-5 rounded-md" />{" "}
+              <FiCreditCard className="green mr-2 p-0.5 text-green-800 bg-green-200 w-6 h-5 rounded-md" />{" "}
               <p className="  font-semibold w-24">ATM Withdrawl</p>
             </div>
             <span className="flex items-center  text-green-500">$245000 </span>
@@ -651,7 +651,7 @@ function Body() {
 
           <div className=" flex justify-between">
             <div className=" flex justify-center items-center ">
-              <FiSmartphone className="green mr-2 text-red-600 bg-red-200 w-8 h-5 rounded-md" />{" "}
+              <FiSmartphone className="green mr-2 text-red-600 bg-red-200 p-0.5 w-6 h-5 rounded-md" />{" "}
               <p className="font-semibold w-24">Movies Subscription</p>
             </div>
             <span className="flex items-center  text-red-500">$100.00 </span>
@@ -662,7 +662,7 @@ function Body() {
 
           <div className=" flex justify-between">
             <div className=" flex justify-center items-center ">
-              <FiArrowDown className="green mr-2 text-green-800 bg-green-200 w-8 h-5 rounded-md" />{" "}
+              <FiArrowDown className="green mr-2 text-green-800 bg-green-200 p-0.5 w-6 h-5 rounded-md" />{" "}
               <p className="font-semibold w-24">Recieved From John </p>
             </div>
             <span className="flex items-center  text-green-500">$15000 </span>
@@ -673,7 +673,7 @@ function Body() {
 
           <div className=" flex justify-between">
             <div className=" flex justify-center items-center ">
-              <FiCreditCard className="green mr-2 text-red-600 bg-red-200 w-8 h-5 rounded-md" />{" "}
+              <FiCreditCard className="green mr-2 text-red-600 bg-red-200 w-6 p-0.5 h-5 rounded-md" />{" "}
               <p className="font-semibold w-24">Credit Card</p>
             </div>
             <span className="flex items-center  text-red-500">-$3000 </span>
@@ -684,7 +684,7 @@ function Body() {
 
           <div className=" flex justify-between">
             <div className=" flex justify-center items-center ">
-              <FiCreditCard className="green mr-2 text-green-800 bg-green-200 w-8 h-5 rounded-md" />{" "}
+              <FiCreditCard className="green mr-2 text-green-800 bg-green-200 w-6 p-0.5 h-5 rounded-md" />{" "}
               <p className="font-semibold w-24">Transfer to Self</p>
             </div>
             <span className="flex items-center  text-green-500">$15000 </span>
@@ -695,7 +695,7 @@ function Body() {
 
           <div className=" flex justify-between">
             <div className=" flex justify-center items-center ">
-              <FiRepeat className="green mr-2 text-red-600 bg-red-200 w-8 h-5 rounded-md" />{" "}
+              <FiRepeat className="green mr-2 text-red-600 bg-red-200 w-6 p-0.5 h-5 rounded-md" />{" "}
               <p className="font-semibold w-24">Transfer to x Card </p>
             </div>
             <span className="flex items-center  text-red-500">$245000 </span>
@@ -716,7 +716,7 @@ function Body() {
               <div
                 className={`${
                   recent ? "" : "hidden"
-                } bg-white -translate-x-24 mt-10 order border-2 shadow-inner absolute`}
+                } bg-white -translate-x-24 mt-10 order border-2 shadow-inner rounded-lg absolute`}
               >
                 <ul className=" p-2 space-y-2">
                   <li className="flex space-x-1 items-center hover:text-blue-500">

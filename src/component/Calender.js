@@ -9,7 +9,7 @@ function Calender() {
   return (
     
     <>
-      <div >
+      <div className="w-96" >
         <Calendar onChange={onChange} value={date} />
         {date.toString()}
       </div>

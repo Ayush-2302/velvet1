@@ -24,8 +24,7 @@ import itly from "../asserts/images/itly.png";
 import russia from "../asserts/images/russia.png";
 import usa from "../asserts/images/usa.png";
 
-
-const cross=createContext();
+const cross = createContext();
 
 function Navbar(props) {
   const sideBar = useContext(val);
@@ -96,20 +95,20 @@ function Navbar(props) {
     setProf(false);
   };
 
-  const [knife, setKnife]= useState("Helllow Ayush")
+  const [knife, setKnife] = useState("Helllow Ayush");
 
   return (
     <>
-    {/* <cross.Provider value={knife}> */}
+      {/* <cross.Provider value={knife}> */}
       {/* {props.children} */}
       {/* <Appsicons/> */}
-    {/* </cross.Provider> */}
+      {/* </cross.Provider> */}
 
       <nav
-        className={`navbar relative   bg-violet-600 flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400  ${
+        className={`navbar relative  flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400  ${
           props.mode === "light" ? "dark" : "light"
         }`}
-        style={{ position: "sticky", top: "1px", zIndex: 12 }}
+        style={{ position: "sticky", top: "0px", zIndex: 12 }}
       >
         <div
           onClick={() => {
@@ -124,7 +123,10 @@ function Navbar(props) {
         </Link>
         <div className="container ml-5  flex items-center h-16  justify-between">
           <div className="hidden sm:block">
-            <div id="search" className="  flex  hover:cursor-pointer  items-center space-x-2">
+            <div
+              id="search"
+              className="  flex  hover:cursor-pointer  items-center space-x-2"
+            >
               <input
                 type="text"
                 placeholder="Search"
@@ -247,9 +249,8 @@ function Navbar(props) {
                   appicon ? "" : " hidden"
                 } absolute bg-white translate-y-12  h-[700px] rounded-md translate-x-24`}
               >
-                    <cross.Provider value={knife}>
-
-                <Appsicons />
+                <cross.Provider value={knife}>
+                  <Appsicons />
                 </cross.Provider>
               </div>
 
@@ -270,7 +271,7 @@ function Navbar(props) {
               <div
                 className={` ${
                   cal ? "" : "hidden"
-                } cal absolute h-60 translate-y-12  text-black translate-x-[90px]`}
+                } cal absolute  translate-y-12  text-black translate-x-[60px] `}
               >
                 <CalNoti />
               </div>
@@ -284,7 +285,7 @@ function Navbar(props) {
               className=" john flex justify-center items-center h-full w-40 border-r-2 border-l-2 border-gray-400 shadow-inner"
             >
               <img src={profile} alt="" className="  rounded-full w-8 h-8" />
-              <p className="harry font-bold ml-2">Harry's John</p>
+              <p className="harry text-sm font-bold ml-2">Harry's John</p>
             </div>
           </Link>
         </div>
@@ -293,10 +294,10 @@ function Navbar(props) {
           <ul
             className={` ${
               prof ? "" : "hidden"
-            } py-1 text-sm   text-black-700 absolute -translate-x-40 translate-y-16 w-40 border-2  border-gray-100  px-4   shadow-inner bg-white`}
+            } py-1 text-sm   text-black-700 absolute -translate-x-40 translate-y-16 w-40 border-2 rounded-lg border-gray-100  px-4   shadow-inner bg-white`}
           >
             <div className="ml-2 text-base  text-gray-600">
-              <li className=" text-green-600 flex space-x-2  p-1 items-center hover:bg-gray-200 ">
+              <li className=" text-green-600 flex space-x-2  p-1 items-center  hover:bg-gray-200 ">
                 <BiUser />
                 <Link to="profile">Profile </Link>
               </li>
@@ -332,64 +333,72 @@ function Navbar(props) {
             className="text-2xl"
             onClick={() => {
               handleNav();
-            }} >
+            }}
+          >
             <FaBars />
           </button>
-         
 
-        <div className={`${nav?"":"hidden"} bg-white absolute text-black my-4 w-36 -translate-x-28 rounded-md    `}>
-          <nav className=" ml-4 p-1">
-            <ul>
-              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
-              <i className="bi bi-globe inline-block w-5 h-5 "
-                    ></i>
-                Language</li>
-              <hr />
-              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
-              <i className="bi bi-moon  inline-block w-5 h-5 "></i>
-              Dark Mode</li>
-              <hr />
-              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
-              <i
+          <div
+            className={`${
+              nav ? "" : "hidden"
+            } bg-white absolute text-black my-4 w-36 -translate-x-28 rounded-md    `}
+          >
+            <nav className=" ml-4 p-1">
+              <ul>
+                <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+                  <i className="bi bi-globe inline-block w-5 h-5 "></i>
+                  Language
+                </li>
+                <hr />
+                <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+                  <i className="bi bi-moon  inline-block w-5 h-5 "></i>
+                  Dark Mode
+                </li>
+                <hr />
+                <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+                  <i
                     onClick={() => handleCart()}
                     className="bi bi-cart  inline-block w-5 h-5 "
                   ></i>
-                cart</li>
-              <hr />
-              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
-              <i
+                  cart
+                </li>
+                <hr />
+                <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+                  <i
                     onClick={() => handleNoti()}
                     className="bi bi-bell  inline-block w-5 h-5 "
                   ></i>
-                  Notification</li>
-              <hr />
-              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
-              <i
+                  Notification
+                </li>
+                <hr />
+                <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+                  <i
                     onClick={() => handleCal()}
                     className="bi bi-sliders2  inline-block w-5 h-5 "
                   ></i>
-                Calender</li>
-              <hr />
-              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
-              <i
+                  Calender
+                </li>
+                <hr />
+                <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+                  <i
                     onClick={() => handleapp()}
                     className="bi bi-grid  inline-block w-5 h-5 "
                   ></i>
-                Apps</li>
-              <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
-              <BiUser />
-
-                Profile</li>
-              <hr />
-            </ul>
-          </nav>
+                  Apps
+                </li>
+                <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
+                  <BiUser />
+                  Profile
+                </li>
+                <hr />
+              </ul>
+            </nav>
           </div>
         </div>
       </nav>
-
     </>
   );
 }
 
 export default Navbar;
-export {cross}
+export { cross };

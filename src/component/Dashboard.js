@@ -5,8 +5,8 @@ import React from "react";
 function Dashboard() {
   return (
     <>
-      <div className="dashboardcont  pt-5 text-white text-3xl pl-10 pr-10 flex  h-32 justify-between">
-        Dashboard <p className=" text-sm m-3">Dashbord » sale</p>
+      <div className="dashboardcont  pt-5 text-white text-3xl pl-10 pr-4 flex  h-32 justify-between">
+        Dashboard <p className=" text-sm m-3  flex space-x-5"><p>Dashbord </p> <p>»</p> <p className=" font-bold"> Sales</p></p>
       </div>
       <div className=" boxes  relative z-10 -mt-20 m-auto  mr-6 ml-2  ">
         <div className="box box1">
