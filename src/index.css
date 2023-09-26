@@ -102,7 +102,7 @@ img {
 
 .navbar,
 .dashboardcont {
-  background-image:  linear-gradient(to right, #4776e6 0%, rgb(142, 84, 233) 100%);
+  background-image: linear-gradient(to right, #4776e6 0%, rgb(142, 84, 233) 100%);
 
 }
 
@@ -176,7 +176,18 @@ img {
 @media(min-width:1401px) {
   .keybody {
     display: flex;
-    flex-grow: 2;
+    flex-grow: 2;}
+
+    .status {
+      display: flex;
+      /* width: 30%; */
+    }
+  .profile_st{
+   margin-left: 20px;
+    width: 30%;
+  }
+  .r_cont{
+    width: 100%;
   }
 
   .task {
@@ -195,6 +206,12 @@ img {
     width: 30%;
   }
 
+}
+@media(max-width:1401px){
+  .profile_st{
+    margin:auto;
+     width: 92%;
+   }
 }
 
 @media(min-width:990px)and (max-width:1401px) {
