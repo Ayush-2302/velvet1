@@ -22,6 +22,7 @@ img {
   border-right: 17px solid rgb(175, 50, 175);
 }
 
+/* Dashboard media-query */
 @media(min-width:1400px) {
   .boxes {
     display: grid;
@@ -110,6 +111,35 @@ img {
   background-color: rgb(28, 44, 63);
 }
 
+.container_acc {
+  width: 95%;
+  margin: auto;
+  padding: 8px;
+  border-radius: 10px;
+  height: auto;
+  background-color: white;
+  margin-top: 25px;
+}
+
+@media(min-width:1200px) {
+
+  .flex1 .container_acc,
+  .flex2 .container_acc,
+  .flex3 .container_acc {
+    width: 48%;
+  }
+
+  .flex1,
+  .flex2,
+  .flex3 {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+  }
+}
+
 .box {
   font-family: inter, sans-serif;
   padding: 10px;
@@ -176,17 +206,20 @@ img {
 @media(min-width:1401px) {
   .keybody {
     display: flex;
-    flex-grow: 2;}
+    flex-grow: 2;
+  }
 
-    .status {
-      display: flex;
-      /* width: 30%; */
-    }
-  .profile_st{
-   margin-left: 20px;
+  .status {
+    display: flex;
+    /* width: 30%; */
+  }
+
+  .profile_st {
+    margin-left: 20px;
     width: 30%;
   }
-  .r_cont{
+
+  .r_cont {
     width: 100%;
   }
 
@@ -207,11 +240,12 @@ img {
   }
 
 }
-@media(max-width:1401px){
-  .profile_st{
-    margin:auto;
-     width: 92%;
-   }
+
+@media(max-width:1401px) {
+  .profile_st {
+    margin: auto;
+    width: 92%;
+  }
 }
 
 @media(min-width:990px)and (max-width:1401px) {
