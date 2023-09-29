@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { BsXLg } from "react-icons/bs";
 import {
   BiUser,
@@ -15,26 +15,20 @@ function Appsicons() {
   const ico= useContext(val)
 
   const button = useContext(cross);
-  const [btn,setBtn]=useState(false)
-  const hide =()=>{
-    setBtn(!btn)
-  }
-  // const btn = button.appicon;
-  // const hide = () => {
-  //   button.handleapp()
-  // }
-
+  
   return (
     <>
-      <div className={`${btn ? "hidden" : ""}  cart w-80  m-3   float-right` } style={{color: ico.mode==='light'?'black':'white' }} >
+      <div className={`  cart w-80  m-3   float-right` } style={{color: ico.mode==='light'?'black':'white' }} >
         <div className="flex justify-between items-center">
           <span className=" text-2xl font-bold m-2 ">
-            Realated Apps {button}
+            Realated Apps 
           </span>
           <button
-            onClick={() => {
-              hide();
-            }}
+            onClick={()=>{
+              button.handleapp()
+            }
+              
+            }
             className=" w-6 m-4 h-7 rounded-md border-gray-100 text-black  bg-slate-200 p-1 "
           >
             <BsXLg />

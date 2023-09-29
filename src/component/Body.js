@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef } from "react";
+import React, { useContext, useState } from "react";
 import { BsFillDiamondFill } from "react-icons/bs";
 import {
   RiCalendar2Line,
@@ -94,30 +94,30 @@ function Body(props) {
     setValue(!value);
   };
 
-  const fullScreenRef = useRef(null);
+  // const fullScreenRef = useRef(null);
 
-  const enterFullScreen = () => {
-    const element = fullScreenRef.current;
+  // const enterFullScreen = () => {
+  //   const element = fullScreenRef.current;
 
-    if (element.requestFullscreen) {
-      element.requestFullscreen();
-    } else if (element.mozRequestFullScreen) {
-      element.mozRequestFullScreen();
-    } else if (element.webkitRequestFullscreen) {
-      element.webkitRequestFullscreen();
-    } else if (element.msRequestFullscreen) {
-      element.msRequestFullscreen();
-    }
-  };
+  //   if (element.requestFullscreen) {
+  //     element.requestFullscreen();
+  //   } else if (element.mozRequestFullScreen) {
+  //     element.mozRequestFullScreen();
+  //   } else if (element.webkitRequestFullscreen) {
+  //     element.webkitRequestFullscreen();
+  //   } else if (element.msRequestFullscreen) {
+  //     element.msRequestFullscreen();
+  //   }
+  // };
 
   return (
     <>
       {/*  card1 */}
-      <div className="bod" ref={fullScreenRef} >
-        <div className="ayush"></div>
+      <div className="bod"  >
+        {/* <div onClick={enterFullScreen} className="ayush text-center"> ayush</div> */}
       <div className="keybody mb-1 ">
         <div className="cards1  mr-5" >
-          <div className="card shadow-inner card1" style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
+          <div className="card shadow-inner card1" style={{backgroundColor:  bod.mode==='light'?'white':'rgb(38,44,60,0.95)',color: bod.mode==='light'?'black':'white' }}>
             <h1 className="text-lg  font-bold">Recent Activity</h1>
             <hr className="mt-3" />
 
@@ -769,13 +769,13 @@ function Body(props) {
           </div>
           <hr className=" m-1" />
           <table
-            className=" w-11/12 m-auto  p-4 
+            className="  m-auto  p-4 
           "
           >
             <thead>
               <tr className=" text-sm  ">
-                <th className=""> S.NO</th>
-                <th className="pr-36">Customer Name</th>
+                <th className=" pr-10"> S.NO</th>
+                <th className="pr-52">Customer Name</th>
                 <th className="pr-10">Order ID</th>
                 <th className="pr-10">Order Date</th>
                 <th className="pr-10"> price</th>

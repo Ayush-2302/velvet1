@@ -8,17 +8,6 @@ function ValNav(props) {
     setShow(!show);
   };
 
-  // const[dark,setDark]= useState("")
-
-  // const [text, setText] = useState("black");
-  // const change = () => {
-  //   if (text === "black") {
-  //     setText = "white";
-  //   } else {
-  //     setText("black");
-  //   }
-  // };
-
   const [mode, setMode] = useState("light");
   const toggleMode = () => {
     if (mode === "light") {

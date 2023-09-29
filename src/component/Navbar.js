@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState,useRef } from "react";
+import React, { createContext, useContext, useState } from "react";
 import profile from "../asserts/images/w7.png";
 import { Link } from "react-router-dom";
 import CalNoti from "./CalNoti";
@@ -28,32 +28,6 @@ const cross = createContext();
 
 function Navbar(props) {
   const sideBar = useContext(val);
-
-
-  const fullScreenRef = useRef(null);
-
-  const enterFull = () => {
-    const element = fullScreenRef.current;
-  
-    if (element.requestFullscreen) {
-      element.requestFullscreen();
-      console.log("im working");
-    } else if (element.mozRequestFullScreen) {
-      element.mozRequestFullScreen();
-      console.log("im working");
-  
-    } else if (element.webkitRequestFullscreen) {
-      element.webkitRequestFullscreen();
-      console.log("im working");
-  
-    } else if (element.msRequestFullscreen) {
-      element.msRequestFullscreen();
-      console.log("im working");
-  
-    }
-  };
-
-
 
 
   const handleSide = () => {
@@ -126,7 +100,7 @@ function Navbar(props) {
     setProf(false);
   };
 
-  const [knife, setKnife] = useState("Helllow Ayush");
+ 
 
   return (
     <>
@@ -278,12 +252,12 @@ function Navbar(props) {
                   appicon ? "" : " hidden"
                 } absolute bg-white translate-y-12  h-[700px] rounded-md translate-x-24`} style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c' }}
               >
-                <cross.Provider value={knife}>
+                <cross.Provider value={{handleapp}}>
                   <Appsicons />
                 </cross.Provider>
               </div>
 
-              <li onClick={enterFull}>
+              <li onClick={props.value}>
                 <Link to="#">
                   <i className="bi bi-fullscreen  inline-block w-5 h-5 "></i>
                 </Link>

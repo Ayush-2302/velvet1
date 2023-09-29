@@ -12,39 +12,22 @@ import ValNav from "./component/ValNav";
 
 function App() {
  
-// const[full, setFull]=useState(false)
-// const nFull=()=>{
-//   setFull(!full)
-// }
-// useEffect(() => {
-//   console.log("fullScreen")
-//   let e=document.getElementById("fullScreen");
-// e?.requestFullscreen();
-// }, [full])
 
+  const fullScreenRef = useRef(null);
 
-// const fullScreenRef = useRef(null);
+  const enterFullScreen = () => {
+    const element = fullScreenRef.current;
 
-// const enterFullScreen = () => {
-//   const element = fullScreenRef.current;
-
-//   if (element.requestFullscreen) {
-//     element.requestFullscreen();
-//     console.log("im working");
-//   } else if (element.mozRequestFullScreen) {
-//     element.mozRequestFullScreen();
-//     console.log("im working");
-
-//   } else if (element.webkitRequestFullscreen) {
-//     element.webkitRequestFullscreen();
-//     console.log("im working");
-
-//   } else if (element.msRequestFullscreen) {
-//     element.msRequestFullscreen();
-//     console.log("im working");
-
-//   }
-// };
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
+    }
+  };
 
 
 
@@ -52,14 +35,14 @@ function App() {
 
 
   return (
-    <div id="fullScreen" >
+    <div id="fullScreen" ref={fullScreenRef} >
     <ValNav>
       <Router>
         <div className="flex slide">
           <Velvet />
 
           <div className="routs w-full">
-            <Navbar  />
+            <Navbar value={enterFullScreen}  />
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/dummy" element={<Dummy />} />
