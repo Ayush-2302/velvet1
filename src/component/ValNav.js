@@ -4,14 +4,37 @@ const val = createContext();
 function ValNav(props) {
   const [show, setShow] = useState(false);
 
-  const widthInc=()=>{
-    setShow(!show)
-  }
+  const widthInc = () => {
+    setShow(!show);
+  };
+
+  // const[dark,setDark]= useState("")
+
+  // const [text, setText] = useState("black");
+  // const change = () => {
+  //   if (text === "black") {
+  //     setText = "white";
+  //   } else {
+  //     setText("black");
+  //   }
+  // };
+
+  const [mode, setMode] = useState("light");
+  const toggleMode = () => {
+    if (mode === "light") {
+      setMode("dark");
+      document.body.style.backgroundColor = "#212529";
+    } else {
+      setMode("light");
+      document.body.style.backgroundColor = "whitesmoke";
+    }
+  };
+
   return (
     <>
-      <val.Provider value={{show, widthInc}}   >
+      <val.Provider value={{ show, widthInc, mode, toggleMode }}>
         {props.children}
-        </val.Provider>
+      </val.Provider>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
@@ -11,20 +11,48 @@ import Velvet from "./component/Velvet";
 import ValNav from "./component/ValNav";
 
 function App() {
-  // const [text, setText] = useState("black");
-  // const change = () => {
-  //   if (text === "black") {
-  //     setText = "white";
-  //   } else {
-  //     setText("black");
-  //   }
-  // };
+ 
+// const[full, setFull]=useState(false)
+// const nFull=()=>{
+//   setFull(!full)
+// }
+// useEffect(() => {
+//   console.log("fullScreen")
+//   let e=document.getElementById("fullScreen");
+// e?.requestFullscreen();
+// }, [full])
+
+
+// const fullScreenRef = useRef(null);
+
+// const enterFullScreen = () => {
+//   const element = fullScreenRef.current;
+
+//   if (element.requestFullscreen) {
+//     element.requestFullscreen();
+//     console.log("im working");
+//   } else if (element.mozRequestFullScreen) {
+//     element.mozRequestFullScreen();
+//     console.log("im working");
+
+//   } else if (element.webkitRequestFullscreen) {
+//     element.webkitRequestFullscreen();
+//     console.log("im working");
+
+//   } else if (element.msRequestFullscreen) {
+//     element.msRequestFullscreen();
+//     console.log("im working");
+
+//   }
+// };
+
+
 
 
 
 
   return (
-    <>
+    <div id="fullScreen" >
     <ValNav>
       <Router>
         <div className="flex slide">
@@ -43,7 +71,7 @@ function App() {
         </div>
       </Router>
       </ValNav>
-    </>
+    </div>
   );
 }
 

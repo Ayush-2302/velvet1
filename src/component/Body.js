@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { BsFillDiamondFill } from "react-icons/bs";
 import {
   RiCalendar2Line,
@@ -34,8 +34,11 @@ import cactus from "../asserts/images/cactus.png";
 import grow from "../asserts/images/grow.png";
 import smartphone from "../asserts/images/phone.png";
 import camera from "../asserts/images/camera.png";
+import { val } from "./ValNav";
 
-function Body() {
+function Body(props) {
+  const bod = useContext(val);
+
   const [weekdrop, setWeekdrop] = useState(false);
   const handleweek = () => {
     setWeekdrop(!weekdrop);
@@ -91,12 +94,30 @@ function Body() {
     setValue(!value);
   };
 
+  const fullScreenRef = useRef(null);
+
+  const enterFullScreen = () => {
+    const element = fullScreenRef.current;
+
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
+    }
+  };
+
   return (
     <>
       {/*  card1 */}
+      <div className="bod" ref={fullScreenRef} >
+        <div className="ayush"></div>
       <div className="keybody mb-1 ">
-        <div className="cards1  mr-5  ">
-          <div className="card shadow-inner card1">
+        <div className="cards1  mr-5" >
+          <div className="card shadow-inner card1" style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
             <h1 className="text-lg  font-bold">Recent Activity</h1>
             <hr className="mt-3" />
 
@@ -189,10 +210,10 @@ function Body() {
             <div></div>
           </div>
           {/* card 2 */}
-          <div className="card overflow-x-auto card2 ">
+          <div className="card overflow-x-auto card2 " style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
             <div className="top flex-shrink break-words  flex justify-between">
               <h1 className=" text-lg font-bold"> Sale By Country </h1>
-              <button className="w-fit flex items-center text-sm bg-gray-100 rounded-lg p-1">
+              <button className="w-fit flex items-center text-sm text-black bg-gray-100 rounded-lg p-1">
                 View All
                 <RiArrowDownSLine />
               </button>
@@ -200,17 +221,16 @@ function Body() {
             <hr className=" m-3" />
 
             <table className=" w-11/12  ">
-              <thead  >
+              <thead>
                 <tr className=" text-sm flex justify-evenly space-x-12" >
-                  
                   <th>Country</th>
-                  <th  className=" pl-10"> Sales </th>
+                  <th className=" pl-10"> Sales </th>
                   <th> Bounce</th>
                 </tr>
               </thead>
               <hr className=" m-3" />
               <tbody className=" text-sm font-bold">
-                <tr  className=" text-sm flex justify-evenly  space-x-14 items-center">
+                <tr className=" text-sm flex justify-evenly  space-x-14 items-center">
                   <td className=" flex items-center ">
                     <img
                       src={canada}
@@ -284,7 +304,7 @@ function Body() {
         </div>
         {/*card 3 */}
         <div className="cards2 mr-5   ">
-          <div className="card card3 p-0  overflow-x-auto ">
+          <div className="card card3 p-0  overflow-x-auto " style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
             <div className="top flex justify-between items-center p-3">
               <h1 className=" text-lg font-bold">Sales Statistics </h1>
               <ul className="btn  text-sm ">
@@ -312,11 +332,13 @@ function Body() {
                 <div
                   className={` ${
                     weekdrop ? "" : "hidden"
-                  }  translate-x-16 absolute week h-fit bg-white w-28 rounded-lg `}
+                  }  translate-x-16 absolute week h-fit w-28 rounded-lg `} style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
                 >
-                  <ul className=" ml-2 space-y-3 p-2 ">
+                  <ul className=" ml-2 space-y-2 p-2 ">
                     <li>Last Month</li>
+                    <hr />
                     <li>Last week</li>
+                    <hr />
                     <li>Share Report</li>
                   </ul>
                 </div>
@@ -327,7 +349,7 @@ function Body() {
             <img src={stock} alt=" img" className=" w-full h-96  " />
           </div>
           {/* card 4 */}
-          <div className="card  card5 grow customize_overflow overflow-x-scroll   ">
+          <div className="card  card5 grow customize_overflow overflow-x-scroll" style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
             <div className="top flex justify-between">
               <h1 className=" text-lg font-bold">Top Selling Products </h1>
               <div className="flex">
@@ -336,16 +358,18 @@ function Body() {
                     handleselling();
                   }}
                 >
-                  <p className="w-8 font-bold bg-gray-100 rounded p-1">:</p>
+                  <p className="w-8 font-bold text-black bg-gray-100 rounded p-1">:</p>
                 </button>
                 <div
-                  className={` bg-white  mt-10  -translate-x-32  border-2 shadow-inner absolute rounded-lg    ${
+                  className={` mt-10  -translate-x-32  border-2 shadow-inner absolute rounded-lg    ${
                     selling ? "" : "hidden"
-                  }`}
+                  }`} style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
                 >
                   <ul className=" text-sm  font-bold ml-2 p-2 space-y-3  ">
                     <li className="hover:text-blue-500">Action </li>
+                    <hr />
                     <li className="hover:text-blue-500">Another action </li>
+                    <hr />
                     <li className="hover:text-blue-500">
                       Something else here{" "}
                     </li>
@@ -378,7 +402,7 @@ function Body() {
                   <td>1534</td>
                   <td className=" flex space-x-1 ">
                     {" "}
-                    <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 rounded">
+                    <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 text-black rounded">
                       <RiPencilLine />
                     </button>
                     <button className=" w-8 p-2 bg-red-100   hover:bg-red-300 text-red-600">
@@ -397,7 +421,7 @@ function Body() {
                   <td>$73.800</td>
                   <td>4987</td>
                   <td className="flex space-x-1">
-                    <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 rounded">
+                    <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                       <RiPencilLine />
                     </button>
                     <button className=" w-8 p-2 bg-red-100  hover:bg-red-300 text-red-600">
@@ -416,7 +440,7 @@ function Body() {
                   <td>$13.800</td>
                   <td>87875</td>
                   <td className=" flex space-x-1">
-                    <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 rounded">
+                    <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                       <RiPencilLine />
                     </button>
                     <button className=" w-8 p-2 bg-red-100   hover:bg-red-300 text-red-600">
@@ -439,7 +463,7 @@ function Body() {
                   <td>$14.600</td>
                   <td>87875</td>
                   <td className="flex space-x-1 ">
-                    <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 rounded">
+                    <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                       <RiPencilLine />
                     </button>
                     <button className=" w-8 p-2 bg-red-100   hover:bg-red-300 text-red-600">
@@ -462,7 +486,7 @@ function Body() {
                   <td>$23.800</td>
                   <td>4087</td>
                   <td className="flex space-x-1">
-                    <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 rounded">
+                    <button className=" hover:bg-blue-200 text-black w-8 p-2 bg-blue-100 rounded">
                       <RiPencilLine />
                     </button>
                     <button className=" w-8 p-2 bg-red-100   hover:bg-red-300 text-red-600">
@@ -477,7 +501,7 @@ function Body() {
 
         {/* card 5 */}
         <div className="cards3 mr-5  ">
-          <div className="card overflow-x-auto  card3">
+          <div className="card overflow-x-auto  card3" style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
             <div className="top flex  justify-between">
               <h1 className=" text-lg font-bold">Sales Value </h1>
               <div>
@@ -485,7 +509,7 @@ function Body() {
                   onClick={() => {
                     handleValue();
                   }}
-                  className="w-fit flex items-center text-sm bg-gray-100 rounded-lg p-1"
+                  className="w-fit flex items-center text-sm text-black bg-gray-100 rounded-lg p-1"
                 >
                   View All
                   <RiArrowDownSLine />
@@ -493,12 +517,15 @@ function Body() {
                 <div
                   className={`${
                     value ? "" : "hidden"
-                  } mt-2  -translate-x-20 w-36 absolute  border-2 shadow-inner bg-white  rounded-lg `}
+                  } mt-2  -translate-x-20 w-36 absolute  border-2 shadow-inner  rounded-lg `} style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
                 >
-                  <ul className=" ml-2 space-y-3 p-2 ">
+                  <ul className=" ml-2 space-y-2 p-2 ">
                     <li className=" hover:text-blue-500">Today</li>
+                    <hr />
                     <li className=" hover:text-blue-500">This Week</li>
+                    <hr />
                     <li className=" hover:text-blue-500">Last week</li>
+                    
                   </ul>
                 </div>
               </div>
@@ -525,7 +552,7 @@ function Body() {
           </div>
 
           {/* card6 */}
-          <div className="card overflow-x-auto  card6 p-2 ">
+          <div className="card overflow-x-auto  card6 p-2" style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
             <div className="top flex justify-between">
               <h1 className=" text-lg font-bold">Monthly Profit </h1>
               <div className="">
@@ -533,7 +560,7 @@ function Body() {
                   onClick={() => {
                     handleProf();
                   }}
-                  className="w-fit flex items-center text-sm bg-gray-100 rounded-lg p-1"
+                  className="w-fit flex items-center text-sm text-black bg-gray-100 rounded-lg p-1"
                 >
                   View All
                   <RiArrowDownSLine />
@@ -541,11 +568,13 @@ function Body() {
                 <div
                   className={`${
                     prof ? "" : "hidden"
-                  } mt-2  -translate-x-20 w-36 absolute  border-2 shadow-inner bg-white  rounded-lg `}
+                  } mt-2  -translate-x-20 w-36 absolute  border-2 shadow-inne rounded-lg ` } style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
                 >
-                  <ul className=" ml-2 space-y-3 p-2 ">
+                  <ul className=" ml-2 space-y-2 p-2 ">
                     <li className=" hover:text-blue-500">Today</li>
+                    <hr />
                     <li className=" hover:text-blue-500">This Week</li>
+                    <hr />
                     <li className=" hover:text-blue-500">Last week</li>
                   </ul>
                 </div>
@@ -556,54 +585,53 @@ function Body() {
             <p className=" to-gray-200 text-gray-400 flex justify-between">
               Total Profit Growth Of 85%
               <div className=" w-20  mt-5 mr-7 ">
-              <img src={grow} alt="" className=" max-h-24" />
-            </div>
+                <img src={grow} alt="" className=" max-h-24 " />
+              </div>
             </p>
-           
 
             <hr className=" m-2" />
             <div className="w-11/12">
-            <div className="cube flex space-x-2 items-center">
-              <div className="w-6  rounded-md p-1 bg-purple-200">
+              <div className="cube flex space-x-2 items-center">
+                <div className="w-6  rounded-md p-1 bg-purple-200">
+                  {" "}
+                  <BiCube />
+                </div>
+                <p>Fashion</p>
+              </div>
+              <div className="progress w-11/12 h-1 bg-purple-600 animate-pulse mt-5">
                 {" "}
-                <BiCube />
               </div>
-              <p>Fashion</p>
-            </div>
-            <div className="progress w-11/12 h-1 bg-purple-600 animate-pulse mt-5">
-              {" "}
-            </div>
 
-            <hr className=" m-2" />
-            <div className="home flex space-x-2 items-center">
-              <div className="w-6  rounded-md p-1 bg-yellow-100">
-                <BiHome />
+              <hr className=" m-2" />
+              <div className="home flex space-x-2 items-center">
+                <div className="w-6  rounded-md p-1 bg-yellow-100">
+                  <BiHome />
+                </div>
+                <p>Home Furniture</p>
               </div>
-              <p>Home Furniture</p>
-            </div>
-            <div className="progress w-8/12 h-1 bg-yellow-400 animate-pulse mt-5"></div>
+              <div className="progress w-8/12 h-1 bg-yellow-400 animate-pulse mt-5"></div>
 
-            <hr className=" m-2" />
-            <div className="tv flex space-x-2 items-center">
-              <div className="w-6  rounded-md p-1 bg-orange-200">
-                <BiTv />
+              <hr className=" m-2" />
+              <div className="tv flex space-x-2 items-center">
+                <div className="w-6  rounded-md p-1 bg-orange-200">
+                  <BiTv />
+                </div>
+                <p>Electronics</p>
               </div>
-              <p>Electronics</p>
-            </div>
-            <div className="progress w-10/12 h-1 bg-orange-600 animate-pulse mt-5"></div>
+              <div className="progress w-10/12 h-1 bg-orange-600 animate-pulse mt-5"></div>
 
-            <hr className=" m-2" />
-            <div className="zap items-center flex space-x-2">
-              <div className="w-6  rounded-md p-1 bg-blue-200">
-                <BiSolidZap />
+              <hr className=" m-2" />
+              <div className="zap items-center flex space-x-2">
+                <div className="w-6  rounded-md p-1 bg-blue-200">
+                  <BiSolidZap />
+                </div>
+                <p>Groceries</p>
               </div>
-              <p>Groceries</p>
-            </div>
-            <div className="progress w-11/12 h-1 bg-blue-600 animate-pulse mt-5">
-              {" "}
-            </div>
+              <div className="progress w-11/12 h-1 bg-blue-600 animate-pulse mt-5">
+                {" "}
+              </div>
 
-            <hr className=" m-2" />
+              <hr className=" m-2" />
             </div>
           </div>
         </div>
@@ -611,7 +639,7 @@ function Body() {
       {/* card 7 */}
 
       <div className=" cards4 xl:m-auto pb-8   mr-5">
-        <div className="card card7 overflow-x-auto ">
+        <div className="card card7 overflow-x-auto " style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
           <div className="top flex justify-between">
             <h1 className=" text-lg font-bold">Transaction History </h1>
             <div className="flex">
@@ -619,7 +647,7 @@ function Body() {
                 onClick={() => {
                   handleTrans();
                 }}
-                className="w-fit flex items-center text-sm bg-gray-100 rounded-lg p-1"
+                className="w-fit flex items-center text-sm text-black bg-gray-100 rounded-lg p-1"
               >
                 View All
                 <RiArrowDownSLine />
@@ -627,11 +655,13 @@ function Body() {
               <div
                 className={` ${
                   trans ? "" : "hidden"
-                } mt-10  -translate-x-16 absolute  border-2 shadow-inner bg-white  rounded-lg `}
+                } mt-10  -translate-x-16 absolute  border-2 shadow-inner   rounded-lg `} style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
               >
                 <ul className=" ml-2 space-y-3 p-2 ">
                   <li>Last Month</li>
+                  <hr />
                   <li>Last week</li>
+                  <hr />
                   <li>Share Report</li>
                 </ul>
               </div>
@@ -705,28 +735,30 @@ function Body() {
 
         {/*   card 8*/}
 
-        <div className="card card8 grow h-fit  mr-5   overflow-x-auto">
+        <div className="card card8 grow h-fit  mr-5   overflow-x-auto" style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
           <div className="top flex  sm:grow-2 justify-between">
             <h1 className=" text-lg font-bold">Recent Orders </h1>
 
             <div className="flex">
               <button onClick={handleRecent}>
-                <p className="w-8 font-bold bg-gray-100 rounded p-1">:</p>
+                <p className="w-8 font-bold bg-gray-100 text-black rounded p-1">:</p>
               </button>
               <div
                 className={`${
                   recent ? "" : "hidden"
-                } bg-white -translate-x-24 mt-10 order border-2 shadow-inner rounded-lg absolute`}
+                } -translate-x-24 mt-10 order border-2 shadow-inner rounded-lg absolute`} style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
               >
                 <ul className=" p-2 space-y-2">
                   <li className="flex space-x-1 items-center hover:text-blue-500">
                     <BiShare />
                     <p>Share</p>
                   </li>
+                  <hr />
                   <li className="flex space-x-1 items-center hover:text-blue-500">
                     <BiDownload />
                     <p>Download</p>
                   </li>
+                  <hr />
                   <li className="flex space-x-1 items-center hover:text-blue-500">
                     <AiOutlineDelete />
                     <p>Delete</p>
@@ -741,8 +773,8 @@ function Body() {
           "
           >
             <thead>
-              <tr className=" text-sm font-bold ">
-                <th className="pr-10"> S.NO</th>
+              <tr className=" text-sm  ">
+                <th className=""> S.NO</th>
                 <th className="pr-36">Customer Name</th>
                 <th className="pr-10">Order ID</th>
                 <th className="pr-10">Order Date</th>
@@ -765,7 +797,7 @@ function Body() {
                 <td className="  text-green-500">Delivered</td>
                 <td className="  flex   item-center  ">
                   {" "}
-                  <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 rounded">
+                  <button className=" hover:bg-blue-200  text-black w-8 p-2 bg-blue-100 rounded">
                     <RiPencilLine />
                   </button>
                   <button className=" w-8 p-2 bg-red-100 ml-1  hover:bg-red-300 text-red-600">
@@ -786,7 +818,7 @@ function Body() {
                 <td className=" text-green-500">Delivered</td>
                 <td className=" flex   item-center">
                   {" "}
-                  <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 rounded">
+                  <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                     <RiPencilLine />
                   </button>
                   <button className=" w-8 p-2 bg-red-100 ml-1  hover:bg-red-300 text-red-600">
@@ -807,7 +839,7 @@ function Body() {
                 <td className=" text-red-500">cancelled</td>
                 <td className=" flex   item-center">
                   {" "}
-                  <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 rounded">
+                  <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                     <RiPencilLine />
                   </button>
                   <button className=" w-8 p-2 bg-red-100 ml-1  hover:bg-red-300 text-red-600">
@@ -828,7 +860,7 @@ function Body() {
                 <td className=" text-blue-500">pending</td>
                 <td className=" flex   item-center">
                   {" "}
-                  <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 rounded">
+                  <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                     <RiPencilLine />
                   </button>
                   <button className=" w-8 p-2 bg-red-100 ml-1  hover:bg-red-300 text-red-600">
@@ -849,7 +881,7 @@ function Body() {
                 <td className=" text-yellow-500">Shipped</td>
                 <td className="  flex  item-center">
                   {" "}
-                  <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 rounded">
+                  <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                     <RiPencilLine />
                   </button>
                   <button className=" w-8 p-2 bg-red-100 ml-1  hover:bg-red-300 text-red-600">
@@ -861,6 +893,7 @@ function Body() {
             </tbody>
           </table>
         </div>
+      </div>
       </div>
     </>
   );

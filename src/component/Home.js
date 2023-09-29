@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Dashboard from "./Dashboard";
 import Body from "./Body";
-// import Velvet from "./Velvet";
+import { val } from "./ValNav";
 
 function Home( props ) {
+  const hom=useContext(val)
   return (
     <>
-        <div className=" m-auto bg-gray-200">
+        <div className=" m-auto ">
           <Dashboard />
           <Body />
         </div>

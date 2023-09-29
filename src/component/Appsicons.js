@@ -9,8 +9,11 @@ import {
   BiEnvelope,
 } from "react-icons/bi";
 import { cross } from "./Navbar";
+import { val } from "./ValNav";
 
 function Appsicons() {
+  const ico= useContext(val)
+
   const button = useContext(cross);
   const [btn,setBtn]=useState(false)
   const hide =()=>{
@@ -23,16 +26,16 @@ function Appsicons() {
 
   return (
     <>
-      <div className={`${btn ? "hidden" : ""}  cart w-80  m-3   float-right`}>
+      <div className={`${btn ? "hidden" : ""}  cart w-80  m-3   float-right` } style={{color: ico.mode==='light'?'black':'white' }} >
         <div className="flex justify-between items-center">
-          <span className=" text-2xl font-bold m-2 text-black">
+          <span className=" text-2xl font-bold m-2 ">
             Realated Apps {button}
           </span>
           <button
             onClick={() => {
               hide();
             }}
-            className=" w-6 m-4 h-7 rounded-md border-gray-100 text-black   bg-slate-200 p-1 "
+            className=" w-6 m-4 h-7 rounded-md border-gray-100 text-black  bg-slate-200 p-1 "
           >
             <BsXLg />
           </button>
@@ -40,30 +43,30 @@ function Appsicons() {
 
         <hr className=" m-2" />
         <div className="icons grid grid-cols-2 gap-3 p-5 m-auto">
-          <div className="icon rounded-md border-2 hover:bg-gray-100">
+          <div className="icon rounded-md border-2  hover:bg-gray-100 hover:text-black">
             <BiCalendar className="  m-auto mt-4  w-9 p-1.5 h-9 text-green-600 bg-green-100 rounded-md" />
-            <p className=" text-center mt-2 mb-4 text-black">Calender</p>
+            <p className=" text-center mt-2 mb-4   ">Calender</p>
           </div>
 
-          <div className="icon rounded-md border-2 hover:bg-gray-100">
+          <div className="icon rounded-md border-2  hover:bg-gray-100 hover:text-black">
             <BiChat className="  m-auto mt-4 w-9 h-9 p-1.5 bg-blue-200 text-blue-400 rounded-md" />
-            <p className=" text-center mt-2 mb-4 text-black">Mail</p>
+            <p className=" text-center mt-2 mb-4   ">Mail</p>
           </div>
-          <div className="icon rounded-md border-2 hover:bg-gray-100">
+          <div className="icon rounded-md border-2  hover:bg-gray-100 hover:text-black">
             <BiUser className="  m-auto mt-4 w-9 h-9 p-1.5 bg-orange-100 rounded-md text-orange-400" />
-            <p className=" text-center mt-2 mb-4 text-black">Profile</p>
+            <p className=" text-center mt-2 mb-4   ">Profile</p>
           </div>
-          <div className="icon rounded-md border-2 hover:bg-gray-100">
+          <div className="icon rounded-md border-2  hover:bg-gray-100 hover:text-black">
             <BiEnvelope className="  m-auto mt-4 w-9 p-1.5 h-9 text-pink-400 bg-pink-100 rounded-md" />
-            <p className=" text-center mt-2 mb-4 text-black">Chat</p>
+            <p className=" text-center mt-2 mb-4   ">Chat</p>
           </div>
-          <div className="icon rounded-md border-2 hover:bg-gray-100">
+          <div className="icon rounded-md border-2  hover:bg-gray-100 hover:text-black">
             <BiPhone className="  m-auto mt-4 w-9 h-9 p-1.5 text-red-400 bg-red-100 rounded-md" />
-            <p className=" text-center mt-2 mb-4 text-black">Contacts</p>
+            <p className=" text-center mt-2 mb-4   ">Contacts</p>
           </div>
-          <div className="icon rounded-md border-2 hover:bg-gray-100">
+          <div className="icon rounded-md border-2  hover:bg-gray-100 hover:text-black">
             <BiCog className="  m-auto mt-4 w-9 h-9 p-1.5 text-blue-400 bg-blue-100 rounded-md" />
-            <p className=" text-center mt-2 mb-4 text-black">Setting</p>
+            <p className=" text-center mt-2 mb-4   ">Setting</p>
           </div>
         </div>
       </div>

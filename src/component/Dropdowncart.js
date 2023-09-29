@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import cactus from "../asserts/images/cactus.png";
 import shoes from "../asserts/images/shoes.png";
@@ -7,8 +7,11 @@ import goodluck from "../asserts/images/goodluck.png";
 import transplant from "../asserts/images/transplant.jpeg";
 import "../style/Navbar.css";
 import { BsCart } from "react-icons/bs";
+import { val } from "./ValNav";
 
 function Dropdowncart() {
+  const art = useContext(val);
+
   const [item, setItem] = useState(true);
   const removeItem = () => {
     setItem(!item);
@@ -30,23 +33,30 @@ function Dropdowncart() {
     setItem4(!item4);
   };
 
-  const[empty ,setEmpty]=useState(false);
+  const [empty, setEmpty] = useState(false);
   // const alpha=setEmpty(
   // {  if(){}}
   // )
 
-
   return (
     <>
-      <div className="cart   text-black p-4 ">
-        <div className="flex justify-between items-center">
+      <div
+        className="cart   text-black p-4 "
+        // style={{
+        //   backgroundColor: art.mode === "light" ? "white" : "#17171c",
+        //   color: art.mode === "light" ? "black" : "white",
+        // }}
+      >
+        <div className="flex justify-between items-center"  style={{
+          color: art.mode === "light" ? "black" : "white",
+        }}>
           <span className=" text-lg font-bold">Cart Items </span>
           <span className="  rounded-xl mr-2   text-xs bg-green-200 text-green-600 p-1 pl-2 pr-2 ">
             5 items
           </span>
         </div>
-        <hr className="m-2 border-black" />
-        <div className={`  ${empty? "":"hidden"}        empty `}>
+        <hr className="m-2 " />
+        <div className={`  ${empty ? "" : "hidden"}  empty `}>
           <div className=" w-24 h-24 m-auto rounded-full flex items-center  justify-center  mt-10 bg-orange-100 ">
             <BsCart className=" text-orange-400 w-8 h-8 animate-pulse " />
           </div>
@@ -60,13 +70,14 @@ function Dropdowncart() {
               Continue shoping »»
             </p>
           </div>
-          </div>
+        </div>
 
-        <div className="scrollbar text-black h-80 overflow-y-scroll customize_overflow ">
-        
-
+        <div
+          className="scrollbar text-black h-80 overflow-y-scroll customize_overflow "
+          style={{ color: art.mode === "light" ? "black" : "white" }}
+        >
           <div
-            className={`cactus p-2 flex items-center justify-between hover:bg-gray-100 ${
+            className={`cactus p-2 flex items-center justify-between hover:bg-gray-100 hover:text-black rounded-md ${
               item ? "" : "hidden"
             } `}
           >
@@ -88,7 +99,7 @@ function Dropdowncart() {
           <div
             className={`${
               item1 ? "" : "hidden"
-            }  Shoes p-2 flex items-center justify-between hover:bg-gray-100`}
+            }  Shoes p-2 flex items-center justify-between hover:bg-gray-100 hover:text-black rounded-md`}
           >
             <img src={shoes} alt="" className="rounded-lg w-20 h-16 " />
             <div className="content">
@@ -108,7 +119,7 @@ function Dropdowncart() {
           <div
             className={` ${
               item2 ? "" : "hidden"
-            } watch p-2 items-center flex justify-between hover:bg-gray-100`}
+            } watch p-2 items-center flex justify-between hover:bg-gray-100 hover:text-black rounded-md`}
           >
             <img src={watch} alt="" className=" rounded-md w-20 h-16" />
             <div className="content">
@@ -127,7 +138,7 @@ function Dropdowncart() {
           <div
             className={` ${
               item3 ? "" : "hidden"
-            } goodluck p-2 items-center flex justify-between hover:bg-gray-100`}
+            } goodluck p-2 items-center flex justify-between hover:bg-gray-100 hover:text-black rounded-md`}
           >
             <img src={goodluck} alt="" className=" rounded-md w-20 h-16 " />
             <div className="content">
@@ -147,7 +158,7 @@ function Dropdowncart() {
           <div
             className={`${
               item4 ? "" : "hidden"
-            }  plant p-2 items-center flex justify-between hover:bg-gray-100`}
+            }  plant p-2 items-center flex justify-between hover:bg-gray-100 hover:text-black  rounded-md`}
           >
             <img src={transplant} alt="" className=" rounded-md w-20 h-16 " />
             <div className="content">

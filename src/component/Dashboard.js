@@ -1,15 +1,17 @@
-import React from "react";
-// import cart from "../asserts/images/cart.png";
-// import "./index.css"
+import React, { useContext } from "react";
+import { val } from "./ValNav";
+
 
 function Dashboard() {
+ const das= useContext(val)
+
   return (
     <>
       <div className="dashboardcont  pt-5 text-white text-3xl pl-10 pr-4 flex  h-32 justify-between">
         Dashboard <p className=" text-sm m-3  flex space-x-5"><p>Dashbord </p> <p>»</p> <p className=" font-bold"> Sales</p></p>
       </div>
       <div className=" boxes  relative z-10 -mt-20 m-auto  mr-6 ml-2  ">
-        <div className="box box1">
+        <div className="box box1" style={{backgroundColor:  das.mode==='light'?'white':'#17171c',color: das.mode==='light'?'black':'white' }}>
           <div className=" flex justify-between leading-9">
             <p>
               Total sale
@@ -27,7 +29,7 @@ function Dashboard() {
             <p className=" underline ">view more</p>
           </p>
         </div>
-        <div className="box box2">
+        <div className="box box2" style={{backgroundColor:  das.mode==='light'?'white':'#17171c',color: das.mode==='light'?'black':'white' }}>
           <div className=" flex justify-between leading-9">
             <p>
               {" "}
@@ -46,7 +48,7 @@ function Dashboard() {
             <p className=" underline">view more</p>
           </p>
         </div>
-        <div className="box box3">
+        <div className="box box3" style={{backgroundColor:  das.mode==='light'?'white':'#17171c',color: das.mode==='light'?'black':'white' }}>
           <div className=" flex justify-between leading-9">
             <p>
               Total sale
@@ -65,7 +67,7 @@ function Dashboard() {
             <p className=" underline ">view more</p>
           </p>
         </div>
-        <div className="box  box4">
+        <div className="box  box4" style={{backgroundColor:  das.mode==='light'?'white':'#17171c',color: das.mode==='light'?'black':'white' }}>
           <div className=" flex justify-between leading-9">
             <p>
               {" "}
@@ -84,7 +86,7 @@ function Dashboard() {
             <p className=" underline">view more</p>
           </p>
         </div>
-        <div className="box  box5">
+        <div className="box  box5" style={{backgroundColor:  das.mode==='light'?'white':'#17171c',color: das.mode==='light'?'black':'white' }}>
           <div className=" flex  justify-between leading-9">
             <p>
               {" "}

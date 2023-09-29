@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState,useRef } from "react";
 import profile from "../asserts/images/w7.png";
 import { Link } from "react-router-dom";
 import CalNoti from "./CalNoti";
@@ -28,8 +28,39 @@ const cross = createContext();
 
 function Navbar(props) {
   const sideBar = useContext(val);
+
+
+  const fullScreenRef = useRef(null);
+
+  const enterFull = () => {
+    const element = fullScreenRef.current;
+  
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+      console.log("im working");
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+      console.log("im working");
+  
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+      console.log("im working");
+  
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
+      console.log("im working");
+  
+    }
+  };
+
+
+
+
   const handleSide = () => {
     sideBar.widthInc();
+  };
+  const darkMode = () => {
+    sideBar.toggleMode();
   };
 
   const [lang, setLang] = useState(false);
@@ -99,15 +130,8 @@ function Navbar(props) {
 
   return (
     <>
-      {/* <cross.Provider value={knife}> */}
-      {/* {props.children} */}
-      {/* <Appsicons/> */}
-      {/* </cross.Provider> */}
-
       <nav
-        className={`navbar relative  flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400  ${
-          props.mode === "light" ? "dark" : "light"
-        }`}
+        className={` navbar relative  flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400 `}
         style={{ position: "sticky", top: "0px", zIndex: 12 }}
       >
         <div
@@ -154,21 +178,21 @@ function Navbar(props) {
                 <div
                   className={` ${
                     lang ? "" : "hidden"
-                  } langDropdown  w-36 rounded-md   text-sm  border-gray-100 border-2 shadow-inner  mt-4 bg-white text-black translate-y-2 absolute  `}
-                >
+                  } langDropdown  w-36 rounded-md   text-sm  border-gray-100 border-2 shadow-inner  mt-4  translate-y-2 absolute  `}
+                  style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c',color: sideBar.mode==='light'?'black':'white' }} >
                   <ul>
                     <div className="p-2 ml-2">
-                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 ">
+                      <li className="  flex space-x-2 p-1 hover:bg-gray-100 hover:text-black  rounded-sm">
                         <img src={usa} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">English</Link>
                       </li>
                       <hr />
-                      <li className="  flex space-x-2 p-1 hover:bg-gray-200   ">
+                      <li className="  flex space-x-2 p-1 hover:bg-gray-200  hover:text-black  rounded-sm  ">
                         <img src={canada} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">French</Link>
                       </li>
                       <hr />
-                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 ">
+                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 hover:text-black  rounded-sm">
                         <img
                           src={germany}
                           alt=""
@@ -177,17 +201,17 @@ function Navbar(props) {
                         <Link href="#">German</Link>
                       </li>
                       <hr className="m-1" />
-                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 ">
+                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 hover:text-black  rounded-sm">
                         <img src={spain} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">Spainish</Link>
                       </li>
                       <hr />
-                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 ">
+                      <li className="  flex space-x-2 p-1 hover:bg-gray-200 hover:text-black  rounded-sm">
                         <img src={itly} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">Italien</Link>
                       </li>
                       <hr />
-                      <li className=" flex space-x-2 p-1 hover:bg-gray-200  ">
+                      <li className=" flex space-x-2 p-1 hover:bg-gray-200 hover:text-black  rounded-sm ">
                         <img src={russia} alt="" className=" w-5 rounded-2xl" />
                         <Link href="#">Russian</Link>
                       </li>
@@ -198,7 +222,12 @@ function Navbar(props) {
 
               <li>
                 <Link to="#">
-                  <i className="bi bi-moon  inline-block w-5 h-5 "></i>
+                  <i
+                    onClick={() => {
+                      darkMode();
+                    }}
+                    className="bi bi-moon  inline-block w-5 h-5 "
+                  ></i>
                 </Link>
               </li>
               <li>
@@ -213,7 +242,7 @@ function Navbar(props) {
               <div
                 className={`${
                   cart ? "" : "hidden"
-                } cart text-sm absolute -translate-x-72 translate-y-12 rounded-md  bg-white border-gray-200 border-2`}
+                } cart text-sm absolute -translate-x-72 translate-y-12 rounded-md border-gray-200 border-2`} style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c'}}
               >
                 <Dropdowncart />
               </div>
@@ -230,7 +259,7 @@ function Navbar(props) {
               <div
                 className={`${
                   noti ? "" : " hidden"
-                } absolute bg-white translate-y-12  rounded-md -translate-x-60`}
+                } absolute bg-white translate-y-12  rounded-md -translate-x-60`}  style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c' }}
               >
                 <Notification />
               </div>
@@ -247,14 +276,14 @@ function Navbar(props) {
               <div
                 className={`${
                   appicon ? "" : " hidden"
-                } absolute bg-white translate-y-12  h-[700px] rounded-md translate-x-24`}
+                } absolute bg-white translate-y-12  h-[700px] rounded-md translate-x-24`} style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c' }}
               >
                 <cross.Provider value={knife}>
                   <Appsicons />
                 </cross.Provider>
               </div>
 
-              <li>
+              <li onClick={enterFull}>
                 <Link to="#">
                   <i className="bi bi-fullscreen  inline-block w-5 h-5 "></i>
                 </Link>
@@ -271,7 +300,7 @@ function Navbar(props) {
               <div
                 className={` ${
                   cal ? "" : "hidden"
-                } cal absolute  translate-y-12  text-black translate-x-[60px] `}
+                } cal absolute  translate-y-12  text-black translate-x-[60px]`} 
               >
                 <CalNoti />
               </div>
@@ -290,34 +319,34 @@ function Navbar(props) {
           </Link>
         </div>
 
-        <div className="proDrop">
+        <div className="proDrop" >
           <ul
             className={` ${
               prof ? "" : "hidden"
-            } py-1 text-sm   text-black-700 absolute -translate-x-40 translate-y-16 w-40 border-2 rounded-lg border-gray-100  px-4   shadow-inner bg-white`}
+            } py-1 text-sm   text-black-700 absolute -translate-x-40 translate-y-16 w-40 border-2 rounded-lg border-gray-100  px-4   shadow-inner bg-white`}   style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c',color: sideBar.mode==='light'?'black':'white' }} 
           >
-            <div className="ml-2 text-base  text-gray-600">
+            <div className="ml-2 text-base  ">
               <li className=" text-green-600 flex space-x-2  p-1 items-center  hover:bg-gray-200 ">
                 <BiUser />
                 <Link to="profile">Profile </Link>
               </li>
               <hr />
-              <li className="flex space-x-2 items-center p-1  hover:bg-gray-200">
+              <li className="flex space-x-2 items-center p-1 hover:text-black hover:bg-gray-200">
                 <BiComment />
                 <Link to="#"> Message </Link>
               </li>
               <hr />
-              <li className="flex space-x-2 items-center p-1  hover:bg-gray-200">
+              <li className="flex space-x-2 items-center p-1 hover:text-black hover:bg-gray-200">
                 <BiCog />
                 <Link to="#"> Setting </Link>
               </li>
               <hr />
-              <li className="flex space-x-2 items-center p-1  hover:bg-gray-200">
+              <li className="flex space-x-2 items-center p-1 hover:text-black hover:bg-gray-200">
                 <BiHelpCircle />
                 <Link to="#"> Help </Link>
               </li>
               <hr />
-              <li className="flex space-x-2 items-center p-1  hover:bg-gray-200">
+              <li className="flex space-x-2 items-center p-1 hover:text-black hover:bg-gray-200">
                 <BiRightArrowAlt />
                 <Link to="#"> Log Out </Link>
               </li>

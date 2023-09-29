@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import pic from "../asserts/images/w4.png";
+import { val } from "./ValNav";
 
 function Profile() {
+  const pro= useContext(val)
   return (
     <>
-      <div className="head mt-3 flex md:shrink sm:shrink justify-between ml-5 mr-6">
+    <div className="pro" style={{color: pro.mode==='light'?'black':'white' }}>
+      <div className="head flex md:shrink sm:shrink justify-between p-4 h-32 dashboardcont">
         <p className=" font-bold text-2xl">Profile</p>
         <p className="flex space-x-3 justify-around">
           <p>Page </p>
@@ -13,7 +16,7 @@ function Profile() {
         </p>
       </div>
 
-      <div className="pr-container flex flex-wrap text-sm justify-between w-11/12 shadow-inner border-2 m-auto border-gray-300 mt-10">
+      <div className="pr-container flex flex-wrap text-sm justify-between w-11/12 shadow-inner border-2 m-auto border-gray-300 rounded-md -mt-10" style={{backgroundColor:  pro.mode==='light'?'white':'#17171c'}}>
         <div className="info flex space-x-3">
           <img
             src={pic}
@@ -49,8 +52,8 @@ function Profile() {
         </div>
       </div>
 
-      <div className="status   ">
-      <div  className="  profile_st shadow-inner border-2  border-gray-300 mt-10">
+      <div className="status ">
+      <div  className="  profile_st shadow-inner border-2  rounded-md border-gray-300 mt-10" style={{backgroundColor:  pro.mode==='light'?'white':'#17171c'}}>
         <div className=" m-4">
           <p>Profile Status:</p>
           <p>
@@ -143,8 +146,9 @@ function Profile() {
           </div>
         </div>
       </div>
-      <div className="r_cont  ">
-        <div className="m-auto w-11/12 flex flex-wrap justify-around  h-auto p-5 space-y-2 shadow-inner mt-10 border-gray-300  mb-6 border-2 ">
+      {/* buttons */}
+      <div className="r_cont" >
+        <div className="m-auto w-11/12 flex flex-wrap justify-around rounded-md h-auto p-5 space-y-2 shadow-inner mt-10 border-gray-300  mb-6 border-2 " style={{backgroundColor:  pro.mode==='light'?'white':'#17171c'}}>
           <button className=" rounded-2xl p-1 h-12 m-auto w-36 bg-violet-500 hover:bg-violet-600">
             {" "}
             Activity{" "}
@@ -163,8 +167,8 @@ function Profile() {
           </button>
         </div>
 
-        <div className="stack w-11/12 mb-10 shadow-inner m-auto overflow-x-auto customize_overflow ">
-          <ul class="divide-y divide-gray-100">
+        <div className="stack w-11/12 mb-10 shadow-inner rounded-md m-auto overflow-x-auto customize_overflow " style={{backgroundColor:  pro.mode==='light'?'white':'#17171c'}} >
+          <ul class="divide-y divide-gray-100 p-3">
             <li class="flex justify-between gap-x-6 py-5">
               <div class="flex min-w-0 gap-x-4">
                 <img
@@ -173,7 +177,7 @@ function Profile() {
                   alt=""
                 />
                 <div class="min-w-0 flex-auto">
-                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                  <p class="text-sm font-semibold leading-6 ">
                     Leslie Alexander
                   </p>
                   <p class="mt-1 truncate text-xs leading-5 text-gray-500">
@@ -182,7 +186,7 @@ function Profile() {
                 </div>
               </div>
               <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p class="text-sm leading-6 text-gray-900">Co-Founder / CEO</p>
+                <p class="text-sm leading-6 ">Co-Founder / CEO</p>
                 <p class="mt-1 text-xs leading-5 text-gray-500">
                   Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
                 </p>
@@ -196,7 +200,7 @@ function Profile() {
                   alt=""
                 />
                 <div class="min-w-0 flex-auto">
-                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                  <p class="text-sm font-semibold leading-6 ">
                     Michael Foster
                   </p>
                   <p class="mt-1 truncate text-xs leading-5 text-gray-500">
@@ -205,7 +209,7 @@ function Profile() {
                 </div>
               </div>
               <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p class="text-sm leading-6 text-gray-900">Co-Founder / CTO</p>
+                <p class="text-sm leading-6 ">Co-Founder / CTO</p>
                 <p class="mt-1 text-xs leading-5 text-gray-500">
                   Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
                 </p>
@@ -219,7 +223,7 @@ function Profile() {
                   alt=""
                 />
                 <div class="min-w-0 flex-auto">
-                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                  <p class="text-sm font-semibold leading-6 ">
                     Dries Vincent
                   </p>
                   <p class="mt-1 truncate text-xs leading-5 text-gray-500">
@@ -228,7 +232,7 @@ function Profile() {
                 </div>
               </div>
               <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p class="text-sm leading-6 text-gray-900">
+                <p class="text-sm leading-6 ">
                   Business Relations
                 </p>
                 <div class="mt-1 flex items-center gap-x-1.5">
@@ -247,7 +251,7 @@ function Profile() {
                   alt=""
                 />
                 <div class="min-w-0 flex-auto">
-                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                  <p class="text-sm font-semibold leading-6 ">
                     Lindsay Walton
                   </p>
                   <p class="mt-1 truncate text-xs leading-5 text-gray-500">
@@ -256,7 +260,7 @@ function Profile() {
                 </div>
               </div>
               <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p class="text-sm leading-6 text-gray-900">
+                <p class="text-sm leading-6">
                   Front-end Developer
                 </p>
                 <p class="mt-1 text-xs leading-5 text-gray-500">
@@ -272,7 +276,7 @@ function Profile() {
                   alt=""
                 />
                 <div class="min-w-0 flex-auto">
-                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                  <p class="text-sm font-semibold leading-6 ">
                     Courtney Henry
                   </p>
                   <p class="mt-1 truncate text-xs leading-5 text-gray-500">
@@ -281,7 +285,7 @@ function Profile() {
                 </div>
               </div>
               <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p class="text-sm leading-6 text-gray-900">Designer</p>
+                <p class="text-sm leading-6 ">Designer</p>
                 <p class="mt-1 text-xs leading-5 text-gray-500">
                   Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
                 </p>
@@ -295,7 +299,7 @@ function Profile() {
                   alt=""
                 />
                 <div class="min-w-0 flex-auto">
-                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                  <p class="text-sm font-semibold leading-6 ">
                     Tom Cook
                   </p>
                   <p class="mt-1 truncate text-xs leading-5 text-gray-500">
@@ -304,7 +308,7 @@ function Profile() {
                 </div>
               </div>
               <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p class="text-sm leading-6 text-gray-900">
+                <p class="text-sm leading-6 ">
                   Director of Product
                 </p>
                 <div class="mt-1 flex items-center gap-x-1.5">
@@ -318,6 +322,7 @@ function Profile() {
           </ul>
         </div>
         </div>
+      </div>
       </div>
     </>
   );

@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import Calendar from "react-calendar";
 import { BiPyramid, BiChevronRight } from "react-icons/bi";
 
 import pic1 from "../asserts/images/w1.png";
 import pic3 from "../asserts/images/w3.png";
+import { val } from "./ValNav";
 
 function CalNoti() {
+  
+  const cal= useContext(val)
   return (
     <>
-      <div className=" space-y-2 border-2 w-96 h-[600px]   overflow-y-scroll bg-white rounded-md customize_overflow   ">
-        <div className="ml-5 mt-5 ">
+      <div className=" space-y-2 border-2 w-96 h-[600px]   overflow-y-scroll rounded-md customize_overflow " style={{backgroundColor:  cal.mode==='light'?'white':'#17171c', }}>
+        <div className="ml-5 mt-5 " >
           <Calendar />
         </div>
 
-        <div className="p-6  ">
+        <div className="p-6  " style={{color: cal.mode==='light'?'black':'white'}}>
           <div className="team flex justify-between items-center">
             <p className="  font-bold">Team Member</p>
             <div className="btn w-fit p-1 pl-2 pr-2 text-sm text-gray-500 bg-gray-100 rounded-md">
@@ -21,8 +24,8 @@ function CalNoti() {
               View All
             </div>
           </div>
-          <div className="data mt-2">
-            <div className="pic6 mt-2 p-3  border-r-gray-100 border-2      rounded-md text-black flex justify-between hover:bg-gray-100">
+          <div className="data mt-2"  style={{color: cal.mode==='light'?'black':'white'}}>
+            <div className="pic6 mt-2 p-3  border-r-gray-100 border-2      rounded-md  flex justify-between hover:text-black hover:bg-gray-100">
               <div className="w-10 h-10  rounded-md bg-green-100 flex items-center justify-center">
                 <BiPyramid className=" text-green-500 w-5 h-5  " />
               </div>
@@ -39,7 +42,7 @@ function CalNoti() {
                 </p>
               </div>
             </div>
-            <div className="pic6 mt-2 p-3  border-r-gray-100 border-2      rounded-md text-black flex justify-between hover:bg-gray-100">
+            <div className="pic6 mt-2 p-3  border-r-gray-100 border-2      rounded-md  flex justify-between hover:text-black hover:bg-gray-100">
               <div className="w-10 h-10  rounded-md  flex items-center justify-center">
                 <img src={pic1} alt="" />
               </div>
@@ -56,7 +59,7 @@ function CalNoti() {
                 </p>
               </div>
             </div>
-            <div className="pic6 mt-2 p-3  border-r-gray-100 border-2      rounded-md text-black flex justify-between hover:bg-gray-100">
+            <div className="pic6 mt-2 p-3  border-r-gray-100 border-2      rounded-md  flex justify-between hover:text-black hover:bg-gray-100">
               <div className="w-10 h-10  rounded-md bg-yellow-100 flex items-center justify-center">
                 <BiPyramid className=" text-yellow-500 w-5 h-5  " />
               </div>
@@ -73,7 +76,7 @@ function CalNoti() {
                 </p>
               </div>
             </div>
-            <div className="pic6 mt-2 p-3  border-r-gray-100 border-2      rounded-md text-black flex justify-between hover:bg-gray-100">
+            <div className="pic6 mt-2 p-3  border-r-gray-100 border-2      rounded-md  flex justify-between hover:text-black hover:bg-gray-100">
               <div className="w-10 h-10  rounded-md bg-blue-100 flex items-center justify-center">
                 <p className=" text-blue-500 w-5 h-5  ">JK</p>
               </div>
@@ -90,7 +93,7 @@ function CalNoti() {
                 </p>
               </div>
             </div>
-            <div className="pic6 mt-2 p-3  border-r-gray-100 border-2      rounded-md text-black flex justify-between hover:bg-gray-100">
+            <div className="pic6 mt-2 p-3  border-r-gray-100 border-2      rounded-md  flex justify-between hover:text-black hover:bg-gray-100">
               <div className="w-10 h-10  rounded-md flex items-center justify-center">
               <img src={pic3} alt="" />
               </div>
@@ -107,7 +110,7 @@ function CalNoti() {
                 </p>
               </div>
             </div>
-            <div className="pic6  mt-2 p-3  border-r-gray-100 border-2      rounded-md text-black flex justify-between hover:bg-gray-100">
+            <div className="pic6  mt-2 p-3  border-r-gray-100 border-2      rounded-md hover:text-black flex justify-between hover:bg-gray-100">
               <div className="w-10 h-10  rounded-md bg-red-100 flex items-center justify-center">
                 <p className=" text-red-500 w-5 h-5  " > MA</p>
               </div>
