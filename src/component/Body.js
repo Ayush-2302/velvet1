@@ -38,6 +38,11 @@ import { val } from "./ValNav";
 
 function Body(props) {
   const bod = useContext(val);
+  const mode_change={
+    backgroundColor:bod.mode==="light"?"white":"#262C3C",
+    color:bod.mode==="dark"?"white":"black",
+    boxShadow:bod.mode==="light"?"":" 0px 3px 4px 0px #373C4A"
+   }
 
   const [weekdrop, setWeekdrop] = useState(false);
   const handleweek = () => {
@@ -117,7 +122,7 @@ function Body(props) {
         {/* <div onClick={enterFullScreen} className="ayush text-center"> ayush</div> */}
       <div className="keybody mb-1 ">
         <div className="cards1  mr-5" >
-          <div className="card shadow-inner card1" style={{backgroundColor:  bod.mode==='light'?'white':'rgb(38,44,60,0.95)',color: bod.mode==='light'?'black':'white' }}>
+          <div className="card shadow-inner card1" style={ mode_change}>
             <h1 className="text-lg  font-bold">Recent Activity</h1>
             <hr className="mt-3" />
 
@@ -210,7 +215,7 @@ function Body(props) {
             <div></div>
           </div>
           {/* card 2 */}
-          <div className="card overflow-x-auto card2 " style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
+          <div className="card overflow-x-auto card2 " style={mode_change}>
             <div className="top flex-shrink break-words  flex justify-between">
               <h1 className=" text-lg font-bold"> Sale By Country </h1>
               <button className="w-fit flex items-center text-sm text-black bg-gray-100 rounded-lg p-1">
@@ -304,7 +309,7 @@ function Body(props) {
         </div>
         {/*card 3 */}
         <div className="cards2 mr-5   ">
-          <div className="card card3 p-0  overflow-x-auto " style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
+          <div className="card card3 p-0  overflow-x-auto " style={mode_change}>
             <div className="top flex justify-between items-center p-3">
               <h1 className=" text-lg font-bold">Sales Statistics </h1>
               <ul className="btn  text-sm ">
@@ -332,7 +337,7 @@ function Body(props) {
                 <div
                   className={` ${
                     weekdrop ? "" : "hidden"
-                  }  translate-x-16 absolute week h-fit w-28 rounded-lg `} style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
+                  }  translate-x-16 absolute week h-fit w-28 rounded-lg `} style={mode_change}
                 >
                   <ul className=" ml-2 space-y-2 p-2 ">
                     <li>Last Month</li>
@@ -349,7 +354,7 @@ function Body(props) {
             <img src={stock} alt=" img" className=" w-full h-96  " />
           </div>
           {/* card 4 */}
-          <div className="card  card5 grow customize_overflow overflow-x-scroll" style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
+          <div className="card  card5 grow customize_overflow overflow-x-scroll" style={mode_change}>
             <div className="top flex justify-between">
               <h1 className=" text-lg font-bold">Top Selling Products </h1>
               <div className="flex">
@@ -363,7 +368,7 @@ function Body(props) {
                 <div
                   className={` mt-10  -translate-x-32  border-2 shadow-inner absolute rounded-lg    ${
                     selling ? "" : "hidden"
-                  }`} style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
+                  }`} style={mode_change}
                 >
                   <ul className=" text-sm  font-bold ml-2 p-2 space-y-3  ">
                     <li className="hover:text-blue-500">Action </li>
@@ -501,7 +506,7 @@ function Body(props) {
 
         {/* card 5 */}
         <div className="cards3 mr-5  ">
-          <div className="card overflow-x-auto  card3" style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
+          <div className="card overflow-x-auto  card3" style={mode_change}>
             <div className="top flex  justify-between">
               <h1 className=" text-lg font-bold">Sales Value </h1>
               <div>
@@ -517,7 +522,7 @@ function Body(props) {
                 <div
                   className={`${
                     value ? "" : "hidden"
-                  } mt-2  -translate-x-20 w-36 absolute  border-2 shadow-inner  rounded-lg `} style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
+                  } mt-2  -translate-x-20 w-36 absolute  border-2 shadow-inner  rounded-lg `} style={mode_change}
                 >
                   <ul className=" ml-2 space-y-2 p-2 ">
                     <li className=" hover:text-blue-500">Today</li>
@@ -552,7 +557,7 @@ function Body(props) {
           </div>
 
           {/* card6 */}
-          <div className="card overflow-x-auto  card6 p-2" style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
+          <div className="card overflow-x-auto  card6 p-2" style={mode_change}>
             <div className="top flex justify-between">
               <h1 className=" text-lg font-bold">Monthly Profit </h1>
               <div className="">
@@ -568,7 +573,7 @@ function Body(props) {
                 <div
                   className={`${
                     prof ? "" : "hidden"
-                  } mt-2  -translate-x-20 w-36 absolute  border-2 shadow-inne rounded-lg ` } style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
+                  } mt-2  -translate-x-20 w-36 absolute  border-2 shadow-inne rounded-lg ` } style={mode_change}
                 >
                   <ul className=" ml-2 space-y-2 p-2 ">
                     <li className=" hover:text-blue-500">Today</li>
@@ -639,7 +644,7 @@ function Body(props) {
       {/* card 7 */}
 
       <div className=" cards4 xl:m-auto pb-8   mr-5">
-        <div className="card card7 overflow-x-auto " style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
+        <div className="card card7 overflow-x-auto " style={mode_change}>
           <div className="top flex justify-between">
             <h1 className=" text-lg font-bold">Transaction History </h1>
             <div className="flex">
@@ -655,7 +660,7 @@ function Body(props) {
               <div
                 className={` ${
                   trans ? "" : "hidden"
-                } mt-10  -translate-x-16 absolute  border-2 shadow-inner   rounded-lg `} style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
+                } mt-10  -translate-x-16 absolute  border-2 shadow-inner   rounded-lg `} style={mode_change}
               >
                 <ul className=" ml-2 space-y-3 p-2 ">
                   <li>Last Month</li>
@@ -735,7 +740,7 @@ function Body(props) {
 
         {/*   card 8*/}
 
-        <div className="card card8 grow h-fit  mr-5   overflow-x-auto" style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}>
+        <div className="card card8 grow h-fit  mr-5   overflow-x-auto" style={mode_change}>
           <div className="top flex  sm:grow-2 justify-between">
             <h1 className=" text-lg font-bold">Recent Orders </h1>
 
@@ -746,7 +751,7 @@ function Body(props) {
               <div
                 className={`${
                   recent ? "" : "hidden"
-                } -translate-x-24 mt-10 order border-2 shadow-inner rounded-lg absolute`} style={{backgroundColor:  bod.mode==='light'?'white':'#17171c',color: bod.mode==='light'?'black':'white' }}
+                } -translate-x-24 mt-10 order border-2 shadow-inner rounded-lg absolute`} style={mode_change}
               >
                 <ul className=" p-2 space-y-2">
                   <li className="flex space-x-1 items-center hover:text-blue-500">

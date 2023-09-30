@@ -4,9 +4,14 @@ import { val } from "./ValNav";
 
 function Profile() {
   const pro= useContext(val)
+  const mode_change={
+    backgroundColor:pro.mode==="light"?"white":"#262C3C",
+    color:pro.mode==="dark"?"white":"black",
+    boxShadow:pro.mode==="light"?"":" 0px 3px 4px 0px #373C4A"
+   }
   return (
     <>
-    <div className="pro" style={{color: pro.mode==='light'?'black':'white' }}>
+    <div className="pro" style={mode_change}>
       <div className="head flex md:shrink sm:shrink justify-between p-4 h-32 dashboardcont">
         <p className=" font-bold text-2xl">Profile</p>
         <p className="flex space-x-3 justify-around">
@@ -16,7 +21,7 @@ function Profile() {
         </p>
       </div>
 
-      <div className="pr-container flex flex-wrap text-sm justify-between w-11/12 shadow-inner border-2 m-auto border-gray-300 rounded-md -mt-10" style={{backgroundColor:  pro.mode==='light'?'white':'#17171c'}}>
+      <div className="pr-container flex flex-wrap text-sm justify-between w-11/12 shadow-inner border-2 m-auto border-gray-300 rounded-md -mt-10" style={mode_change}>
         <div className="info flex space-x-3">
           <img
             src={pic}
@@ -53,7 +58,7 @@ function Profile() {
       </div>
 
       <div className="status ">
-      <div  className="  profile_st shadow-inner border-2  rounded-md border-gray-300 mt-10" style={{backgroundColor:  pro.mode==='light'?'white':'#17171c'}}>
+      <div  className="  profile_st shadow-inner border-2  rounded-md border-gray-300 mt-10" style={mode_change}>
         <div className=" m-4">
           <p>Profile Status:</p>
           <p>
@@ -148,7 +153,7 @@ function Profile() {
       </div>
       {/* buttons */}
       <div className="r_cont" >
-        <div className="m-auto w-11/12 flex flex-wrap justify-around rounded-md h-auto p-5 space-y-2 shadow-inner mt-10 border-gray-300  mb-6 border-2 " style={{backgroundColor:  pro.mode==='light'?'white':'#17171c'}}>
+        <div className="m-auto w-11/12 flex flex-wrap justify-around rounded-md h-auto p-5 space-y-2 shadow-inner mt-10 border-gray-300  mb-6 border-2 " style={mode_change}>
           <button className=" rounded-2xl p-1 h-12 m-auto w-36 bg-violet-500 hover:bg-violet-600">
             {" "}
             Activity{" "}
@@ -167,7 +172,7 @@ function Profile() {
           </button>
         </div>
 
-        <div className="stack w-11/12 mb-10 shadow-inner rounded-md m-auto overflow-x-auto customize_overflow " style={{backgroundColor:  pro.mode==='light'?'white':'#17171c'}} >
+        <div className="stack w-11/12 mb-10 shadow-inner rounded-md m-auto overflow-x-auto customize_overflow " style={mode_change} >
           <ul class="divide-y divide-gray-100 p-3">
             <li class="flex justify-between gap-x-6 py-5">
               <div class="flex min-w-0 gap-x-4">

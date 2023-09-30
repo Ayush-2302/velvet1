@@ -12,7 +12,7 @@ function ValNav(props) {
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
-      document.body.style.backgroundColor = "#212529";
+      document.body.style.backgroundColor = "#313645";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "whitesmoke";

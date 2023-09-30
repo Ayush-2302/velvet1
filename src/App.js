@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Navbar from "./component/Navbar";
-import Footer from "./component/Footer";
+// import Footer from "./component/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dummy from "./component/Dummy";
 import Home from "./component/Home";
@@ -29,11 +29,6 @@ function App() {
     }
   };
 
-
-
-
-
-
   return (
     <div id="fullScreen" ref={fullScreenRef} >
     <ValNav>
@@ -49,7 +44,7 @@ function App() {
               <Route exact path="/accordian" element={<Accordian />} />
               <Route exact path="/profile" element={<Profile />} />
             </Routes>
-            <Footer  />
+            {/* <Footer  /> */}
           </div>
         </div>
       </Router>

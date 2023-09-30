@@ -40,16 +40,13 @@ function Dropdowncart() {
 
   return (
     <>
-      <div
-        className="cart   text-black p-4 "
-        // style={{
-        //   backgroundColor: art.mode === "light" ? "white" : "#17171c",
-        //   color: art.mode === "light" ? "black" : "white",
-        // }}
-      >
-        <div className="flex justify-between items-center"  style={{
-          color: art.mode === "light" ? "black" : "white",
-        }}>
+      <div className="cart   text-black p-4 ">
+        <div
+          className="flex justify-between items-center"
+          style={{
+            color: art.mode === "light" ? "black" : "white",
+          }}
+        >
           <span className=" text-lg font-bold">Cart Items </span>
           <span className="  rounded-xl mr-2   text-xs bg-green-200 text-green-600 p-1 pl-2 pr-2 ">
             5 items

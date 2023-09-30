@@ -28,6 +28,11 @@ const cross = createContext();
 
 function Navbar(props) {
   const sideBar = useContext(val);
+  const mode_change={
+    backgroundColor:sideBar.mode==="light"?"white":"#262C3C",
+    color:sideBar.mode==="dark"?"white":"black",
+    boxShadow:sideBar.mode==="light"?"":" 0px 3px 4px 0px #373C4A"
+   }
 
 
   const handleSide = () => {
@@ -153,7 +158,7 @@ function Navbar(props) {
                   className={` ${
                     lang ? "" : "hidden"
                   } langDropdown  w-36 rounded-md   text-sm  border-gray-100 border-2 shadow-inner  mt-4  translate-y-2 absolute  `}
-                  style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c',color: sideBar.mode==='light'?'black':'white' }} >
+                 style={mode_change} >
                   <ul>
                     <div className="p-2 ml-2">
                       <li className="  flex space-x-2 p-1 hover:bg-gray-100 hover:text-black  rounded-sm">
@@ -216,7 +221,7 @@ function Navbar(props) {
               <div
                 className={`${
                   cart ? "" : "hidden"
-                } cart text-sm absolute -translate-x-72 translate-y-12 rounded-md border-gray-200 border-2`} style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c'}}
+                } cart text-sm absolute -translate-x-72 translate-y-12 rounded-md border-gray-200 border-2`} style={mode_change}
               >
                 <Dropdowncart />
               </div>
@@ -233,7 +238,7 @@ function Navbar(props) {
               <div
                 className={`${
                   noti ? "" : " hidden"
-                } absolute bg-white translate-y-12  rounded-md -translate-x-60`}  style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c' }}
+                } absolute bg-white translate-y-12  rounded-md -translate-x-60`} style={mode_change}
               >
                 <Notification />
               </div>
@@ -250,7 +255,7 @@ function Navbar(props) {
               <div
                 className={`${
                   appicon ? "" : " hidden"
-                } absolute bg-white translate-y-12  h-[700px] rounded-md translate-x-24`} style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c' }}
+                } absolute bg-white translate-y-12  h-[700px] rounded-md translate-x-24`}style={mode_change}
               >
                 <cross.Provider value={{handleapp}}>
                   <Appsicons />
@@ -274,7 +279,7 @@ function Navbar(props) {
               <div
                 className={` ${
                   cal ? "" : "hidden"
-                } cal absolute  translate-y-12  text-black translate-x-[60px]`} 
+                } cal absolute  translate-y-12  text-black translate-x-[60px]`}  style={ {backgroundColor:sideBar.mode==="light"?"white":"#262C3C"}}
               >
                 <CalNoti />
               </div>
@@ -297,7 +302,7 @@ function Navbar(props) {
           <ul
             className={` ${
               prof ? "" : "hidden"
-            } py-1 text-sm   text-black-700 absolute -translate-x-40 translate-y-16 w-40 border-2 rounded-lg border-gray-100  px-4   shadow-inner bg-white`}   style={{backgroundColor:  sideBar.mode==='light'?'white':'#17171c',color: sideBar.mode==='light'?'black':'white' }} 
+            } py-1 text-sm   text-black-700 absolute -translate-x-40 translate-y-16 w-40 border-2 rounded-lg border-gray-100  px-4   shadow-inner bg-white`}   style={mode_change} 
           >
             <div className="ml-2 text-base  ">
               <li className=" text-green-600 flex space-x-2  p-1 items-center  hover:bg-gray-200 ">

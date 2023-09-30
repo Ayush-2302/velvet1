@@ -34,7 +34,7 @@ function Velvet() {
     <>
       <div
         id="velvet"
-        className={`velvet ${toggle.show ? " w-72" : "w-16"}  text-gray-400`}
+        className={`velvet ${toggle.show ? " w-72" : "w-16"} ${toggle.mode==="light"?"":"bg-[#313645]"} text-gray-400`}
       >
         <div
           onClick={() => {

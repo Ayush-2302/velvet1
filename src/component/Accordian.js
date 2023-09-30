@@ -3,6 +3,11 @@ import { val } from "./ValNav";
 
 function Accordian() {
 const accod=useContext(val)
+const mode_change={
+  backgroundColor:accod.mode==="light"?"white":"#262C3C",
+  color:accod.mod==="dark"?"white":"black",
+  boxShadow:accod.mode==="light"?"":" 0px 3px 4px 0px #373C4A"
+ }
 
   const [open, Setopen] = useState([
     {
@@ -299,7 +304,7 @@ const accod=useContext(val)
         </div>
         <div className=" -mt-16 ">
           <div className="flex1  " >
-            <div className={`  container_acc `}  style={{backgroundColor:  accod.mode==='light'?'white':'#17171c', color: accod.mode==='light'?'black':'white' }}>
+            <div className={`  container_acc `} style={mode_change}>
               <div className=" text-lg font-bold p-1 ">Basic Accordion</div>
               <hr />
               {open &&
@@ -330,7 +335,7 @@ const accod=useContext(val)
                 ))}
             </div>
 
-            <div className={`   container_acc `} style={{backgroundColor:  accod.mode==='light'?'white':'#17171c', color: accod.mode==='light'?'black':'white' }}>
+            <div className={`   container_acc `}style={mode_change}>
               <div className=" text-lg  p-1">
                 <p className="font-bold">Always Open Accordion</p>
                 <p className="pl-10 text-sm text-gray-500">
@@ -372,7 +377,7 @@ const accod=useContext(val)
           </div>
           <div className=" pl-8 text-base mt-4 font-bold" style={{color: accod.mode==='light'?'black':'white'}}>Solid Colour :</div>
 
-          <div className={`  container_acc  `} style={{backgroundColor:  accod.mode==='light'?'white':'#17171c', color: accod.mode==='light'?'black':'white' }}>
+          <div className={`  container_acc  `}style={mode_change}>
             <div className=" text-lg  p-1">
               <p className="font-bold ">Flush Accordion </p>
               <p className="pl-10 text-sm text-gray-500">
@@ -408,7 +413,7 @@ const accod=useContext(val)
               ))}
           </div>
           <div className="flex2  ">
-            <div className={` container_acc`} style={{backgroundColor:  accod.mode==='light'?'white':'#17171c', color: accod.mode==='light'?'black':'white' }}>
+            <div className={` container_acc`}style={mode_change}>
               {open4 &&
                 open4.map((ele, index) => (
                   <div
@@ -434,7 +439,7 @@ const accod=useContext(val)
                 ))}
             </div>
 
-            <div className={`  container_acc `} style={{backgroundColor:  accod.mode==='light'?'white':'#17171c', color: accod.mode==='light'?'black':'white' }}>
+            <div className={`  container_acc `}style={mode_change}>
               {open5 &&
                 open5.map((ele, index) => (
                   <div
@@ -467,7 +472,7 @@ const accod=useContext(val)
 
           <div className="flex3  ">
             <div
-              className={`  ${open ? " text-purple-600" : ""} container_acc `}style={{backgroundColor:  accod.mode==='light'?'white':'#17171c', color: accod.mode==='light'?'black':'white' }}
+              className={`  ${open ? " text-purple-600" : ""} container_acc `}style={mode_change}
             >
               {open6 &&
                 open6.map((ele, index) => (
@@ -495,7 +500,7 @@ const accod=useContext(val)
             </div>
 
             <div
-              className={`  ${open ? " text-green-600" : ""} container_acc `} style={{backgroundColor:  accod.mode==='light'?'white':'#17171c', color: accod.mode==='light'?'black':'white' }}
+              className={`  ${open ? " text-green-600" : ""} container_acc `}style={mode_change}
             >
               {open7 &&
                 open7.map((ele, index) => (
@@ -527,7 +532,7 @@ const accod=useContext(val)
             Coloured Background :
           </div>
 
-          <div className={`   container_acc  `} style={{backgroundColor:  accod.mode==='light'?'white':'#17171c', color: accod.mode==='light'?'black':'white' }}>
+          <div className={`   container_acc  `}style={mode_change}>
             {open8 &&
               open8.map((ele, index) => (
                 <div
@@ -555,7 +560,7 @@ const accod=useContext(val)
               ))}
           </div>
             <div className="flex3">
-                        <div className={` container_acc`} style={{backgroundColor:  accod.mode==='light'?'white':'#17171c', color: accod.mode==='light'?'black':'white' }}>
+                        <div className={` container_acc`}style={mode_change}>
             <p className=" font-bold text-lg p-4">Example</p>
             <hr />
             <div className="flex flex-wrap space-y-2 p-5 space-x-1">
@@ -596,7 +601,7 @@ const accod=useContext(val)
             </p>
           </div>
 
-          <div className={` container_acc`} style={{backgroundColor:  accod.mode==='light'?'white':'#17171c', color: accod.mode==='light'?'black':'white' }}>
+          <div className={` container_acc`}style={mode_change}>
             <p className="   p-4">Muttiple terget collapse</p>
             <hr />
             <div className="flex flex-wrap space-y-2  p-5 space-x-1" >
