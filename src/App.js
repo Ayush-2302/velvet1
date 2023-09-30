@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import "./App.css";
 import Navbar from "./component/Navbar";
 // import Footer from "./component/Footer";

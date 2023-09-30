@@ -23,8 +23,10 @@ import spain from "../asserts/images/spain.png";
 import itly from "../asserts/images/itly.png";
 import russia from "../asserts/images/russia.png";
 import usa from "../asserts/images/usa.png";
+import SettingDrop from "./SettingDrop";
 
 const cross = createContext();
+const sett = createContext();
 
 function Navbar(props) {
   const sideBar = useContext(val);
@@ -48,9 +50,21 @@ function Navbar(props) {
   const [cal, setCal] = useState(false);
   const [noti, setNoti] = useState(false);
   const [appicon, setAppicon] = useState(false);
+  const [set, setSet] = useState(false);
 
+  const handleSet = () => {
+    setSet(!set);
+    setProf(false);
+    setLang(false);
+    setCart(false);
+    setCal(false);
+    setNoti(false);
+    setAppicon(false);
+    setNav(false);
+  };
   const handleProf = () => {
     setProf(!prof);
+    setSet(false);
     setLang(false);
     setCart(false);
     setCal(false);
@@ -60,6 +74,7 @@ function Navbar(props) {
   };
   const handleapp = () => {
     setProf(false);
+    setSet(false);
     setLang(false);
     setCart(false);
     setCal(false);
@@ -68,6 +83,7 @@ function Navbar(props) {
   };
   const handleLang = () => {
     setProf(false);
+    setSet(false);
     setAppicon(false);
     setLang(!lang);
     setCart(false);
@@ -76,6 +92,7 @@ function Navbar(props) {
   };
   const handleCart = () => {
     setProf(false);
+    setSet(false);
     setAppicon(false);
     setLang(false);
     setCart(!cart);
@@ -84,6 +101,7 @@ function Navbar(props) {
   };
   const handleCal = () => {
     setProf(false);
+    setSet(false);
     setAppicon(false);
     setLang(false);
     setCart(false);
@@ -92,6 +110,7 @@ function Navbar(props) {
   };
   const handleNoti = () => {
     setProf(false);
+    setSet(false);
     setLang(false);
     setAppicon(false);
     setCart(false);
@@ -332,16 +351,20 @@ function Navbar(props) {
             </div>
           </ul>
         </div>
-        <div id="setting" className=" ml-4 mr-2 pr-3 flex items-center">
-          <i class="bi bi-gear "></i>
+        <div id="setting" className={` ml-4 mr-2 pr-3 flex items-center`}>
+          <i onClick={handleSet} class="bi bi-gear "></i>
+          <div className={`${set?"":"hidden"}  text-black py-1 text-black-700 absolute -translate-x-[350px] -mt-1  h-full   border-2 rounded-lg shadow-inner `}>
+          <sett.Provider value={{handleSet}}>
+          <SettingDrop/>
+          </sett.Provider>
+          </div>
         </div>
 
         <div className="sm:hidden m-5 mr-6 smallNav  ">
           <button
             className="text-2xl"
-            onClick={() => {
-              handleNav();
-            }}
+            onClick={
+              handleNav}
           >
             <FaBars />
           </button>
@@ -365,7 +388,7 @@ function Navbar(props) {
                 <hr />
                 <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
                   <i
-                    onClick={() => handleCart()}
+                    onClick={ handleCart}
                     className="bi bi-cart  inline-block w-5 h-5 "
                   ></i>
                   cart
@@ -373,7 +396,7 @@ function Navbar(props) {
                 <hr />
                 <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
                   <i
-                    onClick={() => handleNoti()}
+                    onClick={handleNoti}
                     className="bi bi-bell  inline-block w-5 h-5 "
                   ></i>
                   Notification
@@ -381,7 +404,7 @@ function Navbar(props) {
                 <hr />
                 <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
                   <i
-                    onClick={() => handleCal()}
+                    onClick={handleCal}
                     className="bi bi-sliders2  inline-block w-5 h-5 "
                   ></i>
                   Calender
@@ -389,7 +412,7 @@ function Navbar(props) {
                 <hr />
                 <li className="p-1 hover:text-blue-500 hover:bg-gray-100 flex items-center space-x-2">
                   <i
-                    onClick={() => handleapp()}
+                    onClick={handleapp}
                     className="bi bi-grid  inline-block w-5 h-5 "
                   ></i>
                   Apps
@@ -410,3 +433,4 @@ function Navbar(props) {
 
 export default Navbar;
 export { cross };
+export { sett };
