@@ -18,9 +18,9 @@ function Appsicons() {
   
   return (
     <>
-      <div className={`  cart w-80  m-3   float-right` } style={{color: ico.mode==='light'?'black':'white' }} >
+      <div className={`  cart  w-full p-5  float-right` } style={{color: ico.mode==='light'?'black':'white' }} >
         <div className="flex justify-between items-center">
-          <span className=" text-2xl font-bold m-2 ">
+          <span className=" text-2xl font-bold  ">
             Realated Apps 
           </span>
           <button
@@ -29,7 +29,7 @@ function Appsicons() {
             }
               
             }
-            className=" w-6 m-4 h-7 rounded-md border-gray-100 text-black  bg-slate-200 p-1 "
+            className=" w-6 h-7 rounded-md border-gray-100 text-black  bg-slate-200 p-1 "
           >
             <BsXLg />
           </button>

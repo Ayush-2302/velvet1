@@ -60,16 +60,10 @@ img {
   }
 }
 
-@media(max-width:601px) {
-  #velvet {
-    /* display: none; */
-    /* width:64px; */
-  }
 
-}
 
 @media(max-width:850px) {
-  #search {
+  #search,#setting {
     display: none;
   }
 }

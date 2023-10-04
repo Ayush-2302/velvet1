@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { RxCross1 } from "react-icons/rx";
-import { sett } from "./Navbar";
+import { cross } from "./Navbar";
 import { val } from "./ValNav";
 
 function SettingDrop() {
-  const set =useContext(sett)
+  const set =useContext(cross)
   const setting = useContext(val);
   const mode_change={
     backgroundColor:setting.mode==="light"?"white":"#262C3C",
@@ -14,7 +14,7 @@ function SettingDrop() {
 
 
   return (
-    <div className="w-96 -mt-1  " style={mode_change}>
+    <div className="w-full -mt-1  rounded-md " style={mode_change}>
       <div className="switcher flex h-14 items-center p-3 justify-between">
         <p className="  text-lg font-bold mt-2 p-2" >Switcher</p>
         <div onClick={set.handleSet}>
@@ -32,7 +32,6 @@ function SettingDrop() {
           <input type="checkbox" className="" />
           <p className="">light</p>
         </label>
-        {/* <label htmlFor=""></label> */}
         
          
         <label className="flex space-x-2">

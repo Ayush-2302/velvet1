@@ -6,9 +6,6 @@ import { val } from "./ValNav";
 function Velvet() {
   const toggle = useContext(val);
 
-  const adjWidth = () => {
-    toggle.widthInc();
-  };
 
   const [dashboard, setDashboard] = useState(false);
   const [ui, setUI] = useState(false);
@@ -30,20 +27,27 @@ function Velvet() {
     setPage(!page);
   };
 
+
+  // const controlWidth=()=>{
+  //   if(toggle.show===flase ){
+      
+  //   }
+  // }
+
   return (
     <>
       <div
         id="velvet"
-        className={`velvet ${toggle.show ? " w-72" : "w-16"} ${toggle.mode==="light"?"":"bg-[#313645]"} text-gray-400`}
+        className={`velvet    ${toggle.show ? " w-72" : "w-16"} ${toggle.mode==="light"?"":"bg-[#313645]"} text-gray-400`}
       >
         <div
           onClick={() => {
-            adjWidth();
+            toggle.widthInc();
           }}
           className=" hover:cursor-pointer h-[63px] text-3xl flex space-x-12  m-auto sticky top-0 items-center border-y-2 border-y-gray-500 "
         >
           <i class="bi bi-browser-chrome ml-3 "></i>
-          <p>Velvet</p>
+          <p className={`${toggle.show ? "" : "hidden"}`}>Velvet</p>
         </div>
         <div className="  border-r sticky top-20 border-gray-300">
           <div className="velvet_body grid sticky top-16 ">
@@ -60,7 +64,7 @@ function Velvet() {
                     }}
                     className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  "
                   >
-                    <p className={`${toggle.show ? "" : "hidden"} `}>
+                    <p className={`${toggle.show ? " " : " hidden"} ${"hover"?"":"hidden"}  `}>
                       Dashboard
                     </p>
                     <p className={`${toggle.show ? "" : "hidden"}`}>

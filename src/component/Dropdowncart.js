@@ -40,7 +40,7 @@ function Dropdowncart() {
 
   return (
     <>
-      <div className="cart   text-black p-4 ">
+      <div className="cart w-full   text-black p-4 ">
         <div
           className="flex justify-between items-center"
           style={{

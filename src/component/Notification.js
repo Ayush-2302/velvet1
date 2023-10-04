@@ -9,7 +9,6 @@ import {
   BiPulse,
   BiBadgeCheck,
   BiCog,
-  BiTrash,
 } from "react-icons/bi";
 import { val } from "./ValNav";
 
@@ -17,8 +16,8 @@ function Notification() {
   const note= useContext(val)
   return (
     <>
-      <div className="notification  p-4 w-96  shadow-inner " style={{color: note.mode==='light'?'black':'white' }} >
-        <div className="flex justify-between items-center" >
+      <div className="notification  p-2 w-full  shadow-inner " style={{color: note.mode==='light'?'black':'white' }} >
+        <div className="flex justify-between items-center p-3" >
           <p className=" text-xl  font-bold">Notification </p>
           <p className="  mr-2 bg-red-100  text-xs font-bold p-0.5 pl-1.5 pr-1.5 rounded-md text-red-400">
             {" "}
