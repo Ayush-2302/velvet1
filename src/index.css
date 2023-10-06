@@ -86,15 +86,6 @@ img {
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-
 .navbar,
 .dashboardcont {
   background-image: linear-gradient(to right, #4776e6 0%, rgb(142, 84, 233) 100%);
@@ -148,7 +139,7 @@ img {
   word-wrap: break-word;
   transition: all 0s ease 0s;
   border-radius: 10px;
-  box-shadow: 0px -10px rgba(242, 242, 242, 0.849);
+  box-shadow: 0px -10px 0px  #92aedf;
   position: relative;
 }
 

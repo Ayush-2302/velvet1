@@ -38,13 +38,13 @@ function Velvet() {
     <>
       <div
         id="velvet"
-        className={`velvet    ${toggle.show ? " w-72" : "w-16"} ${toggle.mode==="light"?"":"bg-[#313645]"} text-gray-400`}
+        className={`velvet h-[700px]    ${toggle.show ? " w-72" : "w-16"} ${toggle.mode==="light"?"":"bg-[#313645]"} text-gray-400`}
       >
         <div
           onClick={() => {
             toggle.widthInc();
           }}
-          className=" hover:cursor-pointer h-[63px] text-3xl flex space-x-12  m-auto sticky top-0 items-center border-y-2 border-y-gray-500 "
+          className=" hover:cursor-pointer h-[67px] text-3xl flex space-x-12  m-auto sticky top-0 items-center border-y-2 border-y-gray-500 "
         >
           <i class="bi bi-browser-chrome ml-3 "></i>
           <p className={`${toggle.show ? "" : "hidden"}`}>Velvet</p>
@@ -133,7 +133,7 @@ function Velvet() {
                     <Link to="accordian"> - Accordians & Collapse </Link>
                   </li>
                   <li className="hover:text-white ">
-                    <Link to="#"> - Carousel </Link>
+                    <Link to="/carousel"> - Carousel </Link>
                   </li>
                   <li className="hover:text-white ">
                     <Link to="#"> - Draggable Cards </Link>

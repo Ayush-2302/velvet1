@@ -11,7 +11,7 @@ function CalNoti() {
   const cal= useContext(val)
   return (
     <>
-      <div className=" space-y-2 border-2 w-full h-[600px]   overflow-y-scroll rounded-md customize_overflow " >
+      <div className=" space-y-2  w-full h-[600px]   overflow-y-scroll rounded-md customize_overflow " >
         <div className=" flex justify-center mt-2" >
           <Calendar />
         </div>

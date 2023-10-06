@@ -339,22 +339,22 @@ function Body(props) {
                   <div
                     className={` ${
                       weekdrop ? "" : "hidden"
-                    }  translate-x-16 absolute week h-fit w-28 rounded-lg `}
+                    }  translate-x-16 absolute week h-fit w-28 mt-4 hover:cursor-pointer rounded-lg `}
                     style={mode_change}
                   >
-                    <ul className=" ml-2 space-y-2 p-2 ">
-                      <li>Last Month</li>
+                    <ul className=" ml-2 space-y-2 p-2  ">
+                      <li className=" hover:text-blue-500">Last Month</li>
                       <hr />
-                      <li>Last week</li>
+                      <li  className=" hover:text-blue-500">Last week</li>
                       <hr />
-                      <li>Share Report</li>
+                      <li  className=" hover:text-blue-500">Share Report</li>
                     </ul>
                   </div>
                 </ul>
               </div>
               <hr className=" m-1" />
 
-              <img src={stock} alt=" img" className=" w-full h-96  " />
+              <img src={stock} alt=" img" className=" w-fit h-96  " />
             </div>
             {/* card 4 */}
             <div
@@ -365,9 +365,7 @@ function Body(props) {
                 <h1 className=" text-lg font-bold">Top Selling Products </h1>
                 <div className="flex">
                   <button
-                    onClick={() => {
-                      handleselling();
-                    }}
+                    onClick={handleselling}
                   >
                     <p className="w-8 font-bold text-black bg-gray-100 rounded p-1">
                       :
@@ -379,7 +377,7 @@ function Body(props) {
                     }`}
                     style={mode_change}
                   >
-                    <ul className=" text-sm  font-bold ml-2 p-2 space-y-3  ">
+                    <ul className=" text-sm  font-bold ml-2 p-2 space-y-3 hover:cursor-pointer  ">
                       <li className="hover:text-blue-500">Action </li>
                       <hr />
                       <li className="hover:text-blue-500">Another action </li>
@@ -534,12 +532,12 @@ function Body(props) {
                     } mt-2  -translate-x-20 w-36 absolute  border-2 shadow-inner  rounded-lg `}
                     style={mode_change}
                   >
-                    <ul className=" ml-2 space-y-2 p-2 ">
-                      <li className=" hover:text-blue-500">Today</li>
+                    <ul className=" ml-2 space-y-2 p-2 hover:cursor-pointer ">
+                      <li className=" hover:text-blue-600">Today</li>
                       <hr />
-                      <li className=" hover:text-blue-500">This Week</li>
+                      <li className=" hover:text-blue-600">This Week</li>
                       <hr />
-                      <li className=" hover:text-blue-500">Last week</li>
+                      <li className=" hover:text-blue-600">Last week</li>
                     </ul>
                   </div>
                 </div>
@@ -588,12 +586,12 @@ function Body(props) {
                     } mt-2  -translate-x-20 w-36 absolute  border-2 shadow-inne rounded-lg `}
                     style={mode_change}
                   >
-                    <ul className=" ml-2 space-y-2 p-2 ">
-                      <li className=" hover:text-blue-500">Today</li>
+                    <ul className=" ml-2 space-y-2 p-2 hover:cursor-pointer ">
+                      <li className=" hover:text-blue-600">Today</li>
                       <hr />
-                      <li className=" hover:text-blue-500">This Week</li>
+                      <li className=" hover:text-blue-600">This Week</li>
                       <hr />
-                      <li className=" hover:text-blue-500">Last week</li>
+                      <li className=" hover:text-blue-600">Last week</li>
                     </ul>
                   </div>
                 </div>
@@ -676,12 +674,12 @@ function Body(props) {
                   } mt-10  -translate-x-16 absolute  border-2 shadow-inner   rounded-lg `}
                   style={mode_change}
                 >
-                  <ul className=" ml-2 space-y-3 p-2 ">
-                    <li>Last Month</li>
+                  <ul className=" ml-2 space-y-3 p-2 hover:cursor-pointer ">
+                    <li  className=" hover:text-blue-600">Last Month</li>
                     <hr />
-                    <li>Last week</li>
+                    <li  className=" hover:text-blue-600">Last week</li>
                     <hr />
-                    <li>Share Report</li>
+                    <li  className=" hover:text-blue-600">Share Report</li>
                   </ul>
                 </div>
               </div>
@@ -775,7 +773,7 @@ function Body(props) {
                   } -translate-x-24 mt-10 order border-2 shadow-inner rounded-lg absolute`}
                   style={mode_change}
                 >
-                  <ul className=" p-2 space-y-2">
+                  <ul className=" p-2 space-y-2 hover:cursor-pointer">
                     <li className="flex space-x-1 items-center hover:text-blue-500">
                       <BiShare />
                       <p>Share</p>

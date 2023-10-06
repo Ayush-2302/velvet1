@@ -21,6 +21,7 @@ function Snav() {
   const [setal, setSetal]=useState(false)
   const handlesetal=()=>{
     setSetal(!setal)
+    
   }
 
   return (
@@ -140,12 +141,12 @@ function Snav() {
               <i className="bi bi-sliders2  inline-block w-5 h-5 "></i>
               Calender
             </div>
-            <div>{nave.noti ? "‹" : "»"}</div>
+            <div>{nave.cal ? "‹" : "»"}</div>
           </li>
           <div
             className={` ${
               nave.cal ? "" : "hidden"
-            } cal absolute  translate-y-12  w-11/12  text-black`}
+            } cal absolute  w-11/12  text-black`}
             style={{
               backgroundColor: move.mode === "light" ? "white" : "#262C3C",
             }}
@@ -161,7 +162,7 @@ function Snav() {
               <i className="bi bi-grid inline-block w-5 h-5 "></i>
               Apps
             </div>
-            <div>{nave.noti ? "‹" : "»"}</div>
+            <div>{nave.appicon ? "‹" : "»"}</div>
           </li>
           <hr />
           <div
@@ -178,7 +179,7 @@ function Snav() {
           <i  class="bi bi-gear "></i>
             setting
             </div>
-            <div>{nave.noti ? "‹" : "»"}</div>
+            <div>{setal ? "‹" : "»"}</div>
           </li>
           <div
               className={`${

@@ -44,6 +44,7 @@ function Navbar(props) {
     sideBar.toggleMode();
   };
 
+
   const [lang, setLang] = useState(false);
   const [prof, setProf] = useState(false);
   const [cart, setCart] = useState(false);
@@ -137,6 +138,7 @@ function Navbar(props) {
 
       <cross.Provider
         value={{
+
           darkMode,
           mode_change,
           appicon,
@@ -156,7 +158,7 @@ function Navbar(props) {
         }}
       >
         <nav
-          className={` navbar relative  flex text-white h-[63px] border-y-2 border-y-gray-400  border-t-gray-400 `}
+          className={` navbar relative  flex text-white  border-y-2 border-y-gray-400  border-t-gray-400 `}
           style={{ position: "sticky", top: "0px", zIndex: 12 }}
         >
           <div
@@ -188,13 +190,13 @@ function Navbar(props) {
             </div>
 
             <div className="icons flex items-center  ">
-              <ul className="hidden sm:flex space-x-4">
+              <ul className="hidden  sm:flex ">
                 <div className="lang">
                   <li>
                     <Link to="#">
                       <i
                         onClick={handleLang}
-                        className="bi bi-globe inline-block w-5 h-5 "
+                        className="bi bi-globe font-black	 text-violet-200 text-lg w-10 h-10 flex justify-center items-center  hover:bg-violet-400 rounded-full  "
                       ></i>
                     </Link>
                   </li>
@@ -260,7 +262,7 @@ function Navbar(props) {
                   <Link to="#">
                     <i
                       onClick={darkMode}
-                      className="bi bi-moon  inline-block w-5 h-5 "
+                      className="bi bi-moon text-violet-200 text-lg w-10 h-10 flex justify-center items-center hover:bg-violet-400 rounded-full "
                     ></i>
                   </Link>
                 </li>
@@ -268,7 +270,7 @@ function Navbar(props) {
                   <Link to="#">
                     <i
                       onClick={handleCart}
-                      className="bi bi-cart  inline-block w-5 h-5 "
+                      className="bi bi-cart  text-violet-200 text-lg w-10 h-10 flex justify-center items-center hover:bg-violet-400 rounded-full "
                     ></i>
                   </Link>
                 </li>
@@ -276,7 +278,7 @@ function Navbar(props) {
                 <div
                   className={`${
                     cart ? "" : "hidden"
-                  } cart text-sm absolute -translate-x-72 translate-y-12 rounded-md border-gray-200 border-2`}
+                  } cart text-sm absolute -translate-x-72 translate-y-14 rounded-md border-gray-200 border-2`}
                   style={mode_change}
                 >
                   <Dropdowncart />
@@ -286,7 +288,7 @@ function Navbar(props) {
                   <Link to="#">
                     <i
                       onClick={() => handleNoti()}
-                      className="bi bi-bell  inline-block w-5 h-5 "
+                      className="bi bi-bell  text-violet-200 text-lg w-10 h-10 flex justify-center items-center hover:bg-violet-400 rounded-full "
                     ></i>
                   </Link>
                 </li>
@@ -294,7 +296,7 @@ function Navbar(props) {
                 <div
                   className={`${
                     noti ? "" : " hidden"
-                  } absolute bg-white translate-y-12 w-96  rounded-md -translate-x-60`}
+                  } absolute bg-white translate-y-14 w-96  rounded-md -translate-x-60`}
                   style={mode_change}
                 >
                   <Notification />
@@ -303,8 +305,8 @@ function Navbar(props) {
                 <li>
                   <Link to="#">
                     <i
-                      onClick={() => handleapp()}
-                      className="bi bi-grid  inline-block w-5 h-5 "
+                      onClick={handleapp}
+                      className="bi bi-grid text-violet-200 text-lg w-10 h-10 flex justify-center items-center hover:bg-violet-400 rounded-full "
                     ></i>
                   </Link>
                 </li>
@@ -312,7 +314,7 @@ function Navbar(props) {
                 <div
                   className={`${
                     appicon ? "" : " hidden"
-                  } absolute bg-white translate-y-12  w-96 h-[700px] rounded-md translate-x-16`}
+                  } absolute bg-white  w-80 h-[700px] rounded-md -translate-y-3 translate-x-[188px]`}
                   style={mode_change}
                 >
                   <Appsicons />
@@ -320,7 +322,7 @@ function Navbar(props) {
 
                 <li onClick={props.value}>
                   <Link to="#">
-                    <i className="bi bi-fullscreen  inline-block w-5 h-5 "></i>
+                    <i className="bi bi-fullscreen text-violet-200 text-lg w-10 h-10 flex justify-center items-center hover:bg-violet-400 rounded-full "></i>
                   </Link>
                 </li>
 
@@ -328,14 +330,14 @@ function Navbar(props) {
                   <Link to="#">
                     <i
                       onClick={() => handleCal()}
-                      className="bi bi-sliders2  inline-block w-5 h-5 "
+                      className="bi bi-sliders2 text-violet-200 text-lg w-10 h-10 flex justify-center items-center hover:bg-violet-400 rounded-full "
                     ></i>
                   </Link>
                 </li>
                 <div
                   className={` ${
                     cal ? "" : "hidden"
-                  } cal absolute  translate-y-12  text-black translate-x-[60px]`}
+                  } cal absolute  translate-y-14  rounded-md text-black translate-x-[150px]`}
                   style={{
                     backgroundColor:
                       sideBar.mode === "light" ? "white" : "#262C3C",

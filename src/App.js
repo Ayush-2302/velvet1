@@ -9,6 +9,7 @@ import Accordian from "./component/Accordian";
 import Profile from "./component/Profile";
 import Velvet from "./component/Velvet";
 import ValNav from "./component/ValNav";
+import ImageSlider from "./component/ImageSlider";
 
 function App() {
  
@@ -43,6 +44,7 @@ function App() {
               <Route exact path="/dummy" element={<Dummy />} />
               <Route exact path="/accordian" element={<Accordian />} />
               <Route exact path="/profile" element={<Profile />} />
+              <Route exact path="/carousel" element={<ImageSlider />} />
             </Routes>
             {/* <Footer  /> */}
           </div>
