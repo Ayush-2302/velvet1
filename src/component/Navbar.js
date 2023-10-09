@@ -27,7 +27,6 @@ import SettingDrop from "./SettingDrop";
 import Snav from "./Snav";
 
 const cross = createContext();
-// const sett = createContext();
 
 function Navbar(props) {
   const sideBar = useContext(val);
@@ -43,7 +42,6 @@ function Navbar(props) {
   const darkMode = () => {
     sideBar.toggleMode();
   };
-
 
   const [lang, setLang] = useState(false);
   const [prof, setProf] = useState(false);
@@ -138,7 +136,6 @@ function Navbar(props) {
 
       <cross.Provider
         value={{
-
           darkMode,
           mode_change,
           appicon,
@@ -165,14 +162,14 @@ function Navbar(props) {
             onClick={() => {
               handleSide();
             }}
-            className=" ml-5 mt-6"
+            className=" ml-5 mt-6 text-2xl"
           >
             <AiOutlineBars />
           </div>
           <Link to="/">
-            <FaHome className="inline-block mr-3 w-7 h-7 ml-5 mt-4 " />
+            <FaHome className="inline-block mr-3 text-3xl ml-5 mt-4 " />
           </Link>
-          <div className="container ml-5  flex items-center h-16  justify-between">
+          <div className="container   flex items-center h-16  justify-between">
             <div className="hidden sm:block">
               <div
                 id="search"
@@ -183,7 +180,7 @@ function Navbar(props) {
                   placeholder="Search"
                   className="rounded-full py-2 px-2 bg-gray-200 text-black"
                 />
-                <button className="text-gray-200">
+                <button className="text-gray-200 text-lg">
                   <FaSearch />
                 </button>
               </div>

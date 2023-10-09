@@ -149,10 +149,8 @@ function Body(props) {
                 </div>
                 <div className="flex items-center flex-shrink break-words justify-between">
                   <p className=" text-gray-400 task ml-8 ">
-                    {" "}
-                    Adam Barry finished task on{" "}
+                    Adam Barry finished task on
                     <span className=" font-bold text-cyan-500">
-                      {" "}
                       Angula JS Template
                     </span>
                   </p>
@@ -167,7 +165,7 @@ function Body(props) {
                 </div>
                 <div className="flex-shrink break-words flex items-center justify-between">
                   <p className=" text-gray-400 task ml-8 ">
-                    Adam Barry finished task on{" "}
+                    Adam Barry finished task on
                     <span className=" font-bold text-yellow-300">
                       Angula JS Template
                     </span>
@@ -183,10 +181,8 @@ function Body(props) {
                 </div>
                 <div className="flex-shrink break-words flex items-center justify-between">
                   <p className=" text-gray-400 task ml-8 ">
-                    {" "}
-                    Adam Barry finished task on{" "}
+                    Adam Barry finished task on
                     <span className=" font-bold text-green-400">
-                      {" "}
                       Angula JS Template
                     </span>
                   </p>
@@ -201,10 +197,8 @@ function Body(props) {
                 </div>
                 <div className="flex-shrink break-words flex items-center justify-between">
                   <p className=" text-gray-400 task ml-8 ">
-                    {" "}
-                    Adam Barry finished task on{" "}
+                    Adam Barry finished task on
                     <span className=" font-bold text-orange-400">
-                      {" "}
                       Angula JS Template
                     </span>
                   </p>
@@ -215,95 +209,119 @@ function Body(props) {
               <div></div>
             </div>
             {/* card 2 */}
-            <div className="card overflow-x-auto card2 " style={mode_change}>
+            <div className="card card2 " style={mode_change}>
               <div className="top  flex justify-between">
                 <h1 className=" text-lg font-bold"> Sale By Country </h1>
-                <button className="w-fit flex items-center text-sm text-black bg-gray-100 rounded-lg p-1">
+                <button className="w-fit flex items-center text-sm text-black pl-2 pr-2 bg-gray-100 rounded-lg p-1">
                   View All
                   <RiArrowDownSLine />
                 </button>
               </div>
-              <hr className=" m-3" />
-                <table className=" w-11/12 m-auto  " >
-                  <thead className=" flex justify-between">
-                    <th>Country</th>
-                    <th className=" ml-16"> Sales </th>
-                    <th className=" ml-5"> Bounce</th>
-                  </thead>
-                  <hr className="m-2" />
+              <hr className=" m-2" />
+              <div className="flex flex-col ">
+                <div className="overflow-x-auto sm:-mx-6 lg:-mx-8 customize_overflow">
+                  <div className="inline-block min-w-full  sm:px-4 lg:px-8">
+                    <table className="w-11/12 text-left text-sm  font-semibold">
+                      <thead className="border-b font-medium dark:border-neutral-500">
+                        <tr>
+                          <th scope="col" className="px-4 py-4">
+                            Country
+                          </th>
+                          <th scope="col" className="px-4 py-4">
+                            Sales
+                          </th>
+                          <th scope="col" className="px-4 py-4">
+                            Bounce
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b dark:border-neutral-500">
+                          <td className="whitespace-nowrap flex items-center px-4 py-4">
+                            <img
+                              src={canada}
+                              className=" mr-2 p-1 h-8 w-8  rounded-full bg-gray-100 "
+                              alt=""
+                            />
+                            Canada
+                          </td>
+                          <td className="whitespace-nowrap px-4 py-4">2500</td>
+                          <td className="whitespace-nowrap px-4 py-4  ">
+                            <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700">
+                              24%
+                            </span>
+                          </td>
+                        </tr>
+                        <tr className="border-b dark:border-neutral-500">
+                          <td className="whitespace-nowrap flex items-center px-4 py-4">
+                            <img
+                              src={germany}
+                              className=" mr-2 p-1 h-8 w-8  rounded-full bg-gray-100 "
+                              alt=""
+                            />
+                            Germany
+                          </td>
+                          <td className="whitespace-nowrap px-4 py-4">2500</td>
+                          <td className="whitespace-nowrap px-4 py-4  ">
+                            <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700">
+                              24%
+                            </span>
+                          </td>
+                        </tr>
 
-                  <tbody className=" text-sm font-bold">
-                    <tr  className=" flex justify-between">
-                      <td className=" flex items-center ">
-                        <img
-                          src={canada}
-                          className=" mr-2 p-1 h-8 w-8  rounded-full bg-gray-100 "
-                          alt=""
-                        />
-                        Canada
-                      </td>
-                      <td>2500</td>
-                      <td className=" text-green-500 text-xs">24%</td>
-                    </tr>
-                    <hr className=" m-3" />
-
-                    <tr  className=" flex justify-between">
-                      <td className=" flex items-center ">
-                        <img
-                          src={germany}
-                          className=" mr-2 p-1 h-8 w-8  rounded-full bg-gray-100 "
-                          alt=""
-                        />
-                        Germany
-                      </td>
-                      <td>846</td>
-                      <td className=" text-green-500 text-xs">24.4%</td>
-                    </tr>
-                    <hr className=" m-3" />
-                    <tr  className=" flex justify-between">
-                      <td className=" flex items-center ">
-                        <img
-                          src={mexico}
-                          className=" mr-2 p-1 h-8 w-8  rounded-full bg-gray-100 "
-                          alt=""
-                        />
-                        Mexico
-                      </td>
-                      <td>1024</td>
-                      <td className=" text-green-500 text-xs">22.33%</td>
-                    </tr>
-                    <hr className=" m-3" />
-                    <tr  className=" flex justify-between">
-                      <td className=" flex items-center ">
-                        <img
-                          src={russia}
-                          className=" mr-2 p-1 h-8 w-8  rounded-full bg-gray-100 "
-                          alt=""
-                        />
-                        Russia
-                      </td>
-                      <td>482</td>
-                      <td className=" text-green-500 text-xs">0.33%</td>
-                    </tr>
-                    <hr className=" m-3" />
-                    <tr  className=" flex justify-between">
-                      <td className=" flex items-center ">
-                        <img
-                          src={usa}
-                          className=" mr-2 p-1 h-8 w-8  rounded-full bg-gray-100 "
-                          alt=""
-                        />
-                        U.S.A
-                      </td>
-                      <td>1410</td>
-                      <td className=" text-green-500 text-xs">13.33%</td>
-                    </tr>
-                    <hr className=" m-3" />
-
-                    
-                   
-                  </tbody>
-                </table>
+                        <tr className="border-b dark:border-neutral-500">
+                          <td className="whitespace-nowrap flex items-center px-4 py-4">
+                            <img
+                              src={mexico}
+                              className=" mr-2 p-1 h-8 w-8  rounded-full bg-gray-100 "
+                              alt=""
+                            />
+                            Mexico
+                          </td>
+                          <td className="whitespace-nowrap px-4 py-4">2500</td>
+                          <td className="whitespace-nowrap px-4 py-4  ">
+                            <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700">
+                              24%
+                            </span>
+                          </td>
+                        </tr>
+                        <tr className="border-b dark:border-neutral-500">
+                          <td className="whitespace-nowrap flex items-center px-4 py-4">
+                            <img
+                              src={russia}
+                              className=" mr-2 p-1 h-8 w-8  rounded-full bg-gray-100 "
+                              alt=""
+                            />
+                            Russia
+                          </td>
+                          <td className="whitespace-nowrap px-4 py-4">2500</td>
+                          <td className="whitespace-nowrap px-4 py-4  ">
+                            <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700">
+                              24%
+                            </span>
+                          </td>
+                        </tr>
+                        <tr className="border-b dark:border-neutral-500">
+                          <td className="whitespace-nowrap flex items-center px-4 py-4">
+                            <img
+                              src={usa}
+                              className=" mr-2 p-1 h-8 w-8  rounded-full bg-gray-100 "
+                              alt=""
+                            />
+                            U.S.A
+                          </td>
+                          <td className="whitespace-nowrap px-4 py-4">2500</td>
+                          <td className="whitespace-nowrap px-4 py-4  ">
+                            <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-primary-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-primary-700">
+                              24%
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           {/*card 3 */}
@@ -345,9 +363,9 @@ function Body(props) {
                     <ul className=" ml-2 space-y-2 p-2  ">
                       <li className=" hover:text-blue-500">Last Month</li>
                       <hr />
-                      <li  className=" hover:text-blue-500">Last week</li>
+                      <li className=" hover:text-blue-500">Last week</li>
                       <hr />
-                      <li  className=" hover:text-blue-500">Share Report</li>
+                      <li className=" hover:text-blue-500">Share Report</li>
                     </ul>
                   </div>
                 </ul>
@@ -364,9 +382,7 @@ function Body(props) {
               <div className="top flex justify-between">
                 <h1 className=" text-lg font-bold">Top Selling Products </h1>
                 <div className="flex">
-                  <button
-                    onClick={handleselling}
-                  >
+                  <button onClick={handleselling}>
                     <p className="w-8 font-bold text-black bg-gray-100 rounded p-1">
                       :
                     </p>
@@ -383,131 +399,176 @@ function Body(props) {
                       <li className="hover:text-blue-500">Another action </li>
                       <hr />
                       <li className="hover:text-blue-500">
-                        Something else here{" "}
+                        Something else here
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <hr className=" m-2" />
-              <table className=" w-[95%]  m-auto ">
-                <thead>
-                  <tr className=" text-sm">
-                    <th className="pr-24">Product Name</th>
-                    <th className="pr-14"> Stock </th>
-                    <th className="pr-12"> price</th>
-                    <th className="pr-12"> Sold</th>
-                    <th className="pr-2"> Action</th>
-                  </tr>
-                </thead>
-                <hr className=" m-4" />
-                <tbody className=" text-sm">
-                  <tr>
-                    <td className="flex items-center">
-                      {" "}
-                      <img src={shoes} alt="" className="w-12 rounded-xl" />
-                      Sports Shoes For Men
-                    </td>
-                    <td className="  text-green-500">in Stocks</td>
-                    <td>$73.800</td>
-                    <td>1534</td>
-                    <td className=" flex space-x-1 ">
-                      {" "}
-                      <button className=" hover:bg-blue-200  w-8 p-2 bg-blue-100 text-black rounded">
-                        <RiPencilLine />
-                      </button>
-                      <button className=" w-8 p-2 bg-red-100   hover:bg-red-300 text-red-600">
-                        <RiDeleteBin7Line />
-                      </button>
-                    </td>
-                  </tr>
-                  <hr className="m-3 " />
-                  <tr>
-                    <td className="flex items-center">
-                      {" "}
-                      <img src={cactus} alt="" className="w-12 rounded-xl" />
-                      Beautiful flower frame{" "}
-                    </td>
-                    <td className=" text-blue-400">Few-left</td>
-                    <td>$73.800</td>
-                    <td>4987</td>
-                    <td className="flex space-x-1">
-                      <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
-                        <RiPencilLine />
-                      </button>
-                      <button className=" w-8 p-2 bg-red-100  hover:bg-red-300 text-red-600">
-                        <RiDeleteBin7Line />
-                      </button>
-                    </td>
-                  </tr>
-                  <hr className="m-2 " />
-                  <tr>
-                    <td className="flex items-center">
-                      {" "}
-                      <img src={watch} alt="" className="w-12 rounded-xl" />
-                      Small alarm Watch{" "}
-                    </td>
-                    <td className="  text-red-500">Out of stock</td>
-                    <td>$13.800</td>
-                    <td>87875</td>
-                    <td className=" flex space-x-1">
-                      <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
-                        <RiPencilLine />
-                      </button>
-                      <button className=" w-8 p-2 bg-red-100   hover:bg-red-300 text-red-600">
-                        <RiDeleteBin7Line />
-                      </button>
-                    </td>
-                  </tr>
-                  <hr className="m-2 " />
-                  <tr>
-                    <td className="flex items-center">
-                      {" "}
-                      <img
-                        src={smartphone}
-                        alt=""
-                        className="w-12 h-10 mr-2 rounded-xl"
-                      />{" "}
-                      New Smart Phone{" "}
-                    </td>
-                    <td className="  text-green-500 ">In-Stock</td>
-                    <td>$14.600</td>
-                    <td>87875</td>
-                    <td className="flex space-x-1 ">
-                      <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
-                        <RiPencilLine />
-                      </button>
-                      <button className=" w-8 p-2 bg-red-100   hover:bg-red-300 text-red-600">
-                        <RiDeleteBin7Line />
-                      </button>
-                    </td>
-                  </tr>
-                  <hr className="m-2 " />
-                  <tr>
-                    <td className="flex items-center">
-                      {" "}
-                      <img
-                        src={camera}
-                        alt=""
-                        className="w-10 mr-2  rounded-xl"
-                      />
-                      Black Colord camera{" "}
-                    </td>
-                    <td className="  text-green-500  ">In-Stock</td>
-                    <td>$23.800</td>
-                    <td>4087</td>
-                    <td className="flex space-x-1">
-                      <button className=" hover:bg-blue-200 text-black w-8 p-2 bg-blue-100 rounded">
-                        <RiPencilLine />
-                      </button>
-                      <button className=" w-8 p-2 bg-red-100   hover:bg-red-300 text-red-600">
-                        <RiDeleteBin7Line />
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <hr className=" mt-2" />
+              <div class=" flex-col justify-center items-center w-[90%] m-auto  ">
+                <div class="sm:-mx-6 lg:-mx-8 ">
+                  <div class="inline-block w-full  py-2 ">
+                    <div class="overflow-hidden">
+                      <table class=" min-w-full text-left text-sm font-medium">
+                        <thead class=" min-w-full border-b font-medium dark:border-neutral-500">
+                          <tr>
+                            <th scope="col" class="px-4 py-2">
+                              Profuct Name
+                            </th>
+                            <th scope="col" class="px-4 py-2">
+                              Stock
+                            </th>
+                            <th scope="col" class="px-2  py-2">
+                              Prise
+                            </th>
+                            <th scope="col" class="px-2  py-2">
+                              Sold
+                            </th>
+                            <th scope="col" class="px-2  py-2">
+                              Action
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="border-b dark:border-neutral-500">
+                            <td class="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
+                              <img
+                                src={shoes}
+                                alt=""
+                                className="w-12 h-12 rounded-xl"
+                              />
+                              <p> Sports Shoes for Men </p>
+                            </td>
+                            <td class="whitespace-nowrap px-4 py-2">
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-green-700">
+                                In Stock
+                              </span>
+                            </td>
+                            <td class="whitespace-nowrap px-2  py-2">$73.800</td>
+                            <td class="whitespace-nowrap px-2  py-2">1534</td>
+                            <td class="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
+                              <span className="whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
+                                <RiPencilLine />
+                              </span>
+                              <span className="whitespace-nowrap rounded-[0.27rem] bg-red-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-red-700">
+                                <RiDeleteBin7Line />
+                              </span>
+                            </td>
+                          </tr>
+                          <tr class="border-b dark:border-neutral-500">
+                            <td class="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
+                              <img
+                                src={cactus}
+                                alt=""
+                                className="w-12 h-12 rounded-xl"
+                              />
+                              <p> Beautiful Flower Frame </p>
+                            </td>
+                            <td class="whitespace-nowrap px-4 py-2">
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-blue-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-blue-700">
+                                Few Left
+                              </span>
+                            </td>
+                            <td class="whitespace-nowrap px-2  py-2">$73.800</td>
+                            <td class="whitespace-nowrap px-2  py-2">4987</td>
+                            <td class="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
+                                <RiPencilLine />
+                              </span>
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-red-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-red-700">
+                                <RiDeleteBin7Line />
+                              </span>
+                            </td>
+                          </tr>
+                          <tr class="border-b dark:border-neutral-500">
+                            <td class="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
+                              <img
+                                src={watch}
+                                alt=""
+                                className="w-12 h-12 rounded-xl"
+                              />
+                              <p> Small Alarm Watch </p>
+                            </td>
+                            <td class="whitespace-nowrap px-4 py-2">
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-red-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-red-700">
+                                Out of Stock
+                              </span>
+                            </td>
+                            <td class="whitespace-nowrap px-2  py-2">
+                              $713.800
+                            </td>
+                            <td class="whitespace-nowrap px-2  py-2">87875</td>
+                            <td class="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
+                                <RiPencilLine />
+                              </span>
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-red-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-red-700">
+                                <RiDeleteBin7Line />
+                              </span>
+                            </td>
+                          </tr>
+                          <tr class="border-b dark:border-neutral-500">
+                            <td class="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
+                              <img
+                                src={smartphone}
+                                alt=""
+                                className="w-12 h-12 rounded-xl"
+                              />
+                              <p> New Smart Phone </p>
+                            </td>
+                            <td class="whitespace-nowrap px-4 py-2">
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-green-700">
+                                In-Stock
+                              </span>
+                            </td>
+                            <td class="whitespace-nowrap px-2  py-2">
+                              $713.800
+                            </td>
+                            <td class="whitespace-nowrap px-2  py-2">87875</td>
+                            <td class="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
+                                <RiPencilLine />
+                              </span>
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-red-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-red-700">
+                                <RiDeleteBin7Line />
+                              </span>
+                            </td>
+                          </tr>
+                          <tr class="border-b dark:border-neutral-500">
+                            <td class="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
+                              <img
+                                src={camera}
+                                alt=""
+                                className="w-12 h-12 rounded-xl"
+                              />
+                              <p>Camera</p>
+                            </td>
+                            <td class="whitespace-nowrap px-4 py-2">
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-green-700">
+                                In-Stock
+                              </span>
+                            </td>
+                            <td class="whitespace-nowrap px-2  py-2">
+                              $713.800
+                            </td>
+                            <td class="whitespace-nowrap px-2  py-2">87875</td>
+                            <td class="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
+                                <RiPencilLine />
+                              </span>
+                              <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-red-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-red-700">
+                                <RiDeleteBin7Line />
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -609,14 +670,11 @@ function Body(props) {
               <div className="w-11/12">
                 <div className="cube flex space-x-2 items-center">
                   <div className="w-6  rounded-md p-1 bg-purple-200">
-                    {" "}
                     <BiCube />
                   </div>
                   <p>Fashion</p>
                 </div>
-                <div className="progress w-11/12 h-1 bg-purple-600 animate-pulse mt-5">
-                  {" "}
-                </div>
+                <div className="progress w-11/12 h-1 bg-purple-600 animate-pulse mt-5"></div>
 
                 <hr className=" m-2" />
                 <div className="home flex space-x-2 items-center">
@@ -643,9 +701,7 @@ function Body(props) {
                   </div>
                   <p>Groceries</p>
                 </div>
-                <div className="progress w-11/12 h-1 bg-blue-600 animate-pulse mt-5">
-                  {" "}
-                </div>
+                <div className="progress w-11/12 h-1 bg-blue-600 animate-pulse mt-5"></div>
 
                 <hr className=" m-2" />
               </div>
@@ -675,11 +731,11 @@ function Body(props) {
                   style={mode_change}
                 >
                   <ul className=" ml-2 space-y-3 p-2 hover:cursor-pointer ">
-                    <li  className=" hover:text-blue-600">Last Month</li>
+                    <li className=" hover:text-blue-600">Last Month</li>
                     <hr />
-                    <li  className=" hover:text-blue-600">Last week</li>
+                    <li className=" hover:text-blue-600">Last week</li>
                     <hr />
-                    <li  className=" hover:text-blue-600">Share Report</li>
+                    <li className=" hover:text-blue-600">Share Report</li>
                   </ul>
                 </div>
               </div>
@@ -687,12 +743,10 @@ function Body(props) {
             <hr className=" m-3" />
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center ">
-                <FiCreditCard className="green mr-2 p-0.5 text-green-800 bg-green-200 w-6 h-5 rounded-md" />{" "}
+                <FiCreditCard className="green mr-2 p-0.5 text-green-800 bg-green-200 w-6 h-5 rounded-md" />
                 <p className="  font-semibold w-24">ATM Withdrawl</p>
               </div>
-              <span className="flex items-center  text-green-500">
-                $245000{" "}
-              </span>
+              <span className="flex items-center  text-green-500">$245000</span>
             </div>
             <p className=" ml-10 text-gray-500 text-sm">Just Now</p>
 
@@ -700,7 +754,7 @@ function Body(props) {
 
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center ">
-                <FiSmartphone className="green mr-2 text-red-600 bg-red-200 p-0.5 w-6 h-5 rounded-md" />{" "}
+                <FiSmartphone className="green mr-2 text-red-600 bg-red-200 p-0.5 w-6 h-5 rounded-md" />
                 <p className="font-semibold w-24">Movies Subscription</p>
               </div>
               <span className="flex items-center  text-red-500">$100.00 </span>
@@ -711,7 +765,7 @@ function Body(props) {
 
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center ">
-                <FiArrowDown className="green mr-2 text-green-800 bg-green-200 p-0.5 w-6 h-5 rounded-md" />{" "}
+                <FiArrowDown className="green mr-2 text-green-800 bg-green-200 p-0.5 w-6 h-5 rounded-md" />
                 <p className="font-semibold w-24">Recieved From John </p>
               </div>
               <span className="flex items-center  text-green-500">$15000 </span>
@@ -722,7 +776,7 @@ function Body(props) {
 
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center ">
-                <FiCreditCard className="green mr-2 text-red-600 bg-red-200 w-6 p-0.5 h-5 rounded-md" />{" "}
+                <FiCreditCard className="green mr-2 text-red-600 bg-red-200 w-6 p-0.5 h-5 rounded-md" />
                 <p className="font-semibold w-24">Credit Card</p>
               </div>
               <span className="flex items-center  text-red-500">-$3000 </span>
@@ -733,7 +787,7 @@ function Body(props) {
 
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center ">
-                <FiCreditCard className="green mr-2 text-green-800 bg-green-200 w-6 p-0.5 h-5 rounded-md" />{" "}
+                <FiCreditCard className="green mr-2 text-green-800 bg-green-200 w-6 p-0.5 h-5 rounded-md" />
                 <p className="font-semibold w-24">Transfer to Self</p>
               </div>
               <span className="flex items-center  text-green-500">$15000 </span>
@@ -744,7 +798,7 @@ function Body(props) {
 
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center ">
-                <FiRepeat className="green mr-2 text-red-600 bg-red-200 w-6 p-0.5 h-5 rounded-md" />{" "}
+                <FiRepeat className="green mr-2 text-red-600 bg-red-200 w-6 p-0.5 h-5 rounded-md" />
                 <p className="font-semibold w-24">Transfer to x Card </p>
               </div>
               <span className="flex items-center  text-red-500">$245000 </span>
@@ -821,7 +875,6 @@ function Body(props) {
                   <td>$73.800</td>
                   <td className="  text-green-500">Delivered</td>
                   <td className="  flex   item-center  ">
-                    {" "}
                     <button className=" hover:bg-blue-200  text-black w-8 p-2 bg-blue-100 rounded">
                       <RiPencilLine />
                     </button>
@@ -842,7 +895,6 @@ function Body(props) {
                   <td>$13.800</td>
                   <td className=" text-green-500">Delivered</td>
                   <td className=" flex   item-center">
-                    {" "}
                     <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                       <RiPencilLine />
                     </button>
@@ -863,7 +915,6 @@ function Body(props) {
                   <td>$37.800</td>
                   <td className=" text-red-500">cancelled</td>
                   <td className=" flex   item-center">
-                    {" "}
                     <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                       <RiPencilLine />
                     </button>
@@ -884,7 +935,6 @@ function Body(props) {
                   <td>$33.800</td>
                   <td className=" text-blue-500">pending</td>
                   <td className=" flex   item-center">
-                    {" "}
                     <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                       <RiPencilLine />
                     </button>
@@ -905,7 +955,6 @@ function Body(props) {
                   <td>$720.800</td>
                   <td className=" text-yellow-500">Shipped</td>
                   <td className="  flex  item-center">
-                    {" "}
                     <button className=" hover:bg-blue-200  w-8 p-2 text-black bg-blue-100 rounded">
                       <RiPencilLine />
                     </button>

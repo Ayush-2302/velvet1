@@ -5,10 +5,17 @@ initTE({ Carousel });
 function ImageSlider() {
   return (
     <>
+      <div className="dashboardcont  pt-5 text-white text-3xl pl-10 pr-4 flex  h-32 justify-between">
+        Carousel
+        <p className=" text-sm m-3  flex space-x-5">
+          <p>Carousel </p> <p>»</p> <p className=" font-bold"> Accordions</p>
+        </p>
+      </div>
+      
+      <div className="cont grid m-auto">
       <div
         id="carouselExampleCaptions"
-        class="relative"
-        zz
+        class="relative w-11/12"
         data-te-carousel-init
         data-te-ride="carousel"
       >
@@ -155,6 +162,7 @@ function ImageSlider() {
             Next
           </span>
         </button>
+      </div>
       </div>
     </>
   );

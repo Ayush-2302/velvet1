@@ -6,7 +6,6 @@ import { val } from "./ValNav";
 function Velvet() {
   const toggle = useContext(val);
 
-
   const [dashboard, setDashboard] = useState(false);
   const [ui, setUI] = useState(false);
   const [page, setPage] = useState(false);
@@ -27,10 +26,9 @@ function Velvet() {
     setPage(!page);
   };
 
-
   // const controlWidth=()=>{
   //   if(toggle.show===flase ){
-      
+
   //   }
   // }
 
@@ -38,23 +36,25 @@ function Velvet() {
     <>
       <div
         id="velvet"
-        className={`velvet h-[700px]    ${toggle.show ? " w-72" : "w-16"} ${toggle.mode==="light"?"":"bg-[#313645]"} text-gray-400`}
+        className={`velvet   ${toggle.show ? " w-72" : "w-16"} ${
+          toggle.mode === "light" ? "" : "bg-[#313645]" 
+        } text-gray-400 `}
       >
-        <div
-          onClick={() => {
-            toggle.widthInc();
-          }}
-          className=" hover:cursor-pointer h-[67px] text-3xl flex space-x-12  m-auto sticky top-0 items-center border-y-2 border-y-gray-500 "
-        >
-          <i class="bi bi-browser-chrome ml-3 "></i>
-          <p className={`${toggle.show ? "" : "hidden"}`}>Velvet</p>
-        </div>
-        <div className="  border-r sticky top-20 border-gray-300">
-          <div className="velvet_body grid sticky top-16 ">
-            <p className=" text-gray-500 ml-6 mb-4 ">{`${
-              toggle.show ? "Main" : "°"
-            }`}</p>
+        <div className=" text-sm border-r sticky top-0 h-[100vh] border-gray-300">
+          <div
+            onClick={() => {
+              toggle.widthInc();
+            }}
+            className=" hover:cursor-pointer h-[67px] text-3xl flex space-x-12  m-auto sticky top-0 items-center border-y-2 border-y-gray-500 "
+          >
+            <i class="bi bi-browser-chrome ml-3 "></i>
+            <p className={`${toggle.show ? "" : "hidden"}`}>Velvet</p>
+          </div>
+          <div className="velvet_body grid pt-4 ">
             <ul className="space-y-2 ">
+              <p className=" text-gray-500 ml-7 text-xs font-bold mb-4 ">{`${
+                toggle.show ? "MAIN" : "°"
+              }`}</p>
               <li>
                 <div className="cursor-pointer flex space-x-4 items-center ">
                   <i className="bi bi-pc-display-horizontal ml-5 "></i>
@@ -64,7 +64,11 @@ function Velvet() {
                     }}
                     className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  "
                   >
-                    <p className={`${toggle.show ? " " : " hidden"} ${"hover"?"":"hidden"}  `}>
+                    <p
+                      className={`${toggle.show ? " " : " hidden"} ${
+                        "hover" ? "" : "hidden"
+                      }  `}
+                    >
                       Dashboard
                     </p>
                     <p className={`${toggle.show ? "" : "hidden"}`}>
@@ -77,7 +81,7 @@ function Velvet() {
                     dashboard
                       ? "display opacity-100 scale-y-100  "
                       : "h-[0px] opacity-0 scale-y-0"
-                  } ml-10 mt-3  transform origin-top transition-opacity duration-300`}
+                  } ml-10 mt-3  transform origin-top space-y-3 transition-opacity duration-300`}
                 >
                   <li className=" text-green-600">
                     <Link to="/"> - Sale</Link>
@@ -96,13 +100,13 @@ function Velvet() {
                   </li>
                 </ul>
               </li>
-              <p className=" text-gray-500 ml-6">
+              <p className=" text-gray-500 text-xs font-bold ml-6 ">
                 {" "}
-                {`${toggle.show ? " General" : "°"}`}
+                {`${toggle.show ? " GENERAL" : "°"}`}
               </p>
 
               <li>
-                <div className="advanceuicursor-pointer flex space-x-4 items-center  ">
+                <div className="advanceuicursor-pointer flex space-x-4 pt-2 items-center  ">
                   <i className="bi bi-box ml-5 "></i>
 
                   <div
@@ -127,7 +131,7 @@ function Velvet() {
                     ui
                       ? "display opacity-100 scale-y-100  "
                       : "h-[0px] opacity-0 scale-y-0"
-                  } ml-10 mt-3 transform origin-top transition-opacity duration-300 `}
+                  } ml-10 mt-3 transform origin-top space-y-3 transition-opacity duration-300 `}
                 >
                   <li className=" text-green-600 hover:text-white">
                     <Link to="accordian"> - Accordians & Collapse </Link>
@@ -139,7 +143,7 @@ function Velvet() {
                     <Link to="#"> - Draggable Cards </Link>
                   </li>
                   <li className="hover:text-white ">
-                    <Link to="#"> - Modals & Closes</Link>
+                    <Link to="/modals"> - Modals & Closes</Link>
                   </li>
                   <li className="hover:text-white ">
                     <Link to="#"> - Navbar </Link>
@@ -152,12 +156,12 @@ function Velvet() {
                   </li>
                 </ul>
               </li>
-              <p className=" text-gray-500 ml-6 ">{`${
-                toggle.show ? "Page" : "°"
+              <p className=" text-gray-500 text-xs font-bold ml-6 ">{`${
+                toggle.show ? "PAGE" : "°"
               }`}</p>
 
               <li>
-                <div className="advanceuicursor-pointer flex space-x-4 items-center  ">
+                <div className="advanceuicursor-pointer flex space-x-4 pt-3 items-center  ">
                   <i class="bi bi-menu-up ml-5"></i>
 
                   <div
@@ -179,7 +183,7 @@ function Velvet() {
                       page
                         ? "display opacity-100 scale-y-100 "
                         : "h-[0px] opacity-0 scale-y-0"
-                    } ml-2 mt-3  transform origin-top transition-opacity duration-300`}
+                    } ml-2 mt-3  transform origin-top space-y-3 transition-opacity duration-300`}
                   >
                     <li className="hover:text-white ">
                       <Link to="#"> - Blog</Link>
