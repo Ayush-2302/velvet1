@@ -311,7 +311,7 @@ function Navbar(props) {
                 <div
                   className={`${
                     appicon ? "" : " hidden"
-                  } absolute bg-white  w-80 h-[700px] rounded-md -translate-y-3 translate-x-[188px]`}
+                  } absolute bg-white  w-96 h-[700px] rounded-md -translate-y-3 translate-x-[130px]`}
                   style={mode_change}
                 >
                   <Appsicons />

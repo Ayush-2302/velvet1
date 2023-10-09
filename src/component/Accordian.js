@@ -316,15 +316,15 @@ const mode_change={
                       onClick={() => toggle(index)}
                       className="flex justify-between mr-5 ml-4"
                     >
-                      <h2 className="  lg:text-lg sm:text-sm md:text-sm  text-sm font-bold">
-                        {" "}
+                      <h2 className="  lg:text-sm sm:text-sm md:text-sm  text-sm font-bold">
+                       
                         {ele.que}
                       </h2>
                       <button> {ele.open ? "‹" : "»"}</button>
                     </div>
                     {
                       <p
-                        className={`ml-16 mt-3 md:text-sm sm:text-sm text-gray-500 ${
+                        className={`ml-16 mt-2 md:text-sm sm:text-sm text-gray-500 ${
                           ele.open ? "display" : "hidden"
                         }`}
                       >
@@ -356,15 +356,15 @@ const mode_change={
                       onClick={() => toggle2(index)}
                       className="flex  justify-between mr-5 ml-4"
                     >
-                      <h2 className=" lg:text-lg sm:text-sm md:text-sm  text-sm font-bold">
-                        {" "}
+                      <h2 className=" lg:text-sm sm:text-sm md:text-sm  text-sm font-bold">
+                       
                         {ele.que}
                       </h2>
                       <button> {ele.open ? "‹" : "»"}</button>
                     </div>
                     {
                       <p
-                        className={`ml-16 mt-3 md:text-sm sm:text-sm  text-gray-500 ${
+                        className={`ml-16 mt-2 md:text-sm sm:text-sm  text-gray-500 ${
                           ele.open ? "display" : "hidden"
                         }`}
                       >
@@ -395,15 +395,15 @@ const mode_change={
                   className="accordian w-full  mt-4  rounded-md shadow-2xl  "
                 >
                   <div className="flex justify-between mr-5 ml-4 text-orange-500">
-                    <h2 className=" lg:text-lg sm:text-sm md:text-sm   text-sm font-bold">
-                      {" "}
+                    <h2 className=" lg:text-sm sm:text-sm md:text-sm   text-sm font-bold">
+                     
                       {ele.que}
                     </h2>
                     <button> {ele.open ? "‹" : "»"}</button>
                   </div>
                   <hr />
                   <p
-                    className={`ml-16 mt-3 md:text-sm p-3 sm:text-sm text-gray-500 ${
+                    className={`ml-16 mt-2 md:text-sm p-3 sm:text-sm text-gray-500 ${
                       ele.open ? "display" : "hidden"
                     }`}
                   >
@@ -421,15 +421,15 @@ const mode_change={
                     className="accordian w-11/12  m-auto mt-4 p-1    rounded-md shadow-2xl  border-2 border-gray-300"
                   >
                     <div className="flex justify-between mr-5 ml-4 text-yellow-500">
-                      <h2 className=" lg:text-lg sm:text-sm md:text-sm  text-sm font-bold">
-                        {" "}
+                      <h2 className=" lg:text-sm sm:text-sm md:text-sm  text-sm font-bold">
+                       
                         {ele.que}
                       </h2>
                       <button> {ele.open ? "‹" : "»"}</button>
                     </div>
 
                     <p
-                      className={`ml-16 mt-3 md:text-sm sm:text-sm text-yellow-500 ${
+                      className={`ml-16 mt-2 md:text-sm sm:text-sm text-yellow-500 ${
                         ele.open ? "display" : "hidden"
                       }`}
                     >
@@ -447,15 +447,15 @@ const mode_change={
                     className="accordian w-11/12  m-auto mt-4 p-1    rounded-md shadow-2xl  border-2 border-gray-300"
                   >
                     <div className="flex justify-between mr-5 ml-4 text-cyan-600">
-                      <h2 className=" lg:text-lg sm:text-sm md:text-sm  text-sm font-bold">
-                        {" "}
+                      <h2 className=" lg:text-sm sm:text-sm md:text-sm  text-sm font-bold">
+                       
                         {ele.que}
                       </h2>
                       <button> {ele.open ? "‹" : "»"}</button>
                     </div>
 
                     <p
-                      className={`ml-16 mt-3 md:text-sm sm:text-sm text-cyan-600 ${
+                      className={`ml-16 mt-2 md:text-sm sm:text-sm text-cyan-600 ${
                         ele.open ? "display" : "hidden"
                       }`}
                     >
@@ -466,7 +466,7 @@ const mode_change={
             </div>
           </div>
           <div className=" pl-8 text-base font-bold mt-4" style={{color: accod.mode==='light'?'black':'white'}}>
-            {" "}
+           
             Coloured Border :
           </div>
 
@@ -481,15 +481,15 @@ const mode_change={
                     className="accordian w-11/12  m-auto mt-4 p-1    rounded-md shadow-2xl  border-2 border-purple-300"
                   >
                     <div className="flex justify-between mr-5 ml-4">
-                      <h2 className=" lg:text-lg sm:text-sm md:text-sm text-purple-600 text-sm font-bold">
-                        {" "}
+                      <h2 className=" lg:text-sm sm:text-sm md:text-sm text-purple-600 text-sm font-bold">
+                       
                         {ele.que}
                       </h2>
                       <button> {ele.open ? "‹" : "»"}</button>
                     </div>
 
                     <p
-                      className={`ml-16 mt-3 md:text-sm sm:text-sm text-purple-600 ${
+                      className={`ml-16 mt-2 md:text-sm sm:text-sm text-purple-600 ${
                         ele.open ? "display" : "hidden"
                       }`}
                     >
@@ -509,15 +509,15 @@ const mode_change={
                     className="accordian w-11/12  m-auto mt-4 p-1    rounded-md shadow-2xl  border-2 border-gray-300"
                   >
                     <div className="flex justify-between mr-5 ml-4">
-                      <h2 className=" lg:text-lg sm:text-sm md:text-sm text-green-600 text-sm font-bold">
-                        {" "}
+                      <h2 className=" lg:text-sm sm:text-sm md:text-sm text-green-600 text-sm font-bold">
+                       
                         {ele.que}
                       </h2>
                       <button> {ele.open ? "‹" : "»"}</button>
                     </div>
 
                     <p
-                      className={`ml-16 mt-3 md:text-sm sm:text-sm text-green-600 ${
+                      className={`ml-16 mt-2 md:text-sm sm:text-sm text-green-600 ${
                         ele.open ? "display" : "hidden"
                       }`}
                     >
@@ -528,7 +528,7 @@ const mode_change={
             </div>
           </div>
           <div className=" pl-8 text-base font-bold mt-4" style={{color: accod.mode==='light'?'black':'white'}}>
-            {" "}
+           
             Coloured Background :
           </div>
 
@@ -537,20 +537,20 @@ const mode_change={
               open8.map((ele, index) => (
                 <div
                   onClick={() => toggle8(index)}
-                  className={` accordian  m-auto mt-4 p-1 bg-blue-400   rounded-md shadow-2xl  `}
+                  className={` accordian  m-auto mt-4 pt-1 bg-blue-200   rounded-md shadow-2xl  `}
                 >
                   <div
                     className={`  text-gray-900  rounded-md  p-1 flex justify-between mr-5 ml-4`}
                   >
-                    <h2 className=" lg:text-lg sm:text-sm md:text-sm  text-sm font-bold">
-                      {" "}
+                    <h2 className=" lg:text-sm sm:text-sm md:text-sm  text-blue-700 text-sm font-bold">
+                     
                       {ele.que}
                     </h2>
                     <button> {ele.open ? "‹" : "»"}</button>
                   </div>
 
                   <p
-                    className={`ml-16 mt-3 md:text-sm sm:text-sm  ${
+                    className={`ml-16 mt-2 md:text-sm sm:text-sm text-blue-700  ${
                       ele.open ? "display" : "hidden"
                     }`}
                   >
@@ -563,19 +563,19 @@ const mode_change={
                         <div className={` container_acc`}style={mode_change}>
             <p className=" font-bold text-lg p-4">Example</p>
             <hr />
-            <div className="flex flex-wrap space-y-2 p-5 space-x-1">
+            <div className="flex flex-wrap p-5 space-x-1">
               <button
                 onClick={() => handleHrf()}
-                className=" w-fit p-1 pl-3 pr-3 bg-purple-600 text-white rounded-md"
+                className=" w-fit p-1 pl-3 pr-3 mt-2  bg-purple-600 text-white rounded-md"
               >
-                {" "}
+               
                 Link with href
               </button>{" "}
               <button
                 onClick={() => handleTarget()}
-                className=" w-fit p-1 pl-3 pr-3 bg-orange-600 text-white rounded-md"
+                className=" w-fit p-1 pl-3 pr-3 mt-2 bg-orange-600 text-white rounded-md"
               >
-                {" "}
+               
                 Button with data-bs-target
               </button>
             </div>
@@ -604,22 +604,22 @@ const mode_change={
           <div className={` container_acc`}style={mode_change}>
             <p className="   p-4">Muttiple terget collapse</p>
             <hr />
-            <div className="flex flex-wrap space-y-2  p-5 space-x-1" >
+            <div className="flex flex-wrap   p-5 space-x-1" >
               <button
                 onClick={() => handleFirst()}
-                className=" w-fit p-1 pl-3 pr-3 bg-purple-600 text-white rounded-md"
+                className=" w-fit p-1 pl-3 pr-3 mt-2 bg-purple-600 text-white rounded-md"
               >
                 Toggle first element
               </button>
               <button
                 onClick={() => handleSecond()}
-                className=" w-fit p-1 pl-3 pr-3 bg-green-600 text-white rounded-md"
+                className=" w-fit p-1 pl-3 pr-3 mt-2 bg-green-600 text-white rounded-md"
               >
                 Toggle second element
               </button>
               <button
                 onClick={() => handleBoth()}
-                className=" w-fit p-1 pl-3 pr-3 bg-orange-600 text-white rounded-md"
+                className=" w-fit p-1 pl-3 pr-3 mt-2 bg-orange-600 text-white rounded-md"
               >
                 Toggle both element
               </button>

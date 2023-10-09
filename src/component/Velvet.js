@@ -26,31 +26,25 @@ function Velvet() {
     setPage(!page);
   };
 
-  // const controlWidth=()=>{
-  //   if(toggle.show===flase ){
-
-  //   }
-  // }
-
   return (
     <>
       <div
         id="velvet"
         className={`velvet   ${toggle.show ? " w-72" : "w-16"} ${
-          toggle.mode === "light" ? "" : "bg-[#313645]" 
-        } text-gray-400 `}
+          toggle.mode === "light" ? "" : "bg-[#313645]"
+        } text-gray-400 sticky top-0 h-[100vh]  `}
       >
-        <div className=" text-sm border-r sticky top-0 h-[100vh] border-gray-300">
+        <div className=" text-sm border-r  border-gray-300">
           <div
             onClick={() => {
               toggle.widthInc();
             }}
-            className=" hover:cursor-pointer h-[67px] text-3xl flex space-x-12  m-auto sticky top-0 items-center border-y-2 border-y-gray-500 "
+            className=" hover:cursor-pointer h-[67px] text-3xl w-[240px] flex space-x-12  m-auto fixed items-center border-y-2 border-y-gray-500 "
           >
             <i class="bi bi-browser-chrome ml-3 "></i>
             <p className={`${toggle.show ? "" : "hidden"}`}>Velvet</p>
           </div>
-          <div className="velvet_body grid pt-4 ">
+          <div className="velvet_body grid  mt-24 w-[240px]  fixed  ">
             <ul className="space-y-2 ">
               <p className=" text-gray-500 ml-7 text-xs font-bold mb-4 ">{`${
                 toggle.show ? "MAIN" : "°"
@@ -81,7 +75,7 @@ function Velvet() {
                     dashboard
                       ? "display opacity-100 scale-y-100  "
                       : "h-[0px] opacity-0 scale-y-0"
-                  } ml-10 mt-3  transform origin-top space-y-3 transition-opacity duration-300`}
+                  } ml-10 mt-3  transform origin-top space-y-3 transition-opacity duration-300 ${toggle.show ? "" : "hidden"}`}
                 >
                   <li className=" text-green-600">
                     <Link to="/"> - Sale</Link>
@@ -131,7 +125,7 @@ function Velvet() {
                     ui
                       ? "display opacity-100 scale-y-100  "
                       : "h-[0px] opacity-0 scale-y-0"
-                  } ml-10 mt-3 transform origin-top space-y-3 transition-opacity duration-300 `}
+                  } ml-10 mt-3 transform origin-top space-y-3 transition-opacity duration-300 ${toggle.show ? "" : "hidden"}`}
                 >
                   <li className=" text-green-600 hover:text-white">
                     <Link to="accordian"> - Accordians & Collapse </Link>
@@ -143,7 +137,7 @@ function Velvet() {
                     <Link to="#"> - Draggable Cards </Link>
                   </li>
                   <li className="hover:text-white ">
-                    <Link to="/modals"> - Modals & Closes</Link>
+                    <Link to="modals"> - Modals & Closes</Link>
                   </li>
                   <li className="hover:text-white ">
                     <Link to="#"> - Navbar </Link>
@@ -183,7 +177,7 @@ function Velvet() {
                       page
                         ? "display opacity-100 scale-y-100 "
                         : "h-[0px] opacity-0 scale-y-0"
-                    } ml-2 mt-3  transform origin-top space-y-3 transition-opacity duration-300`}
+                    } ml-2 mt-3  transform origin-top space-y-3 transition-opacity duration-300 ${toggle.show ? "" : "hidden"}`}
                   >
                     <li className="hover:text-white ">
                       <Link to="#"> - Blog</Link>

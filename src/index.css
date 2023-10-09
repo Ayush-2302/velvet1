@@ -63,6 +63,9 @@ img {
 
 
 @media(max-width:850px) {
+  #query{
+    width: 80%;
+  }
   #search,#setting {
     display: none;
   }
@@ -107,11 +110,21 @@ img {
   margin-top: 25px;
 }
 
+
+@media(max-width:1200px) {
+  #gama{
+    margin-top: -200px;
+   }
+}
 @media(min-width:1200px) {
   .modals{
     display: grid;
     grid-template-columns: repeat(3,1fr);
   }
+
+ #gama{
+  margin-top: -80px;
+ }
 
   .flex1 .container_acc,
   .flex2 .container_acc,

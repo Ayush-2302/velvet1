@@ -742,68 +742,80 @@ function Body(props) {
             </div>
             <hr className=" m-3" />
             <div className=" flex justify-between">
-              <div className=" flex justify-center items-center ">
-                <FiCreditCard className="green mr-2 p-0.5 text-green-800 bg-green-200 w-6 h-5 rounded-md" />
-                <p className="  font-semibold w-24">ATM Withdrawl</p>
+              <div className=" flex justify-center items-center space-x-2 ">
+                <div className=" bg-green-200 w-10 h-10 rounded-full p-3  text-green-800  ">
+                <FiCreditCard />
+                </div>
+                <p className="  font-semibold text-sm w-24">ATM Withdrawl</p>
               </div>
-              <span className="flex items-center  text-green-500">$245000</span>
+              <span className="flex items-center text-sm text-green-500">$245000</span>
             </div>
-            <p className=" ml-10 text-gray-500 text-sm">Just Now</p>
+            <p className=" ml-12 text-gray-500 text-sm">Just Now</p>
 
             <hr className=" m-1" />
 
             <div className=" flex justify-between">
-              <div className=" flex justify-center items-center ">
-                <FiSmartphone className="green mr-2 text-red-600 bg-red-200 p-0.5 w-6 h-5 rounded-md" />
+              <div className=" flex justify-center items-center space-x-2 ">
+              <div className=" bg-red-200 w-10 h-10 rounded-full p-3  text-red-800  ">
+                <FiSmartphone  />
+                </div>
                 <p className="font-semibold w-24">Movies Subscription</p>
               </div>
-              <span className="flex items-center  text-red-500">$100.00 </span>
+              <span className="flex items-center text-sm text-red-500">$100.00 </span>
             </div>
-            <p className=" ml-10 text-gray-500 text-sm">Just Now</p>
+            <p className=" ml-12 text-gray-500 text-sm">Just Now</p>
 
             <hr className=" m-1" />
 
             <div className=" flex justify-between">
-              <div className=" flex justify-center items-center ">
-                <FiArrowDown className="green mr-2 text-green-800 bg-green-200 p-0.5 w-6 h-5 rounded-md" />
+              <div className=" flex justify-center items-center space-x-2 ">
+              <div className=" bg-green-200 w-10 h-10 rounded-full p-3  text-green-800  ">
+                <FiArrowDown  />
+                </div>
                 <p className="font-semibold w-24">Recieved From John </p>
               </div>
-              <span className="flex items-center  text-green-500">$15000 </span>
+              <span className="flex items-center text-sm text-green-500">$15000 </span>
             </div>
-            <p className=" ml-10 text-gray-500 text-sm">17-04-2022</p>
+            <p className=" ml-12 text-gray-500 text-sm">17-04-2022</p>
 
             <hr className=" m-1" />
 
             <div className=" flex justify-between">
-              <div className=" flex justify-center items-center ">
-                <FiCreditCard className="green mr-2 text-red-600 bg-red-200 w-6 p-0.5 h-5 rounded-md" />
+              <div className=" flex justify-center items-center space-x-2">
+              <div className=" bg-red-200 w-10 h-10 rounded-full p-3  text-red-800  ">
+                <FiCreditCard />
+                </div>
                 <p className="font-semibold w-24">Credit Card</p>
               </div>
-              <span className="flex items-center  text-red-500">-$3000 </span>
+              <span className="flex items-center text-sm text-red-500">-$3000 </span>
             </div>
-            <p className=" ml-10 text-gray-500 text-sm">Just Now</p>
+            <p className=" ml-12 text-gray-500 text-sm">Just Now</p>
 
             <hr className=" m-1" />
 
             <div className=" flex justify-between">
-              <div className=" flex justify-center items-center ">
-                <FiCreditCard className="green mr-2 text-green-800 bg-green-200 w-6 p-0.5 h-5 rounded-md" />
+              <div className=" flex justify-center items-center space-x-2 ">
+              <div className=" bg-green-200 w-10 h-10 rounded-full p-3  text-green-800  ">
+                <FiCreditCard />
+                </div>
                 <p className="font-semibold w-24">Transfer to Self</p>
               </div>
-              <span className="flex items-center  text-green-500">$15000 </span>
+              <span className="flex items-center text-sm  text-green-500">$15000 </span>
             </div>
-            <p className=" ml-10 text-gray-500 text-sm">30-04-2022</p>
+            <p className=" ml-12 text-gray-500 text-sm">30-04-2022</p>
 
             <hr className=" m-1" />
 
             <div className=" flex justify-between">
-              <div className=" flex justify-center items-center ">
-                <FiRepeat className="green mr-2 text-red-600 bg-red-200 w-6 p-0.5 h-5 rounded-md" />
-                <p className="font-semibold w-24">Transfer to x Card </p>
+              <div className=" flex justify-center items-center space-x-2 ">
+              <div className=" bg-red-200 w-10 h-10 rounded-full p-3 text-red-800  ">
+                <FiRepeat />
+                </div>
+                <p className="font-semibold w-24 ">Transfer to x Card </p>
               </div>
-              <span className="flex items-center  text-red-500">$245000 </span>
+              <span className="flex items-center text-sm text-red-500">$245000 </span>
             </div>
-            <p className=" ml-10 text-gray-500 text-sm">30-04-2022</p>
+            <p className=" ml-12 text-gray-500 text-sm">30-04-2022</p>
           </div>
 
           {/*   card 8*/}
