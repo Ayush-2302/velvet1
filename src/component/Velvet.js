@@ -30,11 +30,11 @@ function Velvet() {
   return (
     <>
      
-
+    
 
       <div
-        className={`velvet sticky top-[0px]  text-gray-400   ${toggle.show ? "w-72" : ""}  ${
-          toggle.mode === "light" ? "" : "bg-[#313645]"
+        className={`velvet  h-[100vh] sticky top-0 text-gray-400    ${toggle.show ? "w-72" : ""}  ${
+          toggle.mode === "light" ? " bg-gray-900" : "bg-[#313645]"
         }`}
       >
 
@@ -45,7 +45,7 @@ function Velvet() {
           onClick={() => {
             toggle.widthInc();
           }}
-          className=" hover:cursor-pointer w-full h-[67px] text-3xl items-center flex justify-around m-auto border-b-2 border-y-gray-500 "
+          className=" hover:cursor-pointer   w-full h-[67px] text-3xl items-center flex justify-around m-auto border-b-2 border-y-gray-500 "
         >
           <i class="bi bi-browser-chrome  "></i>
           <p className={`${toggle.show ? "" : "hidden"}`}>Velvet</p>
@@ -54,7 +54,7 @@ function Velvet() {
 
 
 
-        <div className="velvet_body grid text-sm ] ">
+        <div className="velvet_body  grid h-[90vh] pb-6 overflow-y-scroll customize_overflow  text-sm ] ">
 
           <ul className="space-y-2 mt-4  ">
             <p className=" text-gray-500 ml-7 text-xs font-bold mb-4 ">{`${
