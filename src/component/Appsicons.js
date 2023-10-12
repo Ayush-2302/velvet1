@@ -29,9 +29,9 @@ function Appsicons() {
             }
               
             }
-            className=" w-6 h-7 rounded-md border-gray-100 text-black  bg-slate-200 p-1 "
+            className=" w-6 h-7 rounded-md  border-gray-100 text-black  bg-slate-200 p-1 "
           >
-            <BsXLg />
+            <BsXLg className=" w-4 h-5" />
           </button>
         </div>
 

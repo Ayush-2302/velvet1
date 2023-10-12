@@ -1,171 +1,284 @@
-import React from "react";
-import { Carousel, initTE } from "tw-elements";
-initTE({ Carousel });
+import React, { useContext } from "react";
+import { Fade } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+import { val } from "./ValNav";
 
-function ImageSlider() {
+const divStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundSize: "cover",
+  height: "300px",
+};
+const arr = [
+  {
+    url: "https://images.unsplash.com/photo-1682687220198-88e9bdea9931?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1695751240180-6194e4d152a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1696519293772-0b240f1e5318?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  },
+];
+
+const arr2 = [
+  {
+    url: "https://images.unsplash.com/photo-1695031786586-cf9bf5c5a705?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8aG1lbnZRaFVteE18fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1696948758504-9ae476b1a6c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8aG1lbnZRaFVteE18fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1691748994172-35248b2688f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fGhtZW52UWhVbXhNfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+  },
+];
+
+const arr1 = [
+  {
+    url: "https://images.unsplash.com/photo-1696945147512-745188d0ef77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8cVBZc0R6dkpPWWN8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1696761783118-b12b579c3541?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fHFQWXNEenZKT1ljfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1696458520084-8bf82aad92cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIzfHFQWXNEenZKT1ljfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+  },
+];
+
+const ImageSlider = () => {
+  const { mode } = useContext(val);
+  const mode_change = {
+    backgroundColor: mode === "light" ? "white" : "#262C3C",
+    color: mode === "dark" ? "white" : "black",
+    boxShadow: mode === "light" ? "" : " 0px 3px 4px 0px #373C4A",
+  };
   return (
     <>
-      <div className="dashboardcont  pt-5 text-white text-3xl pl-10 pr-4 flex  h-32 justify-between">
+      <div
+        className="dashboardcont  pt-5 text-white text-3xl pl-10 pr-4 flex  h-32 justify-between"
+       
+      >
         Carousel
         <p className=" text-sm m-3  flex space-x-5">
-          <p>Carousel </p> <p>»</p> <p className=" font-bold"> Accordions</p>
+          <p>Advanced UI </p> <p>»</p>
+          <p className=" font-bold"> Carousel</p>
         </p>
       </div>
-      
-      <div className="cont grid m-auto">
-      <div
-        id="carouselExampleCaptions"
-        class="relative w-11/12"
-        data-te-carousel-init
-        data-te-ride="carousel"
-      >
-        {/* <!--Carousel indicators--> */}
-        <div
-          class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-          data-te-carousel-indicators
-        >
-          <button
-            type="button"
-            data-te-target="#carouselExampleCaptions"
-            data-te-slide-to="0"
-            data-te-carousel-active
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-te-target="#carouselExampleCaptions"
-            data-te-slide-to="1"
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-te-target="#carouselExampleCaptions"
-            data-te-slide-to="2"
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-label="Slide 3"
-          ></button>
+      <div className=" grid grid-cols-3 gap-4 p-8 -mt-16">
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Slide Only</p>
+
+          <Fade className=" p-8">
+            {arr.map((arr, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
         </div>
 
-        {/* <!--Carousel items--> */}
-        <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-          {/* <!--First item--> */}
-          <div
-            class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-te-carousel-active
-            data-te-carousel-item
-            // style="backface-visibility: hidden"
-          >
-            <img
-              src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
-              class="block w-full"
-              alt="..."
-            />
-            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-              <h5 class="text-xl">First slide label</h5>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-          </div>
-          {/* <!--Second item--> */}
-          <div
-            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-te-carousel-item
-            // style="backface-visibility: hidden"
-          >
-            <img
-              src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
-              class="block w-full"
-              alt="..."
-            />
-            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-              <h5 class="text-xl">Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
-            </div>
-          </div>
-          {/* <!--Third item--> */}
-          <div
-            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-te-carousel-item
-            // style="backface-visibility: hidden"
-          >
-            <img
-              src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
-              class="block w-full"
-              alt="..."
-            />
-            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-              <h5 class="text-xl">Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
-          </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">
+          Experiment slider
+          </p>
+          <Fade className=" p-8">
+            {arr1.map((arr1, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr1.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Films slider</p>
+          <Fade className=" p-8">
+            {arr2.map((arr2, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr2.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Films slider</p>
+          <Fade className=" p-8">
+            {arr2.map((arr2, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr2.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Slide Only</p>
+
+          <Fade className=" p-8">
+            {arr.map((arr, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
         </div>
 
-        {/* <!--Carousel controls - prev item--> */}
-        <button
-          class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-          type="button"
-          data-te-target="#carouselExampleCaptions"
-          data-te-slide="prev"
-        >
-          <span class="inline-block h-8 w-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </span>
-          <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-            Previous
-          </span>
-        </button>
-        {/* <!--Carousel controls - next item--> */}
-        <button
-          class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-          type="button"
-          data-te-target="#carouselExampleCaptions"
-          data-te-slide="next"
-        >
-          <span class="inline-block h-8 w-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </span>
-          <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-            Next
-          </span>
-        </button>
-      </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">
+          Experiment slider
+          </p>
+          <Fade className=" p-8">
+            {arr1.map((arr1, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr1.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Films slider</p>
+          <Fade className=" p-8">
+            {arr2.map((arr2, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr2.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Films slider</p>
+          <Fade className=" p-8">
+            {arr2.map((arr2, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr2.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Slide Only</p>
+
+          <Fade className=" p-8">
+            {arr.map((arr, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">
+          Experiment slider
+          </p>
+          <Fade className=" p-8">
+            {arr1.map((arr1, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr1.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Films slider</p>
+          <Fade className=" p-8">
+            {arr2.map((arr2, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr2.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Films slider</p>
+          <Fade className=" p-8">
+            {arr2.map((arr2, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr2.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Slide Only</p>
+
+          <Fade className=" p-8">
+            {arr.map((arr, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">
+          Experiment slider
+          </p>
+          <Fade className=" p-8">
+            {arr1.map((arr1, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr1.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
+        <div className="slide-container rounded-md " style={mode_change}>
+          <p className=" p-4 border-b-2 text-xl font-semibold">Films slider</p>
+          <Fade className=" p-8">
+            {arr2.map((arr2, index) => (
+              <div key={index}>
+                <div
+                  className=""
+                  style={{ ...divStyle, backgroundImage: `url(${arr2.url}) ` }}
+                ></div>
+              </div>
+            ))}
+          </Fade>
+        </div>
       </div>
     </>
   );
-}
-
+};
 export default ImageSlider;

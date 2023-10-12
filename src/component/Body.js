@@ -407,33 +407,33 @@ function Body(props) {
               </div>
 
               <hr className=" mt-2" />
-              <div class=" flex-col justify-center items-center w-[90%] m-auto  ">
-                <div class="sm:-mx-6 lg:-mx-8 ">
-                  <div class="inline-block w-full  py-2 ">
-                    <div class="overflow-hidden">
-                      <table class=" min-w-full text-left text-sm font-medium">
-                        <thead class=" min-w-full border-b font-medium dark:border-neutral-500">
+              <div className=" flex-col justify-center items-center w-[90%] m-auto  ">
+                <div className="sm:-mx-6 lg:-mx-8 ">
+                  <div className="inline-block w-full  py-2 ">
+                    <div className="overflow-hidden">
+                      <table className=" min-w-full text-left text-sm font-medium">
+                        <thead className=" min-w-full border-b font-medium dark:border-neutral-500">
                           <tr>
-                            <th scope="col" class="px-4 py-2">
+                            <th scope="col" className="px-4 py-2">
                               Profuct Name
                             </th>
-                            <th scope="col" class="px-4 py-2">
+                            <th scope="col" className="px-4 py-2">
                               Stock
                             </th>
-                            <th scope="col" class="px-2  py-2">
+                            <th scope="col" className="px-2  py-2">
                               Prise
                             </th>
-                            <th scope="col" class="px-2  py-2">
+                            <th scope="col" className="px-2  py-2">
                               Sold
                             </th>
-                            <th scope="col" class="px-2  py-2">
+                            <th scope="col" className="px-2  py-2">
                               Action
                             </th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr class="border-b dark:border-neutral-500">
-                            <td class="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
+                          <tr className="border-b dark:border-neutral-500">
+                            <td className="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
                               <img
                                 src={shoes}
                                 alt=""
@@ -441,14 +441,14 @@ function Body(props) {
                               />
                               <p> Sports Shoes for Men </p>
                             </td>
-                            <td class="whitespace-nowrap px-4 py-2">
+                            <td className="whitespace-nowrap px-4 py-2">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-green-700">
                                 In Stock
                               </span>
                             </td>
-                            <td class="whitespace-nowrap px-2  py-2">$73.800</td>
-                            <td class="whitespace-nowrap px-2  py-2">1534</td>
-                            <td class="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
+                            <td className="whitespace-nowrap px-2  py-2">$73.800</td>
+                            <td className="whitespace-nowrap px-2  py-2">1534</td>
+                            <td className="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
                               <span className="whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
                                 <RiPencilLine />
                               </span>
@@ -457,8 +457,8 @@ function Body(props) {
                               </span>
                             </td>
                           </tr>
-                          <tr class="border-b dark:border-neutral-500">
-                            <td class="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
+                          <tr className="border-b dark:border-neutral-500">
+                            <td className="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
                               <img
                                 src={cactus}
                                 alt=""
@@ -466,14 +466,14 @@ function Body(props) {
                               />
                               <p> Beautiful Flower Frame </p>
                             </td>
-                            <td class="whitespace-nowrap px-4 py-2">
+                            <td className="whitespace-nowrap px-4 py-2">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-blue-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-blue-700">
                                 Few Left
                               </span>
                             </td>
-                            <td class="whitespace-nowrap px-2  py-2">$73.800</td>
-                            <td class="whitespace-nowrap px-2  py-2">4987</td>
-                            <td class="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
+                            <td className="whitespace-nowrap px-2  py-2">$73.800</td>
+                            <td className="whitespace-nowrap px-2  py-2">4987</td>
+                            <td className="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
                                 <RiPencilLine />
                               </span>
@@ -482,8 +482,8 @@ function Body(props) {
                               </span>
                             </td>
                           </tr>
-                          <tr class="border-b dark:border-neutral-500">
-                            <td class="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
+                          <tr className="border-b dark:border-neutral-500">
+                            <td className="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
                               <img
                                 src={watch}
                                 alt=""
@@ -491,16 +491,16 @@ function Body(props) {
                               />
                               <p> Small Alarm Watch </p>
                             </td>
-                            <td class="whitespace-nowrap px-4 py-2">
+                            <td className="whitespace-nowrap px-4 py-2">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-red-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-red-700">
                                 Out of Stock
                               </span>
                             </td>
-                            <td class="whitespace-nowrap px-2  py-2">
+                            <td className="whitespace-nowrap px-2  py-2">
                               $713.800
                             </td>
-                            <td class="whitespace-nowrap px-2  py-2">87875</td>
-                            <td class="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
+                            <td className="whitespace-nowrap px-2  py-2">87875</td>
+                            <td className="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
                                 <RiPencilLine />
                               </span>
@@ -509,8 +509,8 @@ function Body(props) {
                               </span>
                             </td>
                           </tr>
-                          <tr class="border-b dark:border-neutral-500">
-                            <td class="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
+                          <tr className="border-b dark:border-neutral-500">
+                            <td className="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
                               <img
                                 src={smartphone}
                                 alt=""
@@ -518,16 +518,16 @@ function Body(props) {
                               />
                               <p> New Smart Phone </p>
                             </td>
-                            <td class="whitespace-nowrap px-4 py-2">
+                            <td className="whitespace-nowrap px-4 py-2">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-green-700">
                                 In-Stock
                               </span>
                             </td>
-                            <td class="whitespace-nowrap px-2  py-2">
+                            <td className="whitespace-nowrap px-2  py-2">
                               $713.800
                             </td>
-                            <td class="whitespace-nowrap px-2  py-2">87875</td>
-                            <td class="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
+                            <td className="whitespace-nowrap px-2  py-2">87875</td>
+                            <td className="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
                                 <RiPencilLine />
                               </span>
@@ -536,8 +536,8 @@ function Body(props) {
                               </span>
                             </td>
                           </tr>
-                          <tr class="border-b dark:border-neutral-500">
-                            <td class="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
+                          <tr className="border-b dark:border-neutral-500">
+                            <td className="whitespace-nowrap flex space-x-2 items-center py-2 font-medium">
                               <img
                                 src={camera}
                                 alt=""
@@ -545,16 +545,16 @@ function Body(props) {
                               />
                               <p>Camera</p>
                             </td>
-                            <td class="whitespace-nowrap px-4 py-2">
+                            <td className="whitespace-nowrap px-4 py-2">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-green-700">
                                 In-Stock
                               </span>
                             </td>
-                            <td class="whitespace-nowrap px-2  py-2">
+                            <td className="whitespace-nowrap px-2  py-2">
                               $713.800
                             </td>
-                            <td class="whitespace-nowrap px-2  py-2">87875</td>
-                            <td class="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
+                            <td className="whitespace-nowrap px-2  py-2">87875</td>
+                            <td className="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
                                 <RiPencilLine />
                               </span>

@@ -47,7 +47,7 @@ function Velvet() {
           }}
           className=" hover:cursor-pointer   w-full h-[67px] text-3xl items-center flex justify-around m-auto border-b-2 border-y-gray-500 "
         >
-          <i class="bi bi-browser-chrome  "></i>
+          <i className="bi bi-browser-chrome  "></i>
           <p className={`${toggle.show ? "" : "hidden"}`}>Velvet</p>
         </div>
 
@@ -167,7 +167,7 @@ function Velvet() {
 
             <li>
               <div className="advanceuicursor-pointer flex space-x-4 pt-3 items-center  ">
-                <i class="bi bi-menu-up ml-5"></i>
+                <i className="bi bi-menu-up ml-5"></i>
 
                 <div
                   onClick={() => {
@@ -218,7 +218,7 @@ function Velvet() {
             </li>
             <li>
               <div className="advanceuicursor-pointer flex space-x-4 items-center  mt-4 ">
-                <i class="bi bi-magnet ml-5"></i>
+                <i className="bi bi-magnet ml-5"></i>
 
                 <div className=" hover:rounded-2xl items-center w-2/3   pt-1.5 pl-4 hover:text-white justify-between  flex  ">
                   <p className={`${toggle.show ? "" : "hidden"}`}> Utilities</p>
@@ -230,7 +230,7 @@ function Velvet() {
             </li>
             <li>
               <div className="advanceuicursor-pointer flex space-x-4 items-center mt-4 ">
-                <i class="bi bi-hexagon ml-5"></i>
+                <i className="bi bi-hexagon ml-5"></i>
 
                 <div className=" hover:rounded-2xl items-center w-2/3   pt-1.5 pl-4 hover:text-white justify-between  flex  ">
                   <p className={`${toggle.show ? "" : "hidden"}`}>
@@ -245,7 +245,7 @@ function Velvet() {
             </li>
             <li>
               <div className="advanceuicursor-pointer flex space-x-4 items-center mt-4 ">
-                <i class="bi bi-grid ml-5 "></i>
+                <i className="bi bi-grid ml-5 "></i>
 
                 <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
                   <p className={`${toggle.show ? "" : "hidden"}`}> Apps</p>
@@ -259,7 +259,7 @@ function Velvet() {
             </li>
             <li>
               <div className="advanceuicursor-pointer flex  space-x-4 items-center mt-4 ">
-                <i class="bi bi-emoji-smile  ml-5"></i>
+                <i className="bi bi-emoji-smile  ml-5"></i>
 
                 <div className=" hover:rounded-2xl items-center  w-2/3  pt-1.5 pl-4 hover:text-white justify-between  flex  ">
                   <p className={`${toggle.show ? "" : "hidden"}`}> Utilities</p>
@@ -271,7 +271,7 @@ function Velvet() {
             </li>
             <li>
               <div className="advanceuicursor-pointer flex space-x-4  items-center mt-4 ">
-                <i class="bi bi-menu-button-wide ml-5 "></i>
+                <i className="bi bi-menu-button-wide ml-5 "></i>
 
                 <div className=" hover:rounded-2xl items-center w-2/3   pt-1.5 pl-4 hover:text-white justify-between  flex  ">
                   <p className={`${toggle.show ? "" : "hidden"}`}>Widgets</p>

@@ -95,9 +95,10 @@ img {
 
 }
 
-/* .velvet {
-  background-color: rgb(28, 44, 63);
-} */
+button svg{
+width: 10px;
+}
+
 
 .container_acc {
   width: 95%;

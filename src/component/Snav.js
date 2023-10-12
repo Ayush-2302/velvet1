@@ -176,7 +176,7 @@ function Snav() {
 
           <li onClick={handlesetal} className="p-1 hover:text-blue-500 hover:bg-gray-100 flex justify-between  items-center ">
             <div className="flex items-center space-x-2">
-          <i  class="bi bi-gear "></i>
+          <i  className="bi bi-gear "></i>
             setting
             </div>
             <div>{setal ? "‹" : "»"}</div>

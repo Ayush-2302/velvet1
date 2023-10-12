@@ -6,6 +6,7 @@ import { val } from "./ValNav";
 function SettingDrop() {
   const set =useContext(cross)
   const setting = useContext(val);
+  // const{darkmode}=useContext(cross)
   const mode_change={
     backgroundColor:setting.mode==="light"?"white":"#262C3C",
     color:setting.mode==="dark"?"white":"black",
@@ -28,15 +29,15 @@ function SettingDrop() {
       </div>
       <div className="color  p-2" style={{ backgroundColor:setting.mode==="light"?"rgb(229 231 235)":"gray"}} >Theme Color Mode:</div>
       <div className="flex p-3    space-x-8 ">
-        <label className="flex  space-x-2 ">
+        <label onClick={()=>setting.toggleMode()} className={` flex  space-x-2`}>
           <input type="checkbox" className="" />
           <p className="">light</p>
         </label>
         
          
-        <label className="flex space-x-2">
-          <input type="checkbox" className="" />
-          <p>Dark</p>
+        <label onClick={()=>!setting.toggleMode()} className="flex space-x-2">
+          <input  type="checkbox" className="" />
+          <p >Dark</p>
         </label>
       </div>
       <div className="color    bg-gray-200 p-2" style={{ backgroundColor:setting.mode==="light"?"rgb(229 231 235)":"gray"}}>Direction:</div>

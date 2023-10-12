@@ -24,7 +24,7 @@ function Dashboard() {
             </p>
 
             <div className="w-9  h-9 flex items-center justify-center rounded-md bg-purple-300">
-              <i class="bi bi-cart-check   text-purple-900 "></i>
+              <i className="bi bi-cart-check   text-purple-900 "></i>
             </div>
           </div>
           <p className=" flex justify-between text-xs h-5 mt-2 ">
@@ -43,7 +43,7 @@ function Dashboard() {
 
             <div className=" w-9 h-9 flex items-center justify-center rounded-md bg-red-300">
               {" "}
-              <i class="bi bi-archive   text-red-800 "></i>
+              <i className="bi bi-archive   text-red-800 "></i>
             </div>
           </div>
           <p className=" flex justify-between text-xs mt-2 ">
@@ -62,7 +62,7 @@ function Dashboard() {
 
             <div className=" w-9 h-9 flex items-center justify-center rounded-md bg-blue-300">
               {" "}
-              <i class="bi bi-handbag   text-blue-900 "></i>
+              <i className="bi bi-handbag   text-blue-900 "></i>
             </div>
           </div>
           <p className=" flex justify-between text-xs  mt-2 ">
@@ -81,7 +81,7 @@ function Dashboard() {
 
             <div className=" w-9 h-9 flex items-center justify-center rounded-md bg-orange-300">
               {" "}
-              <i class="bi bi-currency-dollar   text-orange-900 "></i>
+              <i className="bi bi-currency-dollar   text-orange-900 "></i>
             </div>
           </div>
           <p className=" flex justify-between text-xs  mt-2 ">
@@ -101,7 +101,7 @@ function Dashboard() {
 
             <div className=" w-9 h-9 flex items-center justify-center rounded-md bg-red-300">
               {" "}
-              <i class="bi bi-bell  text-red-900 "></i>
+              <i className="bi bi-bell  text-red-900 "></i>
             </div>
           </div>
           <p className=" flex justify-between text-xs mt-2 ">

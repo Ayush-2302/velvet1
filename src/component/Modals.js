@@ -580,19 +580,19 @@ function Modals() {
               <hr />
               <div className="btn p-5 flex ">
                 <button
-                  onClick={""}
+                  onClick={handleAlert4}
                   className="hover:bg-violet-600 hover:text-white text-sm button p-2 border-2 border-violet-600 text-violet-600  w-fit rounded-lg"
                 >
                   Extra large modal
                 </button>
                 <button
-                  onClick={""}
+                  onClick={handleAlert3}
                   className="hover:bg-violet-600 hover:text-white text-sm button p-2 border-2 ml-2 border-violet-600 text-violet-600  w-fit rounded-lg"
                 >
                   Large modal
                 </button>
                 <button
-                  onClick={""}
+                  onClick={handleAlert4}
                   className="hover:bg-violet-600 hover:text-white text-sm button p-2 border-2 ml-2 border-violet-600 text-violet-600  w-fit rounded-lg"
                 >
                   Small modal
@@ -601,6 +601,41 @@ function Modals() {
             </div>
           </div>
       </div>
+       <div className="  my-3 pb-8">
+            <div className="w-11/12 rounded-lg m-auto  " style={mode_change}>
+              <div className="head p-4 text-lg font-semibold">
+                Optional Size
+              </div>
+              <hr />
+              <div className="btn p-5 flex ">
+                <button
+                  className="hover:bg-violet-600 hover:text-white text-sm button p-2 border-2 border-violet-600 text-violet-600  w-fit rounded-lg"
+                >
+                  Extra large modal
+                </button>
+                <button
+                  className="hover:bg-green-600 hover:text-white text-sm button p-2 border-2 ml-2 border-green-600 text-green-600  w-fit rounded-lg"
+                >
+                  Large modal
+                </button>
+                <button
+                  className="hover:bg-red-600 hover:text-white text-sm button p-2 border-2 ml-2 border-red-600 text-red-600  w-fit rounded-lg"
+                >
+                  Small modal
+                </button>
+                <button
+                  className="hover:bg-orange-600 hover:text-white text-sm button p-2 border-2 ml-2 border-orange-600 text-orange-600  w-fit rounded-lg"
+                >
+                  Small modal
+                </button>
+                <button
+                  className="bg-yellow-400 text-white text-sm button p-2 border-2 ml-2 border-yellow-400  w-fit rounded-lg"
+                >
+                  Small modal
+                </button>
+              </div>
+            </div>
+          </div>
     </>
   );
 }

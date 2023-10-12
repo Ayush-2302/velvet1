@@ -88,7 +88,7 @@ function Dropdowncart() {
               onClick={() => {
                 removeItem();
               }}
-              class="bi bi-trash3 text-red-600 mb-10 ml-10"
+              className="bi bi-trash3 text-red-600 mb-10 ml-10"
             ></i>
           </div>
           <hr />
@@ -108,7 +108,7 @@ function Dropdowncart() {
               onClick={() => {
                 removeItem1();
               }}
-              class="bi bi-trash3 text-red-600 mb-10 ml-10"
+              className="bi bi-trash3 text-red-600 mb-10 ml-10"
             ></i>
           </div>
           <hr />
@@ -128,7 +128,7 @@ function Dropdowncart() {
               onClick={() => {
                 removeItem2();
               }}
-              class="bi bi-trash3 text-red-600 mb-10 ml-10"
+              className="bi bi-trash3 text-red-600 mb-10 ml-10"
             ></i>
           </div>
           <hr />
@@ -147,7 +147,7 @@ function Dropdowncart() {
               onClick={() => {
                 removeItem3();
               }}
-              class="bi bi-trash3 text-red-600 mb-10 ml-10"
+              className="bi bi-trash3 text-red-600 mb-10 ml-10"
             ></i>
           </div>
           <hr />
@@ -167,7 +167,7 @@ function Dropdowncart() {
               onClick={() => {
                 removeItem4();
               }}
-              class="bi bi-trash3 text-red-600 mb-10 ml-10"
+              className="bi bi-trash3 text-red-600 mb-10 ml-10"
             ></i>
           </div>
           <hr />

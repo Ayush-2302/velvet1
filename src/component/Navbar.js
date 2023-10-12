@@ -393,7 +393,7 @@ function Navbar(props) {
             </ul>
           </div>
           <div id="setting" className={` ml-4 mr-2 pr-3 flex items-center`}>
-            <i onClick={handleSet} class="bi bi-gear "></i>
+            <i onClick={handleSet} className="bi bi-gear "></i>
             <div
               className={`${
                 set ? "" : "hidden"
