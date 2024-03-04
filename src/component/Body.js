@@ -44,6 +44,12 @@ function Body(props) {
     boxShadow: bod.mode === "light" ? "" : " 0px 3px 4px 0px #373C4A",
   };
 
+  const [light, setLight] = useState(mode_change);
+
+  const mode_light = () => {
+    setLight(!light);
+  };
+
   const [weekdrop, setWeekdrop] = useState(false);
   const handleweek = () => {
     setWeekdrop(!weekdrop);
@@ -98,22 +104,6 @@ function Body(props) {
     setProf(false);
     setValue(!value);
   };
-
-  // const fullScreenRef = useRef(null);
-
-  // const enterFullScreen = () => {
-  //   const element = fullScreenRef.current;
-
-  //   if (element.requestFullscreen) {
-  //     element.requestFullscreen();
-  //   } else if (element.mozRequestFullScreen) {
-  //     element.mozRequestFullScreen();
-  //   } else if (element.webkitRequestFullscreen) {
-  //     element.webkitRequestFullscreen();
-  //   } else if (element.msRequestFullscreen) {
-  //     element.msRequestFullscreen();
-  //   }
-  // };
 
   return (
     <>
@@ -209,7 +199,7 @@ function Body(props) {
               <div></div>
             </div>
             {/* card 2 */}
-            <div className="card card2 " style={mode_change}>
+            <div className="card card2 " style={{ mode_change }}>
               <div className="top  flex justify-between">
                 <h1 className=" text-lg font-bold"> Sale By Country </h1>
                 <button className="w-fit flex items-center text-sm text-black pl-2 pr-2 bg-gray-100 rounded-lg p-1">
@@ -446,8 +436,12 @@ function Body(props) {
                                 In Stock
                               </span>
                             </td>
-                            <td className="whitespace-nowrap px-2  py-2">$73.800</td>
-                            <td className="whitespace-nowrap px-2  py-2">1534</td>
+                            <td className="whitespace-nowrap px-2  py-2">
+                              $73.800
+                            </td>
+                            <td className="whitespace-nowrap px-2  py-2">
+                              1534
+                            </td>
                             <td className="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
                               <span className="whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
                                 <RiPencilLine />
@@ -471,8 +465,12 @@ function Body(props) {
                                 Few Left
                               </span>
                             </td>
-                            <td className="whitespace-nowrap px-2  py-2">$73.800</td>
-                            <td className="whitespace-nowrap px-2  py-2">4987</td>
+                            <td className="whitespace-nowrap px-2  py-2">
+                              $73.800
+                            </td>
+                            <td className="whitespace-nowrap px-2  py-2">
+                              4987
+                            </td>
                             <td className="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
                                 <RiPencilLine />
@@ -499,7 +497,9 @@ function Body(props) {
                             <td className="whitespace-nowrap px-2  py-2">
                               $713.800
                             </td>
-                            <td className="whitespace-nowrap px-2  py-2">87875</td>
+                            <td className="whitespace-nowrap px-2  py-2">
+                              87875
+                            </td>
                             <td className="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
                                 <RiPencilLine />
@@ -526,7 +526,9 @@ function Body(props) {
                             <td className="whitespace-nowrap px-2  py-2">
                               $713.800
                             </td>
-                            <td className="whitespace-nowrap px-2  py-2">87875</td>
+                            <td className="whitespace-nowrap px-2  py-2">
+                              87875
+                            </td>
                             <td className="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
                                 <RiPencilLine />
@@ -553,7 +555,9 @@ function Body(props) {
                             <td className="whitespace-nowrap px-2  py-2">
                               $713.800
                             </td>
-                            <td className="whitespace-nowrap px-2  py-2">87875</td>
+                            <td className="whitespace-nowrap px-2  py-2">
+                              87875
+                            </td>
                             <td className="whitespace-nowrap px-2  py-2 flex space-x-2 items-center">
                               <span className="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-100 px-2 pb-2 pt-2 text-center align-baseline  font-bold  text-green-700">
                                 <RiPencilLine />
@@ -744,11 +748,13 @@ function Body(props) {
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center space-x-2 ">
                 <div className=" bg-green-200 w-10 h-10 rounded-full p-3  text-green-800  ">
-                <FiCreditCard />
+                  <FiCreditCard />
                 </div>
                 <p className="  font-semibold text-sm w-24">ATM Withdrawl</p>
               </div>
-              <span className="flex items-center text-sm text-green-500">$245000</span>
+              <span className="flex items-center text-sm text-green-500">
+                $245000
+              </span>
             </div>
             <p className=" ml-12 text-gray-500 text-sm">Just Now</p>
 
@@ -756,12 +762,14 @@ function Body(props) {
 
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center space-x-2 ">
-              <div className=" bg-red-200 w-10 h-10 rounded-full p-3  text-red-800  ">
-                <FiSmartphone  />
+                <div className=" bg-red-200 w-10 h-10 rounded-full p-3  text-red-800  ">
+                  <FiSmartphone />
                 </div>
                 <p className="font-semibold w-24">Movies Subscription</p>
               </div>
-              <span className="flex items-center text-sm text-red-500">$100.00 </span>
+              <span className="flex items-center text-sm text-red-500">
+                $100.00{" "}
+              </span>
             </div>
             <p className=" ml-12 text-gray-500 text-sm">Just Now</p>
 
@@ -769,12 +777,14 @@ function Body(props) {
 
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center space-x-2 ">
-              <div className=" bg-green-200 w-10 h-10 rounded-full p-3  text-green-800  ">
-                <FiArrowDown  />
+                <div className=" bg-green-200 w-10 h-10 rounded-full p-3  text-green-800  ">
+                  <FiArrowDown />
                 </div>
                 <p className="font-semibold w-24">Recieved From John </p>
               </div>
-              <span className="flex items-center text-sm text-green-500">$15000 </span>
+              <span className="flex items-center text-sm text-green-500">
+                $15000{" "}
+              </span>
             </div>
             <p className=" ml-12 text-gray-500 text-sm">17-04-2022</p>
 
@@ -782,12 +792,14 @@ function Body(props) {
 
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center space-x-2">
-              <div className=" bg-red-200 w-10 h-10 rounded-full p-3  text-red-800  ">
-                <FiCreditCard />
+                <div className=" bg-red-200 w-10 h-10 rounded-full p-3  text-red-800  ">
+                  <FiCreditCard />
                 </div>
                 <p className="font-semibold w-24">Credit Card</p>
               </div>
-              <span className="flex items-center text-sm text-red-500">-$3000 </span>
+              <span className="flex items-center text-sm text-red-500">
+                -$3000{" "}
+              </span>
             </div>
             <p className=" ml-12 text-gray-500 text-sm">Just Now</p>
 
@@ -795,12 +807,14 @@ function Body(props) {
 
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center space-x-2 ">
-              <div className=" bg-green-200 w-10 h-10 rounded-full p-3  text-green-800  ">
-                <FiCreditCard />
+                <div className=" bg-green-200 w-10 h-10 rounded-full p-3  text-green-800  ">
+                  <FiCreditCard />
                 </div>
                 <p className="font-semibold w-24">Transfer to Self</p>
               </div>
-              <span className="flex items-center text-sm  text-green-500">$15000 </span>
+              <span className="flex items-center text-sm  text-green-500">
+                $15000{" "}
+              </span>
             </div>
             <p className=" ml-12 text-gray-500 text-sm">30-04-2022</p>
 
@@ -808,12 +822,14 @@ function Body(props) {
 
             <div className=" flex justify-between">
               <div className=" flex justify-center items-center space-x-2 ">
-              <div className=" bg-red-200 w-10 h-10 rounded-full p-3 text-red-800  ">
-                <FiRepeat />
+                <div className=" bg-red-200 w-10 h-10 rounded-full p-3 text-red-800  ">
+                  <FiRepeat />
                 </div>
                 <p className="font-semibold w-24 ">Transfer to x Card </p>
               </div>
-              <span className="flex items-center text-sm text-red-500">$245000 </span>
+              <span className="flex items-center text-sm text-red-500">
+                $245000{" "}
+              </span>
             </div>
             <p className=" ml-12 text-gray-500 text-sm">30-04-2022</p>
           </div>

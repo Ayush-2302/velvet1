@@ -29,14 +29,14 @@ function SettingDrop() {
       </div>
       <div className="color  p-2" style={{ backgroundColor:setting.mode==="light"?"rgb(229 231 235)":"gray"}} >Theme Color Mode:</div>
       <div className="flex p-3    space-x-8 ">
-        <label onClick={()=>setting.toggleMode()} className={` flex  space-x-2`}>
-          <input type="checkbox" className="" />
+        <label  className={` flex  space-x-2`}>
+          <input onClick={()=>setting.lightMode()} type="checkbox" className="" />
           <p className="">light</p>
         </label>
         
          
-        <label onClick={()=>!setting.toggleMode()} className="flex space-x-2">
-          <input  type="checkbox" className="" />
+        <label  className="flex space-x-2">
+          <input onClick={()=>setting.toggleMode()} type="checkbox" className="" />
           <p >Dark</p>
         </label>
       </div>

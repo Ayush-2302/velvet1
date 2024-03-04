@@ -9,7 +9,7 @@ function Home( props ) {
   const {mode}=useContext(val)
   return (
     <>
-        <div className={mode==="light"?" m-auto": "m-auto bg-[#313645]"}>
+        <div className={mode==="light"?" m-auto": "m-auto"}>
           <Dashboard />
           <Body />
           <Footer/>
