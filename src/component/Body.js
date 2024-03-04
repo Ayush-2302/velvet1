@@ -44,11 +44,11 @@ function Body(props) {
     boxShadow: bod.mode === "light" ? "" : " 0px 3px 4px 0px #373C4A",
   };
 
-  const [light, setLight] = useState(mode_change);
+  // const [light, setLight] = useState(mode_change);
 
-  const mode_light = () => {
-    setLight(!light);
-  };
+  // const mode_light = () => {
+  //   setLight(!light);
+  // };
 
   const [weekdrop, setWeekdrop] = useState(false);
   const handleweek = () => {

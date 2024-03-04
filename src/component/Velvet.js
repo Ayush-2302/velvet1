@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import "boxicons";
+// import "boxicons";
 import { val } from "./ValNav";
-import { BoxIconElement } from "boxicons";
+// import { BoxIconElement } from "boxicons";
 
 function Velvet() {
   const toggle = useContext(val);

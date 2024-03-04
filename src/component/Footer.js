@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { val } from "./ValNav";
 
-export default function () {
+export default function Footer () {
   const foo= useContext(val);
   const mode_change={
     backgroundColor:foo.mode==="light"?"white":"#262C3C",

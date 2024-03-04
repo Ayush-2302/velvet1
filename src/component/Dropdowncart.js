@@ -32,7 +32,7 @@ function Dropdowncart() {
   const removeItem4 = () => {
     setItem4(!item4);
   };
-
+// eslint-disable-next-line
   const [empty, setEmpty] = useState(false);
   // const alpha=setEmpty(
   // {  if(){}}
