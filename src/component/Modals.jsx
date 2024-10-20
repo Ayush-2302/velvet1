@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 // import AlertModal from "./AlertModal";
 
 const modal = createContext();

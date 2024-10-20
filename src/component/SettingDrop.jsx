@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { RxCross1 } from "react-icons/rx";
 import { cross } from "./Navbar";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 
 function SettingDrop() {
   const set =useContext(cross)

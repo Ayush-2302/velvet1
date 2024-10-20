@@ -9,7 +9,7 @@ import {
   BiEnvelope,
 } from "react-icons/bi";
 import { cross } from "./Navbar";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 
 function Appsicons() {
   const ico= useContext(val)

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Dashboard from "./Dashboard";
 import Body from "./Body";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 import Footer from "./Footer";
 
 

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import pic from "../asserts/images/w4.png";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 
 function Profile() {
   const pro= useContext(val)

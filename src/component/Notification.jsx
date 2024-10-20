@@ -10,7 +10,7 @@ import {
   BiBadgeCheck,
   BiCog,
 } from "react-icons/bi";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 
 function Notification() {
   const note= useContext(val)

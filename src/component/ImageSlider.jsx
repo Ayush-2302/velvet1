@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 
 const divStyle = {
   display: "flex",

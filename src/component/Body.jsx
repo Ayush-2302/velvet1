@@ -34,7 +34,7 @@ import cactus from "../asserts/images/cactus.png";
 import grow from "../asserts/images/grow.png";
 import smartphone from "../asserts/images/phone.png";
 import camera from "../asserts/images/camera.png";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 
 function Body(props) {
   const bod = useContext(val);

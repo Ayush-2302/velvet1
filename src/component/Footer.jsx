@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 
 export default function Footer () {
   const foo= useContext(val);

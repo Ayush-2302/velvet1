@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 // import "boxicons";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 // import { BoxIconElement } from "boxicons";
 
-function Velvet() {
+function Sidebar() {
   const toggle = useContext(val);
 
   const [dashboard, setDashboard] = useState(false);
@@ -29,33 +29,22 @@ function Velvet() {
 
   return (
     <>
-     
-    
-
       <div
-        className={`velvet  h-[100vh] sticky top-0 text-gray-400    ${toggle.show ? "w-72" : ""}  ${
-          toggle.mode === "light" ? " bg-gray-900" : "bg-[#313645]"
-        }`}
+        className={`velvet  h-[100vh] ease-in-out transition-all duration-1000   sticky top-0 text-gray-400    ${
+          toggle.show ? "w-72 " : ""
+        }  ${toggle.mode === "light" ? " bg-gray-900" : "bg-[#313645]"}`}
       >
-
-
-
-
-      <div
+        <div
           onClick={() => {
             toggle.widthInc();
           }}
-          className=" hover:cursor-pointer   w-full h-[67px] text-3xl items-center flex justify-around m-auto border-b-2 border-y-gray-500 "
+          className=" hover:cursor-pointer  w-full h-[67px] text-3xl items-center flex justify-around m-auto border-b-2 border-y-gray-500 "
         >
           <i className="bi bi-browser-chrome  "></i>
           <p className={`${toggle.show ? "" : "hidden"}`}>Velvet</p>
         </div>
 
-
-
-
         <div className="velvet_body  grid h-[90vh] pb-6 overflow-y-scroll customize_overflow  text-sm ] ">
-
           <ul className="space-y-2 mt-4  ">
             <p className=" text-gray-500 ml-7 text-xs font-bold mb-4 ">{`${
               toggle.show ? "MAIN" : "°"
@@ -90,16 +79,16 @@ function Velvet() {
                   <Link to="/"> - Sale</Link>
                 </li>
                 <li className="hover:text-white ">
-                  <Link to="#"> - Crypto</Link>
+                  <Link to="/crypto-dashboard"> - Crypto</Link>
                 </li>
                 <li className="hover:text-white ">
-                  <Link to="#"> - Jobs</Link>
+                  <Link to="/job-dashboard"> - Jobs</Link>
                 </li>
                 <li className="hover:text-white ">
-                  <Link to="#"> - CRM</Link>
+                  <Link to="/crm-dashboard"> - CRM</Link>
                 </li>
                 <li className="hover:text-white ">
-                  <Link to="#"> - Ecommerce</Link>
+                  <Link to="/ecommerce-page"> - Ecommerce</Link>
                 </li>
               </ul>
             </li>
@@ -145,19 +134,19 @@ function Velvet() {
                   <Link to="/carousel"> - Carousel </Link>
                 </li>
                 <li className="hover:text-white ">
-                  <Link to="#"> - Draggable Cards </Link>
+                  <Link to="draggable-card"> - Draggable Cards </Link>
                 </li>
                 <li className="hover:text-white ">
                   <Link to="modals"> - Modals & Closes</Link>
                 </li>
                 <li className="hover:text-white ">
-                  <Link to="#"> - Navbar </Link>
+                  <Link to="multiple-nav"> - Navbar </Link>
                 </li>
                 <li className="hover:text-white ">
-                  <Link to="#"> - Offcanvas</Link>
+                  <Link to="offCanvasNav"> - Offcanvas</Link>
                 </li>
                 <li className="hover:text-white ">
-                  <Link to="#"> - Placeholder </Link>
+                  <Link to="placeholder"> - Placeholder </Link>
                 </li>
               </ul>
             </li>
@@ -193,25 +182,25 @@ function Velvet() {
                   }`}
                 >
                   <li className="hover:text-white ">
-                    <Link to="#"> - Blog</Link>
+                    <Link to="/blog-page"> - Blog</Link>
                   </li>
                   <li className="hover:text-white ">
-                    <Link to="#"> - Chat</Link>
+                    <Link to="/chat-page"> - Chat</Link>
                   </li>
                   <li className="hover:text-white ">
-                    <Link to="#"> - Contacts</Link>
+                    <Link to="/contact-page"> - Contacts</Link>
                   </li>
                   <li className="hover:text-white ">
-                    <Link to="#"> - Ecommerce</Link>
+                    <Link to="/ecommerce-page"> - Ecommerce</Link>
                   </li>
                   <li className="hover:text-white ">
-                    <Link to="#"> - Email</Link>
+                    <Link to="/email-page"> - Email</Link>
                   </li>
                   <li className="hover:text-white ">
-                    <Link to="#"> - Empty</Link>
+                    <Link to="/page-not-found"> - Empty</Link>
                   </li>
                   <li className="hover:text-white ">
-                    <Link to="#"> - FAQ's</Link>
+                    <Link to="/faqs"> - FAQ's</Link>
                   </li>
                 </ul>
               </div>
@@ -290,4 +279,4 @@ function Velvet() {
   );
 }
 
-export default Velvet;
+export default Sidebar;

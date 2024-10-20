@@ -4,7 +4,7 @@ import { BiPyramid, BiChevronRight } from "react-icons/bi";
 
 import pic1 from "../asserts/images/w1.png";
 import pic3 from "../asserts/images/w3.png";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 
 function CalNoti() {
   

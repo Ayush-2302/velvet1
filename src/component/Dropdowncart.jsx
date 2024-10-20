@@ -7,7 +7,7 @@ import goodluck from "../asserts/images/goodluck.png";
 import transplant from "../asserts/images/transplant.jpeg";
 import "../style/Navbar.css";
 import { BsCart } from "react-icons/bs";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 
 function Dropdowncart() {
   const art = useContext(val);

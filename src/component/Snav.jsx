@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import canada from "../asserts/images/canada.png";
 import germany from "../asserts/images/germany.png";
 import spain from "../asserts/images/spain.png";
-import itly from "../asserts/images/itly.png";
+import italy from "../asserts/images/italy.png";
 import russia from "../asserts/images/russia.png";
 import usa from "../asserts/images/usa.png";
 import { cross } from "./Navbar";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 import Dropdowncart from "./Dropdowncart";
 import Notification from "./Notification";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -64,12 +64,12 @@ function Snav() {
                   <hr className="m-1" />
                   <li className="  flex space-x-2 p-1 hover:bg-gray-200 hover:text-black  rounded-sm">
                     <img src={spain} alt="" className=" w-5 rounded-2xl" />
-                    <Link href="#">Spainish</Link>
+                    <Link href="#">Spanish</Link>
                   </li>
                   <hr />
                   <li className="  flex space-x-2 p-1 hover:bg-gray-200 hover:text-black  rounded-sm">
-                    <img src={itly} alt="" className=" w-5 rounded-2xl" />
-                    <Link href="#">Italien</Link>
+                    <img src={italy} alt="" className=" w-5 rounded-2xl" />
+                    <Link href="#">Italian</Link>
                   </li>
                   <hr />
                   <li className=" flex space-x-2 p-1 hover:bg-gray-200 hover:text-black  rounded-sm ">

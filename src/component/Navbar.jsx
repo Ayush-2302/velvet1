@@ -6,10 +6,11 @@ import Notification from "./Notification";
 import Appsicons from "./Appsicons";
 import Dropdowncart from "./Dropdowncart";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { useTranslation } from 'react-i18next';
 
 import { FaSearch, FaHome, FaBars } from "react-icons/fa";
 import { AiOutlineBars } from "react-icons/ai";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 import {
   BiUser,
   BiCog,
@@ -20,7 +21,7 @@ import {
 import canada from "../asserts/images/canada.png";
 import germany from "../asserts/images/germany.png";
 import spain from "../asserts/images/spain.png";
-import itly from "../asserts/images/itly.png";
+import italy from "../asserts/images/italy.png";
 import russia from "../asserts/images/russia.png";
 import usa from "../asserts/images/usa.png";
 import SettingDrop from "./SettingDrop";
@@ -34,6 +35,14 @@ function Navbar(props) {
     backgroundColor: sideBar.mode === "light" ? "white" : "#262C3C",
     color: sideBar.mode === "dark" ? "white" : "black",
     boxShadow: sideBar.mode === "light" ? "" : " 0px 3px 4px 0px #373C4A",
+  };
+
+
+  const { t, i18n } = useTranslation();
+
+  const handleLanguageChange = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem('i18nextLng', lang);
   };
 
   const handleSide = () => {
@@ -234,12 +243,12 @@ function Navbar(props) {
                             alt=""
                             className=" w-5 rounded-2xl"
                           />
-                          <Link href="#">Spainish</Link>
+                          <Link href="#">Spanish</Link>
                         </li>
                         <hr />
                         <li className="  flex space-x-2 p-1 hover:bg-gray-200 hover:text-black  rounded-sm">
-                          <img src={itly} alt="" className=" w-5 rounded-2xl" />
-                          <Link href="#">Italien</Link>
+                          <img src={italy} alt="" className=" w-5 rounded-2xl" />
+                          <Link href="#">Italian</Link>
                         </li>
                         <hr />
                         <li className=" flex space-x-2 p-1 hover:bg-gray-200 hover:text-black  rounded-sm ">
@@ -361,10 +370,10 @@ function Navbar(props) {
             <ul
               className={` ${
                 prof ? "" : "hidden"
-              } py-1 text-sm   text-black-700 absolute -translate-x-40 translate-y-16 w-40 border-2 rounded-lg border-gray-100  px-4   shadow-inner bg-white`}
+              } py-1 text-sm mt-2  text-black-700 absolute -translate-x-40 translate-y-16 w-40 border-2 rounded-lg border-gray-100  px-4   shadow-inner bg-white`}
               style={mode_change}
             >
-              <div className="ml-2 text-base  ">
+              <div className="ml-2  text-base  ">
                 <li className=" text-green-600 flex space-x-2  p-1 items-center  hover:bg-gray-200 ">
                   <BiUser />
                   <Link to="profile">Profile </Link>

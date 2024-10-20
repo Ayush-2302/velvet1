@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { val } from "./ValNav";
+import { val } from "../context/ValNav";
 
 function Accordian() {
 const accod=useContext(val)
